@@ -1,0 +1,116 @@
+{{#if original}}
+<section class="container--base gray" id="myDocuments">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="h3 medium margin-large">My Documents</h2>
+        <p>Search by keywords or use the advanced search option below.</p>
+        <form class="margin-none">
+          <div class="table-body responsive wide my-documents-table">
+            <div class="table-body-row">
+              <div class="table-body-cell">
+                  <label class="bold" for="doc-type">Document Type:</label>
+              </div>
+              <div class="table-body-cell">
+                <div class="select--regular">
+                  <select id="doc-type" name="doc-type" class="">
+                    <option value="All" selected>All</option>
+                    <option value="Claims billing and payments">Claims, Billing, and Payments</option>
+                    <option value="Document Type 2">Document Type 2</option>
+                    <option value="Document Type 3">Document Type 3</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="table-body-row">
+              <div class="table-body-cell">
+                  <label class="bold" for="date-range">View Documents From:</label>
+              </div>
+              <div class="table-body-cell">
+                <div class="select--regular">
+                  <select name="date-range" class="date-range" id="date-range">
+                      <option value="90-days">Last 90 Days</option>
+                      <option value="6-months">Last 6 Months</option>
+                      <option value="12-months">Last 12 Months</option>
+                      <option value="24-months">Last 24 Months</option>
+                      <option value="current-year">Current Year</option>
+                      <option value="custom-search">Custom Search</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="table-body-row custom-search-fields hidden">
+              <div class="table-body-cell"></div>
+              <div class="table-body-cell">
+                <div class="custom-search-input">
+                    <label for="custom-from{{#if combo}}{{combo}}{{/if}}">From</label>
+                    <input type="date" id="custom-from{{#if combo}}{{combo}}{{/if}}">
+                </div>
+                <div class="custom-search-input">
+                    <label for="custom-to{{#if combo}}{{combo}}{{/if}}">to</label>
+                    <input type="date" id="custom-to{{#if combo}}{{combo}}{{/if}}">
+                </div>
+              </div>
+              <div class="table-body-cell">
+                <button class="btn custom-date-search-btn"><span class="btn btn--primary">Search</span></button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <p class="margin-large">This is not a full list of documents that have been sent to you. This is only what can be sent electronically. Important information will continue to arrive in the mail. Please continue to read all plan documents you receive.</p>
+        {{!-- Table start --}}
+        <table class="table-responsive margin-large">
+          <tr>
+            <th>Document Type</th>
+            <th>Description</th>
+            <th>Date</th>
+          </tr>
+          <tr>
+            <td data-header="Document Type:"><div class="table-dots"></div><span>Claims, Billing, and Payments</span></td>
+            <td data-header="Description:"><div class="table-dots"></div><span>ICUE NextGen</span></td>
+            <td data-header="Date:"><div class="table-dots"></div><span>2016-10-05</span></td>
+          </tr>
+          <tr>
+            <td data-header="Document Type:"><div class="table-dots"></div><span>Claims, Billing, and Payments</span></td>
+            <td data-header="Description:"><div class="table-dots"></div><span>ICUE NextGen</span></td>
+            <td data-header="Date:"><div class="table-dots"></div><span>2016-10-05</span></td>
+          </tr>
+          <tr>
+            <td data-header="Document Type:"><div class="table-dots"></div><span>Claims, Billing, and Payments</span></td>
+            <td data-header="Description:"><div class="table-dots"></div><span>ICUE NextGen</span></td>
+            <td data-header="Date:"><div class="table-dots"></div><span>2016-10-05</span></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+{{else}}
+<section class="container--base gray">
+  <div class="container">
+    {{!-- Start: section header --}}
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="h3 medium margin-small">My Documents</h2>
+        <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="block">
+          <div class="block-body padding-left">
+            <h3 class="h5 medium margin-small">Search your documents</h3>
+              <a href="#" class="btn btn--secondary">Search</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{/if}}

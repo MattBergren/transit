@@ -1,0 +1,89 @@
+{
+    "card--drug-list": {
+        "allegra": {
+            "title": "Allegra-D 24 Hour Allergy & Congestion Tab 24 Hour",
+            "qty": "30",
+            "freq": "1",
+            "tier": "Tier 1",
+            "drug-limits": "Prior Auth",
+            "deductible-stage": "N/A",
+            "gap-stage": "$XXX.XX",
+            "initial-stage": "$XXX.XX",
+            "catastrophic-stage": "$XXX.XX"
+        },
+        "prozac": {
+            "title": "Prozac Cap 20MG",
+            "qty": "30 every 1 month",
+            "tier": "Tier 4",
+            "deductible-stage": "Part of $210 deductible",
+            "gap-stage": "$XXX.XX",
+            "initial-stage": "$XXX.XX",
+            "catastrophic-stage": "$XXX.XX"
+        },
+        "lipitor": {
+            "title": "Lipitor 20MG",
+            "qty": "30 every 1 month",
+            "tier": "Tier 4",
+            "deductible-stage": "Part of $210 deductible",
+            "gap-stage": "$XXX.XX",
+            "initial-stage": "$XXX.XX",
+            "catastrophic-stage": "$XXX.XX"
+        }
+    },
+    "map-results": {
+        "saver": [
+            {
+                "name": "CVS Pharmacy",
+                "address": "795 Oglethorpe Ave",
+                "distance": "0.81",
+                "cost": "1000.00",
+                "savings": "5.00",
+                "id": "result-1",
+                "number": "1"
+            },
+            {
+                "name": "Bob's Club Pharmacy",
+                "address": "347 Mirum Circle",
+                "distance": "0.93",
+                "cost": "950.00",
+                "savings": "10.00",
+                "id": "result-2",
+                "number": "2"
+            },
+            {
+                "name": "Walblues Pharmacy",
+                "address": "965 Snapple Drive",
+                "distance": "1.36",
+                "cost": "940.00",
+                "savings": "20.00",
+                "id": "result-3",
+                "number": "3"
+            },
+            {
+                "name": "UHCMR Pharmacy",
+                "address": "123 Health Street",
+                "distance": "0.93",
+                "cost": "935.00",
+                "savings": "25.00",
+                "id": "result-4",
+                "number": "4"
+            }
+        ],
+        "standard": [
+            {
+                "name": "Standard Pharmacy",
+                "address": "985 Universal Ave",
+                "distance": "1.56",
+                "id": "result-5",
+                "number": "1"
+            },
+            {
+                "name": "Hershey's Pharmacy",
+                "address": "795 Chocolate Ave",
+                "distance": "0.76",
+                "id": "result-6",
+                "number": "2"
+            }
+        ]
+    }
+}

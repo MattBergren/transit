@@ -1,0 +1,32 @@
+{
+    "federalMonthly": {
+        "ship": false,
+        "auto": false,
+        "method": "Monthly Billing"
+    },
+    "federalAutoCredit": {
+        "ship": false,
+        "auto": true,
+        "method": ""
+    },
+    "federalAuto": {
+        "ship": false,
+        "auto": true,
+        "method:": ""
+    },
+    "shipRecurring": {
+        "ship": true,
+        "auto": true,
+        "method": "EFT - Checking"
+    },
+    "shipRecurringEFT": {
+        "ship": true,
+        "auto": true,
+        "method": "EFT - Checking"
+    },
+    "shipMonthly": {
+        "ship": true,
+        "auto": false,
+        "method": "Monthly Billing"
+    }
+}

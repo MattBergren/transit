@@ -1,0 +1,65 @@
+---
+title: one time
+layout: default
+iframe: true
+hasScript:
+  - cc-enhancement
+---
+
+<div id="cc-enhancement">
+    
+    {{> cc-intro title="Make a One Time Payment" plan="Medicare Prescription Drug Plan" }}
+
+    <section class="payment-selection">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <form action="checking-form.html">
+                        <fieldset>
+                            <legend class="payment-selection__title">Select an Amount</legend>
+                                <div class="radio" aria-describedby="payment-selection__note">
+                                    <label for="optionsRadios1">
+                                        <input type="radio" name="paymentRadios" id="optionsRadios1" value="option1">
+                                        Amount due today: $54.00
+                                        <div id="payment-selection__note">(does not include your next premium payment)</div>
+                                    </label>
+                                    <label for="otherAmount">
+                                        <input type="radio" name="paymentRadios" id="otherAmount" value="option2">
+                                        Other Amount:
+                                        <label for="amountInput" class="sr-only">Amount Input</label>
+                                        <input type="text" name="amountInput" class="payment-selection__amount js-payment-amount-input" placeholder="$0.00">
+                                        <span class="payment-selection__required">(required)</span>
+                                    </label>
+                                </div>
+                        </fieldset>
+
+                        {{> cc-select-payment-method selectedPaymentMethod.oneTime}}
+                    </form>      
+                </div>
+                <div class="col-sm-6">
+                    <aside class="info-panel shadow-md" aria-labelledby="info-panel__title">
+                        <div class="info-panel__header">
+                            {{!-- <span class="material-icons md-36" aria-hidden="true">access_alarm</span> --}}
+                            <h4 id="info-panel__title">Balance Summary</h4>
+                        </div>
+                        <div class="info-panel__body">
+                            <dl class="dl-horizontal">
+                                <dt>Next Payment</dt>
+                                <dd>$27.00</dd>
+                                <dt>Due</dt>
+                                <dd>10/01/2018</dd>
+                            </dl>
+                            <dl class="dl-horizontal">
+                                <dt>Remaining Amount</dt>
+                                <dd>$216.00</dd>
+                                <dt>Due</dt>
+                                <dd>06/01/2019</dd>
+                            </dl>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>

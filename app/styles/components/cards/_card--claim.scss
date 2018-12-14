@@ -1,0 +1,62 @@
+.claim-collection {
+  .claim {
+    margin-bottom: 5px;
+  }
+
+  &__footer {
+    margin-top: 20px;
+    text-align: right;
+  }
+
+  &__footer-row {
+    margin-top: 10px;
+    &:first-of-type {
+      border-bottom: 1px solid $color-gray-medium;
+    }
+  }
+
+  &__footer-number {
+    @extend .h4;
+    width: 200px;
+  }
+}
+
+.claim {
+  padding: 20px;
+  background-color: #FFFFFF;
+  transition: min-height 0.3s;
+  margin-bottom: 5px;
+
+  &__header,
+  &__footer {
+    width: 100%;
+    display: block;
+    padding: 10px 0;
+
+    p {
+      margin-bottom: 0;
+      max-width: none;
+    }
+  }
+
+  &__cell {
+    padding: 0 0 10px;
+
+    @media (min-width: $breakpoint-md) {
+      padding: 20px 0;
+    }
+    &--meta {
+      padding: 10px 0 0;
+
+      @media (min-width: $breakpoint-md) {
+        padding: 20px 20px 20px 0;
+        border-right: 1px solid $color-gray-medium;
+      }
+    }
+  }
+
+  &--totals {
+    background-color: transparent;
+    border-bottom: 1px solid $color-gray-medium;
+  }
+}

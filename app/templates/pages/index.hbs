@@ -1,0 +1,46 @@
+---
+title: UHC M&R
+layout: template-list
+---
+<div class="home">
+    <div class="container--base">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    {{> card home.cards.intro}}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+
+                    <div class="template-list devflags-hidden" id="feature-list">
+                        <ul>
+                            {{#each templateList.sections as |section sectionKey|}}
+
+                                <li class="template-list__section-title">
+                                    {{section.title}}
+                                </li>
+                                <ul>
+                                    {{#each section.pages as |page pageKey|}}
+                                        <li class="template-list__page-title">{{page.title}}</li>
+                                        <ul class="template-list__link-list">
+
+                                            {{#each page.links as |link linkKey|}}
+                                                <li>
+                                                    <i class="material-icons">link</i>
+                                                    <a href="{{link.path}}">{{link.title}}</a>
+                                                </li>
+                                            {{/each}}
+                                        </ul>
+                                    {{/each}}
+                                </ul>
+                            {{/each}}
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

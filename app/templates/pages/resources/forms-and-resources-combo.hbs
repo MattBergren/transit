@@ -1,0 +1,32 @@
+---
+title: Forms and Resources
+layout: default
+hasFooter: true
+hasHeader: true
+hasTabs:
+  - Prescription Drug Plan
+  - State Health Insurance Plan
+hasScript:
+  - documents-history
+  - table
+---
+<div class="forms-and-resources">
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane fade in active" id="tab-1" aria-label="PDP">
+      {{> plan-documents-combo}}
+      {{> my-documents}}
+      {{> explanation-of-benefits-no-medical}}
+      {{> resources-combo}}
+      {{> renew-magazine}}
+      {{> form-disclaimer}}
+      {{> need-help help-type="PDP"}}
+    </div>
+    <div role="tabpanel" class="tab-pane fade" id="tab-2" aria-label="SHIP">
+      {{> plan-documents-ship}}
+      {{> resources-ship}}
+      {{> renew-magazine}}
+      {{> form-disclaimer}}
+      {{> need-help help-type='SHIP'}}
+    </div>
+  </div>
+</div>

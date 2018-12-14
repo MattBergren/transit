@@ -1,0 +1,91 @@
+<!-- Start: Add modal -->
+<div id="emailRecordsModal" tabindex="-1" role="dialog" aria-labelledby="emailRecordsModalLabel" class="modal fade">
+	<div role="document" class="modal-dialog modal-md rx-tools-modal">
+		<div class="modal-content">
+			<div class="modal-header">
+				<a class="link link--icon-right link--icon-circled align-right email-cancel-link" data-icon="" data-dismiss="modal" aria-label="Close">Cancel</a>
+				<div id="emailRecordsModalLabel" class="modal-title">
+					<h1 class="h3 margin-none">Email Records</h1>
+				</div>
+			</div>
+			<div class="modal-body">
+				<div class="container-fluid">
+					<div class="row">
+            <div class="col-sm-12">
+              <div class="card-animation-wrapper">
+                <div class="card match-height-once">
+                  <div class="card-header">
+                  </div>
+                  <div class="card-body">
+                    <div class="card-slide" aria-hidden="false">
+                      <p class="margin-small">Confirm your e-mail</p>
+                      <form id="email-records-form">
+                        <fieldset>
+                          <legend class="sr-only">Send Us a Secure Message</legend>
+                          <div class="field">
+                            <div class="field-input">
+                              <div class="radio-block">
+                                <input type="radio" name="message-email-type" value="message-old-email" id="message-old-email" checked="checked">
+                                <label for="message-old-email" class="lowercase">Use email address on file:</label>
+                              </div>
+                            </div>
+                          </div>
+
+                          <p class="margin-small indent-left">jsmith@gmail.com</p>
+
+                          <div class="field">
+                            <div class="field-input">
+                              <div class="radio-block">
+                                <input type="radio" name="message-email-type" value="message-new-email" id="message-new-email">
+                                <label for="message-new-email" class="lowercase">Use a different email:</label>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div id="new-email-fields" class="hidden">
+                            <div class="field indent-left">
+                              <label for="message-email">New email</label>
+                              <div class="field-input">
+                                <input type="text" name="message-email" id="message-email">
+                              </div>
+                            </div>
+
+                            <div class="field indent-left margin-large">
+                              <label for="message-email-confirm">Confirm new email</label>
+                              <div class="field-input">
+                                <input type="text" name="message-email-confirm" id="message-email-confirm">
+                              </div>
+                            </div>
+                          </div>
+
+                          <p class="margin-large">Providing a different email address will not change the address we retain on file for your account. The email address you provide above will only be used this one time.</p>
+
+                          <button type="submit" name="email-records-submit" class="btn--center margin-small" id="email-records-submit">
+                            <span class="btn btn--primary">Continue</span>
+                          </button>
+                          <a href="#" data-dismiss="modal" class="display-block align-center" id="email-records-cancel">Cancel</a>
+                        </fieldset>
+                      </form>
+                    </div>
+
+                    <div class="card-slide card-slide-message" aria-hidden="true">
+                      <div class="message-block--full-width success margin-large variation-el">
+                        <div class="message-block-header">
+                          <span>Your Request has Been Confirmed</span>
+                        </div>
+                        <div class="message-block-body">
+                          <p class="margin-small">You will receive a copy of your personal health records shortly.</p>
+                        </div>
+                      </div>
+                      <a href="#" class="btn btn--center btn--primary" id="message-send" data-toggle="modal" data-target="#emailRecordsModal">Ok</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

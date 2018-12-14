@@ -1,0 +1,18 @@
+---
+title: My Claim Details
+backTitle: Claim Search
+layout: default
+hasFooter: true
+hasHeader: true
+hasScript:
+  - medical-claims
+  - table
+hasHelp: SHIP
+---
+<!--  - Indemnity/Hospital/SNF -->
+<div class="medical-claims">
+  {{> mc-details-intro-ship indemnitysnf=true }}
+  {{> mc-details-claims-ship snf=true planPays=true }}
+  {{> mc-details-info-ship snf=true }}
+  <div class="divider"></div>
+</div>

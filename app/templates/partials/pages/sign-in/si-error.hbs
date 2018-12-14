@@ -1,0 +1,73 @@
+<div class="container--base gray">
+  <div class="container">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="card">
+        <div class="card-header">
+          <h2 class="h4 margin-none">
+            {{#if multiple}}Select Email Address{{/if}}
+            {{#if undeliverable}}Undeliverable Email Address{{/if}}
+						{{#if none}}No Email Address{{/if}}
+          </h2>
+        </div>
+        <div class="card-body">
+          <form id="email-modal-form">
+            <p class="margin-small">
+              {{#if multiple}}There are multiple email addresses associated with your account. You must select only one email address.{{/if}}
+            </p>
+            <fieldset>
+              <legend{{#if none}} class="sr-only"{{/if}}>Which email address would you like to use?</legend>
+              {{#or multiple undeliverable}}
+              <div class="radio-group">
+                <div class="field">
+                  <div class="field-input--no-max-width">
+                    <div class="radio-block">
+                      <input type="radio" name="email-type" id="email-1">
+                      <label for="email-1">&lt;Email Address&gt;</label>
+                    </div>
+                  </div>
+                </div>
+                {{#if multiple}}
+                <div class="field">
+                  <div class="field-input--no-max-width">
+                    <div class="radio-block">
+                      <input type="radio" name="email-type" id="email-2">
+                      <label for="email-2">&lt;Email Address 2&gt;</label>
+                    </div>
+                  </div>
+                </div>
+                {{/if}}
+                <div class="field">
+                  <div class="field-input--no-max-width">
+                    <div class="radio-block">
+                      <input type="radio" name="email-type" id="email-3" value="diff-email">
+                      <label for="email-3">Use a different email address</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {{/or}}
+              <div class="padding-left-large{{#or multiple undeliverable}} hidden{{/or}}">
+                <div class="field">
+                  <label for="new-email">New Email</label>
+                  <div class="field-input">
+                    <input type="email" name="new-email" id="new-email">
+                  </div>
+                </div>
+                <div class="field">
+                  <label for="new-email-confirm">Confirm New Email</label>
+                  <div class="field-input">
+                    <input type="email" name="new-email-confirm" id="new-email-confirm">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+            <div class="btn-group">
+              <a href="#" class="btn btn--secondary">Cancel</a>
+              <button class="btn"><span class="btn btn--primary">Continue</span></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

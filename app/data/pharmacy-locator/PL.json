@@ -1,0 +1,36 @@
+{
+  "MAPD": {
+    "plan-types": [
+      {
+        "name": "United HealthCare Group Medicare Advantage (HMO)",
+        "value": "Saver"
+      },
+      {
+        "name": "<Group MAPD Plan>",
+        "value": "Walgreens"
+      },
+      {
+        "name": "<Group MAPD Plan>",
+        "value": "Preferred"
+      }
+    ],
+    "pharmacy-type": "Pharmacy Saver Pharmacy"
+  },
+  "PDP": {
+    "plan-types": [
+      {
+        "name": "AARP MedicareRX Preferred (PDP)",
+        "value": "Saver"
+      },
+      {
+        "name": "AARP MedicareRX Saver Plus (PDP)",
+        "value": "Walgreens"
+      },
+      {
+        "name": "<PDP Plan>",
+        "value": "Preferred"
+      }
+    ],
+    "pharmacy-type": "Preferred Retail Pharmacy"
+  }
+}

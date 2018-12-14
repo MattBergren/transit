@@ -1,0 +1,110 @@
+.forms-and-resources {
+  select.lang-select {
+    min-height: 35px;
+    padding-left: 5px;
+    margin-right: 1.5rem;
+  }
+  .my-documents-table {
+      .table-body-cell {
+          padding: 5px 0;
+      }
+  }
+  legend {
+    width: auto;
+    display: inline-block;
+  }
+  .card.promo {
+    h4 {
+      font-size: 16px;
+    }
+
+    p {
+      max-width: 100%;
+    }
+  }
+  .new-callout {
+    font-size: 14px;
+    color: $color-green-dark;
+  }
+  .document-list {
+    border: solid 1px $color-gray-accent;
+    .list-group-item {
+      border: 0 none;
+      padding: 15px 15px 15px 47px;
+
+      &.no-icon {
+        padding-left: 15px;
+      }
+      .pull-left {
+        @media screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+          max-width: 330px;
+        }
+        @media screen and (min-width: $breakpoint-lg) {
+          max-width: 435px;
+        }
+        @media screen and (max-width: $breakpoint-md) {
+          max-width: 360px;
+        }
+        @media screen and (max-width: $breakpoint-sm) {
+          max-width: 600px;
+        }
+
+        & + div.pull-left {
+          clear: left;
+        }
+
+        .icon {
+          height: 1.7em;
+          position: absolute;
+          top: 12px;
+          left: 15px;
+          margin-right: 0;
+
+          &.icon-external-link {
+            height: 1.4em;
+            top: 15px;
+          }
+        }
+
+        & > span {
+          //margin-left: 32px;
+          display: inline-block;
+
+          &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+          }
+        }
+
+        & > p {
+          //margin-left: 32px;
+        }
+
+      }
+      .pull-right {
+        @media screen and (min-width: 769px) {
+          position: absolute;
+          right: 15px;
+        }
+      }
+    }
+  }
+}
+
+.form-disclaimer {
+  img.icon {
+    max-width: 60px;
+    position: relative;
+    float: left;
+  }
+
+  span {
+    margin-left: 15px;
+    display: block;
+
+    & > span {
+      display: inline;
+      margin: 0;
+    }
+  }
+}

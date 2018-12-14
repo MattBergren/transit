@@ -1,0 +1,256 @@
+<section class="container--base gray">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <h2 class="h4 color-blue medium margin-small" id="MA">Medicare Advantage Plan</h2>
+        <p class="text-uppercase">Unitedhealthcare Medicare Completechoice Plan (PPO)</p>
+        <p><span class="semi-bold text-uppercase">MEMBER ID:</span> XXXXXXXXX-00</p>
+        <p><span class="semi-bold text-uppercase">MEMBER SINCE:</span> XX/XX/XXXX</p>
+        <a href="#">View Temporary ID Card</a>
+      </div>
+      <div class="col-md-9">
+        <div class="card">
+          <a class="card-header" data-toggle="collapse" href="#cabd" aria-expanded="true" aria-controls="cabd">
+            Cost and Benefit Details
+          </a>
+          <div class="card-body">
+            <div class="collapse in" id="cabd">
+              {{#or mapd pdp}}
+              <p class="color-gray semi-bold margin-large text-uppercase">PRESCRIPTION DRUG ACTIVITY</p>
+              <div class="row">
+                <div class="col-md-4">
+                  <p class="semi-bold">Drug Payment Stage</p>
+                  <p class="h4 color-green-dark medium margin-none">Deductible</p>
+                </div>
+                <div class="col-md-4">
+                  <p class="semi-bold">Total Drug Cost</p>
+                  <p class="h4 color-green-dark medium display-inline-block margin-small">$XX.XX</p>
+                  <span class="text-medium color-gray">of $XX.XX Paid</span>
+                  <p class="margin-none">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat purus at magna feugiat volutpat.</p>
+                </div>
+                <div class="col-md-4">
+                  <p class="semi-bold">Drug Payment Stage</p>
+                  <p class="h4 color-green-dark medium display-inline-block margin-small">$XX.XX</p>
+                  <span class="text-medium color-gray">of $XX.XX Paid</span>
+                  <p class="margin-none">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat purus at magna feugiat volutpat.</p>
+                </div>
+              </div>
+              {{/or}}
+
+              {{#or mapd}}
+              <hr>
+              {{/or}}
+
+              {{#or mapd ma}}
+              <p class="color-gray semi-bold margin-large text-uppercase">Medical Activity</p>
+              <p class="semi-bold margin-small text-uppercase">In Network Expenses</p>
+              <div class="row">
+                <div class="col-md-6">
+                  <p class="semi-bold">Deductible</p>
+                  <p class="h4 color-green-dark medium display-inline-block margin-small">$XX.XX</p>
+                  <span class="text-medium color-gray">of $XX.XX Paid</span>
+                  <div class="progress-bar-green margin-small"></div>
+                  <p class="margin-none">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat purus at magna feugiat volutpat.</p>
+                </div>
+                <div class="col-md-6">
+                  <p class="semi-bold">Out of Pocket</p>
+                  <p class="h4 color-green-dark medium display-inline-block margin-small">$XX.XX</p>
+                  <span class="text-medium color-gray">of $XX.XX Paid</span>
+                  <div class="progress-bar-green margin-small"></div>
+                  <p class="margin-none">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat purus at magna feugiat volutpat.</p>
+                </div>
+              </div>
+              {{/or}}
+
+              {{#or mapd}}
+              <p class="semi-bold margin-none text-uppercase">Out of Network Expenses</p>
+              <p class="margin-small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat purus at magna feugiat volutpat.</p>
+              <div class="row">
+                <div class="col-md-6">
+                  <p class="semi-bold">Deductible</p>
+                  <p class="h4 color-green-dark medium display-inline-block margin-small">$XX.XX</p>
+                  <span class="text-medium color-gray">of $XX.XX Paid</span>
+                  <div class="progress-bar-green margin-small"></div>
+                  <p class="margin-none">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat purus at magna feugiat volutpat.</p>
+                </div>
+                <div class="col-md-6">
+                  <p class="semi-bold">Out of Pocket</p>
+                  <p class="h4 color-green-dark medium display-inline-block margin-small">$XX.XX</p>
+                  <span class="text-medium color-gray">of $XX.XX Paid</span>
+                  <div class="progress-bar-green margin-small"></div>
+                  <p class="margin-none">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat purus at magna feugiat volutpat.</p>
+                </div>
+              </div>
+              {{/or}}
+
+              <div class="row">
+                <div class="col-md-12"><a href="#" class="btn btn--secondary">View Benefits and Coverage</a></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-9 col-md-offset-3">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card match-height button-bottom">
+              {{#or mapd ma pdp}}
+              <a class="card-header" data-toggle="collapse" href="#pp" aria-expanded="true" aria-controls="pp">
+                  {{#if ma}}Claims History{{else}}Premium Payments{{/if}}
+              </a>
+              {{/or}}
+              <div class="card-body">
+                <div class="collapse in" id="pp">
+                  {{#if ma}}
+                  <p class="semi-bold color-gray text-uppercase">Claims</p>
+                  {{/if}}
+                  {{#or mapd pdp}}<p class="semi-bold">Total Amount Due:</p>{{/or}}
+                  {{#if ma}}<p class="semi-bold">In the Past 30 Days:</p>{{/if}}
+                  <p class="h4 color-green-dark semi-bold margin-small">
+                    {{#or mapd pdp}}$XX.XX{{else or ma}}30{{/or}}
+                  </p>
+                  {{#or mapd pdp}}<p><span class="semi-bold">Payment Method:</span> Monthly Billing</p>{{/or}}
+                  {{#if ma}}<p class="color-gray margin-large">Medical Claims</p>{{/if}}
+                </div>
+              </div>
+              <a href="#" class="btn btn--secondary">
+                {{#or mapd pdp}}View Payments{{else or ma}}View All Claims{{/or}}
+              </a>
+            </div>
+          </div>
+
+          {{#or mapd pdp}}
+          <div class="col-md-8">
+            <div class="card match-height">
+              <a class="card-header" data-toggle="collapse" href="#cl" aria-expanded="true" aria-controls="cl">
+                Claims
+              </a>
+              <div class="card-body">
+                <div class="collapse in" id="cl">
+                  <div class="row">
+                    <div class="col-md-6 match-height-inner button-bottom">
+                      <p class="color-gray semi-bold text-uppercase">Claims History</p>
+                      <p class="semi-bold">In the past 30 Days:</p>
+                      <div class="row">
+                        {{#if mapd}}
+                        <div class="col-md-6 margin-large">
+                          <p class="h4 color-green-dark semi-bold margin-extra-small">30</p>
+                          <span class="color-gray">Medical Claims</span>
+                        </div>
+                        {{/if}}
+                        <div class="col-md-6 margin-large">
+                          <p class="h4 color-green-dark semi-bold margin-extra-small">0</p>
+                          <span class="color-gray">Prescription Drug Claims</span>
+                        </div>
+                      </div>
+                      <a href="#" class="btn btn--secondary">View All Claims</a>
+                    </div>
+                    <div class="col-md-6 border-left match-height-inner button-bottom">
+                      <p class="color-gray semi-bold text-uppercase margin-large">Explanation of Benefits</p>
+                      <p class="margin-large">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat purus at magna feugiat volutpat.</p>
+                      <a href="#" class="btn btn--secondary">View EOBs</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {{/or}}
+
+        </div>
+      </div>
+    </div>
+
+    {{#or ship}}
+  </div>
+
+  <div class="divider dark"></div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <h2 class="h4 color-blue medium margin-small" id="SHIP">Supplemental Health Insurance Plan</h2>
+        <p class="text-uppercase">AARP Medicare Supplemental Plan</p>
+        <p><span class="semi-bold text-uppercase">MEMBER ID:</span> XXXXXXXXX-00</p>
+        <p><span class="semi-bold text-uppercase">MEMBER SINCE:</span> XX/XX/XXXX</p>
+        <a href="#">View Temporary ID Card</a>
+      </div>
+      <div class="col-md-9">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card button-bottom match-height">
+              <a class="card-header" data-toggle="collapse" href="#cabd2" aria-expanded="true" aria-controls="cabd2">
+                COST AND BENEFIT DETAILS
+              </a>
+              <div class="card-body">
+                <div class="collapse in" id="cabd2">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat purus at magna feugiat volutpat.</p>
+                </div>
+              </div>
+              <a href="#" class="btn btn--secondary">View Benefits and Coverage</a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card button-bottom match-height">
+              <a class="card-header" data-toggle="collapse" href="#pp2" aria-expanded="true" aria-controls="pp2">
+                Premium Payments
+              </a>
+              <div class="card-body">
+                <div class="collapse in" id="pp2">
+                  <p class="semi-bold">Total Amount Due:</p>
+                  <p class="h4 color-green-dark semi-bold margin-small">$XX.XX</p>
+                  <div class="table-body margin-large">
+                    <div class="table-body-row">
+                      <div class="table-body-cell"><p class="semi-bold">Paid through:</p></div>
+                      <div class="table-body-cell">XX/XX/XXXX</div>
+                    </div>
+                    <div class="table-body-row">
+                      <div class="table-body-cell"><p class="semi-bold">Payment due date:</p></div>
+                      <div class="table-body-cell">XX/XX/XXXX</div>
+                    </div>
+                    <div class="table-body-row">
+                      <div class="table-body-cell"><p class="semi-bold">Payment method:</p></div>
+                      <div class="table-body-cell">Monthly Billing</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a href="#" class="btn btn--secondary">View Payments</a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-8">
+            <div class="card">
+              <a class="card-header" data-toggle="collapse" href="#cl2" aria-expanded="true" aria-controls="cl2">
+                Claims
+              </a>
+              <div class="card-body">
+                <div class="collapse in" id="cl2">
+                  <div class="row">
+                    <div class="col-md-6 button-bottom match-height">
+                      <p class="color-gray semi-bold text-uppercase margin-large">Claims History</p>
+                      <p class="margin-large">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat purus at magna feugiat volutpat.</p>
+                      <a href="#" class="btn btn--secondary">View all Claims</a>
+                    </div>
+                    <div class="col-md-6 button-bottom border-left match-height">
+                      <p class="color-gray semi-bold text-uppercase margin-large">Explanation of Benefits</p>
+                      <p class="margin-large">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat purus at magna feugiat volutpat.</p>
+                      <a href="#" class="btn btn--secondary">View EOBs</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{/or}}
+
+  </div>
+</section>

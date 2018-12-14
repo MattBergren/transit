@@ -1,0 +1,18 @@
+---
+title: checking form
+layout: default
+iframe: true
+hasScript:
+  - cc-enhancement-app
+backBtn: true
+href: one-time.html
+---
+
+<div id="cc-enhancement">
+    
+    {{> cc-intro title="Make a One Time Payment" plan="Medicare Prescription Drug Plan"}}
+    {{> cc-checking-form btnName="Authorize" action="review.html"}}
+    {{> cancel }}
+    {{> authorization }}
+    {{> abandon }}
+</div>

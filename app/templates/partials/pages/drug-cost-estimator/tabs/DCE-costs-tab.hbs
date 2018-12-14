@@ -1,0 +1,326 @@
+<div class="theme-uhc-mir">
+    <div class="row">
+        <div class="col-md-12">
+            <p class="color-red bold" rv-if="data.DCE.savedDrugs.noDrugs">{{> important }} You must add at least one drug to see your costs.</p>
+            <p class="color-red bold" rv-unless="data.DCE.savedPharmacy.name">{{> important }} You must select a pharmacy to see your costs.</p>
+        </div>
+    </div>
+    <div class="row margin-large">
+        <div class="col-md-3">
+            <div class="card" id="drug-cost-card">
+                <div class="card-header margin-small">
+                    <h2 class="h2 margin-extra-small no-wrap">$<span class="total-cost">--.--</span></h2>
+                    <p class="margin-none">
+                        Total Estimated Annual Drug Costs <a tabindex="0" class="standalone" rel="tooltip" title="<p>Aute enim nisi consectetur excepteur esse cupidatat Lorem excepteur laborum sunt occaecat nulla culpa magna cillum.</p>">
+                            <svg class="icon-info">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-info"></use>
+                            </svg>
+                        </a>
+                    </p>
+                </div>
+                <div class="card-body">
+                    <hr> {{!--
+                    <p class="margin-small" data-tooltip="small">
+                        Annual Deductible
+                    </p>
+                    <p class="margin-none">Tiers 1 and 2: $
+                        <span class="drug-tiers">--.--</span>
+                    </p>
+                    <p class="margin-none">Tiers 3, 4, & 5: $
+                        <span class="drug-tiers">--.--</span>
+                    </p>
+                    <div id="drug-sidebar"></div>
+                    <div id="drug-pharmacy-sidebar"></div> --}}
+                    <div class="margin-small">
+                        {{!--
+                        <hr>
+                        <div class="message-block success">
+                            <div class="message-block-body">
+                                <span class="color-green-dark bold">
+                                    $91.34
+                                </span>
+                                total available savings
+                            </div>
+                        </div> --}}
+                        <div class="table-body">
+                            <div class="table-body-row">
+                                {{!--
+                                <div class="table-body-cell" style="padding-right: 0;">
+                                    <img src="/images/icon-svgs/money.svg" alt="Money" class="img-small" style="margin-right: 10px;"
+                                    />
+                                </div> --}}
+                                <div class="table-body-cell" style="padding-right: 0;">
+                                    {{!--
+                                    <span class="color-green-dark bold">Save $56.78</span> by switching to generics --}}
+                                    <a href="#" class="display-block margin-small edit-drug-list">Edit Drug List</a>
+                                </div>
+                            </div>
+                            <div class="table-body-row">
+                                {{!--
+                                <div class="table-body-cell" style="padding-right: 0;">
+                                    <img src="/images/icon-svgs/money.svg" alt="Money" class="img-small" style="margin-right: 10px;"
+                                    />
+                                </div> --}}
+                                <div class="table-body-cell" style="padding-right: 0;">
+                                    {{!--
+                                    <span class="color-green-dark bold">Save $34.56</span> by switching pharmacies --}}
+                                    <a href="#" class="display-block edit-pharmacy">Edit Pharmacy</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <p class="margin-small">See what your drug cost might be for plans available in your area.</p>
+                    <button class="cta-button primary" style="font-size: 14px; width: 100%;">Back to plans</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9">
+            {{!-- Start drug price container --}}
+            <div class="drug-container margin-large">
+                <div class="row" rv-each-drug="data.DCE.savedDrugs.drugs">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12 margin-none">
+                                        <p class="subtitle">{ drug.title }</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <p class="color-gray bold margin-none">Qty:</p>
+                                                <p class="color-gray margin-extra-small">{ drug.qty } Every { drug.freq } month(s)</p>
+                                                <p class="color-gray bold margin-none">Tier:</p>
+                                                <p class="color-gray margin-none">Tier 1</p>
+                                            </div>
+                                            <div class="col-sm-6"><!-- rv-if="drug.limits" -->
+                                                <p class="color-gray bold margin-none">Drug Limits:</p>
+                                                <p class="margin-none color-gray" data-tooltip="small"> PA</p>
+                                                <p class="margin-none color-gray" data-tooltip="small"> QL</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2 margin-small border-left-sm">
+                                        <p class="margin-none semi-bold">$
+                                            <span class="drug-tiers">---.--</span>
+                                        </p>
+                                        <span class="italic text-small">Initial Coverage Stage</span>
+                                    </div>
+                                    <div class="col-sm-2 margin-small">
+                                        <p class="margin-none semi-bold">$
+                                            <span class="drug-tiers">---.--</span>
+                                        </p>
+                                        <span class="italic text-small">Coverage Gap Stage</span>
+                                    </div>
+                                    <div class="col-sm-2 margin-small">
+                                        <p class="margin-none semi-bold">$
+                                            <span class="drug-tiers">---.--</span>
+                                        </p>
+                                        <span class="italic text-small">Catastrophic Coverage Stage</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="bold margin-small">Drug Coverage Legend</p>
+            <div class="row">
+                <div class="col-md-4 margin-none">
+                    <ul class="style-none">
+                        <li> NC - Not Covered <a tabindex="0" class="standalone" rel="tooltip" title="<p>Aute enim nisi consectetur excepteur esse cupidatat Lorem excepteur laborum sunt occaecat nulla culpa magna cillum.</p>">
+                            <svg class="icon-info">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-info"></use>
+                            </svg>
+                        </a></li>
+                        <li> LA - Limited Access <a tabindex="0" class="standalone" rel="tooltip" title="<p>Aute enim nisi consectetur excepteur esse cupidatat Lorem excepteur laborum sunt occaecat nulla culpa magna cillum.</p>">
+                            <svg class="icon-info">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-info"></use>
+                            </svg>
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 margin-none">
+                    <ul class="style-none">
+                        <li> ST - Step Therapy <a tabindex="0" class="standalone" rel="tooltip" title="<p>Aute enim nisi consectetur excepteur esse cupidatat Lorem excepteur laborum sunt occaecat nulla culpa magna cillum.</p>">
+                            <svg class="icon-info">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-info"></use>
+                            </svg>
+                        </a></li>
+                        <li> PA - Prior Authorization <a tabindex="0" class="standalone" rel="tooltip" title="<p>Aute enim nisi consectetur excepteur esse cupidatat Lorem excepteur laborum sunt occaecat nulla culpa magna cillum.</p>">
+                            <svg class="icon-info">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-info"></use>
+                            </svg>
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 margin-large">
+                    <ul class="style-none">
+                        <li> QL - Quantity Limits <a tabindex="0" class="standalone" rel="tooltip" title="<p>Aute enim nisi consectetur excepteur esse cupidatat Lorem excepteur laborum sunt occaecat nulla culpa magna cillum.</p>">
+                            <svg class="icon-info">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-info"></use>
+                            </svg>
+                        </a></li>
+                        <li> ADC - Additional Drug Coverage <a tabindex="0" class="standalone" rel="tooltip" title="<p>Aute enim nisi consectetur excepteur esse cupidatat Lorem excepteur laborum sunt occaecat nulla culpa magna cillum.</p>">
+                            <svg class="icon-info">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-info"></use>
+                            </svg>
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+            {{!-- More info collapse --}}
+            <div class="margin-extra-small display-block">
+                <a href="#collapseTiers" role="button" data-toggle="collapse" aria-expanded="false"
+                    aria-controls="collapseTiers" class="display-block collapse-expand">
+                    Learn More about Drug Pricing Tiers<img id="arr1" src="images/icon-svgs/arrow_dwn.png" alt="arrow" class="custom-material-icons">
+                </a>
+                <div class="collapse-wrapper">
+                    <div class="collapse" id="collapseTiers">
+                        {{!-- Tier 1 --}}
+                        <p class="bold margin-extra-small">Tier 1 Drugs</p>
+                        <p class="margin-small">
+                            Nulla ea veniam nostrud reprehenderit eiusmod excepteur adipisicing nulla cupidatat
+                            cupidatat. Excepteur amet exercitation minim sint nulla occaecat
+                            dolor anim duis proident ad ea voluptate do enim consequat
+                            ea.
+                        </p>
+                        {{!-- Tier 2 --}}
+                        <p class="bold margin-extra-small">Tier 2 Drugs</p>
+                        <p class="margin-small">
+                            Nulla ea veniam nostrud reprehenderit eiusmod excepteur adipisicing nulla cupidatat
+                            cupidatat. Excepteur amet exercitation minim sint nulla occaecat
+                            dolor anim duis proident ad ea voluptate do enim consequat
+                            ea.
+                        </p>
+                        {{!-- Tier 3 --}}
+                        <p class="bold margin-extra-small">Tier 3 Drugs</p>
+                        <p class="margin-small">
+                            Nulla ea veniam nostrud reprehenderit eiusmod excepteur adipisicing nulla cupidatat
+                            cupidatat. Excepteur amet exercitation minim sint nulla occaecat
+                            dolor anim duis proident ad ea voluptate do enim consequat
+                            ea.
+                        </p>
+                        {{!-- Tier 4 --}}
+                        <p class="bold margin-extra-small">Tier 4 Drugs</p>
+                        <p class="margin-small">
+                            Nulla ea veniam nostrud reprehenderit eiusmod excepteur adipisicing nulla cupidatat
+                            cupidatat. Excepteur amet exercitation minim sint nulla occaecat
+                            dolor anim duis proident ad ea voluptate do enim consequat
+                            ea.
+                        </p>
+                        {{!-- Tier 5 --}}
+                        <p class="bold margin-extra-small">Tier 5 Drugs</p>
+                        <p class="margin-small">
+                            Nulla ea veniam nostrud reprehenderit eiusmod excepteur adipisicing nulla cupidatat
+                            cupidatat. Excepteur amet exercitation minim sint nulla occaecat
+                            dolor anim duis proident ad ea voluptate do enim consequat
+                            ea.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="margin-extra-small display-block">
+                <a href="#collapseStages" role="button" data-toggle="collapse" aria-expanded="false"
+                    aria-controls="collapseStages" class="display-block collapse-expand">
+                    Learn More about Drug Pricing Stages<img id="arr1" src="images/icon-svgs/arrow_dwn.png" alt="arrow" class="custom-material-icons">
+                </a>
+                <div class="collapse-wrapper margin-large">
+                    <div class="collapse" id="collapseStages">
+                        {{!-- Stage 1 --}}
+                        <p class="bold margin-extra-small">Annual Deductible Stage</p>
+                        <p class="margin-small">
+                            Nulla ea veniam nostrud reprehenderit eiusmod excepteur adipisicing nulla cupidatat
+                            cupidatat. Excepteur amet exercitation minim sint nulla occaecat
+                            dolor anim duis proident ad ea voluptate do enim consequat
+                            ea.
+                        </p>
+                        {{!-- Stage 2 --}}
+                        <p class="bold margin-extra-small">Initial Coverage Stage</p>
+                        <p class="margin-small">
+                            Nulla ea veniam nostrud reprehenderit eiusmod excepteur adipisicing nulla cupidatat
+                            cupidatat. Excepteur amet exercitation minim sint nulla occaecat
+                            dolor anim duis proident ad ea voluptate do enim consequat
+                            ea.
+                        </p>
+                        {{!-- Stage 3 --}}
+                        <p class="bold margin-extra-small">Catastrophic Coverage Stage</p>
+                        <p class="margin-small">
+                            Nulla ea veniam nostrud reprehenderit eiusmod excepteur adipisicing nulla cupidatat
+                            cupidatat. Excepteur amet exercitation minim sint nulla occaecat
+                            dolor anim duis proident ad ea voluptate do enim consequat
+                            ea.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="margin-extra-small display-block">
+                <a href="#importantDisclaimer" role="button" data-toggle="collapse" aria-expanded="false"
+                    aria-controls="importantDisclaimer" class="display-block collapse-expand">
+                    Important Disclaimer Information<img id="arr1" src="images/icon-svgs/arrow_dwn.png" alt="arrow" class="custom-material-icons">
+                </a>
+                <div class="collapse-wrapper">
+                    <div class="collapse" id="importantDisclaimer">
+                        {{!-- <p><b>Disclaimer Information</b></p> --}}
+                        {{!-- <p>The list of covered drugs was last updated on 11.06.2017.</p>
+                        <p>The prescription drug costs displayed are estimates and may vary based on the specific
+                            quantity, strength and/or dosage of the medication and the pharmacy you use.
+                            Note: a plan's drug list may change during the plan year.</p>
+                        <p>It may be important to look beyond your current needs at the value of having Medicare
+                            prescription drug insurance. Enrolling when you become eligible may help give
+                            you peace of mind, should your drug needs become more significant in the future.
+                            It may also help you avoid the Medicare late enrollment penalty.</p>
+                        <p>The Formulary and/or pharmacy network may change at any time. You will receive notice
+                            when necessary.</p> --}}
+
+                        <p>The list of covered drugs was last updated on 03.26.2018.</p>
+
+                        <p><b>The drug costs displayed are estimates and may vary based on the specific quantity, strength and/or dosage of the medication and the pharmacy you use.</b> It may be important to look beyond your current needs at the value of having Medicare prescription drug insurance. Enrolling when you become eligible may help give you peace of mind, should your drug needs become more significant in the future. It may also help you avoid the Medicare late enrollment penalty.</p>
+
+                        <p>No drug will move to a higher cost tier unless a new generic version becomes available. If this occurs, you will be notified in your Prescription Drug Explanation of Benefits (EOB) 60 days before the change takes effect.</p>
+
+                        <p>The Formulary and/or pharmacy directory may change at any time. You will receive notice when necessary.</p>
+
+                        <p><b>Medicare Advantage plans</b></p>
+
+                        <p>Find important information about coverage determinations and appeals,
+                            quality assurance policies, grievances, drug conditions and limitations. <a href="https://www.aarpmedicareplans.com/content/aarpmedicareplans/en/health-plans/medicare-advantage-plans/resources-plan-material/ma-medicare-forms/medicare-appeals.html">View coverage determinations and appeals process</a>.</p>
+
+                        <p>Learn about prior authorization criteria, step therapy criteria and the <a href="https://www.aarpmedicareplans.com/content/aarpmedicareplans/en/health-plans/medicare-advantage-plans/resources-plan-material/ma-medicare-forms/medicare-appeals.html">60-day formulary change notice</a>.
+                            <br>
+                        </p>
+
+                        <p>Note: the drug list <a tabindex="0" class="standalone" rel="tooltip" id="5abb29b7-6b6b-47c0-98fb-9e98024a3b2f_toolTip"
+                                title="<p>A list of drugs covered by your Medicare Part D plan benefit. A drug list may also be referred to as a covered medications list (CML), a preferred drug list (PDL), a select drug list or a formulary. These drugs are dispensed through participating pharmacies to covered members. Drug lists may differ between plans with prescription drug coverage.</p><p>Carefully weigh the differences in drug lists against the Medicare plan costs and other features when choosing a plan that may best meet your needs. A drug list may change during the year.</p>">
+                                <svg class="icon-info">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-info"></use>
+                                </svg></a> may change during the plan year.</p>
+
+                        <p>View the <a href="https://www.aarpmedicareplans.com/content/aarpmedicareplans/en/health-plans/medicare-advantage-plans/resources-plan-material/ma-medicare-forms/ma-drug-transition.html">UnitedHealthcare prescriptinon drug transition process</a>.</p>
+
+                        <p><b>Medicare prescription drug plans</b></p>
+
+                        <p>Find important information about coverage determinations and appeals, quality assurance policies, grievances, drug conditions and limitations. <a href="https://www.aarpmedicareplans.com/content/aarpmedicareplans/en/health-plans/prescription-drug-plans/resources/pdp-medicare-forms/medicare-appeals.html">View coverage determinations and appeals process</a>.</p>
+
+                        <p>Learn about prior authorization criteria, step therapy criteria and the <a href="https://www.aarpmedicareplans.com/content/aarpmedicareplans/en/health-plans/prescription-drug-plans/resources/pdp-medicare-forms/medicare-appeals.html">60-day formulary change notice</a>.</p>
+
+                        <p>Note: the drug list <a tabindex="0" class="standalone" rel="tooltip" id="8575f694-3ff4-4f5e-8331-73a01d2767bd_toolTip"
+                                title="<p>A list of drugs covered by your Medicare Part D plan benefit. A drug list may also be referred to as a covered medications list (CML), a preferred drug list (PDL), a select drug list or a formulary. These drugs are dispensed through participating pharmacies to covered members. Drug lists may differ between plans with prescription drug coverage.</p><p>Carefully weigh the differences in drug lists against the Medicare plan costs and other features when choosing a plan that may best meet your needs. A drug list may change during the year.</p>">
+                                <svg class="icon-info">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-info"></use>
+                                </svg>
+                            </a> may change during the plan year.</p>
+
+                        <p>View the <a href="https://www.aarpmedicareplans.com/content/aarpmedicareplans/en/health-plans/prescription-drug-plans/resources/pdp-medicare-forms/prescription-drug-transition.html">UnitedHealthcare prescription drug transition process</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{> DCE-cost-info}}
+</div>
+

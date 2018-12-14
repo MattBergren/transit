@@ -1,0 +1,195 @@
+<table class="phr-table phr-provider-table table-responsive margin-small">
+  <tr>
+    <th>Provider</th>
+    <th>Specialty</th>
+    <th class="print-only">Facility</th>
+    <th>City</th>
+    <th class="print-only">Phone #</th>
+    <th>Date of Record</th>
+  </tr>
+  {{#each PHR-providers.providers as |provider providerKey|}}
+    <tr class="provider-row">
+      <td data-provider-name="{{provider.name}}">
+        <a href="#" class="provider-name">{{provider.name}}</a>
+        {{#if provider.primary}}
+        <span class="primary-care-provider">Primary care provider</span>
+        {{/if}}
+      </td>
+      <td data-provider-specialty="{{provider.specialty}}">
+        <span class="mobile-table-header">Specialty</span>
+        <div class="table-dots"></div>
+        <span>{{provider.specialty}}</span>
+      </td>
+      <td data-provider-facility="{{provider.facility}}" class="print-only">
+        <span class="mobile-table-header">Facility</span>
+        <div class="table-dots"></div>
+        <span>{{provider.facility}}</span>
+      </td>
+      <td data-provider-city="{{provider.city}}" data-provider-state="">
+        <span class="mobile-table-header">Location</span>
+        <div class="table-dots"></div>
+        <span>{{provider.city}}</span>
+      </td>
+      <td data-provider-phone="{{provider.phone}}" class="print-only">
+        <span class="mobile-table-header">Phone</span>
+        <div class="table-dots"></div>
+        <span>{{provider.phone}}</span>
+      </td>
+      <td data-provider-date="{{provider.date}}">
+        <span class="mobile-table-header">Date of Record</span>
+        <div class="table-dots"></div>
+        <span>{{provider.date}}</span>
+      </td>
+    </tr>
+  {{/each}}
+  {{!-- <tr class="provider-row">
+    <td data-provider-name="Smithsberg, Jonathen; MD">
+      <a href="#">Smithsberg, Jonathen; MD</a> <span class="primary-care-provider">Primary care provider</span>
+    </td>
+    <td data-provider-specialty="General">
+      <span class="mobile-table-header">Specialty</span>
+      <div class="table-dots"></div>
+      <span>General</span>
+    </td>
+    <td data-provider-facility="Western Health Center" class="print-only">
+      <span class="mobile-table-header">Facility</span>
+      <div class="table-dots"></div>
+      <span>Western Health Center</span>
+    </td>
+    <td data-provider-city="Eden Prairie" data-provider-state="MN">
+      <span class="mobile-table-header">Location</span>
+      <div class="table-dots"></div>
+      <span>Eden Prairie</span>
+    </td>
+    <td data-provider-phone="(123) 456-7890" class="print-only">
+      <span class="mobile-table-header">Phone</span>
+      <div class="table-dots"></div>
+      <span>(123) 456-7890</span>
+    </td>
+    <td data-provider-date="11/20/17">
+      <span class="mobile-table-header">Date of Record</span>
+      <div class="table-dots"></div>
+      <span>11/20/17</span>
+    </td>
+  </tr>
+  <tr class="provider-row">
+    <td data-provider-name="Roselin Swain">
+      <a href="#">Swain, Roselin; MD</a>
+    </td>
+    <td data-provider-specialty="General">
+      <span class="mobile-table-header">Specialty</span>
+      <div class="table-dots"></div>
+      <span>General</span>
+    </td>
+    <td data-provider-facility="Facility Name" class="print-only">
+      <span class="mobile-table-header">Facility</span>
+      <div class="table-dots"></div>
+      <span>Facility Name</span>
+    </td>
+    <td data-provider-city="Eden Prairie" data-provider-state="MN">
+      <span class="mobile-table-header">Location</span>
+      <div class="table-dots"></div>
+      <span>Eden Prairie</span>
+    </td>
+    <td data-provider-phone="(123) 456-7890" class="print-only">
+      <span class="mobile-table-header">Phone</span>
+      <div class="table-dots"></div>
+      <span>(123) 456-7890</span>
+    </td>
+    <td data-provider-date="6/15/17">
+      <span class="mobile-table-header">Date of Record</span>
+      <div class="table-dots"></div>
+      <span>6/15/17</span>
+    </td>
+  </tr>
+  <tr class="provider-row">
+    <td data-provider-name="Timothy Franklin">
+      <a href="#">Franklin, Timothy; MD</a>
+    </td>
+    <td data-provider-specialty="Allergist">
+      <span class="mobile-table-header">Specialty</span>
+      <div class="table-dots"></div>
+      <span>Allergist</span>
+    </td>
+    <td data-provider-facility="Facility Name" class="print-only">
+      <span class="mobile-table-header">Facility</span>
+      <div class="table-dots"></div>
+      <span>Facility Name</span>
+    </td>
+    <td data-provider-city="Bloomington" data-provider-state="MN">
+      <span class="mobile-table-header">Location</span>
+      <div class="table-dots"></div>
+      <span>Bloomington</span>
+    </td>
+    <td data-provider-phone="(123) 456-7890" class="print-only">
+      <span class="mobile-table-header">Phone</span>
+      <div class="table-dots"></div>
+      <span>(123) 456-7890</span>
+    </td>
+    <td data-provider-date="5/3/17">
+      <span class="mobile-table-header">Date of Record</span>
+      <div class="table-dots"></div>
+      <span>5/3/17</span>
+    </td>
+  </tr>
+  <tr class="provider-row">
+    <td data-provider-name="Sanjay Wali">
+      <a href="#">Wali, Sanjay; MD</a>
+    </td>
+    <td data-provider-specialty="Cardiothoracic Surgeon">
+      <span class="mobile-table-header">Specialty</span>
+      <div class="table-dots"></div>
+      <span>Cardiothoracic Surgeon</span>
+    </td>
+    <td data-provider-facility="Facility Name" class="print-only">
+      <span class="mobile-table-header">Facility</span>
+      <div class="table-dots"></div>
+      <span>Facility Name</span>
+    </td>
+    <td data-provider-city="Minneapolis" data-provider-state="MN">
+      <span class="mobile-table-header">Location</span>
+      <div class="table-dots"></div>
+      <span>Minneapolis</span>
+    </td>
+    <td data-provider-phone="(123) 456-7890" class="print-only">
+      <span class="mobile-table-header">Phone</span>
+      <div class="table-dots"></div>
+      <span>(123) 456-7890</span>
+    </td>
+    <td data-provider-date="8/20/2015">
+      <span class="mobile-table-header">Date of Record</span>
+      <div class="table-dots"></div>
+      <span>8/20/2015</span>
+    </td>
+  </tr>
+  <tr class="provider-row">
+    <td data-provider-name="Smithsberg, Jonathen; MD">
+      <a href="#">Ramirez, Steven; MD</a>
+    </td>
+    <td data-provider-specialty="General">
+      <span class="mobile-table-header">Specialty</span>
+      <div class="table-dots"></div>
+      <span>General</span>
+    </td>
+    <td data-provider-facility="Facility Name" class="print-only">
+      <span class="mobile-table-header">Facility</span>
+      <div class="table-dots"></div>
+      <span>Facility Name</span>
+    </td>
+    <td data-provider-city="Eden Prairie" data-provider-state="MN">
+      <span class="mobile-table-header">Location</span>
+      <div class="table-dots"></div>
+      <span>Bloomington</span>
+    </td>
+    <td data-provider-phone="(123) 456-7890" class="print-only">
+      <span class="mobile-table-header">Phone</span>
+      <div class="table-dots"></div>
+      <span>(123) 456-7890</span>
+    </td>
+    <td data-provider-date="1/26/2015">
+      <span class="mobile-table-header">Date of Record</span>
+      <div class="table-dots"></div>
+      <span>3/3/2014</span>
+    </td>
+  </tr> --}}
+</table>

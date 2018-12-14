@@ -1,0 +1,71 @@
+<div class="container--base">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <p class="margin-none">Find forms, plan materials and other resources to help you get the most out of your plan.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="container--base">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <h2 class="h3 medium margin-small">Plan Materials</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="variation-el">
+          <ul class="document-utilities">
+            <li>
+              <a href="#"><img src="/images/icon-svgs/plan.svg" alt="plan"> Order Plan Materials</a>
+            </li>
+            <li>
+              <a href="#"><img src="/images/icon-svgs/card.svg" alt="card"> View Temporary ID Card</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-8">
+        <div class="margin-small">
+          <fieldset>
+            <legend class="sr-only">PM</legend>
+            <label for="lang-select-1" class="display-inline-block">View </label>
+            <div class="select--inline">
+              <select id="lang-select-1" class="lang-select">
+                <option>ENGLISH</option>
+                <option>SPANISH</option>
+                <option>CHINESE</option>
+              </select>
+            </div>
+            <span class="display-inline-block bold">documents</span>
+          </fieldset>
+        </div>
+        {{#if variation}}
+        <ul class="document-list-new margin-small variation-el">
+          <li>
+            <a href="#"><img src="/images/icon-svgs/PDF_outlined.svg" alt="PDF">Summary of Benefits <span class="doc-specs">(PDF, size)</span></a>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+          </li>
+          <li><a href="#"><img src="/images/icon-svgs/PDF_outlined.svg" alt="PDF">Evidence of Coverage <span class="doc-specs">(PDF, size)</span></a></li>
+          <li><a href="#"><img src="/images/icon-svgs/PDF_outlined.svg" alt="PDF">Non-Discrimination Notice <span class="doc-specs">(PDF, size)</span></a></li>
+          <li><a href="#"><img src="/images/icon-svgs/PDF_outlined.svg" alt="PDF">Comprehensive Formulary <span class="doc-specs">(PDF, size)</span></a></li>
+          <li><a href="#"><img src="/images/icon-svgs/PDF_outlined.svg" alt="PDF">Prior Authorization Criteria <span class="doc-specs">(PDF, size)</span></a></li>
+          <li><a href="#"><img src="/images/icon-svgs/PDF_outlined.svg" alt="PDF">Step Therapy Criteria <span class="doc-specs">(PDF, size)</span></a></li>
+          <li><a href="#"><img src="/images/icon-svgs/PDF_outlined.svg" alt="PDF">Formulary Additions <span class="doc-specs">(PDF, size)</span></a></li>
+          <li><a href="#"><img src="/images/icon-svgs/PDF_outlined.svg" alt="PDF">Formulary Deletions <span class="doc-specs">(PDF, size)</span></a></li>
+        </ul>
+        {{/if}}
+        {{#if variation}}<div class="variation-orig">{{/if}}
+          {{> link-list resources-mapd.plan-materials.english}}
+        {{#if variation}}</div>{{/if}}
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,107 @@
+---
+title: Payments
+layout: default
+hasFooter: true
+hasHeader: true
+hasScript:
+- table
+- payments
+hasHelp: SHIP
+---
+<div class="payments">
+    <div class="container--base">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="h2 margin-large">
+                            Review Recurring Payments
+                        </h1>
+                        <p class="large bold margin-small">Please review your information before submitting your payment.</p>
+                        <p class="margin">By submitting this Checking account payment, you are authorizing UnitedHealthcare Insurance Company to automatically deduct your monthly premium payments from the Checking account on this form. If you have any questions regarding your automatic payments please contact the number on the back of your member ID card. Payments will be automatically deducted on or around the fifth day of each month.</p>
+
+                        <div class="table-body payment-confirm-table">
+                          <div class="table-body-row">
+                              <div class="table-body-cell">
+                                Payment Type
+                              </div>
+                            <div class="table-body-cell">
+                              <span class="bold">EFT-Checking (Recurring)</span>
+                            </div>
+                          </div>
+                          <div class="table-body-row">
+                              <div class="table-body-cell">
+                                Payment Date
+                              </div>
+                            <div class="table-body-cell">
+                              <span class="bold">12/31/2016</span>
+                            </div>
+                          </div>
+                          <div class="table-body-row">
+                              <div class="table-body-cell">
+                                Payment Amount
+                              </div>
+                            <div class="table-body-cell">
+                              <span class="bold">The current premium due each month</span>
+                            </div>
+                          </div>
+                          <div class="table-body-row">
+                              <div class="table-body-cell">
+                                Routing Number
+                              </div>
+                            <div class="table-body-cell">
+                              <span class="bold">123456789</span>
+                            </div>
+                          </div>
+                          <div class="table-body-row">
+                              <div class="table-body-cell">
+                                Account Number
+                              </div>
+                            <div class="table-body-cell">
+                              <span class="bold">123456789</span>
+                            </div>
+                          </div>
+                          <div class="table-body-row">
+                              <div class="table-body-cell">
+                                Account Holder Name
+                              </div>
+                            <div class="table-body-cell">
+                              <span class="bold">John Adam Smith</span>
+                            </div>
+                          </div>
+                          <div class="table-body-row">
+                              <div class="table-body-cell">
+                                Member ID
+                              </div>
+                            <div class="table-body-cell">
+                              <span class="bold">123456789</span>
+                            </div>
+                          </div>
+                          <div class="table-body-row">
+                              <div class="table-body-cell">
+                                Member Name
+                              </div>
+                            <div class="table-body-cell">
+                              <span class="bold">John Smith</span>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="btn btn--primary">Edit Payment Information</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {{> payments-fed-confirm-legal}}
+        <div class="container--base">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <button class="btn btn--secondary">Cancel</button>
+                        <button class="btn btn--primary" onclick="confirmLegal(event, '/payments/ship/submitted.html')">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="divider"></div>
+</div>

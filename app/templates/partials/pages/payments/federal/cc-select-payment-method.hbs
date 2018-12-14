@@ -1,0 +1,20 @@
+<fieldset>
+    <legend class="payment-selection__title">Select Payment Method</legend>
+    <div class="radio">
+
+        {{#each controls}}
+            <label for="amountRadios{{@key}}">
+                <input type="radio" name="amountRadios" id="amountRadios{{@key}}">
+                {{this}}
+            </label>
+        {{/each}}
+
+    </div>
+    <div class="payment-selection__actions">
+
+        {{#each buttons}}
+                <{{type}} class="{{class}}"{{#if href}}{{{href}}}{{/if}}>{{name}}</{{type}}>
+        {{/each}}
+
+    </div>
+</fieldset>

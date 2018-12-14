@@ -1,0 +1,17 @@
+---
+title: Payments
+layout: default
+hasFooter: true
+hasHeader: true
+hasScript:
+    - table
+    - payment-history
+hasHelp: SHIP
+---
+<div class="payments">
+
+    {{> payments-overview
+        paymentsOverview.shipMonthly
+    }}
+    {{> payments-history ShipHistory=true includedPayments="true"}}
+</div>

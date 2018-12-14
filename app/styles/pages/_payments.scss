@@ -1,0 +1,230 @@
+.payments {
+  .cc-payment-link {
+    position: relative;
+
+    img {
+      width: 29px;
+      height: auto;
+      top: -2px;
+      position: relative;
+    }
+  }
+    .payment-confirm-table {
+        .table-body-cell {
+            padding: 5px 0;
+        }
+    }
+    form {
+        @media (max-width: $breakpoint-xs) {
+            .table-body {
+                width: 100%;
+            }
+            input[type='text'] {
+                width: 100%;
+            }
+        }
+    }
+    .table-responsive {
+        &__col {
+            &--wide {
+                width: 130px;
+            }
+        }
+        &__value {
+            text-align: right;
+        }
+    }
+
+    .table-body.js-history-filters {
+        @media (max-width: $breakpoint-md) {
+            display: block;
+            .table-body-row {
+                display: block;
+            }
+        }
+        .table-body-row {
+            &:not(:first-child) {
+                .table-body-cell {
+                    padding-top: 15px;
+                }
+            }
+            .table-body-cell {
+                &:nth-of-type(2) {
+                    padding-left: 30px;
+                    @media (max-width: $breakpoint-md) {
+                        padding-left: 0;
+                        padding-top: 0;
+                    }
+                }
+            }
+
+        }
+
+    }
+    .table-body.ot-payment-table {
+
+        .table-body-row {
+            .table-body-cell {
+                &:nth-of-type(2) {
+                    @media (max-width: $breakpoint-md) {
+                        padding-top: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .field-input.checkbox {
+      display: inline-block;
+      width: auto;
+      max-width: inherit;
+    }
+
+    .longform {
+        max-width: 600px;
+
+        &__row {
+            display: flex;
+            align-items: top;
+            margin: 1.75rem 0;
+            flex-wrap: wrap;
+            @media (min-width: $breakpoint-sm) {
+                flex-wrap: nowrap;
+            }
+        }
+        &__row-label,
+        &__row-input {
+            margin-right: 0.5rem;
+            flex: 0 0 100%;
+            @media (min-width: $breakpoint-sm) {
+                flex: 0 1 50%;
+            }
+        }
+        &__row-full {
+            flex: 0 0 100%;
+        }
+    }
+
+    .field-label {
+        display: inline-block;
+        @media (min-width: $breakpoint-sm) {
+            margin-top: 12px;
+        }
+    }
+
+    .field-saved {
+        margin-top: 12px;
+        display: inline-block;
+    }
+    .field {
+        max-width: 400px;
+        position: relative;
+
+        @media (max-width: $breakpoint-sm) {
+          padding-right: 30px;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+        }
+        &--symbol {
+            &:before {
+                content: attr(data-symbol);
+                position: absolute;
+                top: 10px;
+                left: 8px;
+            }
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 7px;
+            display: none;
+            width: 25px;
+            height: 25px;
+            background-image: url('/images/icon-svgs/important.svg');
+        }
+    }
+
+    .field-error {
+        margin-top: 0.5rem;
+        max-width: 250px;
+        color: $color-red-base;
+        display: none;
+    }
+
+    .error-flag {
+        width: 25px;
+        height: 1.125rem;
+        position: relative;
+        display: none;
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            background-image: url(/images/icon-svgs/important.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 25px;
+            height: 25px;
+        }
+    }
+
+    .error-summary {
+        p {
+            font-weight: bold;
+            color: $color-red-base;
+        }
+        .error-flag {
+            display: inline-block;
+        }
+    }
+
+
+
+    .has-error {
+        .field-label {
+            color: $color-red-base;
+        }
+        .field {
+            input {
+                border-color: $color-red-base;
+            }
+            &:after {
+                display: block;
+            }
+            &--symbol {
+                &:before {
+                    color: $color-red-base;
+                }
+            }
+        }
+        .field-error {
+            display: block;
+        }
+        .error-flag {
+            display: inline-block;
+        }
+
+        fieldset {
+            input[type="checkbox"].custom-checkbox {
+                & + label {
+                    color: $color-red-base;
+                    &:before {
+                        border-color: $color-red-base;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.payment-form {
+    .collapse-wrapper {
+        margin-left: 1.75rem;
+    }
+}

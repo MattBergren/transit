@@ -1,0 +1,43 @@
+<h3 class="h4 color-blue medium margin-small">Amount to be paid</h3>
+{{#if ship}}
+    <p class="margin-medium">One-time withdrawal from your bank account to pay the amount specified.</p>
+{{/if}}
+
+<fieldset>
+  <legend class="sr-only ">Amount to be paid</legend>
+  <div class="table-body responsive wide">
+    <div class="table-body-row field--row">
+      <div class="table-body-cell">
+        <div class="field-label radio-block">
+          <input type="radio" name="amount-paid" id="total-amount" value="total" checked>
+          <label for="total-amount" class="color-black">Total Amount Due:</label>
+        </div>
+      </div>
+      <div class="table-body-cell">
+        <span class="bold field-saved">$XX.XX</span>
+      </div>
+    </div>
+    <div class="table-body-row field--row">
+      <div class="table-body-cell">
+        <div class="field-label radio-block">
+            <input type="radio" name="amount-paid" id="other-amount" value="other">
+            <label for="other-amount" class="color-black">Other Amount:</label>
+        </div>
+      </div>
+      <div class="table-body-cell">
+        <label for="other-amount-number" class="sr-only">Other amount</label>
+        <div class="field-input">
+          <input type="number" id="other-amount-number" name="other-amount-number">
+        </div>
+      </div>
+    </div>
+    <div class="table-body-row field--row">
+      <div class="table-body-cell">
+        <span class="field-label color-black">Payment Date:</span>
+      </div>
+      <div class="table-body-cell">
+        <span class="bold field-saved">XX/XX/XXXX</span>
+      </div>
+    </div>
+  </div>
+</fieldset>

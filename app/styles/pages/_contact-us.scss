@@ -1,0 +1,52 @@
+.contact-us {
+  fieldset {
+    .indent-left {
+      padding-left: 0;
+      padding-right: 0;
+
+      @media (max-width: $breakpoint-xs) {
+        .field-input, input {
+          min-width: inherit;
+        }
+      }
+
+      @media (min-width: $breakpoint-md) {
+        padding-left: 25px;
+      }
+    }
+  }
+
+  #message-image {
+    border: 1px solid $color-gray-medium;
+    display: block;
+    margin: 0 auto;
+    max-width: 300px;
+    width: 100%;
+  }
+
+  .card-animation-wrapper {
+    background-color: $color-white;
+    overflow: hidden;
+  }
+
+  .card {
+    overflow: hidden;
+
+    .card-header {
+      margin-bottom: $spacing-small;
+    }
+
+    .card-body {
+      .card-slide {
+        &:not(:first-of-type) {
+          border-top: 1px solid $color-gray-medium;
+          padding-top: $spacing-small;
+        }
+
+        &[aria-hidden="true"] {
+          display: none;
+        }
+      }
+    }
+  }
+}

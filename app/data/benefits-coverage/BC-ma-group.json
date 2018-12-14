@@ -1,0 +1,22 @@
+{
+  "table-small": {
+    "title-section-one": [
+      {
+        "title": "Name",
+        "content": "Jonathan Doe"
+      },
+      {
+        "title": "Member ID",
+        "content": "XXXXXX"
+      },
+      {
+        "title": "Group ID",
+        "content": "XXXXXX"
+      },
+      {
+        "title": "Effective Date",
+        "content": "XX/XX/XX"
+      }
+    ]
+  }
+}

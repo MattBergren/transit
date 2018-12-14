@@ -1,0 +1,50 @@
+---
+title: Payments
+layout: default
+hasFooter: true
+hasHeader: true
+hasScript:
+  - payments
+  - form-validation
+---
+<div class="payments">
+    <section class="container--base">
+        <div class="container">
+          <form class="margin-large" id="auto-payments" action="/payments/federal/onetimepay/review-eft.html">
+            <div class="row">
+                <div class="col-md-12">
+                    {{!-- Intro header --}}
+                    <h2 class="h3 medium margin-small">Make a One-Time Payment</h2>
+                    <p class="margin-small">
+                        It’s easy to pay your premium. Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit. Nunc dapibus, sem a consequat varius, metus dolor convallis
+                        justo, sit amet interdum justo orci at sapien.
+                    </p>
+                    <p class="margin-small">
+                        <strong>Please note: </strong>Payments can only be made from a bank account and cannot be made using a credit card or savings account. You can find the bank 9-digit routing number and your account number on the bottom of your check. It may take up to three business days for your payment to be reflected on your bank account. If you submit more than one one-time payment per day, only the last payment will be applied.
+                    </p>
+                </div>
+            </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        {{> payments-onetimepay-form ship="true" }}
+                    </div>
+                </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    {{> payments-fed-form
+                        cancelUrl="/payments/ship/overview/monthly.html"
+                        continueUrl="/payments/federal/onetimepay/review.html"
+                    }}
+                    {{> payments-bank-account-form
+                        cancelUrl="/payments/ship/overview/monthly.html"
+                        continueUrl="/payments/federal/onetimepay/review-eft.html"
+                    }}
+                </div>
+            </div>
+          </form>
+        </div>
+    </section>
+</div>

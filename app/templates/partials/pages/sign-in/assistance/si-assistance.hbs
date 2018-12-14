@@ -1,0 +1,39 @@
+<div class="container--base gray">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <div class="card">
+          <div class="card-body">
+            <form id="sign-in-form">
+              <fieldset>
+                <legend class="show-error">What information are you missing? (select one or both)</legend>
+                <div class="radio-group">
+                  <div class="field">
+                    <div class="field-input">
+                      <div class="checkbox-block">
+                        <input type="checkbox" class="custom-checkbox" name="missing" id="select-username" value="username">
+                        <label for="select-username">Username</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <div class="field-input">
+                      <div class="checkbox-block">
+                        <input type="checkbox" class="custom-checkbox" name="missing" id="select-password" value="password">
+                        <label for="select-password">Password</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="btn-group">
+                  <a href="#" class="btn btn--secondary">Cancel</a>
+                  <button class="btn" id="missing-btn"><span class="btn btn--primary">Continue</span></button>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

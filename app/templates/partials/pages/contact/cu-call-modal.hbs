@@ -1,0 +1,93 @@
+<div id="callYouModal" tabindex="-1" role="dialog" aria-labelledby="callYouModalLabel" class="modal fade">
+  <div role="document" class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <a class="link link--icon-right link--icon-circled align-right" data-icon="&#xE5CD;" data-dismiss="modal" aria-label="Close"></a>
+        <div id="callYouModalLabel" class="modal-title">
+          <h1 class="h3 margin-none call-you" aria-hidden="false">Have us Call You</h1>
+          <h1 class="h3 margin-none call-you-confirm hidden" aria-hidden="true">Thank You</h1>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          {{!-- Start: Have us call you --}}
+          <div class="call-you" aria-hidden="false">
+            <div class="row">
+              <div class="col-md-12">
+                <p>
+                  Select the topic of your question and enter your phone number to receive a call from a UnitedHealthcare® Customer Service representative.
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <form>
+                  <div class="table-body responsive">
+                    {{!-- Start: I have a question drop down --}}
+                    <div class="table-body-row">
+                      <div class="table-body-cell">
+                        <label for="question-about">I Have a Question About:</label>
+                      </div>
+                      <div class="table-body-cell">
+                        <div class="select--regular margin-large">
+                          <select id="question-about" name="question-about">
+                            <option value="benefits">Benefits</option>
+                            <option value="claims-info">Claims Information</option>
+                            <option value="physician">Finding a Physician or Provider</option>
+                            <option value="pharmacy">Finding a Pharmacy</option>
+                            <option value="billing">Billing Information</option>
+                            <option value="id">Member ID Card</option>
+                            <option value="other">Other</option>
+                          </select>
+                        </div>
+                        <div id="more-information" aria-hidden="true">
+                          <label for="more-info">More Information:</label>
+                          <div class="field">
+                            <textarea name="more-info" id="more-info" class="margin-large"></textarea>
+                            <p class="error-msg">This field is required.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    {{!-- Start: Phone number --}}
+                    <div class="table-body-row">
+                      <div class="table-body-cell">
+                        <label for="number">Phone Number:</label>
+                      </div>
+                      <div class="table-body-cell">
+                        <div class="field">
+                          <input type="tel" name="number" id="number">
+                          <p class="error-msg">This field is required.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="call-you-confirm hidden" aria-hidden="true">
+            {{!-- Start: Thank you --}}
+            <div class="row">
+              <div class="col-md-12">
+                <p>We value your input and will be happy to answer your questions. A UnitedHealthcare® Customer Service representative will call you shortly at the number you provided.</p>
+                <p class="margin-none">XXX-XXX-XXXX</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <div class="call-you" aria-hidden="false">
+          <button class="btn" id="request-call">
+            <span class="btn btn--primary">Request a call</span>
+          </button>
+          <a href="#" data-dismiss="modal">Cancel</a>
+        </div>
+        <div class="call-you-confirm hidden" aria-hidden="true">
+          <a href="#" data-dismiss="modal">Close</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

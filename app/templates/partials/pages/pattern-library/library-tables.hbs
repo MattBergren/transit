@@ -1,0 +1,226 @@
+<h2 class="h3">Tables & Lists</h2>
+
+<h3 class="h5 semi-bold text-uppercase margin-small">Table Style 1</h3>
+<!-- Mobile table start -->
+<div class="margin-small">
+  <div class="mobile-table-wrapper">
+    <div class="row">
+      <div class="col-md-12 clearfix">
+        <!-- Slick Navigation -->
+        <div class="table-nav-block">
+          <div class="prev-arrow">
+            <span class="material-icons">keyboard_arrow_left</span> Prev
+          </div>
+          <div class="nav-dots"></div>
+          <div class="next-arrow">
+            Next
+            <span class="material-icons">keyboard_arrow_right</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="table-slick">
+          <div class="table-slick-slide">
+            <!-- Table column one -->
+            <table class="mobile-table">
+              <tr>
+                <th scope="col" colspan="2" class="align-center">
+                  <span>Annual Deductible Stage</span>
+                </th>
+              </tr>
+              <tr>
+                <th scope="row">Covered Generic Drugs</th>
+                <td rowspan="2">No Deductible</td>
+              </tr>
+              <tr>
+                <th scope="row">All Other Covered Drugs</th>
+              </tr>
+            </table>
+          </div>
+          <div class="table-slick-slide">
+            <!-- Table column two -->
+            <table class="mobile-table">
+              <tr>
+                <th scope="col" colspan="2" class="align-center">
+                  <span>Initial Coverage Stage</span>
+                </th>
+              </tr>
+              <tr>
+                <th scope="row">Covered Generic Drugs</th>
+                <td>$X.XX</td>
+              </tr>
+              <tr>
+                <th scope="row">All Other Covered Drugs</th>
+                <td>X.XX</td>
+              </tr>
+            </table>
+          </div>
+          <div class="table-slick-slide">
+            <!-- Table column three -->
+            <table class="mobile-table">
+              <tr>
+                <th scope="col" colspan="2" class="align-center">
+                  <span>Catastrophic Coverage Stage</span>
+                </th>
+              </tr>
+              <tr>
+                <th scope="row">Covered Generic Drugs</th>
+                <td>$X.XX</td>
+              </tr>
+              <tr>
+                <th scope="row">All Other Covered Drugs</th>
+                <td>X.XX</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Desktop table start -->
+  <div class="desktop-table-wrapper">
+    <div class="row">
+      <div class="col-md-12">
+        <table class="table-white">
+          <tr>
+            <th scope="row"></th>
+            <th scope="row"><span>Annual Deductible Stage</span></th>
+            <th scope="row"><span>Initial Coverage Stage</span></th>
+            <th scope="row"><span>Catastrophic Coverage Stage</span></th>
+          </tr>
+          <tr>
+            <th scope="col">Covered Generic Drugs</th>
+            <td rowspan="2">No Deductible</td>
+            <td>$X.XX</td>
+            <td>$X.XX</td>
+          </tr>
+          <tr>
+            <th scope="col">All Other Covered Drugs</th>
+            <td>$X.XX</td>
+            <td rowspan="4">$X.XX</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h3 class="h5 semi-bold text-uppercase margin-small">Table Style 2</h3>
+{{!-- Table start --}}
+<div class="table-2 margin-small">
+  <table class="table-responsive more-info">
+    <tr>
+      <th>Service Date</th>
+      <th>Provider Name</th>
+      <th data-tooltip="small" data-tooltip-label="Provider type tooltip" data-tooltip-mobile>Provider Type</th>
+      <th data-tooltip="small" data-tooltip-label="Claim status tooltip" data-tooltip-mobile>Claim Status</th>
+      <th data-tooltip="small" data-tooltip-label="Amount provider has billed tooltip" data-tooltip-mobile>Amount provider has billed the plan</th>
+      <th>Claim Detail</th>
+    </tr>
+    {{!-- 1 --}}
+    <tr>
+      <td><span class="table-responsive__value">XX/XX/XXXX</span></td>
+      <td><span class="table-responsive__value">Doogie Howser, M.D.</span></td>
+      <td><span class="table-responsive__value">Physician</span></td>
+      <td><span class="table-responsive__value">Pending</span></td>
+      <td><span class="table-responsive__value">$XXX.XX</span></td>
+      <td><a href="/medical-claims/details/index.html">More Info</a></td>
+    </tr>
+    {{!-- 2 --}}
+    <tr>
+      <td><span class="table-responsive__value">XX/XX/XXXX</span></td>
+      <td><span class="table-responsive__value">Penrose St Francis</span></td>
+      <td><span class="table-responsive__value">Hospital</span></td>
+      <td><span class="table-responsive__value">Paid</span></td>
+      <td><span class="table-responsive__value">$XXX.XX</span></td>
+      <td><a href="/medical-claims/details/index.html">More Info</a></td>
+    </tr>
+    {{!-- 3 --}}
+    <tr>
+      <td><span class="table-responsive__value">XX/XX/XXXX</span></td>
+      <td><span class="table-responsive__value">Penrose St Francis</span></td>
+      <td><span class="table-responsive__value">Hospital</span></td>
+      <td><span class="table-responsive__value">Paid</span></td>
+      <td><span class="table-responsive__value">$XXX.XX</span></td>
+      <td><a href="/medical-claims/details/index.html">More Info</a></td>
+    </tr>
+  </table>
+</div>
+
+<h3 class="h5 semi-bold text-uppercase margin-small">Table Style 3</h3>
+<table class="table-responsive margin-small">
+  <tr>
+    <th>Document Type</th>
+    <th>Description</th>
+    <th>Date</th>
+  </tr>
+  <tr>
+    <td data-header="Document Type:"><div class="table-dots"></div><span>Claims, Billing, and Payments</span></td>
+    <td data-header="Description:"><div class="table-dots"></div><span>ICUE NextGen</span></td>
+    <td data-header="Date:"><div class="table-dots"></div><span>2016-10-05</span></td>
+  </tr>
+  <tr>
+    <td data-header="Document Type:"><div class="table-dots"></div><span>Claims, Billing, and Payments</span></td>
+    <td data-header="Description:"><div class="table-dots"></div><span>ICUE NextGen</span></td>
+    <td data-header="Date:"><div class="table-dots"></div><span>2016-10-05</span></td>
+  </tr>
+  <tr>
+    <td data-header="Document Type:"><div class="table-dots"></div><span>Claims, Billing, and Payments</span></td>
+    <td data-header="Description:"><div class="table-dots"></div><span>ICUE NextGen</span></td>
+    <td data-header="Date:"><div class="table-dots"></div><span>2016-10-05</span></td>
+  </tr>
+</table>
+
+<h3 class="h5 semi-bold text-uppercase margin-small">PDF list</h3>
+<ul class="list-group margin-none">
+  <li class="list-group-item clearfix">
+    <div class="pull-left">
+      <img src="/images/icon-svgs/PDF_outlined.svg" alt="PDF" class="icon"/>
+      <span class="bold">Document_Name_v1.pdf</span>
+    </div>
+    <div class="pull-right">
+      <a href="#">
+        <img src="/images/icon-svgs/eye.svg" alt="View" class="icon"/>
+        <span class="bold">VIEW</span>
+      </a>
+      <a href="#">
+        <img src="/images/icon-svgs/download.svg" alt="Download" class="icon"/>
+        <span class="bold">DOWNLOAD</span>
+      </a>
+    </div>
+  </li>
+  <li class="list-group-item clearfix">
+    <div class="pull-left">
+      <img src="/images/icon-svgs/PDF_outlined.svg" alt="PDF" class="icon"/>
+      <span class="bold">Document_Name_v1.pdf</span>
+    </div>
+    <div class="pull-right">
+      <a href="#">
+        <img src="/images/icon-svgs/eye.svg" alt="View" class="icon"/>
+        <span class="bold">VIEW</span>
+      </a>
+      <a href="#">
+        <img src="/images/icon-svgs/download.svg" alt="Download" class="icon"/>
+        <span class="bold">DOWNLOAD</span>
+      </a>
+    </div>
+  </li>
+  <li class="list-group-item clearfix">
+    <div class="pull-left">
+      <img src="/images/icon-svgs/PDF_outlined.svg" alt="PDF" class="icon"/>
+      <span class="bold">Document_Name_v1.pdf</span>
+    </div>
+    <div class="pull-right">
+      <a href="#">
+        <img src="/images/icon-svgs/eye.svg" alt="View" class="icon"/>
+        <span class="bold">VIEW</span>
+      </a>
+      <a href="#">
+        <img src="/images/icon-svgs/download.svg" alt="Download" class="icon"/>
+        <span class="bold">DOWNLOAD</span>
+      </a>
+    </div>
+  </li>
+</ul>

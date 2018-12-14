@@ -1,0 +1,81 @@
+<div class="card-animation-wrapper">
+  <div class="card match-height-once">
+    <div class="card-header">
+      <p class="subtitle semi-bold">Email Us</p>
+      <p class="margin-small">Send a secure message to a UnitedHealthcare Customer Service representative{{#if combo}} about your Medicare Advantage Plan{{/if}}.</p>
+    </div>
+    <div class="card-body">
+      <div class="card-slide" aria-hidden="false">
+        <a href="#" class="btn btn--primary"{{#unless opt-in}} id="message-btn">Get Started{{else}}>Go to Inbox{{/unless}}</a>
+      </div>
+
+      <div class="card-slide" aria-hidden="true">
+        <p class="margin-small">Confirm your e-mail</p>
+        <form id="message-form">
+          <fieldset>
+            <legend class="sr-only">Send Us a Secure Message</legend>
+            <div class="field">
+              <div class="field-input">
+                <div class="radio-block">
+                  <input type="radio" name="message-email-type" value="message-old-email" id="message-old-email" checked="checked">
+                  <label for="message-old-email" class="lowercase">Use email address on file:</label>
+                </div>
+              </div>
+            </div>
+
+            <p class="margin-small indent-left">jsmith@gmail.com</p>
+
+            <div class="field">
+              <div class="field-input">
+                <div class="radio-block">
+                  <input type="radio" name="message-email-type" value="message-new-email" id="message-new-email">
+                  <label for="message-new-email" class="lowercase">Use a different email:</label>
+                </div>
+              </div>
+            </div>
+
+            <div id="new-email-fields" class="hidden">
+              <div class="field indent-left">
+                <label for="message-email">New email:</label>
+                <div class="field-input">
+                  <input type="text" name="message-email" id="message-email">
+                </div>
+              </div>
+
+              <div class="field indent-left margin-large">
+                <label for="message-email-confirm">Confirm new email:</label>
+                <div class="field-input">
+                  <input type="text" name="message-email-confirm" id="message-email-confirm">
+                </div>
+              </div>
+            </div>
+
+            <p class="margin-large">Providing a different email address will not change the address we retain on file for your account. The email address you provide above will only be used for messages between you and Customer Service.</p>
+
+            <button type="submit" name="message-submit" class="btn--center margin-small" id="message-submit"><span class="btn btn--primary">Continue</span></button>
+            <a href="#" class="display-block align-center" id="message-cancel">Cancel</a>
+          </fieldset>
+        </form>
+      </div>
+
+      <div class="card-slide" aria-hidden="true">
+        {{#if variation}}
+        <div class="message-block--full-width success margin-large variation-el">
+          <div class="message-block-header">
+            <span>Your Request has Been Confirmed</span>
+          </div>
+          <div class="message-block-body">
+            <p class="margin-small">You may now safely send messages to Customer Service using the link to your messages at the top of your screen.</p>
+          </div>
+        </div>
+        {{/if}}
+        {{#if variation}}<div class="variation-orig margin-large">{{/if}}
+          <p class="color-green-dark bold">{{> check }} Your request has been confirmed</p>
+          <p class="margin-small">You may now safely send messages to Customer Service using the link to your messages at the top of your screen.</p>
+        {{#if variation}}</div>{{/if}}
+        <img src="/images/partials/email-screen.png" alt="Message" class="margin-large" id="message-image">
+        <a href="#" class="btn btn--center btn--primary" id="message-send" data-toggle="modal" data-target="#messageModal">Send a Message</a>
+      </div>
+    </div>
+  </div>
+</div>

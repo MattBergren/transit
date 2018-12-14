@@ -1,0 +1,55 @@
+<section class="container--base">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <p class="margin-none">10/01/2016 - 10/03/2016</p>
+        <h2 class="h3 medium margin-none">Penrose St Francis</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="table-body responsive">
+          {{!-- Service dates --}}
+          <div class="table-body-row">
+            <div class="table-body-cell">
+              <span class="bold">Claim number:</span>
+            </div>
+            <div class="table-body-cell">
+              #00039
+            </div>
+          </div>
+          {{!-- Claim type --}}
+          <div class="table-body-row">
+            <div class="table-body-cell">
+              <span class="bold">Claim type:</span>
+            </div>
+            <div class="table-body-cell">
+              Hospital
+            </div>
+          </div>
+          {{!-- Claim status --}}
+          <div class="table-body-row">
+            <div class="table-body-cell">
+              <span class="bold">Claim status:</span>
+            </div>
+            <div class="table-body-cell" data-tooltip="small">
+              Paid
+            </div>
+          </div>
+          {{#if variation}}
+            {{else}}
+              <div class="table-body-row">
+                <div class="table-body-cell">
+                  <span class="bold">Medical Explanation of Benefits (EOB):</span>
+                </div>
+                <div class="table-body-cell">
+                  <a href="#">VIEW AS PDF</a>
+                </div>
+              </div>
+          {{/if}}
+          {{!-- EOB --}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

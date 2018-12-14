@@ -1,0 +1,93 @@
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+    <div class="card">
+      <div class="card-header">
+        <p class="bold margin-none">&lt;Federal Plan Name&gt;</p>
+      </div>
+      <div class="card-body">
+        <div class="table-body{{#if additional}} margin-large{{/if}}">
+          <div class="table-body-row">
+            <div class="table-body-cell"><span class="bold">Member ID</span></div>
+            <div class="table-body-cell">12345</div>
+          </div>
+          <div class="table-body-row">
+            <div class="table-body-cell"><span class="bold">Name</span></div>
+            <div class="table-body-cell">John Smith</div>
+          </div>
+          <div class="table-body-row">
+            <div class="table-body-cell"><span class="bold">Date of Birth</span></div>
+            <div class="table-body-cell">&lt;MM/DD/YYYY&gt;</div>
+          </div>
+        </div>
+        <div class="field additional-plan hidden">
+          <div class="field-input--radio">
+            <input type="checkbox" class="custom-checkbox" name="add-to-account" value="add-to-account" id="add-to-account" checked="checked">
+            <label for="add-to-account">Confirm</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row{{#unless additional}} hidden{{/unless}}" id="additional-plan-selector"{{#unless additional}} tabindex="-1" aria-hidden="true"{{/unless}}>
+  <div class="col-md-10 col-md-offset-1">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="h4 margin-none">Additional Plans</h3>
+      </div>
+      <div class="card-body">
+        <p class="margin-large">We found additional plans that may be yours. Please enter another Member ID for any other plans that you are enrolled in and click add a plan. If you do not have or want to register additional plans, just skip this step.</p>
+        <div class="field">
+          <label for="multiple-member-id" class="display-inline-block">Member ID Number</label><span data-tooltip="small" data-tooltip-side="right"></span>
+          <div class="field-input">
+            <input type="number" name="multiple-member-id" id="multiple-member-id">
+          </div>
+        </div>
+        <p class="bold color-red no-plan margin-small hidden">The Member ID you provided does not match the additional plans we found.  Reenter your member ID or click "Next" to continue the registration process.</p>
+        <p class="bold color-red additional-warning margin-small hidden">Additional plans associated with your member information are inactive or have been terminated and cannot be registered for online account access.</p>
+        <a href="#" class="btn btn--secondary" id="add-to-plan">+ Add a Plan</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row hidden additional-plan">
+  <div class="col-md-10 col-md-offset-1">
+    <div class="card">
+      <div class="card-header">
+        <p class="bold">&lt;SHIP Plan Name&gt;</p>
+        <p class="bold">&lt;SHIP Plan Name&gt;</p>
+        <p class="bold margin-none">&lt;SHIP Plan Name&gt;</p>
+      </div>
+      <div class="card-body">
+        <div class="table-body margin-large">
+          <div class="table-body-row">
+            <div class="table-body-cell"><span class="bold">Member ID</span></div>
+            <div class="table-body-cell">12345</div>
+          </div>
+          <div class="table-body-row">
+            <div class="table-body-cell"><span class="bold">Name</span></div>
+            <div class="table-body-cell">John Smith</div>
+          </div>
+          <div class="table-body-row">
+            <div class="table-body-cell"><span class="bold">Date of Birth</span></div>
+            <div class="table-body-cell">&lt;MM/DD/YYYY&gt;</div>
+          </div>
+        </div>
+        <div class="field margin-none">
+          <div class="field-input--radio">
+            <input type="checkbox" class="custom-checkbox" name="add-to-account2" value="add-to-account2" id="add-to-account2" checked="checked">
+            <label for="add-to-account2">Confirm <span class="hidden">additional plan</span></label>
+          </div>
+        </div>
+
+        <div class="hidden-warning hidden">
+          <p class="bold color-red" style="margin-top: 30px;"><img src="/images/icon-svgs/important.svg" alt="Important" class="img-text">The plan(s) are already associated with an existing online account: &lt;username&gt;.</p>
+          <a href="#">Sign In</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

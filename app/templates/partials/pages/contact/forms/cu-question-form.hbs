@@ -1,0 +1,244 @@
+<div class="card-animation-wrapper">
+  <div class="card match-height-once">
+    <div class="card-header">
+      <p class="subtitle semi-bold">Send Us a Question</p>
+      <p class="margin-small">Fill out our online contact form and we will respond to you by phone, e-mail, or mailing address depending on the nature of your inquiry.</p>
+    </div>
+    <div class="card-body">
+      <div class="card-slide" aria-hidden="false">
+        <a href="#" class="btn btn--primary" id="question-btn">Fill Out Contact Form</a>
+      </div>
+
+      <div class="card-slide" aria-hidden="true">
+        <form id="question-form">
+          <fieldset>
+            <legend class="sr-only">Send Us a Question</legend>
+            <div class="field">
+              <label for="question-about">I Have a Question About:</label>
+              <div class="field-input">
+                <div class="select--regular">
+                  <select name="question-about" id="question-about">
+                    <option value="Pharmacy (Rx) Benefits">Pharmacy (Rx) Benefits</option>
+                    <option value="Finding a Physician or Provider">Finding a Physician or Provider</option>
+                    <option value="Finding a Pharmacy">Finding a Pharmacy</option>
+                    <option value="Updating Member information">Updating Member information</option>
+                    <option value="Billing Information">Billing Information</option>
+                    <option value="Payment Information">Payment Information</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="field ask-question-message">
+              <label for="question-message">Message:</label>
+              <div class="field-input">
+                <textarea name="question-message" id="question-message" maxlength="1000"></textarea>
+                <p class="display-block align-right color-gray">Characters left: <span class="message-count">1000</span></p>
+              </div>
+            </div>
+
+            {{#if ship}}
+            <div class="field">
+              <label for="question-member-number" class="display-inline-block" data-tooltip="aarp-card">AARP Membership Number:</label>
+              <div class="field-input">
+                <input type="number" name="question-member-number" id="question-member-number">
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="question-first-name">First Name:</label>
+              <div class="field-input">
+                <input type="text" name="question-first-name" id="question-first-name">
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="question-last-name">Last Name:</label>
+              <div class="field-input">
+                <input type="text" name="question-last-name" id="question-last-name">
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="question-email">Email Address:</label>
+              <div class="field-input">
+                <input type="text" name="question-email" id="question-email">
+              </div>
+            </div>
+
+            <div class="field margin-small">
+              <label for="question-email-confirm">Confirm Email Address:</label>
+              <div class="field-input">
+                <input type="text" name="question-email-confirm" id="question-email-confirm">
+              </div>
+            </div>
+
+            <fieldset class="margin-large">
+              <legend>Date of Birth:</legend>
+              <div class="field--dob short">
+              	<div class="field-input">
+              	  <select name="dob-mm" id="date-mm" style="width: 100%"><option value=""></option></select>
+              	  <label for="date-mm">MM</label>
+              	</div>
+              	<div class="field-input">
+              	  <select name="dob-dd" id="date-dd" style="width: 100%"><option value=""></option></select>
+              	  <label for="date-dd">DD</label>
+              	</div>
+              	<div class="field-input">
+              	  <select name="dob-yyyy" id="date-yyyy" style="width: 100%"><option value=""></option></select>
+              	  <label for="date-yyyy">YYYY</label>
+              	</div>
+              </div>
+            </fieldset>
+
+            {{!-- <div class="field">
+              <label for="question-address">Address:</label>
+              <div class="field-input">
+                <input type="text" name="question-address" id="question-address">
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="question-address-2">Address Line 2:</label>
+              <div class="field-input">
+                <input type="text" name="question-address-2" id="question-address-2">
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="question-city">City:</label>
+              <div class="field-input">
+                <input type="text" name="question-city" id="question-city">
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="question-state">State:</label>
+              <div class="field-input">
+                <input type="text" name="question-state" id="question-state">
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="question-zip">Zip Code:</label>
+              <div class="field-input">
+                <input type="text" name="question-zip" id="question-zip">
+              </div>
+            </div> --}}
+            {{/if}}
+
+            {{#unless ship}}
+            <div class="field">
+              <p class="margin-extra-small">Membership ID:</p>
+              <p class="bold margin-none">123456789</p>
+            </div>
+
+            <div class="field">
+              <p class="margin-extra-small">First Name:</p>
+              <p class="bold margin-none">John</p>
+            </div>
+
+            <div class="field">
+              <p class="margin-extra-small">Last Name:</p>
+              <p class="bold margin-none">Doe</p>
+            </div>
+
+            <div class="field">
+              <p class="margin-extra-small">Email Address:</p>
+              <p class="bold margin-extra-small">johndoe@gmail.com</p>
+              <a href="#" id="add-alt-email">+ Add an Alternate Email Address</a>
+            </div>
+
+            <div id="alt-email-wrapper" class="hidden">
+              <div class="field">
+                <label for="question-alt-email">Alternate Email Address</label>
+                <div class="field-input">
+                  <input type="text" name="question-alt-email" id="question-alt-email">
+                </div>
+              </div>
+              <div class="field">
+                <label for="question-alt-email-confirm">Confirm Alternate Email Address</label>
+                <div class="field-input">
+                  <input type="text" name="question-alt-email-confirm" id="question-alt-email-confirm">
+                </div>
+              </div>
+            </div>
+
+            <div class="field">
+              <p class="margin-extra-small">Date of Birth:</p>
+              <p class="bold margin-none">XX/XX/XXXX</p>
+            </div>
+
+            <div class="field">
+              <p class="margin-extra-small">Phone Number:</p>
+              <p class="bold margin-extra-small">763-555-5555</p>
+              <a href="#" id="add-alt-phone">+ Add an Alternate Phone Number</a>
+            </div>
+
+            <div id="alt-phone-wrapper" class="hidden">
+              <div class="field">
+                <label for="question-alt-phone">Alternate Phone Number</label>
+                <div class="field-input">
+                  <input type="text" name="question-alt-phone" id="question-alt-phone">
+                </div>
+              </div>
+              <div class="field">
+                <label for="question-alt-phone-confirm">Confirm Alternate Phone Number</label>
+                <div class="field-input">
+                  <input type="text" name="question-alt-phone-confirm" id="question-alt-phone-confirm">
+                </div>
+              </div>
+            </div>
+
+            {{!-- <div class="field">
+              <p class="margin-extra-small">Address:</p>
+              <p class="bold margin-none">12345 1st Ave</p>
+            </div>
+
+            <div class="field">
+              <p class="margin-extra-small">Address Line 2:</p>
+              <p class="bold margin-none">Apt A</p>
+            </div>
+
+            <div class="field">
+              <p class="margin-extra-small">City:</p>
+              <p class="bold margin-none">Minneapolis</p>
+            </div>
+
+            <div class="field">
+              <p class="margin-extra-small">State:</p>
+              <p class="bold margin-none">MN</p>
+            </div>
+
+            <div class="field">
+              <p class="margin-extra-small">Zip Code:</p>
+              <p class="bold margin-none">55408</p>
+            </div> --}}
+            {{/unless}}
+
+            <button type="submit" name="question-submit" class="btn btn--center margin-small" id="question-submit"><span class="btn--primary">Submit Question</span></button>
+            <a href="#" class="display-block align-center" id="question-cancel">Cancel</a>
+          </fieldset>
+        </form>
+      </div>
+
+      <div class="card-slide" aria-hidden="true">
+        {{#if variation}}
+        <div class="message-block--full-width success margin-none variation-el">
+          <div class="message-block-header">
+            <span class="color-green-dark bold">Your Request has Been Received</span>
+          </div>
+          <div class="message-block-body">
+            <p class="margin-small">Thank you. We value your input, and will be happy to answer your questions. A Customer Service representative will review your question and respond to you shortly.</p>
+          </div>
+        </div>
+        {{/if}}
+        {{#if variation}}<div class="variation-orig">{{/if}}
+          <p class="color-green-dark bold">{{> check }} Your request has been received</p>
+          <p class="margin-small">Thank you. We value your input, and will be happy to answer your questions. A Customer Service representative will review your question and respond to you shortly.</p>
+        {{#if variation}}</div>{{/if}}
+      </div>
+    </div>
+  </div>
+</div>

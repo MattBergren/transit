@@ -1,0 +1,89 @@
+<ul class="pharmacy-list">
+    <li rv-each-pharmacy="data.DCE.{{ type }}" rv-show="pharmacy.visible">
+        <div class="row">
+            <div class="col-xs-8 col-sm-10 margin-none">
+                <div class="row">
+                    <div class="col-sm-4 margin-mobile-small">
+                        <div class="display-flex">
+                            <div class="map-pin">
+                                <img src="/images/icon-svgs/mapmarker-pin-blue.svg" alt="Map Pin" class="img-small"
+                                />
+                                <div class="map-pin-number">
+                                    <span rv-text="%pharmacy% | plusOne"></span>
+                                </div>
+                            </div>
+                            <div>
+                                <span class="bold text-medium display-block color-blue-base pharmacy-name">
+                                    { pharmacy.name }
+                                </span>
+                                <p class="color-gray">{ pharmacy.address1 }</p>
+                                <a href="#" class="show-on-map">Show on Map</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2 margin-mobile-small">
+                        <div class="display-inline-flex">
+                            <div class="hidden-pin">
+                                <img src="/images/icon-svgs/mapmarker-pin-blue.svg" alt="Map Pin" class="img-small"
+                                />
+                            </div>
+                            <div>
+                                <span class="bold">{ pharmacy.distance } mi.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 margin-mobile-small pharmacy-cost">
+                        <div class="display-inline-flex" rv-if="pharmacy.cost">
+                            <div class="hidden-pin">
+                                <img src="/images/icon-svgs/mapmarker-pin-blue.svg" alt="Map Pin" class="img-small"
+                                />
+                            </div>
+                            <div>
+                                <span class="bold display-block">${ pharmacy.cost }</span>
+                                <span class="color-gray">
+                                    total annual drug cost
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 margin-mobile-small">
+                        <div class="display-inline-flex" rv-if="pharmacy.savings">
+                            <div class="hidden-pin">
+                                <img src="/images/icon-svgs/mapmarker-pin-blue.svg" alt="Map Pin" class="img-small"
+                                />
+                            </div>
+                            <div>
+                                <span class="bold display-block color-green-dark">Save ${ pharmacy.savings } annually</span>
+                                <span class="color-gray">
+                                    (
+                                    <span class="bold">2 of 4 drugs</span> have Pharmacy Saver™ pricing)
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-4 col-sm-2">
+                <a href="#" class="btn btn--secondary select-pharmacy">Select</a>
+            </div>
+        </div>
+    </li>
+    {{!-- Pagination --}}
+    <li>
+        <nav aria-label="Page navigation">
+            <ul class="uhc-pagination">
+                <li>Page 1 of 5</li>
+                <li class="disabled">
+                    <a href="#">
+                        <span class="material-icons">keyboard_arrow_left</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="material-icons">keyboard_arrow_right</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </li>
+</ul>

@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Turn off telephone number detection. -->
+    <meta name="format-detection" content="telephone=no">
+    <title>Payments</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <!-- Place favicon.ico in the root directory -->
+
+
+    <link rel="stylesheet" href="/styles/vendor/slick-theme.css">
+    <link rel="stylesheet" href="/styles/vendor/slick.css">
+    <link rel="stylesheet" href="/styles/vendor/tooltipster-new.css">
+    <link rel="stylesheet" href="/styles/vendor/bootstrap.css">
+    <link rel="stylesheet" href="/styles/vendor/awesomplete.css">
+
+    <link rel="stylesheet" href="/styles/mir-main.css">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/cc-enhancement.css">
+
+    <link rel="stylesheet" href="/styles/print.css">
+
+
+    <link rel="stylesheet" href="/styles/vendor/common.css">
+
+    <script src="/scripts/vendor/modernizr.js"></script>
+
+</head>
+<body>
+  <div class="uhc-body-wrapper">
+    <div class="uhc-body-light-box"></div>
+    <div class="rivets-loading" rv-show="data.loading" style="position: fixed; top:0; left:0; right:0; bottom:0; background-color: white; z-index:9999;"></div>
+    <!-- Start: Navigation -->
+    <nav class="uhcg-nav">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="uhcg-nav-header">
+          <div class="header-wrapper">
+            <div class="logo-container">
+              <img src="/images/logos/uhc-logo.svg" alt="Main Logo" class="img-responsive">
+              <div class="logo-divider"></div>
+              <img src="/images/logos/mirum-logo.png" alt="Partner Logo" class="img-responsive">
+            </div>
+            <div class="icon-container">
+              <a href="#" class="menu-icon" aria-label="Menu">
+                <div class="menu-line-wrapper">
+                  <div class="menu-line"></div>
+                  <div class="menu-line"></div>
+                  <div class="menu-line"></div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <ul class="uhc-nav">
+            <li class="uhc-nav-item--secondary">
+              <a href="#" class="uhc-nav-item-link">
+                <img src="/images/icon-svgs/nav-phone.svg" alt="Phone">
+                Contact Us
+              </a>
+            </li>
+            <li class="uhc-nav-item--secondary">
+              <a href="#" class="uhc-nav-item-link">
+                <span class="count-circle">2</span>
+                <img src="/images/icon-svgs/nav-mail.svg" alt="Message">
+                Messages
+              </a>
+            </li>
+            <li class="uhc-nav-item--secondary">
+              <a href="#" class="uhc-nav-item-link">
+                <img src="/images/icon-svgs/nav-doc.svg" alt="Documents">
+                My Documents
+              </a>
+            </li>
+            <li class="uhc-nav-item--secondary has-sub-nav">
+              <a href="#" class="uhc-nav-item-link" id="nav-profile">
+                <img src="/images/icon-svgs/nav-user.svg" alt="User">
+                Profile
+              </a>
+              <ul class="sub-nav">
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Update Profile</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Go Green Preferences</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Change Password</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Sign Out</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="nav-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="uhc-nav">
+            <li class="uhc-nav-item"><a href="#" class="uhc-nav-item-link">Home</a></li>
+            <li class="uhc-nav-item has-sub-nav">
+              <a href="#" class="uhc-nav-item-link">Care & Costs</a>
+              <ul class="sub-nav">
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Provider Search</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Pharmacy Locator</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Drug Look Up</a></li>
+              </ul>
+            </li>
+            <li class="uhc-nav-item has-sub-nav">
+              <a href="#" class="uhc-nav-item-link">Benefits</a>
+              <ul class="sub-nav">
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Benefits Summary</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Forms & Resources</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Order Materials</a></li>
+              </ul>
+            </li>
+            <li class="uhc-nav-item has-sub-nav">
+              <a href="#" class="uhc-nav-item-link">Claims</a>
+              <ul class="sub-nav">
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Claims Search</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">EOB Search</a></li>
+              </ul>
+            </li>
+            <li class="uhc-nav-item"><a href="#" class="uhc-nav-item-link">Premium Payments</a></li>
+            <li class="uhc-nav-item"><a href="#" class="uhc-nav-item-link">Health & Wellness</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+    
+
+    <!-- Start: Page header -->
+    <header class="benefits-coverage page-header-wrapper" role="banner" aria-label="header">
+      <div class="page-header">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="display-flex v-center">
+                <div class="page-header--left">
+                  <h1 class="h4 margin-none">
+                    Payments
+                  </h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+
+
+      <div class="payments">
+    <section class="container--base">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="h2 margin-small">
+                        Premium Payments Overview
+                    </h2>
+                    <p class="span" data-tooltip="large" data-tooltip-label="Total amount due tooltip">
+                        <span class="bold">Total Amount Due:</span>
+                    </p>
+                    <p class="h4">$XX.XX</p>
+                    <div class="table-body margin-large">
+                            <div class="table-body-row">
+                                <div class="table-body-cell" data-tooltip="small" data-tooltip-label="Credit balance tooltip">
+                                    <span class="bold">Credit Balance:</span>
+                                </div>
+                                <div class="table-body-cell">
+                                    $XX.XX
+                                </div>
+                            </div>
+                        <div class="table-body-row">
+                            <div class="table-body-cell">
+                                <span class="bold">Payment Method:</span>
+                            </div>
+                            <div class="table-body-cell">
+                                Monthly Billing 
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="message-block error hidden" id="cancellingAutomaticPayment">
+                        <div class="message-block-header">Your automatic payment has been cancelled.</div>
+                        <div class="message-block-body">
+                            <p class="margin-bottom">
+                                Your payment method will continue to display as EFT until the first of next month.
+                            </p>
+                        </div>
+                    </div>
+    
+                    <div class="message-block success variation-el">
+                        <div class="message-block-header">Your Payment Has Been Submitted</div>
+                        <div class="message-block-body">
+                            <p class="margin-bottom">
+                                It typically takes 1-3 business days for your payment to be processed and applied to your account.
+                            </p>
+                        </div>
+                    </div>
+    
+                    <div class="margin-small">
+    
+                            <a href="/payments/federal/onetimepay/form.html" class="btn btn--primary">Make a One-Time Payment</a>
+    
+                                <a href="/payments/federal/automatic/form.html" class="btn btn--primary">Set Up Automatic Payments</a>
+    
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container--base gray">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-md-12">
+    				<h2 class="h2 margin-small">
+                        Payment History
+                    </h2>
+    				<p class="margin-small">
+    					Tool tip information here.
+    				</p>
+    				<p class="margin-large">
+    					You may search payment history for the previous 24 months. You can also search for future premium payment information for the current plan year.
+    				</p>
+    				<div class="margin-large">
+    					<fieldset>
+    						<legend><span class="hidden">Payment History:</span></legend>
+    					<div class="table-body responsive wide">
+    						<div class="table-body-row">
+    							<div class="table-body-cell">
+    								<label class="bold" for="date-range">View Payments For:</label>
+    							</div>
+    							<div class="table-body-cell">
+    								<div class="select--regular">
+    									<select name="date-range" class="date-range" id="date-range">
+    										<option value="90-days">Last 90 Days</option>
+    										<option value="6-months">Last 6 Months</option>
+    										<option value="12-months">Last 12 Months</option>
+    										<option value="24-months">Last 24 Months</option>
+    										<option value="current-year">Current Year</option>
+    										<option value="custom-search">Custom Search</option>
+    									</select>
+    								</div>
+    							</div>
+    						</div>
+    						<div class="table-body-row custom-search-fields hidden">
+    							<div class="table-body-cell"></div>
+    							<div class="table-body-cell">
+    								<div class="custom-search-input">
+    									<label for="custom-from">From</label>
+    									<input type="date" id="custom-from">
+    								</div>
+    								<div class="custom-search-input">
+    									<label for="custom-to">to</label>
+    									<input type="date" id="custom-to">
+    								</div>
+    							</div>
+    							<div class="table-body-cell">
+    								<button class="btn custom-date-search-btn"><span class="btn btn--primary">Search</span></button>
+    							</div>
+    						</div>
+    		</div>
+    	</fieldset>
+    </div>
+    		<p class="margin-large">Total search results for premium payments from <strong>&lt;mm/dd/yyyy&gt;</strong> to <strong>&lt;mm/dd/yyyy&gt;</strong>. If you have questions about your payments, please <a href="#" class="text-link">contact UnitedHealthcare.</a></p>
+    
+          <a href="#collapseInfo" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="collapseInfo" class="display-block collapse-expand">
+            Learn More About Your Cost Breakdown
+            <span class="material-icons">keyboard_arrow_down</span>
+          </a>
+          <div class="collapse-wrapper margin-large">
+            <div class="collapse" id="collapseInfo" aria-expanded="false" role="tablist">
+              <p class="bold margin-none">Premium Due Date</p>
+              <p>
+                Qui aute quis laboris culpa velit dolore id cillum cupidatat
+                officia in ex velit ea sint exercitation. Proident non mollit
+                pariatur minim officia ad officia sit magna aute labore.
+              </p>
+              <p class="bold margin-none">Premium Account</p>
+              <p>
+                Qui aute quis laboris culpa velit dolore id cillum cupidatat
+                officia in ex velit ea sint exercitation. Proident non mollit
+                pariatur minim officia ad officia sit magna aute labore.
+              </p>
+              <p class="bold margin-none">Payment Status</p>
+              <p>
+                Qui aute quis laboris culpa velit dolore id cillum cupidatat
+                officia in ex velit ea sint exercitation. Proident non mollit
+                pariatur minim officia ad officia sit magna aute labore.
+              </p>
+            </div>
+          </div>
+    
+    			<!-- Desktop tables start -->
+    			<div class="row">
+    			  <div class="col-md-12">
+    			    <table class="table-responsive">
+    			      <tr>
+    			        <th>Due Date</th>
+    			        <th data-tooltip="small" data-tooltip-label="Amount billed tooltip">Amount Billed</th>
+    			        <th>Paid Date</th>
+    			        <th>Amount Paid</th>
+    			        <th data-tooltip="small" data-tooltip-label="Balance due tooltip">Balance Due</th>
+    			        <th class="table-responsive__col--wide">Monthly Bill</th>
+    			      </tr>
+    			      <tr>
+    			        <td><span class="mobile-table-header">Due Date</span><div class="table-dots"></div><span class="table-responsive__value">XX/XX/XXXX</span></td>
+    			        <td><span class="mobile-table-header"><span data-tooltip="small" data-tooltip-label="Amount billed tooltip 1">Amount Billed</span></span><div class="table-dots"></div><span class="table-responsive__value">$XX.XX</span></td>
+    			        <td><span class="mobile-table-header">Paid Date</span><div class="table-dots"></div><span class="table-responsive__value">XX/XX/XXXX</span></td>
+    			        <td><span class="mobile-table-header">Amount Paid</span><div class="table-dots"></div><span class="table-responsive__value">$XX.XX</span></td>
+    			        <td><span class="mobile-table-header"><span data-tooltip="small" data-tooltip-label="Balance Due tooltip 1">Balance Due</span></span><div class="table-dots"></div><span class="table-responsive__value">$XX.XX</span></td>
+    			        <td><span class="mobile-table-header">Monthly Bill</span><div class="table-dots"></div><a href="#">Download</a></td>
+    			      </tr>
+    			      <tr>
+    			        <td><span class="mobile-table-header">Due Date</span><div class="table-dots"></div><span class="table-responsive__value">XX/XX/XXXX</span></td>
+    			        <td><span class="mobile-table-header"><span data-tooltip="small" data-tooltip-label="Amount billed tooltip 2">Amount Billed</span></span><div class="table-dots"></div><span class="table-responsive__value">$XX.XX</span></td>
+    			        <td><span class="mobile-table-header">Paid Date</span><div class="table-dots"></div><span class="table-responsive__value">XX/XX/XXXX</span></td>
+    			        <td><span class="mobile-table-header">Amount Paid</span><div class="table-dots"></div><span class="table-responsive__value">$XX.XX</span></td>
+    			        <td><span class="mobile-table-header"><span data-tooltip="small" data-tooltip-label="Balance Due tooltip 2">Balance Due</span></span><div class="table-dots"></div><span class="table-responsive__value">$XX.XX</span></td>
+    			        <td><span class="mobile-table-header">Monthly Bill</span><div class="table-dots"></div><span class="table-responsive__value">Not available</span></td>
+    			      </tr>
+    			      <tr>
+    			        <td><span class="mobile-table-header">Due Date</span><div class="table-dots"></div><span class="table-responsive__value">XX/XX/XXXX</span></td>
+    			        <td><span class="mobile-table-header"><span data-tooltip="small" data-tooltip-label="Amount billed tooltip 3">Amount Billed</span></span><div class="table-dots"></div><span class="table-responsive__value">$XX.XX</span></td>
+    			        <td><span class="mobile-table-header">Paid Date</span><div class="table-dots"></div><span class="table-responsive__value">XX/XX/XXXX</span></td>
+    			        <td><span class="mobile-table-header">Amount Paid</span><div class="table-dots"></div><span class="table-responsive__value">$XX.XX</span></td>
+    			        <td><span class="mobile-table-header"><span data-tooltip="small" data-tooltip-label="Balance Due tooltip 3">Balance Due</span></span><div class="table-dots"></div><span class="table-responsive__value">$XX.XX</span></td>
+    			        <td><span class="mobile-table-header">Monthly Bill</span><div class="table-dots"></div><span class="table-responsive__value">Not available</span></td>
+    			      </tr>
+    			    </table>
+    			  </div>
+    			</div>
+    
+    			<div class="margin-large">
+    				<h3 class="h4 medium color-blue margin-small">Making your payments</h3>
+    
+    				<p>If you’d like to make changes to how you pay your premiums, we have these options available.</p>
+    				<ul class="margin-small">
+    					<li>Automatic deduction from your checking account.</li>
+    					<li>Monthly Bill.</li>
+    					<li>Automatic deduction from your monthly Social Security benefit check.</li>
+    				</ul>
+    				<a href="#collapseWaysToPay" class="collapse-expand display-block bold" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="collapseWaysToPay">
+                              Learn More About Ways to Pay
+                              <span class="material-icons">keyboard_arrow_down</span>
+                            </a>
+    				<div id="collapseWaysToPay" class="collapse">
+    					<p class="margin-none"><span class="bold">Automatic deduction from your checking account.</span> To sign up for automatic deductions from your checking account, select the setup automatic payments in the Premium Payments overview section of this page. You can also download
+    						and complete the form below and follow the instructions provided.</p>
+    					<a href="#" class="text-link margin-small display-inline-block">Electronic Funds Transfer (EFT) Form (PDF)(636.6 KB)</a>
+    
+    					<p class="">Note: Adobe® Reader® software is required to download this document. It's free and easy. <a href="#" class="text-link">Download now</a></p>
+    
+    					<p class=""><span class="bold">Monthly Bill.</span> You may pay by mail each month (we will provide you a monthly bill). You may also make advance payments. If making a payment for the entire year, you will only need to submit one bill along with a check for
+    						the total premium amount due for the year. Mail your Medicare prescription drug plan payment with your bill to: UnitedHealthcare PO Box 5840 Carol Stream, IL 60197-5840</p>
+    
+    					<p class="margin-none"><span class="bold">Automatic deduction from your monthly Social Security benefit check.</span> 1 Processing the SSA deduction is completed through the Social Security Administration and may take up to two or more months to begin. During that time,
+    						you will receive a monthly bill to make your payments. The first deduction from your Social Security benefit check will include all premiums due from the Social Security deduction effective date.</p>
+    
+    					<a href="#" class="text-link margin-small display-inline-block">Social Security Deduction Form (PDF)(39.9 KB)
+    
+    </a>
+    
+    					<p>1 If you are receiving help from a plan sponsor (former employer, union or trust administrator) or State Pharmaceutical Assistance Program (SPAP) you have the right to elect automatic deductions from your Social Security benefit check.</p>
+    
+    					<p>However, it is important that you know that Social Security does not know if you have other coverage that pays part of your premium, even when the other coverage is paying part of your premium to your Medicare plan.</p>
+    
+    					<p>If you choose to have your payments automatically deducted from your Social Security benefit check, the deductions for the premiums will be higher than they should be. Your Medicare plan will need to give you a refund for the premium amount paid
+    						by your other coverage. You may experience delays in obtaining a refund for the excess amounts.</p>
+    
+    					<p class="margin-small"><span class="bold">Note:</span> If you qualify for Extra Help with your Medicare costs, Medicare may cover all or some portion of your plan premium.</p>
+    
+    					<a href="#" class="text-link margin-small display-inline-block">print
+    
+    </a>
+    				</div>
+    			</div>
+    	</div>
+    	</div>
+    	</div>
+    </section>
+</div>
+<div class="variation-toggles">
+  <div class="btn btn--primary variation-btn" data-variation="false" id="highlight-variation">Highlight Variations</div>
+  <div class="btn btn--primary variation-btn" data-variation="true" id="toggle-variation">Toggle Variation</div>
+</div>
+
+
+      <!-- Tooltips -->
+      <div class="tooltip-templates">
+          <div id="tooltip-large">
+              <p class="bold margin-extra-small">Lorem Ipsum</p>
+              <span class="text-small">
+                  Id elit reprehenderit fugiat Lorem in magna aliqua sunt ut est id ullamco dolor ut ad.
+              </span>
+          </div>
+          <div id="tooltip-small">
+              <span class="text-small">
+                  Aute enim nisi consectetur excepteur esse cupidatat Lorem excepteur laborum sunt occaecat nulla culpa magna cillum.
+              </span>
+          </div>
+          <div id="tooltip-costs">
+            <span class="text-small">
+                This is the amount you pay as your share of your prescription drug costs,
+                such as deductibles (if applicable), co-pays/co-insurance and the amounts
+                you pay in the coverage gap.
+            </span>
+          </div>
+      </div>
+
+            <section class="container--base contact-us">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h2 class="h3 medium margin-small">Need help?</h2>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="display-flex v-center margin-small">
+                      <img src="/images/icon-svgs/computer.svg" alt="Tech Support" class="img-small">
+                      <div class="padding-left-small">
+                        <h3 class="h4 margin-none">Technical Support</h3>
+                      </div>
+                    </div>
+                    <a href="tel:1-800-555-5555" class="display-inline-block margin-extra-small text-large">1-800-XXX-XXXX</a>
+                    <p>
+                      TTY users, call <a href="tel:711">711</a>
+                    </p>
+                    <p>
+                      8 am-8 pm local time, 7 days a week
+                    </p>
+                  </div>
+                  <div class="col-md-4 border-left">
+                    <div class="display-flex v-center margin-small">
+                      <img src="/images/icon-svgs/plan.svg" alt="Plan Support" class="img-small">
+                      <div class="padding-left-small">
+                        <h3 class="h4 margin-none">Plan Support</h3>
+                      </div>
+                    </div>
+                    <a href="tel:1-800-555-5555" class="display-inline-block margin-extra-small text-large">1-800-XXX-XXXX</a>
+                    <p>
+                      TTY users, call <a href="tel:711">711</a>
+                    </p>
+                    <p>
+                      8 am-8 pm local time, 7 days a week
+                    </p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <p class="margin-none">
+                      See more ways to <a href="/contact/contact-us-ma.html" class="lowercase">contact us</a>.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+            </main>
+
+    <!-- Start: Footer -->
+    <footer class="nav-footer" role="contentinfo" aria-label="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h1 class="h6 medium">Member Support</h1>
+            <ul class="nav-footer--list">
+              <li>Customer Service 1-800-555-5555</li>
+              <li><a href="#">All Contact Info</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h1 class="h6 medium">Quick Links</h1>
+            <ul class="nav-footer--list">
+              <li><a href="#">Find A Provider</a></li>
+              <li><a href="#">Send Feedback</a></li>
+              <li><a href="#">Report Incorrect Info</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h1 class="h6 medium">Ask A Nurse</h1>
+            <ul class="nav-footer--list">
+              <li>Registered nurses available 24/7</li>
+              <li>1-888-842-4224</li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12"><span style="font-size: .875rem;">UHC &copy; 2016 | All Rights Reserved</span></div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+    <!-- Start: Footer scripts -->
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    
+    <!-- Vendor scripts -->
+    <script src="/scripts/vendor/jquery-3.1.1.min.js"></script>
+    <script src="/scripts/vendor/lockrroom.js"></script>
+    <script src="/scripts/vendor/select2.min.js"></script>
+    <script src="/scripts/vendor/select2-tab-fix.js"></script>
+    <script src="/scripts/vendor/rivets.bundled.min.js"></script>
+    <script src="/scripts/vendor/rivets.js"></script>
+    <script src="/scripts/vendor/jquery.matchHeight.js"></script>
+    <script src="/scripts/vendor/slick.min.js"></script>
+    <script src="/scripts/vendor/TweenLite.min.js"></script>
+    <script src="/scripts/vendor/plugins/CSSPlugin.min.js"></script>
+    <script src="/scripts/vendor/jquery.autocomplete.min.js"></script>
+    <script src="/scripts/vendor/bootstrap.min.js"></script>
+    
+    <script src="/scripts/vendor/jquery.validate.min.js"></script>
+    <script src="/scripts/vendor/tooltipster.bundle.min.js"></script>
+    <script src="/scripts/vendor/awesomplete.js"></script>
+    
+    
+    
+    
+    <script src="/scripts/main.js"></script>
+    <script src="/scripts/navigation.js"></script>
+    
+    
+      <script src="/scripts/pages/table.js"></script>
+      <script src="/scripts/pages/payment-history.js"></script>
+      <script src="/scripts/pages/variation.js"></script>
+</body>
+</html>

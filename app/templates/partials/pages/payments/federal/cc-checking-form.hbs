@@ -1,0 +1,53 @@
+<section class="checking-form">
+    <div class="container">
+        <h3 class="checking-form__header">Checking Account Information</h3>
+        <p class="checking-form__info"><em>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto ab rerum sed numquam.</em></p>
+        <div class="row">
+            <div class="col-sm-6 col-sm-push-5">
+                <div class="checking-form__helper">
+                    <p id="checkingFormInfo">You can find the bank 9-digit routing number and your account number at the bottom of your check.</p>
+                </div>
+                <img class="checking-form__image"src="/images/partials/check.svg" alt="">
+            </div>
+            <div class="col-sm-5 col-sm-pull-6">
+                <form class="checking-form__form js-checking-form__form" action="{{action}}">
+                    <div class="form-group">
+                        <label for="routing-number" aria-describedby="checkingFormInfo">Routing Number</label>
+                        <input type="text" class="form-control" id="routing-number" aria-required="true">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-routing-number">Confirm Routing Number</label>
+                        <input type="text" class="form-control" id="confirm-routing-number" aria-required="true">
+                    </div>
+                    <div class="form-group">
+                        <label for="account-number" aria-describedby="checkingFormInfo">Account Number</label>
+                        <input type="text" class="form-control" id="account-number" aria-required="true">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-account-number">Confirm Account Number</label>
+                        <input type="text" class="form-control" id="confirm-account-number" aria-required="true">
+                    </div>
+                    <div class="form-group">
+                        <label for="first-name">Bank Holder First Name</label>
+                        <input type="text" class="form-control" id="first-name" aria-required="true">
+                    </div>
+                    <div class="form-group">
+                        <label for="middle-name">Bank Holder Middle Name (optional)</label>
+                        <input type="text" class="form-control" id="middle-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">Bank Holder Last Name</label>
+                        <input type="text" class="form-control" id="last-name" aria-required="true">
+                    </div>
+                    <p class="checking-form__preview-msg">By clicking "Authorize" you <a href="#" data-toggle="modal" data-target="#authModal"  class="lowercase">allow UHC to withdraw monthly payments on your behalf</a></p>
+                    <div class="checking-form__actions">
+                        <button type="submit" class="btn btn--primary checking-form__btn">{{btnName}}</button>
+                        <a class="checking-form__link" data-toggle="modal" data-target="#cancelModal" href="#">Cancel</a>
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+        
+    </div>
+</section>

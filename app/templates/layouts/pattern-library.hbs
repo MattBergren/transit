@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Turn off telephone number detection. -->
+    <meta name="format-detection" content="telephone=no">
+    <title>{{title}}</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <!-- Place favicon.ico in the root directory -->
+
+    {{!-- <!-- build:css /styles/vendor.css -->
+    <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick-theme.css">
+    <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" href="/bower_components/tooltipster/css/tooltipster.css">
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild --> --}}
+
+    <link rel="stylesheet" href="/styles/vendor/slick-theme.css">
+    <link rel="stylesheet" href="/styles/vendor/slick.css">
+    <link rel="stylesheet" href="/styles/vendor/tooltipster.css">
+    <link rel="stylesheet" href="/styles/vendor/bootstrap.css">
+
+    {{!-- <!-- build:css /styles/main.css -->
+    <link rel="stylesheet" href="/styles/main.css?v={{moment cachebust "YYYYHHmmssZZ"}}">
+    <!-- endbuild --> --}}
+
+    <link rel="stylesheet" href="/styles/main.css">
+
+    {{!-- <!-- build:js /scripts/vendor/modernizr.js -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild --> --}}
+
+    <script src="/scripts/vendor/modernizr.js"></script>
+
+</head>
+<body data-spy="scroll" data-target="#navbar">
+  <div class="uhc-body-wrapper">
+    <div class="uhc-body-light-box"></div>
+    <div class="rivets-loading" rv-show="data.loading" style="position: fixed; top:0; left:0; right:0; bottom:0; background-color: white; z-index:9999;"></div>
+
+    <main>
+      {% body %}
+
+      <!-- Tooltips -->
+      <div class="tooltip-templates">
+          <div id="tooltip-large">
+              <p class="bold margin-extra-small">Lorem Ipsum</p>
+              <span class="text-small">
+                  Id elit reprehenderit fugiat Lorem in magna aliqua sunt ut est id ullamco dolor ut ad.
+              </span>
+          </div>
+          <div id="tooltip-small">
+              <span class="text-small">
+                  Aute enim nisi consectetur excepteur esse cupidatat Lorem excepteur laborum sunt occaecat nulla culpa magna cillum.
+              </span>
+          </div>
+          <div id="tooltip-costs">
+            <span class="text-small">
+                This is the amount you pay as your share of your prescription drug costs,
+                such as deductibles (if applicable), co-pays/co-insurance and the amounts
+                you pay in the coverage gap.
+            </span>
+          </div>
+          {{#if AARPtooltip}}
+            <div id="tooltip-aarp-card">
+              <p class="bold">Where to find your membership number:</p>
+              <img src="/images/partials/aarp-card.png" alt="AARP Card" class="img-responsive">
+            </div>
+          {{/if}}
+      </div>
+
+      {{#if hasHelp}}
+        {{#eq hasHelp 'SHIP'}}
+          {{> need-help help-type='SHIP' }}
+          {{else eq hasHelp 'PDP'}}
+            {{> need-help help-type='PDP' }}
+          {{else}}
+            {{> need-help }}
+        {{/eq}}
+      {{/if}}
+    </main>
+
+  </div>
+
+    <!-- Start: Footer scripts -->
+    {{> footer-scripts}}
+</body>
+</html>

@@ -1,0 +1,96 @@
+{
+  "table-small": {
+    "title-section-one": [
+      {
+        "title": "Name",
+        "content": "Jonathan Doe"
+      },
+      {
+        "title": "Member ID",
+        "content": "XXXXXX"
+      },
+      {
+        "title": "Effective Date",
+        "content": "XX/XX/XX"
+      }
+    ],
+    "office-visits": [
+      {
+        "title": "Tier 1",
+        "content": "$XX.XX"
+      },
+      {
+        "title": "Tier 2",
+        "content": "$XX.XX"
+      },
+      {
+        "title": "Tier 3",
+        "content": "$XX.XX"
+      }
+    ],
+    "inpatient-hospital-visits": [
+      {
+        "title": "Days 1-4",
+        "content": "$XX.XX"
+      },
+      {
+        "title": "Days 5-90",
+        "content": "$XX.XX"
+      }
+    ],
+    "outpatient-care": [
+      {
+        "title": "Type 1",
+        "content": "$XX.XX"
+      },
+      {
+        "title": "Type 2",
+        "content": "$XX.XX"
+      }
+    ]
+  },
+  "cards": {
+    "active-rider-1": {
+      "icon": "tooth",
+      "icon-color": "teal",
+      "title": "High Dental",
+      "subtitle": "+$37.00/mo",
+      "success": "XX/XX/XXXX",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at erat at nisl tincidunt dignissim.",
+      "rider-type": "remove"
+    },
+    "active-rider-2": {
+      "icon": "shoe",
+      "icon-color": "purple",
+      "title": "Fitness",
+      "subtitle": "+$37.00/mo",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at erat at nisl tincidunt dignissim.",
+      "rider-type": "remove"
+    },
+    "available-rider-1": {
+      "icon": "tooth",
+      "icon-color": "teal",
+      "title": "Dental",
+      "subtitle": "+$15.00/mo",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at erat at nisl tincidunt dignissim.",
+      "rider-type": "add"
+    },
+    "available-rider-2": {
+      "icon": "tooth",
+      "icon-color": "teal",
+      "title": "Dental",
+      "subtitle": "+$25.00/mo",
+      "error": "XX/XX/XXXX",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at erat at nisl tincidunt dignissim.",
+      "rider-type": "add"
+    },
+    "available-rider-3": {
+      "icon": "tooth",
+      "icon-color": "teal",
+      "title": "Dental",
+      "subtitle": "+$50.00/mo",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at erat at nisl tincidunt dignissim.",
+      "rider-type": "add"
+    }
+  }
+}

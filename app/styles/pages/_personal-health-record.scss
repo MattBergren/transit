@@ -1,0 +1,479 @@
+.personal-health-record {
+  .card-header {
+    margin-bottom: 10px;
+  }
+
+  .rx-tools-modal {
+    button.btn--center {
+      min-width: 220px;
+    }
+  }
+
+  .show-records-btn {
+    min-width: 180px;
+
+    @media (min-width: $breakpoint-sm) {
+      margin-left: 15px;
+    }
+  }
+
+  .medication-filters,
+  .provider-filters {
+    > div {
+      flex: 0 1 50%;
+    }
+  }
+
+  .phr-section-header {
+    a {
+      margin-left: 15px;
+    }
+  }
+
+  .drug-tools-link {
+    padding-left: 12px;
+    position: relative;
+
+    svg {
+      display: block;
+      fill: #196ECF;
+      height: 16px;
+      left: 0;
+      position: absolute;
+      top: 3px;
+      width: 4px;
+    }
+  }
+
+  .external-link {
+    height: 1.2em;
+    margin-left: 3px;
+    margin-top: -2px;
+  }
+
+  table.table-responsive {
+    border-bottom: 1px solid $color-gray-accent;
+
+    tr:not(:first-child) {
+      &:last-child {
+        td {
+          border-bottom: 0;
+        }
+      }
+
+      &:nth-child(2n+1) {
+        td {
+          background-color: $color-gray-light !important;
+        }
+      }
+    }
+
+    tr:not(:first-child):nth-child(2n) {
+      &.new {
+        background-color: #BBEABB;
+      }
+    }
+
+    tr.provider-row {
+      a {
+        margin-right: 5px;
+      }
+    }
+
+    @media screen and (max-width: 991px) {
+      tr {
+        &:not(:first-child) {
+          td {
+            span:first-of-type {
+              max-width: 49%;
+            }
+
+            span:last-of-type {
+              text-align: right;
+              max-width: 49%;
+            }
+
+            span.provider-name {
+              max-width: 100%;
+              text-align: left;
+            }
+
+            &:first-child {
+              align-items: flex-start;
+              flex-direction: column;
+
+              span {
+                max-width: 100%;
+                text-align: left;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  th,
+  td,
+  .user-info {
+    &.print-only {
+      display: none;
+    }
+  }
+
+  .added-drug-name {
+    font-weight: 500;
+    margin-right: 5px;
+    text-transform: uppercase;
+  }
+
+  .added-by-me,
+  .primary-care-provider {
+    font-size: .875rem;
+    font-weight: 400;
+    // margin-left: 5px;
+
+    @media (min-width: $breakpoint-sm) {
+      white-space: nowrap;
+    }
+  }
+
+  .records-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    p {
+      margin-bottom: 15px;
+
+      @media (min-width: $breakpoint-sm) {
+        margin-bottom: 0;
+      }
+    }
+
+    @media (min-width: $breakpoint-sm) {
+      flex-direction: row;
+    }
+  }
+
+  .card-slide {
+    &[aria-hidden='true'] {
+      display: none;
+    }
+  }
+
+  // firefox fix
+  .table-body-cell {
+    .field-input {
+      margin-top: 15px;
+    }
+  }
+
+  .modal {
+    hr {
+      margin-bottom: 10px;
+    }
+
+    .add-drug-form-button,
+    .add-provider-form-button {
+      min-width: 150px;
+    }
+  }
+
+  .modal-dialog .modal-content .modal-footer button {
+    margin-bottom: 15px;
+  }
+
+  .no-drugs-placeholder {
+    background-color: #fff;
+    border: 1px solid $color-gray-base;
+    color: $color-digital-gray;
+    padding: 20px;
+
+    @media (min-width: $breakpoint-md) {
+      padding: 30px;
+    }
+
+    h3 {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+  }
+}
+
+#email-records-form {
+  .indent-left {
+    padding-left: 0;
+    padding-right: 0;
+
+    @media (min-width: $breakpoint-md) {
+      padding-left: 25px;
+    }
+  }
+}
+
+#drugToolsModal {
+  p {
+    text-align: center;
+
+    @media (max-width: $breakpoint-sm) {
+      btn--large-width {
+        min-width: 100%;
+      }
+    }
+  }
+}
+
+#addProviderModal,
+#addDrugModal {
+  @media (max-width: $breakpoint-sm) {
+    .modal-body .container-fluid {
+      padding: 0;
+    }
+  }
+}
+
+#viewDrugModal,
+#editProviderModal {
+  .card {
+    padding: 0;
+  }
+
+  .container-fluid {
+    @media (max-width: $breakpoint-sm) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .card-slide h4 {
+    line-height: 1.4;
+  }
+
+  .btn-group--full-width {
+    margin-bottom: 15px;
+
+    button.btn {
+      flex: none;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      span.btn {
+        margin-bottom: 0;
+      }
+
+      button:first-of-type {
+        margin-bottom: 0;
+        // order: 2;
+      }
+
+      button:last-of-type {
+        margin-bottom: 15px;
+        // order: 1;
+      }
+    }
+  }
+}
+
+#viewProviderCarouselModal {
+  .modal-header {
+    // padding: 60px 0 0;
+    // padding: 60px 20px 15px;
+  }
+
+  .modal-title {
+    text-align: left;
+
+    span {
+      display: block;
+      padding-bottom: 15px;
+    }
+  }
+
+  .modal-body {
+    @media (min-width: $breakpoint-md) {
+      padding-bottom: 30px;
+    }
+  }
+
+  .btn-row div {
+    @media (max-width: $breakpoint-sm) {
+      padding: 0;
+    }
+  }
+
+  #provider-carousel {
+    max-height: 202px;
+    opacity: 0;
+    overflow: hidden;
+
+    &.slick-initialized {
+      max-height: none;
+      opacity: 1;
+      overflow: auto;
+    }
+  }
+
+  .slick-next--provider,
+  .slick-prev--provider {
+    // color: #000;
+    display: inline-block;
+    font-size: 16px;
+    height: 38px;
+    line-height: 1;
+    padding-top: 11px;
+    position: relative;
+    transform: none;
+
+    &:hover {
+      // color: #000;
+      font-size: 16px;
+      position: relative;
+    }
+
+    &.slick-disabled {
+      opacity: 0;
+    }
+  }
+
+  .slick-prev--provider {
+    padding-left: 40px;
+  }
+
+  .slick-next--provider {
+    padding-right: 40px;
+  }
+
+  // Arrows
+  .slick-prev--provider,
+  .slick-next--provider {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .slick-prev--provider:hover,
+  .slick-prev--provider:focus,
+  .slick-next--provider:hover,
+  .slick-next--provider:focus {
+    background: transparent;
+    outline: none;
+  }
+
+  .slick-prev--provider:hover:before,
+  .slick-prev--provider:focus:before,
+  .slick-next--provider:hover:before,
+  .slick-next--provider:focus:before {
+    opacity: 1;
+  }
+
+  .slick-prev--provider.slick-disabled:before,
+  .slick-next--provider.slick-disabled:before {
+    opacity: .25;
+  }
+
+  .slick-prev--provider:before,
+  .slick-next--provider:before {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    // color: #000;
+    font-family: 'Material Icons';
+    font-size: 40px;
+    line-height: 1;
+    // opacity: .4;
+    position: absolute;
+  }
+
+  .slick-prev--provider:before {
+    left: 0;
+    top: 0;
+  }
+
+  .slick-next--provider:before {
+    right: 0;
+    top: 0;
+  }
+
+  .slick-prev--provider:before {
+    content: '\E314';
+  }
+
+  .slick-next--provider:before {
+    content: '\E315';
+  }
+
+  .slick-slide {
+    padding: 0;
+    @media (min-width: $breakpoint-sm) {
+      padding: 0 80px;
+    }
+  }
+}
+
+.container.print-email-container {
+  margin-bottom: 40px;
+
+  .card-content {
+    margin-bottom: 15px;
+
+    @media (min-width: $breakpoint-sm) {
+      margin-bottom: 0;
+    }
+  }
+
+  .card {
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media (min-width: $breakpoint-sm) {
+      flex-direction: row;
+    }
+  }
+
+  .phr-print-button,
+  .phr-email-button {
+    padding-left: 22px;
+    position: relative;
+
+    svg {
+      display: block;
+      fill: #196ECF;
+      height: 17px;
+      left: 0;
+      position: absolute;
+      top: 2px;
+      width: 17px;
+    }
+  }
+
+  .phr-print-button {
+    @media (max-width: $breakpoint-md) {
+      display: none !important;
+    }
+
+    @media (min-width: $breakpoint-md) {
+      border-right: 1px solid $color-gray-medium;
+      display: block;
+      padding-right: 15px;
+    }
+  }
+
+  .phr-email-button {
+    display: block;
+
+    @media (min-width: $breakpoint-md) {
+      margin-left: 15px;
+    }
+  }
+}
+
+.row-hidden {
+  display: none;
+
+  &.row-visible {
+    display: table-row;
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "plan-materials": {
+    "english": [
+      {
+        "title": "Summary of Benefits",
+        "type": "pdf",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation."
+      },
+      {
+        "title": "Evidence of Coverage",
+        "type": "pdf"
+      },
+      {
+        "title": "Non-Discrimination Notice",
+        "type": "pdf"
+      },
+      {
+        "title": "Comprehensive Formulary",
+        "type": "pdf"
+      },
+      {
+        "title": "Prior Authorization Criteria",
+        "type": "pdf"
+      },
+      {
+        "title": "Step Therapy Criteria",
+        "type": "pdf"
+      },
+      {
+        "title": "Formulary Additions",
+        "type": "pdf"
+      },
+      {
+        "title": "Formulary Deletions",
+        "type": "pdf"
+      },
+      {
+        "title": "Order plan materials",
+        "type": "link"
+      },
+      {
+        "title": "View/Print member ID card information",
+        "type": "link"
+      }
+    ]
+  },
+  "annual-changes": {
+    "year-2016": [
+      {
+        "title": "Annual Notice of Changes",
+        "type": "pdf"
+      },
+      {
+        "title": "Evidence of Coverage",
+        "type": "pdf"
+      },
+      {
+        "title": "Comprehensive Formulary",
+        "type": "pdf"
+      }
+    ],
+    "year-2017": [
+      {
+        "title": "Annual Notice of Changes",
+        "type": "pdf"
+      },
+      {
+        "title": "Evidence of Coverage",
+        "type": "pdf"
+      },
+      {
+        "title": "Non-Discrimination Notice",
+        "type": "pdf"
+      },
+      {
+        "title": "Comprehensive Formulary",
+        "type": "pdf"
+      }
+    ],
+    "directory": [
+      {
+        "title": "2016 Provider Directory",
+        "type": "pdf"
+      },
+      {
+        "title": "2017 Provider Directory",
+        "type": "pdf"
+      },
+      {
+        "title": "Provider Search",
+        "type": "link",
+        "desc": "You can also search for a physician, facility or medical group online and print directory results based on your specific search criteria."
+      }
+    ]
+  },
+  "resources": {
+    "drug-mail-order": [
+      {
+        "title": "Prescription Mail Order For - Preferred Mail Service through OptumRx",
+        "type": "pdf"
+      }
+    ],
+    "premium-payment-claim": [
+      {
+        "title": "How to read your bill",
+        "type": "pdf"
+      },
+      {
+        "title": "Electronic Funds Transfer Form (EFT)",
+        "type": "pdf"
+      },
+      {
+        "title": "Premium Deduction from Social Security Payment Form",
+        "type": "pdf"
+      },
+      {
+        "title": "Prescription Drug Reimbursement Form",
+        "type": "pdf"
+      }
+    ],
+    "authorization": [
+      {
+        "title": "How to appoint a representative",
+        "type": "link"
+      },
+      {
+        "title": "Appointment of Representative Form",
+        "type": "link"
+      },
+      {
+        "title": "Authorization to Share Personal Information Form",
+        "type": "pdf"
+      },
+      {
+        "title": "Medication Prior Authorization Request Form",
+        "type": "pdf"
+      },
+      {
+        "title": "Medicare Part D Coverage Determination Request Form",
+        "type": "pdf"
+      },
+      {
+        "title": "Specialty Pharmacy Prior Authorization Request Forms",
+        "type": "link"
+      },
+      {
+        "title": "Redetermination Request Form",
+        "type": "pdf"
+      }
+    ],
+    "other": [
+      {
+        "title": "Prescription drug coverage determinations and appeals, drug conditions and limitations and quality assurance policies",
+        "type": "link"
+      },
+      {
+        "title": "Prescription Drug Transition Process",
+        "type": "pdf"
+      },
+      {
+        "title": "Medication Therapy Management (MTM) Program",
+        "type": "link"
+      }
+    ],
+    "disenrollment": [
+      {
+        "title": "Disenrollment rights and responsibilities",
+        "type": "link"
+      },
+      {
+        "title": "Disenrollement Form (Online)",
+        "type": "link"
+      },
+      {
+        "title": "Disenrollement Form",
+        "type": "pdf"
+      }
+    ]
+  }
+}

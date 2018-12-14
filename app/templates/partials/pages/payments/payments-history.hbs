@@ -1,0 +1,175 @@
+<section class="container--base gray">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h2 class="h2 margin-small">
+                    Payment History
+                </h2>
+				<p class="margin-small">
+					Tool tip information here.
+				</p>
+				{{#if includedPayments}}
+					<div class="margin-small">
+						<p><strong>Note:</strong> the billing history below includes payments for the following plans</p>
+						<ul>
+							<li>PLAN NAME</li>
+							{{#eq includedPayments 'labelID'}}
+								<li>ANOTHER PLAN NAME</li>
+							{{/eq}}
+						</ul>
+					</div>
+				{{/if}}
+				<p class="margin-large">
+					You may search payment history for the previous 24 months. You can also search for future premium payment information for the current plan year.
+				</p>
+				<div class="margin-large">
+					<fieldset>
+						<legend><span class="hidden">{{#if ShipHistory}}Ship {{/if}}Payment History:</span></legend>
+					<div class="table-body responsive wide">
+						<div class="table-body-row">
+							<div class="table-body-cell">
+								<label class="bold" for="date-range{{#if labelID}}{{ labelID }}{{/if}}">View Payments For:</label>
+							</div>
+							<div class="table-body-cell">
+								<div class="select--regular">
+									<select name="date-range" class="date-range" id="date-range{{#if labelID}}{{ labelID }}{{/if}}">
+										<option value="90-days">Last 90 Days</option>
+										<option value="6-months">Last 6 Months</option>
+										<option value="12-months">Last 12 Months</option>
+										<option value="24-months">Last 24 Months</option>
+										<option value="current-year">Current Year</option>
+										<option value="custom-search">Custom Search</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="table-body-row custom-search-fields hidden">
+							<div class="table-body-cell"></div>
+							<div class="table-body-cell">
+								<div class="custom-search-input">
+									<label for="custom-from{{#if labelID}}{{labelID}}{{/if}}">From</label>
+									<input type="date" id="custom-from{{#if labelID}}{{labelID}}{{/if}}">
+								</div>
+								<div class="custom-search-input">
+									<label for="custom-to{{#if labelID}}{{labelID}}{{/if}}">to</label>
+									<input type="date" id="custom-to{{#if labelID}}{{labelID}}{{/if}}">
+								</div>
+							</div>
+							<div class="table-body-cell">
+								<button class="btn custom-date-search-btn"><span class="btn btn--primary">Search</span></button>
+							</div>
+						</div>
+			{{#if ShipHistory}}
+				<div class="table-body-row">
+					<div class="table-body-cell">
+						<span class="bold">With Payment Status:</span>
+					</div>
+					<div class="table-body-cell">
+						<div class="checkbox-block">
+							<input type="checkbox" class="custom-checkbox" name="paymentStatusPaid" id="paymentStatusPaid{{#if labelID}}{{ labelID }}{{/if}}" checked>
+							<label for="paymentStatusPaid{{#if labelID}}{{ labelID }}{{/if}}">Paid</label>
+						</div>
+						<div class="checkbox-block">
+							<input type="checkbox" class="custom-checkbox" name="paymentStatusUnpaid" id="paymentStatusUnpaid{{#if labelID}}{{ labelID }}{{/if}}" checked>
+							<label for="paymentStatusUnpaid{{#if labelID}}{{ labelID }}{{/if}}">Unpaid</label>
+						</div>
+					</div>
+				</div>
+			{{/if}}
+		</div>
+	</fieldset>
+</div>
+		<p class="margin-large">Total search results for premium payments from <strong>&lt;mm/dd/yyyy&gt;</strong> to <strong>&lt;mm/dd/yyyy&gt;</strong>. If you have questions about your payments, please <a href="#" class="text-link">contact UnitedHealthcare.</a></p>
+
+      <a href="#collapseInfo{{#if labelID}}{{ labelID }}{{/if}}" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="collapseInfo{{#if labelID}}{{ labelID }}{{/if}}" class="display-block collapse-expand">
+        Learn More About Your Cost Breakdown
+        <span class="material-icons">keyboard_arrow_down</span>
+      </a>
+      <div class="collapse-wrapper margin-large">
+        <div class="collapse" id="collapseInfo{{#if labelID}}{{ labelID }}{{/if}}" aria-expanded="false" role="tablist">
+          <p class="bold margin-none">Premium Due Date</p>
+          <p>
+            Qui aute quis laboris culpa velit dolore id cillum cupidatat
+            officia in ex velit ea sint exercitation. Proident non mollit
+            pariatur minim officia ad officia sit magna aute labore.
+          </p>
+          <p class="bold margin-none">Premium Account</p>
+          <p>
+            Qui aute quis laboris culpa velit dolore id cillum cupidatat
+            officia in ex velit ea sint exercitation. Proident non mollit
+            pariatur minim officia ad officia sit magna aute labore.
+          </p>
+          <p class="bold margin-none">Payment Status</p>
+          <p>
+            Qui aute quis laboris culpa velit dolore id cillum cupidatat
+            officia in ex velit ea sint exercitation. Proident non mollit
+            pariatur minim officia ad officia sit magna aute labore.
+          </p>
+        </div>
+      </div>
+
+		{{#if ShipHistory}}
+			{{> payments-history-table--ship }}
+		{{/if}}
+		{{#unless ShipHistory}}
+			{{> payments-history-table--federal }}
+		{{/unless}}
+
+		{{#if ShipHistory}}
+			<div class="margin-large">
+				<h3 class="h4 medium color-blue margin-small">Important Note</h3>
+				<p>The total amount due applies to your entire household. It includes payment amounts for your AARP-branded supplemental plans and also includes required coverage payment amounts for other members of your household. The amount applies only to AARP-branded
+					supplemental plans.</p>
+			</div>
+		{{/if}}
+		{{#unless ShipHistory}}
+			<div class="margin-large">
+				<h3 class="h4 medium color-blue margin-small">Making your payments</h3>
+
+				<p>If you’d like to make changes to how you pay your premiums, we have these options available.</p>
+				<ul class="margin-small">
+					{{!-- <li>Credit Card payments</li> --}}
+					<li>Automatic deduction from your checking account.</li>
+					<li>Monthly Bill.</li>
+					<li>Automatic deduction from your monthly Social Security benefit check.</li>
+				</ul>
+				<a href="#collapseWaysToPay" class="collapse-expand display-block bold" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="collapseWaysToPay">
+                          Learn More About Ways to Pay
+                          <span class="material-icons">keyboard_arrow_down</span>
+                        </a>
+				<div id="collapseWaysToPay" class="collapse">
+					<p class="margin-none"><span class="bold">Automatic deduction from your checking account.</span> To sign up for automatic deductions from your checking account, select the setup automatic payments in the Premium Payments overview section of this page. You can also download
+						and complete the form below and follow the instructions provided.</p>
+					<a href="#" class="text-link margin-small display-inline-block">Electronic Funds Transfer (EFT) Form (PDF)(636.6 KB)</a>
+
+					<p class="">Note: Adobe® Reader® software is required to download this document. It's free and easy. <a href="#" class="text-link">Download now</a></p>
+
+					<p class=""><span class="bold">Monthly Bill.</span> You may pay by mail each month (we will provide you a monthly bill). You may also make advance payments. If making a payment for the entire year, you will only need to submit one bill along with a check for
+						the total premium amount due for the year. Mail your Medicare prescription drug plan payment with your bill to: UnitedHealthcare PO Box 5840 Carol Stream, IL 60197-5840</p>
+
+					<p class="margin-none"><span class="bold">Automatic deduction from your monthly Social Security benefit check.</span> 1 Processing the SSA deduction is completed through the Social Security Administration and may take up to two or more months to begin. During that time,
+						you will receive a monthly bill to make your payments. The first deduction from your Social Security benefit check will include all premiums due from the Social Security deduction effective date.</p>
+
+					<a href="#" class="text-link margin-small display-inline-block">Social Security Deduction Form (PDF)(39.9 KB)
+
+</a>
+
+					<p>1 If you are receiving help from a plan sponsor (former employer, union or trust administrator) or State Pharmaceutical Assistance Program (SPAP) you have the right to elect automatic deductions from your Social Security benefit check.</p>
+
+					<p>However, it is important that you know that Social Security does not know if you have other coverage that pays part of your premium, even when the other coverage is paying part of your premium to your Medicare plan.</p>
+
+					<p>If you choose to have your payments automatically deducted from your Social Security benefit check, the deductions for the premiums will be higher than they should be. Your Medicare plan will need to give you a refund for the premium amount paid
+						by your other coverage. You may experience delays in obtaining a refund for the excess amounts.</p>
+
+					<p class="margin-small"><span class="bold">Note:</span> If you qualify for Extra Help with your Medicare costs, Medicare may cover all or some portion of your plan premium.</p>
+
+					<a href="#" class="text-link margin-small display-inline-block">print
+
+</a>
+				</div>
+			</div>
+		{{/unless}}
+	</div>
+	</div>
+	</div>
+</section>

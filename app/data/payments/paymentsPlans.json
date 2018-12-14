@@ -1,0 +1,380 @@
+{
+    "members": {
+        "new": {
+                "id": "0",
+                "firstName": "John",
+                "lastName": "Doe",
+                "plans": [
+                    {
+                        "planName": "Medicare Prescription Drug Plan",
+                        "currentBill" : {
+                            "amountDue": "$0.00",
+                            "nextBill": {
+                                "amount" : "In Process",
+                                "date" : "Due 10/01/2018"
+                            }
+                        }
+                    },
+                    {
+                        "planName": "Supplemental Plan",
+                        "alertRecurring": true,
+                        "currentBill" : {
+                            "amountDue": "$0.00",
+                            "date": "04/30/2020",
+                            "nextBill": {
+                                "amount" : "Processing Amount",
+                                "date" : "Due 10/01/2018"
+                            }
+                        },
+                        "bills": [
+                            {
+                                "dateDue": "11/1/2018",
+                                "amountDue": "0.00",
+                                "amountBilled": "57.00",
+                                "paid": true,
+                                "amountPaid": "57.00",
+                                "paidDate": "10/10/2018",
+                                "paymentMethod": "Credit/Debit Card",
+                                "confirmationNumber": "1234562"
+                            },
+                            {
+                                "dateDue": "10/1/2018",
+                                "amountDue": "0.00",
+                                "amountBilled": "57.00",
+                                "paid": true,
+                                "amountPaid": "57.00",
+                                "paidDate": "9/09/2018",
+                                "paymentMethod": "Credit/Debit Card",
+                                "confirmationNumber": "1234561"
+                            },
+                            {
+                                "dateDue": "9/1/2018",
+                                "amountDue": "0.00",
+                                "amountBilled": "57.00",
+                                "paid": true,
+                                "amountPaid": "57.00",
+                                "paidDate": "8/29/2018",
+                                "paymentMethod": "Credit/Debit Card",
+                                "confirmationNumber": "1234560"
+                            },
+                            {
+                                "dateDue": "8/1/2018",
+                                "amountDue": "0.00",
+                                "amountBilled": "57.00",
+                                "paid": true,
+                                "amountPaid": "57.00",
+                                "paidDate": "7/16/2018",
+                                "paymentMethod": "Credit/Debit Card",
+                                "confirmationNumber": "1234559"
+                            },
+                            {
+                                "dateDue": "7/1/2018",
+                                "amountDue": "0.00",
+                                "amountBilled": "57.00",
+                                "paid": true,
+                                "amountPaid": "57.00",
+                                "paidDate": "6/09/2018",
+                                "paymentMethod": "Credit/Debit Card",
+                                "confirmationNumber": "1234558"
+                            },
+                            {
+                                "dateDue": "6/1/2018",
+                                "amountDue": "0.00",
+                                "amountBilled": "57.00",
+                                "paid": true,
+                                "amountPaid": "81.00",
+                                "paidDate": "5/12/2018",
+                                "paymentMethod": "Credit/Debit Card",
+                                "confirmationNumber": "123457"
+                            },
+                            {
+                                "dateDue": "5/1/2018",
+                                "amountDue": "0.00",
+                                "amountBilled": "57.00",
+                                "paid": true,
+                                "amountPaid": "57.00",
+                                "paidDate": "4/22/2018",
+                                "paymentMethod": "Credit/Debit Card",
+                                "confirmationNumber": "123456"
+                            }
+                        ]
+                    }
+                ] 
+        },
+        "existing": {
+            "id": "0",
+            "firstName": "John",
+            "lastName": "Doe",
+            "plans": [
+                    {
+                        "planName": "Medicare Prescription Drug Plan",
+                        "currentBill" : {
+                            "amountDue": "$32.00",
+                            "paidThrough": "9/31/2018",
+                            "nextBill": {
+                                "amount" : "$57.00",
+                                "date" : "Due 10/01/2018"
+                            },
+                            "credit": "$10.00"
+                        },
+                        "bills": [
+                            {
+                                "dateDue": "11/1/2018",
+                                "amountDue": "0.00",
+                                "amountBilled": "57.00",
+                                "paid": true,
+                                "amountPaid": "57.00",
+                                "paidDate": "10/10/2018",
+                                "paymentMethod": "Credit/Debit Card",
+                                "confirmationNumber": "1234562"
+                            },
+                            {
+                                "dateDue": "10/1/2018",
+                                "amountDue": "0.00",
+                                "amountBilled": "57.00",
+                                "paid": true,
+                                "amountPaid": "57.00",
+                                "paidDate": "9/09/2018",
+                                "paymentMethod": "Credit/Debit Card",
+                                "confirmationNumber": "1234561"
+                            },
+                            {
+                                "dateDue": "9/1/2018",
+                                "amountDue": "0.00",
+                                "amountBilled": "57.00",
+                                "paid": true,
+                                "amountPaid": "57.00",
+                                "paidDate": "8/29/2018",
+                                "paymentMethod": "Credit/Debit Card",
+                                "confirmationNumber": "1234560"
+                            },
+                            {
+                                "dateDue": "8/1/2018",
+                                "amountDue": "0.00",
+                                "amountBilled": "57.00",
+                                "paid": true,
+                                "amountPaid": "57.00",
+                                "paidDate": "7/16/2018",
+                                "paymentMethod": "Credit/Debit Card",
+                                "confirmationNumber": "1234559"
+                            },
+                            {
+                                "dateDue": "7/1/2018",
+                                "amountDue": "0.00",
+                                "amountBilled": "57.00",
+                                "paid": true,
+                                "amountPaid": "57.00",
+                                "paidDate": "6/09/2018",
+                                "paymentMethod": "Credit/Debit Card",
+                                "confirmationNumber": "1234558"
+                            },
+                            {
+                                "dateDue": "6/1/2018",
+                                "amountDue": "0.00",
+                                "amountBilled": "57.00",
+                                "paid": true,
+                                "amountPaid": "81.00",
+                                "paidDate": "5/12/2018",
+                                "paymentMethod": "Credit/Debit Card",
+                                "confirmationNumber": "123457"
+                            },
+                            {
+                                "dateDue": "5/1/2018",
+                                "amountDue": "0.00",
+                                "amountBilled": "57.00",
+                                "paid": true,
+                                "amountPaid": "57.00",
+                                "paidDate": "4/22/2018",
+                                "paymentMethod": "Credit/Debit Card",
+                                "confirmationNumber": "123456"
+                            }
+                        ]
+                    }
+            ] 
+        },
+        "advancePayment": {
+            "id": "0",
+            "firstName": "John",
+            "lastName": "Doe",
+            "plans": [
+                    {
+                        "planName": "Medicare Prescription Drug Plan",
+                        "advancePay": "true",
+                        "currentBill" : {
+                            "amountDue": "$0.00",
+                            "paidThrough": "03/30/2019",
+                            "nextBill": {
+                                "amount" : "In Process",
+                                "date" : "Not scheduled yet"
+                            },
+                            "credit": "$10.00"
+                        },
+                        "bills": [
+                            {
+                                "dateDue": "11/1/2018",
+                                "amountDue": "0.00",
+                                "amountBilled": "57.00",
+                                "paid": true,
+                                "amountPaid": "57.00",
+                                "paidDate": "10/10/2018",
+                                "paymentMethod": "Credit/Debit Card",
+                                "confirmationNumber": "1234562"
+                            },
+                            {
+                                "dateDue": "10/1/2018",
+                                "amountDue": "0.00",
+                                "amountBilled": "57.00",
+                                "paid": true,
+                                "amountPaid": "57.00",
+                                "paidDate": "9/09/2018",
+                                "paymentMethod": "Credit/Debit Card",
+                                "confirmationNumber": "1234561"
+                            },
+                            {
+                                "dateDue": "9/1/2018",
+                                "amountDue": "0.00",
+                                "amountBilled": "57.00",
+                                "paid": true,
+                                "amountPaid": "57.00",
+                                "paidDate": "8/29/2018",
+                                "paymentMethod": "Credit/Debit Card",
+                                "confirmationNumber": "1234560"
+                            },
+                            {
+                                "dateDue": "8/1/2018",
+                                "amountDue": "0.00",
+                                "amountBilled": "57.00",
+                                "paid": true,
+                                "amountPaid": "57.00",
+                                "paidDate": "7/16/2018",
+                                "paymentMethod": "Credit/Debit Card",
+                                "confirmationNumber": "1234559"
+                            },
+                            {
+                                "dateDue": "7/1/2018",
+                                "amountDue": "0.00",
+                                "amountBilled": "57.00",
+                                "paid": true,
+                                "amountPaid": "57.00",
+                                "paidDate": "6/09/2018",
+                                "paymentMethod": "Credit/Debit Card",
+                                "confirmationNumber": "1234558"
+                            },
+                            {
+                                "dateDue": "6/1/2018",
+                                "amountDue": "0.00",
+                                "amountBilled": "57.00",
+                                "paid": true,
+                                "amountPaid": "81.00",
+                                "paidDate": "5/12/2018",
+                                "paymentMethod": "Credit/Debit Card",
+                                "confirmationNumber": "123457"
+                            },
+                            {
+                                "dateDue": "5/1/2018",
+                                "amountDue": "0.00",
+                                "amountBilled": "57.00",
+                                "paid": true,
+                                "amountPaid": "57.00",
+                                "paidDate": "4/22/2018",
+                                "paymentMethod": "Credit/Debit Card",
+                                "confirmationNumber": "123456"
+                            }
+                        ]
+                    }
+            ]
+        },
+        "fullPayment": {
+            "id": "0",
+            "firstName": "John",
+            "lastName": "Doe",
+            "plans": [
+                    {
+                        "planName": "Medicare Prescription Drug Plan",
+                        "fullPay": "true",
+                        "currentBill" : {
+                            "amountDue": "$0.00",
+                            "paidThrough": "03/30/2019",
+                            "nextBill": {
+                                "amount" : "Paid in Full",
+                                "date" : "Not scheduled yet"
+                            },
+                            "credit": "$10.00"
+                        },
+                        "bills": [
+                            {
+                                "dateDue": "11/1/2018",
+                                "amountDue": "0.00",
+                                "amountBilled": "57.00",
+                                "paid": true,
+                                "amountPaid": "57.00",
+                                "paidDate": "10/10/2018",
+                                "paymentMethod": "Credit/Debit Card",
+                                "confirmationNumber": "1234562"
+                            },
+                            {
+                                "dateDue": "10/1/2018",
+                                "amountDue": "0.00",
+                                "amountBilled": "57.00",
+                                "paid": true,
+                                "amountPaid": "57.00",
+                                "paidDate": "9/09/2018",
+                                "paymentMethod": "Credit/Debit Card",
+                                "confirmationNumber": "1234561"
+                            },
+                            {
+                                "dateDue": "9/1/2018",
+                                "amountDue": "0.00",
+                                "amountBilled": "57.00",
+                                "paid": true,
+                                "amountPaid": "57.00",
+                                "paidDate": "8/29/2018",
+                                "paymentMethod": "Credit/Debit Card",
+                                "confirmationNumber": "1234560"
+                            },
+                            {
+                                "dateDue": "8/1/2018",
+                                "amountDue": "0.00",
+                                "amountBilled": "57.00",
+                                "paid": true,
+                                "amountPaid": "57.00",
+                                "paidDate": "7/16/2018",
+                                "paymentMethod": "Credit/Debit Card",
+                                "confirmationNumber": "1234559"
+                            },
+                            {
+                                "dateDue": "7/1/2018",
+                                "amountDue": "0.00",
+                                "amountBilled": "57.00",
+                                "paid": true,
+                                "amountPaid": "57.00",
+                                "paidDate": "6/09/2018",
+                                "paymentMethod": "Credit/Debit Card",
+                                "confirmationNumber": "1234558"
+                            },
+                            {
+                                "dateDue": "6/1/2018",
+                                "amountDue": "0.00",
+                                "amountBilled": "57.00",
+                                "paid": true,
+                                "amountPaid": "81.00",
+                                "paidDate": "5/12/2018",
+                                "paymentMethod": "Credit/Debit Card",
+                                "confirmationNumber": "123457"
+                            },
+                            {
+                                "dateDue": "5/1/2018",
+                                "amountDue": "0.00",
+                                "amountBilled": "57.00",
+                                "paid": true,
+                                "amountPaid": "57.00",
+                                "paidDate": "4/22/2018",
+                                "paymentMethod": "Credit/Debit Card",
+                                "confirmationNumber": "123456"
+                            }
+                        ]
+                    }
+            ]
+        }
+    }
+}

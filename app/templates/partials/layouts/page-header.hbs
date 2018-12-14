@@ -1,0 +1,36 @@
+<header class="benefits-coverage page-header-wrapper" role="banner" aria-label="header">
+  <div class="page-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="display-flex v-center">
+            <div class="page-header--left">
+              {{#if backTitle}}
+                <a href="{{#if backLink}}{{backLink}}{{else}}#{{/if}}" class="link link--icon-left link--icon-circled" data-icon="&#xE314;">
+                    {{backTitle}}
+                </a>
+              {{/if}}
+              <h1 class="h4 margin-none">
+                {{title}}
+              </h1>
+            </div>
+            {{#if langSelect }}
+              <div class="page-header--right">
+                <div class="margin-none">
+                  <label for="lang-select" class="display-inline-block">Select a language</label>
+                  <div class="select--inline select-no-underline">
+                    <select id="lang-select">
+                      <option>ENGLISH</option>
+                      <option>SPANISH</option>
+                      <option>CHINESE</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            {{/if}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,154 @@
+<section class="container--base">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="h3 medium margin-large">
+          Get hard copies delivered
+        </h2>
+        <p class="margin-large">
+          You can order any of the items below free of charge. Please submit each
+          item individually if you would like to order more than one.
+        </p>
+        <form class="select-item-form{{#if ship}}-ship{{/if}}" action="/order-materials/order-materials-federal-submitted.html">
+          <fieldset>
+            <legend class="margin-small">Select one plan item below:</legend>
+            {{#if ship}}
+              <div class="radio-group">
+                <div class="field">
+                  <div class="field-input--no-max-width">
+                    <div class="radio-block">
+                      <input type="radio" name="order-materials-ship" value="member-id" id="member-id">
+                      <label for="member-id">
+                        Member ID Card (Health Insurance Card) <br>
+                        <a href="#" data-toggle="modal" data-target="#tempCardModal">View Temporary Card</a>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <div class="field-input--no-max-width">
+                    <div class="radio-block">
+                      <input type="radio" name="order-materials-ship" value="eft" id="eft">
+                      <label for="eft">
+                        Electronic Funds Transfer (EFT) Brochure
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <div class="field-input--no-max-width">
+                    <div class="radio-block">
+                      <input type="radio" name="order-materials-ship" value="premium-payment" id="premium-payment">
+                      <label for="premium-payment">
+                        Premium Payment Envelopes
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <div class="field-input--no-max-width">
+                    <div class="radio-block">
+                      <input type="radio" name="order-materials-ship" value="coupon-book" id="coupon-book">
+                      <label for="coupon-book">
+                        Coupon Book
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <div class="field-input--no-max-width">
+                    <div class="radio-block">
+                      <input type="radio" name="order-materials-ship" value="medicare-hospital" id="medicare-hospital">
+                      <label for="medicare-hospital">
+                        Medicare Hospital Directory
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <div class="field-input--no-max-width">
+                    <div class="hidden-select-block">
+                      <label for="state">Select State:</label>
+                      <div class="select--regular select--small">
+                        <select name="state" id="state">
+                          <option value="MN">Minnesota</option>
+                          <option value="MN">Lorem Ipsum</option>
+                          <option value="MN">Lorem Ipsum</option>
+                          <option value="MN">Lorem Ipsum</option>
+                          <option value="MN">Lorem Ipsum</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <div class="field-input--no-max-width">
+                    <div class="radio-block">
+                      <input type="radio" name="order-materials-ship" value="claims-envelope" id="claims-envelope">
+                      <label for="claims-envelope">
+                        Claims Envelope
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <div class="field-input--no-max-width">
+                    <div class="radio-block">
+                      <input type="radio" name="order-materials-ship" value="cert-insurance" id="cert-insurance">
+                      <label for="cert-insurance">
+                        Certificate of Insurance
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {{else}}
+              <div class="radio-group">
+                <div class="field">
+                  <div class="field-input--no-max-width">
+                    <div class="radio-block">
+                      <input type="radio" name="order-materials" value="member-materials" id="member-materials">
+                      <label for="member-materials">
+                        Member Materials (includes Getting Started Guide and Plan Details,
+                        plan benefits, information on how to find network pharmacies and
+                        providers, a partial drug list and Evidence of Coverage)
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="field-input--no-max-width">
+                    <div class="radio-block">
+                      <input type="radio" name="order-materials" value="replacement-id" id="replacement-id">
+                      <label for="replacement-id">
+                        Replacement ID card <br>
+                        <a href="#" data-toggle="modal" data-target="#tempCardModal">View Temporary Card</a>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {{/if}}
+          </fieldset>
+          <p class="text-medium bold margin-small">
+            Shipping Address
+          </p>
+          <p class="margin-large">
+            The
+            materials will be sent to the permanent address you have on file. If
+            you have questions or would like an item sent to a different address,
+            <a href="#" class="lowercase">please contact {{#if ship}}us{{else}}UnitedHealthcare{{/if}}</a>.
+          </p>
+          <button class="btn btn-primary select-item-submit" type="submit"><span class="btn">Submit Order</span></button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

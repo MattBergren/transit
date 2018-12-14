@@ -1,0 +1,85 @@
+<!-- Start: Add plan modal -->
+<div id="multipleEmailModal" tabindex="-1" role="dialog" aria-labelledby="multipleEmailModalLabel" class="modal fade">
+	<div role="document" class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<a class="link link--icon-right link--icon-circled align-right" data-icon="&#xE5CD;" data-dismiss="modal" aria-label="Close">Cancel</a>
+				<div id="multipleEmailModalLabel" class="modal-title">
+					<h1 class="h3 margin-none">
+						{{#if multiple}}Select Email Address{{/if}}
+						{{#if undeliverable}}Undeliverable Email Address{{/if}}
+						{{#if none}}No Email Address{{/if}}
+					</h1>
+				</div>
+			</div>
+			<div class="modal-body">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-10 col-md-offset-1">
+							<p class="margin-large">
+								{{#if multiple}}There are multiple email addresses associated with your account. You must select only one email address.{{/if}}
+								{{#if undeliverable}}&lt;Email Address&gt; Lorem Ipsum Proident enim voluptate mollit esse ea do ex eu ut.{{/if}}
+								{{#if none}}We are unable to find an email address associated with your account. Please provide an email address.{{/if}}
+							</p>
+							<form id="email-modal-form">
+								<fieldset>
+									<legend{{#if none}} class="sr-only"{{/if}}>Which email address would you like to use?</legend>
+									{{#or multiple undeliverable}}
+									<div class="radio-group">
+										<div class="field">
+											<div class="field-input--no-max-width">
+												<div class="radio-block">
+													<input type="radio" name="email-type" id="email-1">
+													<label for="email-1">&lt;Email Address&gt;</label>
+												</div>
+											</div>
+										</div>
+										{{#if multiple}}
+										<div class="field">
+											<div class="field-input--no-max-width">
+												<div class="radio-block">
+													<input type="radio" name="email-type" id="email-2">
+													<label for="email-2">&lt;Email Address 2&gt;</label>
+												</div>
+											</div>
+										</div>
+										{{/if}}
+										<div class="field">
+											<div class="field-input--no-max-width">
+												<div class="radio-block">
+													<input type="radio" name="email-type" id="email-3" value="diff-email">
+													<label for="email-3">Use a different email address</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									{{/or}}
+									<div class="padding-left-large{{#or multiple undeliverable}} hidden{{/or}}">
+										<div class="field">
+											<label for="new-email">New Email</label>
+											<div class="field-input">
+												<input type="email" name="new-email" id="new-email">
+											</div>
+										</div>
+										<div class="field">
+											<label for="new-email-confirm">Confirm New Email</label>
+											<div class="field-input">
+												<input type="email" name="new-email-confirm" id="new-email-confirm">
+											</div>
+										</div>
+									</div>
+								</fieldset>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn hidden-xs hidden-sm" id="email-modal-continue">
+          <span class="btn btn--primary">Continue</span>
+        </button>
+				<a href="#" data-dismiss="modal">Cancel</a>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,46 @@
+<section class="container--base gray">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <div class="card">
+          <div class="card-header">
+            {{#if member-not-found}}
+            <h3 class="h4 margin-none"><img src="/images/icon-svgs/important.svg" alt="Error" class="error-icon">Member Information not Found</h3>
+            {{/if}}
+            {{#if existing-member}}
+            <h3 class="h4 margin-none">There’s already an account associated with that Plan</h3>
+            {{/if}}
+            {{#if innactive-plan}}
+            <h3 class="h4 margin-none"><img src="/images/icon-svgs/important.svg" alt="Error" class="error-icon">Inactive or Terminated Plan</h3>
+            {{/if}}
+            {{#if future-plan}}
+            <h3 class="h4 margin-none">Future Plan Effective Date</h3>
+            {{/if}}
+          </div>
+          <div class="card-body">
+            {{#if member-not-found}}
+            <p class="margin-none">We were unable to find your member information. If you want to try again, please click “start over” to provide different information. Otherwise, you may call the number on the back of your member ID card to speak with UnitedHealthcare Customer Service.</p>
+            {{/if}}
+            {{#if existing-member}}
+            <p class="margin-large">The Plan associated with your member information are already associated with a Username. Please use <a href="#" class="lowercase">username and password help</a> if you need assistance with your account credentials. Otherwise, you may call the number on the back of your member ID card to speak with UnitedHealthcare Customer Service.</p>
+            {{/if}}
+            {{#if innactive-plan}}
+            <p class="margin-none">The Plan associated with your member information is inactive or terminated and cannot be registered for online accounts. If you want to try again, please click “start over” to provide different credentials. Otherwise, you may call the number on the back of your member ID card to speak with UnitedHealthcare Customer Service.</p>
+            {{/if}}
+            {{#if future-plan}}
+            <p class="margin-none">The Plan associated with your member information is not effective yet. Eu nisi amet fugiat minim exercitation excepteur sit cupidatat amet quis dolore. Otherwise, you may call the number on the back of your member ID card to speak with UnitedHealthcare Customer Service.</p>
+            {{/if}}
+            {{#if existing-member}}
+            <a href="#">Sign in with your existing credentials</a>
+            {{/if}}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <a href="#" class="link link--icon-left link--icon-circled" data-icon="">Start Over</a>
+      </div>
+    </div>
+  </div>
+</section>

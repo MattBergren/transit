@@ -1,0 +1,179 @@
+{{#each plans}}  
+<div class="plan-card">
+
+    <div class="plan-card__container">
+        {{#if advancePay}}
+        <div class="plan-card__alert plan-card--advance">
+            <span class="plan-card__alert-icon material-icons md-18">info</span>
+            <p class="plan-card__alert-message">Your Medicare Prescription Drug Plan is current, no payment is due. Your next premium is not yet scheduled.</p>
+        </div>
+        {{/if}}
+        {{#if fullPay}}
+        <div class="plan-card__alert plan-card--full">
+            <span class="plan-card__alert-icon material-icons md-18">check_circle</span>
+            <p class="plan-card__alert-message">Your Medicare Prescription Drug Plan is paid in full. There are no next premium payments scheduled.</p>
+        </div>
+        {{/if}}
+        <div class="plan-card__main">
+            <h2 class="plan-card__title">{{this.planName}}</h2>
+            <div class="plan-card__status">
+                <div class="plan-card__col">
+                    <div class="plan-card__label-row">
+                        <div class="plan-card__label">Total Amount Due</div>
+                        <a href="#" class="material-icons plan-card__icon" data-toggle="modal" data-target="#moreInfoModal" data-content="amount-due-content">info</a>
+                    </div>
+                    <div class="plan-card__amount-row">
+                        <div class="plan-card__amount">{{this.currentBill.amountDue}}</div>
+                        {{#if this.currentBill.paidThrough}}
+                            <div class="plan-card__paid">Paid through {{this.currentBill.paidThrough}}</div>
+                        {{/if}}
+                    </div>
+                </div>
+                <div class="plan-card__col">
+                    <div class="plan-card__label-row">
+                        <div class="plan-card__label">Next Premium Payment</div>
+                        <a href="#" class="material-icons plan-card__icon" data-toggle="modal" data-target="#moreInfoModal" data-content="next-payment-content">info</a>
+                    </div>
+                    <div class="plan-card__amount-row">
+                        <div class="plan-card__amount">{{this.currentBill.nextBill.amount}}</div>
+                        <div class="plan-card__paid">{{this.currentBill.nextBill.date}}</div>
+                    </div>
+                </div>
+                {{#if this.currentBill.credit}}
+                <div class="plan-card__col">
+                    <div class="plan-card__label-row">
+                        <div class="plan-card__label">Available Credit</div>
+                        <a href="#" class="material-icons plan-card__icon" data-toggle="modal" data-target="#moreInfoModal" data-content="credit-balance-content">info</a>
+                    </div>
+                    <div class="plan-card__amount-row">
+                        <div class="plan-card__amount">{{this.currentBill.credit}}</div>
+                    </div>
+                </div>
+                {{/if}}
+            </div>
+            {{#if this.alertRecurring}}
+                <p class="plan-card__recurring-info">Save $2 on your total monthly rate by setting up recurring payments with your checking account. <a href="#">Get Started</a>
+                </p>
+            {{/if}}
+            <div class="plan-card__cta-row">
+                <div class="plan-card__buttons">
+                    <a href="#" class="plan-card__btn plan-card__btn-primary">Set up Recurring Payments <span class="material-icons">navigate_next</span></a>
+                    <a href="#" class="plan-card__btn plan-card__btn-secondary">Make a One Time Payment <span class="material-icons">navigate_next</span></a>
+                </div>
+                <div class="plan-card__payment-method">
+                    <p class="plan-card__payment-method-message">Current payment method is direct billing. <a href="#" data-toggle="modal" data-target="#moreInfoModal" data-content="ways-to-pay-content">Learn about ways to pay.</a></p>
+                </div>
+            </div>
+        </div>
+        {{#if bills}}
+        <div class="plan-card__footer">
+        
+            <div class="plan-card__toggle-show">
+                <a href="#paymentHistoryTable{{@index}}" data-toggle="collapse" role="button" class="plan-card__table-link"><span class="plan-card__table-icon material-icons">add_box</span>Show Payment History</a>
+            </div>
+
+            <div class="plan-card__toggle-hide">
+                <a href="#paymentHistoryTable{{@index}}" data-toggle="collapse" role="button"  class="plan-card__table-link"><span class="plan-card__table-icon material-icons">indeterminate_check_box</span>Hide Payment History</a>
+                <button type="button" class="plan-card__download-link" data-toggle="modal" data-target="#downloadBillingModal">Download Billing Statements</button>
+            </div>
+            <div class="collapse" id="paymentHistoryTable{{@index}}">
+                <div class="payment-history-table">
+
+                    <div class="payment-history-table__header">
+                        <div class="payment-history-table__controls">
+                            <form action="#">
+                                <fieldset>
+                                    <legend class="sr-only">Date Range</legend>
+                                <div class="payment-history-table__form">
+                                    <div class="form-group">
+                                        <label for="paymentsFrom">Show Payments From</label>
+                                        <div class="select--regular">
+                                        <select name="date-range" class="date-range" id="date-range">
+                                            <option value="90-days">Last 90 Days</option>
+                                            <option value="6-months">Last 6 Months</option>
+                                            <option value="12-months">Last 12 Months</option>
+                                            <option value="24-months">Last 24 Months</option>
+                                            <option value="current-year">Current Year</option>
+                                            <option value="custom-search">Custom Search</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                    <span class="payment-history-table__option">OR</span>
+                                    <div class="form-group">
+                                        <label for="custom-from-{{@index}}">From</label>
+                                        <input aria-required="true" type="date" aria-describedby="format" id="custom-from-{{@index}}">
+                                        <div id="format">mm/dd/yyyy</div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="custom-from-{{@index}}">To</label>
+                                        <input type="date" aria-required="true" aria-describedby="format" id="custom-from-{{@index}}">
+                                        <div id="format">mm/dd/yyyy</div>
+                                    </div>
+                                    <button class="plan-card__btn plan-card__btn-primary" type="submit">Search</button>
+                                    </div>
+                                </fieldset>
+                            </form>
+
+                        </div>
+                    </div>
+
+                    <div class="payment-history-table__body">
+                        <table class="table-responsive">
+                            <caption class="sr-only">Payment History Table</caption>
+                        <tr>
+                            <th scope="col">Due Date</th>
+                            <th scope="col">Amount Billed</th>
+                            <th scope="col">Paid Date</th>
+                            <th scope="col">Amount Paid</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Payment Method</th>
+                            <th scope="col">Confirmation</th>
+                        </tr>
+                        {{#each bills}}
+                            <tr>
+                                <td><span class="mobile-table-header">Due Date</span><div class="table-dots"></div><span class="table-responsive__value">{{this.dateDue}}</span></td>
+                                    <td><span class="mobile-table-header"><span>Amount Billed</span></span><div class="table-dots"></div><span class="table-responsive__value">{{this.amountBilled}}</span></td>
+                                    <td><span class="mobile-table-header">Paid Date</span><div class="table-dots"></div><span class="table-responsive__value">{{this.paidDate}}</span></td>
+                                    <td><span class="mobile-table-header">Amount Paid</span><div class="table-dots"></div><span class="table-responsive__value">{{this.amountPaid}}</span></td>
+                                    <td>
+                                        <span class="mobile-table-header"><span >Status</span></span><div class="table-dots"></div><span class="table-responsive__value {{#if paid}}paid{{/if}}">
+                                    {{#if paid}}
+                                        Paid
+                                    {{else}}
+                                        N/A
+                                    {{/if}}
+                                    </span></td>
+                                    <td><span class="mobile-table-header">Payment Method</span><div class="table-dots"></div>{{this.paymentMethod}}</td>
+                                    <td><span class="mobile-table-header">Confirmation #</span><div class="table-dots"></div>{{this.confirmationNumber}}</td>
+                            </tr>
+                        {{/each}}
+                        </table>
+                    </div>
+
+                    <div class="payment-history-table__footer">
+
+                        <div class="payment-history-table__buttons">
+                            
+                            <a href="#" class="plan-card__btn plan-card__btn-secondary"><span class="material-icons">print</span>Print Payment History </a>
+
+
+                            <a href="#" class="plan-card__btn plan-card__btn-secondary"><span class="material-icons">save_alt</span>Download Payment History </a>
+
+                        </div>
+
+                        <div class="payment-history-table__contact-links">
+                            <a href="#">Contact Support</a>
+                        </div>
+
+                    </div>
+                    <a href="#" class="payment-history-table__learn-more" data-toggle="modal" data-target="#moreInfoModal" data-content="payment-history-content">Learn more about your payment history <span class="material-icons">navigate_next</span></a>
+
+                </div>
+            </div>
+        </div>
+        {{/if}}
+        
+    </div>
+
+</div>
+{{/each}}

@@ -1,0 +1,71 @@
+<div class="container--base teal">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="greeting-block">
+          <h2 class="h2">Hello, Michael</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container--base padding-none teal">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <ul class="plan-tools">
+          {{#or mapd ma}}
+          <li class="plan-tools-item">
+            <a href="#" class="plan-tools-item-link">
+              <img src="/images/icon-svgs/plus-outline.svg" alt="FDF">
+              Find a Doctor or Facility
+            </a>
+          </li>
+          {{/or}}
+          {{#or mapd pdp}}
+          <li class="plan-tools-item">
+            <a href="#" class="plan-tools-item-link">
+              <img src="/images/icon-svgs/drugs.svg" alt="EDC">
+              Estimate Drug Costs
+            </a>
+          </li>
+          {{/or}}
+          {{#or mapd pdp}}
+          <li class="plan-tools-item">
+            <a href="#" class="plan-tools-item-link">
+              <img src="/images/icon-svgs/pharmacy.svg" alt="LP">
+              Locate a Pharmacy
+            </a>
+          </li>
+          {{/or}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="container--base margin-none">
+  <div class="container">
+    {{#if ship}}
+    <div class="row">
+      <div class="col-md-12 margin-none">
+        <h2 class="h3 medium">Your Plans</h2>
+        <ul class="plan-list">
+          <li class="plan-list-item">
+            <a href="#MA">Medicare Prescription Drug Plan</a>
+            <span class="text-uppercase">AARP MedicareRx Preferred (PDP)</span>
+          </li>
+          <li class="plan-list-item">
+            <a href="#SHIP">Supplemental Health Insurance Plan</a>
+            <span class="text-uppercase">AARP Medicare Supplement Plan</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    {{/if}}
+    <div class="row">
+      <div class="col-md-12">
+        <a href="#" class="link-plan">+ Link Another Plan</a>
+      </div>
+    </div>
+  </div>
+</section>

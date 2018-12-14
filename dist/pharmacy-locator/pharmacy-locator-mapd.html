@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Turn off telephone number detection. -->
+    <meta name="format-detection" content="telephone=no">
+    <title>Pharmacy Locator</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <!-- Place favicon.ico in the root directory -->
+
+
+    <link rel="stylesheet" href="/styles/vendor/slick-theme.css">
+    <link rel="stylesheet" href="/styles/vendor/slick.css">
+    <link rel="stylesheet" href="/styles/vendor/tooltipster-new.css">
+    <link rel="stylesheet" href="/styles/vendor/bootstrap.css">
+    <link rel="stylesheet" href="/styles/vendor/awesomplete.css">
+
+    <link rel="stylesheet" href="/styles/mir-main.css">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/cc-enhancement.css">
+
+    <link rel="stylesheet" href="/styles/print.css">
+
+
+    <link rel="stylesheet" href="/styles/vendor/common.css">
+
+    <script src="/scripts/vendor/modernizr.js"></script>
+
+</head>
+<body>
+  <div class="uhc-body-wrapper">
+    <div class="uhc-body-light-box"></div>
+    <div class="rivets-loading" rv-show="data.loading" style="position: fixed; top:0; left:0; right:0; bottom:0; background-color: white; z-index:9999;"></div>
+    <!-- Start: Navigation -->
+    <nav class="uhcg-nav">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="uhcg-nav-header">
+          <div class="header-wrapper">
+            <div class="logo-container">
+              <img src="/images/logos/uhc-logo.svg" alt="Main Logo" class="img-responsive">
+              <div class="logo-divider"></div>
+              <img src="/images/logos/mirum-logo.png" alt="Partner Logo" class="img-responsive">
+            </div>
+            <div class="icon-container">
+              <a href="#" class="menu-icon" aria-label="Menu">
+                <div class="menu-line-wrapper">
+                  <div class="menu-line"></div>
+                  <div class="menu-line"></div>
+                  <div class="menu-line"></div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <ul class="uhc-nav">
+            <li class="uhc-nav-item--secondary">
+              <a href="#" class="uhc-nav-item-link">
+                <img src="/images/icon-svgs/nav-phone.svg" alt="Phone">
+                Contact Us
+              </a>
+            </li>
+            <li class="uhc-nav-item--secondary">
+              <a href="#" class="uhc-nav-item-link">
+                <span class="count-circle">2</span>
+                <img src="/images/icon-svgs/nav-mail.svg" alt="Message">
+                Messages
+              </a>
+            </li>
+            <li class="uhc-nav-item--secondary">
+              <a href="#" class="uhc-nav-item-link">
+                <img src="/images/icon-svgs/nav-doc.svg" alt="Documents">
+                My Documents
+              </a>
+            </li>
+            <li class="uhc-nav-item--secondary has-sub-nav">
+              <a href="#" class="uhc-nav-item-link" id="nav-profile">
+                <img src="/images/icon-svgs/nav-user.svg" alt="User">
+                Profile
+              </a>
+              <ul class="sub-nav">
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Update Profile</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Go Green Preferences</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Change Password</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Sign Out</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="nav-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="uhc-nav">
+            <li class="uhc-nav-item"><a href="#" class="uhc-nav-item-link">Home</a></li>
+            <li class="uhc-nav-item has-sub-nav">
+              <a href="#" class="uhc-nav-item-link">Care & Costs</a>
+              <ul class="sub-nav">
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Provider Search</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Pharmacy Locator</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Drug Look Up</a></li>
+              </ul>
+            </li>
+            <li class="uhc-nav-item has-sub-nav">
+              <a href="#" class="uhc-nav-item-link">Benefits</a>
+              <ul class="sub-nav">
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Benefits Summary</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Forms & Resources</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Order Materials</a></li>
+              </ul>
+            </li>
+            <li class="uhc-nav-item has-sub-nav">
+              <a href="#" class="uhc-nav-item-link">Claims</a>
+              <ul class="sub-nav">
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Claims Search</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">EOB Search</a></li>
+              </ul>
+            </li>
+            <li class="uhc-nav-item"><a href="#" class="uhc-nav-item-link">Premium Payments</a></li>
+            <li class="uhc-nav-item"><a href="#" class="uhc-nav-item-link">Health & Wellness</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+    
+
+    <!-- Start: Page header -->
+    <header class="benefits-coverage page-header-wrapper" role="banner" aria-label="header">
+      <div class="page-header">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="display-flex v-center">
+                <div class="page-header--left">
+                  <h1 class="h4 margin-none">
+                    Pharmacy Locator
+                  </h1>
+                </div>
+                  <div class="page-header--right">
+                    <div class="margin-none">
+                      <label for="lang-select" class="display-inline-block">Select a language</label>
+                      <div class="select--inline select-no-underline">
+                        <select id="lang-select">
+                          <option>ENGLISH</option>
+                          <option>SPANISH</option>
+                          <option>CHINESE</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+
+
+      <div class="pharmacy-locator">
+  <div class="container--base">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p class="margin-none">Use the online directory to locate a pharmacy and map its location</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="display-inline-block margin-small h4">
+            Find a pharmacy within
+            <label for="distance" class="sr-only">Distance</label>
+            <div class="select--inline">
+              <select id="distance">
+                <option value="1">1 mile</option>
+                <option value="2">2 miles</option>
+                <option value="5">5 miles</option>
+                <option value="10">10 miles</option>
+                <option value="15" selected="selected">15 miles</option>
+                <option value="25">25 miles</option>
+              </select>
+            </div>
+            of
+          </div>
+          <div id="zipcode-wrapper">
+            <label for="zipcode" class="sr-only">Zipcode</label>
+            <input type="text" id="zipcode" placeholder="Search by ZIP Code" value="90210" class="input-small">
+            <button class="btn" id="zipcode-button"><span class="btn btn--primary" data-button-icon="search">Search</span></button>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+            <div class="table-body responsive">
+              <div class="table-body-row">
+                <div class="table-body-cell">
+                  <label for="plan-year">Plan year:</label>
+                </div>
+                <div class="table-body-cell">
+                  <div class="select--regular margin-large">
+                    <select name="plan-year" id="plan-year">
+                      <option value="2016">2016</option>
+                      <option value="2017">2017</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="table-body-row">
+                <div class="table-body-cell">
+                  <label for="plan-type">Plan type:</label>
+                </div>
+                <div class="table-body-cell">
+                  <div class="select--regular margin-extra-small">
+                    <select name="plan-type" id="plan-type">
+                        <option value="Saver">United HealthCare Group Medicare Advantage (HMO)</option>
+                        <option value="Walgreens">&lt;Group MAPD Plan&gt;</option>
+                        <option value="Preferred">&lt;Group MAPD Plan&gt;</option>
+                    </select>
+                  </div>
+                  <span class="italic">All Medicare prescription drug plans available in your area are displayed</span>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <div class="filter-wrapper">
+    <div class="filter-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-6 col-sm-12 margin-none">
+            <h2 class="h4 color-blue medium pharmacy-count">33 Pharmacies Found</h2>
+          </div>
+          <div class="col-xs-6 col-sm-12">
+            <a class="h5 filter-button bold color-blue-link margin-none" data-filter-open="false">Filter (<span id="filterNumber">1</span>) <span class="material-icons">keyboard_arrow_down</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="filter-body-wrapper">
+      <div class="filter-body">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="pharmacyFilters">
+                <fieldset>
+                  <legend class="sr-only">
+                    By Pharmacy Types
+                  </legend>
+                  <h3 class="h5 medium margin-small">By Pharmacy Types</h3>
+                  <ul class="filter-list">
+                    <li>
+                      <input type="checkbox" class="custom-checkbox" id="pharmacy-standard" value="Standard Network Pharmacy">
+                      <label for="pharmacy-standard">Standard Network Pharmacy</label>
+                    </li>
+                    <li id="saver-checkbox" data-tooltip="small" data-tooltip-side="right" data-tooltip-label="Pharmacy saver tooltip">
+                      <input type="checkbox" class="custom-checkbox" id="pharmacy-saver" value="Pharmacy Saver Pharmacy">
+                      <label for="pharmacy-saver">Pharmacy Saver Pharmacy</label>
+                    </li>
+                  </ul>
+                </fieldset>
+                <fieldset>
+                  <legend class="sr-only">
+                    By Services
+                  </legend>
+                  <h3 class="h5 medium margin-small">By Services</h3>
+                  <ul class="filter-list">
+                    <li data-tooltip="small" data-tooltip-side="right" data-tooltip-label="Standard network tooltip">
+                      <input type="checkbox" class="custom-checkbox" id="pharmacy-90" value="Standard Network (90-day)">
+                      <label for="pharmacy-90">Standard Network (90-day)</label>
+                    </li>
+                    <li data-tooltip="small" data-tooltip-side="right" data-tooltip-label="Open 24 hours tooltip">
+                      <input type="checkbox" class="custom-checkbox" id="24-hours" checked="checked" value="Open 24 Hours">
+                      <label for="24-hours">Open 24 Hours</label>
+                    </li>
+                    <li data-tooltip="small" data-tooltip-side="right" data-tooltip-label="Long term care tooltip">
+                      <input type="checkbox" class="custom-checkbox" id="long-term" value="Long-Term Care">
+                      <label for="long-term">Long-Term Care</label>
+                    </li>
+                    <li data-tooltip="small" data-tooltip-side="right" data-tooltip-label="Mail order tooltip">
+                      <input type="checkbox" class="custom-checkbox" id="mail-order" value="Mail Order Pharmacy">
+                      <label for="mail-order">Mail Order</label>
+                    </li>
+                    <li data-tooltip="small" data-tooltip-side="right" data-tooltip-label="Home infusion tooltip">
+                      <input type="checkbox" class="custom-checkbox" id="home-specialty" value="Home Infusion Speciality">
+                      <label for="home-specialty">Home Infusion and Specialty</label>
+                    </li>
+                    <li data-tooltip="small" data-tooltip-side="right" data-tooltip-label="E-prescribing tooltip">
+                      <input type="checkbox" class="custom-checkbox" id="E-Prescribing" value="E-Prescribing">
+                      <label for="E-Prescribing">E-Prescribing</label>
+                    </li>
+                    <li data-tooltip="small" data-tooltip-side="right" data-tooltip-label="Indian tribal tooltip">
+                      <input type="checkbox" class="custom-checkbox" id="indian-tribal" value="Indian / Tribal / Urban">
+                      <label for="indian-tribal">Indian / Tribal / Urban</label>
+                    </li>
+                  </ul>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container--base gray">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="map-toggle">
+            <li>
+              <a href="#collapseMap" role="button" data-toggle="collapse" aria-expanded="true" aria-controls="collapseMap" class="toggle-show">
+                Map <span class="material-icons">keyboard_arrow_down</span>
+              </a>
+            </li>
+          </ul>
+          <div class="collapse-wrapper">
+            <div class="collapse in" id="collapseMap">
+              <div class="map-wrapper">
+                <div id="map"></div>
+              </div>
+            </div>
+          </div>
+            <ul class="pharmacy-list">
+              <li class="clearfix" rv-if="data.PL.hasResults">
+                <div class="pull-left" style="margin-right: 15px;">
+                  <img src="/images/icon-svgs/mapmarker-pin-blue.svg" alt="Standard Network" class="img-extra-small" />
+                  <span class="text-small">Standard Network Pharmacy</span>
+                </div>
+                <div class="pull-left">
+                  <img src="/images/icon-svgs/mapmarker-pin-green.svg" alt="Preferred Network" class="img-extra-small" />
+                  <span class="text-small">Pharmacy Saver Pharmacy</span>
+                </div>
+                <div class="pull-right">
+                  <a href="#">View Results as PDF</a>
+                </div>
+              </li>
+              <li rv-unless="data.PL.hasResults">
+                <span class="color-red bold">
+                  <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  	 viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve" height="1.5rem" style="vertical-align: bottom; max-width: 1.5rem;">
+                  	<g>
+                  		<path fill="#E91B18" d="M270.2,372c0,8.4-6.7,15.3-14.8,15.3c-7.5,0-14.2-7-14.2-15.3
+                  			c0-8.3,6.7-15.3,14.5-15.3C263.8,356.7,270.2,363.7,270.2,372z M267.6,252.1l-6.2,79.6h-11.5l-5.9-79.6V197
+                  			h23.6V252.1z"/>
+                  		<path fill="#E91B18" d="M438.1,428.7L438.1,428.7H73.9c-3.4,0-6.5-1.8-8.3-4.7c-1.7-2.9-1.8-6.6-0.1-9.5
+                  			L247.6,88.2c1.7-3,4.9-4.9,8.4-4.9c3.5,0,6.7,1.9,8.4,4.9l181.9,325.7c0.9,1.5,1.5,3.3,1.5,5.2
+                  			C447.7,424.4,443.4,428.7,438.1,428.7z M90.2,409.5h331.6L256,112.6L90.2,409.5z"/>
+                  	</g>
+                  </svg>
+                  There were no results found for the requested search. Broadening your search
+                  criteria may help you get a different result.
+                </span>
+              </li>
+              <li rv-each-pharmacy="data.PL.resultList">
+                <div class="row">
+                  <div class="col-sm-6 col-md-4">
+                    <div class="display-flex">
+                      <div class="map-pin">
+                        <img src="/images/icon-svgs/mapmarker-pin-blue.svg" alt="Map Marker Standard" class="img-small" rv-if="pharmacy.type | isEqualTo 'standard'" />
+                        <img src="/images/icon-svgs/mapmarker-pin-green.svg" alt="Map Marker Saver" class="img-small" rv-if="pharmacy.type | isEqualTo 'saver'" />
+                        <div class="map-pin-number">
+                          <span rv-text="%pharmacy% | plusOne"></span>
+                        </div>
+                      </div>
+                      <div class="pharmacy-info">
+                        <span class="bold text-medium display-block color-blue-base pharmacy-name" rv-if="pharmacy.type | isEqualTo 'standard'">
+                          { pharmacy.name } &nbsp;
+                        </span>
+                        <span class="bold text-medium display-block color-green-dark pharmacy-name" rv-if="pharmacy.type | isEqualTo 'saver'">
+                          { pharmacy.name } &nbsp;
+                        </span>
+                        <p class="bold text-medium margin-none">
+                          { pharmacy.distance } mi
+                        </p>
+                        <p class="margin-none color-gray">
+                          { pharmacy.address1 }
+                        </p>
+                        <p class="margin-none color-gray">
+                          { pharmacy.address2 }
+                        </p>
+                        <p class="margin-none color-gray">
+                          { pharmacy.phone }
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-4">
+                    <p rv-each-filter="pharmacy.filters">
+                      <img src="/images/icon-svgs/check.svg" class="img-extra-small" style="margin-right: 5px;" alt="check mark">
+                      { filter }
+                    </p>
+                  </div>
+                  <div class="col-sm-12 col-md-4">
+                    <div class="pharmacy-list-links">
+                      <div>
+                        <a href="#">Show on Map</a>
+                        <a href="#">Get Directions</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <p class="margin-auto margin-small">
+                  For pharmacies with Indian/Tribal/Urban, Home Infusion, or Long-term
+                  care services only, please contact UnitedHealthcare for more information.
+                </p>
+                <nav aria-label="Page navigation" class="margin-small">
+                  <ul class="uhc-pagination">
+                    <li>Page 1 of 5</li>
+                    <li class="disabled"><a href="#"><span class="material-icons">keyboard_arrow_left</span></a></li>
+                    <li><a href="#"><span class="material-icons">keyboard_arrow_right</span></a></li>
+                  </ul>
+                </nav>
+                <p class="italic margin-auto" style="margin-bottom: 0;" data-tooltip="small">Dont see the pharmacy you're looking for? Try modifying your search</p>
+              </li>
+            </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card match-height">
+            <div class="card-header display-flex v-center margin-small">
+              <div>
+                <img src="/images/icon-svgs/mail.svg" alt="Mail" class="img-medium" style="padding-right: 10px;" />
+              </div>
+              <div>
+                <h2 class="h4 margin-none">Preferred Mail Service Pharmacy</h2>
+              </div>
+            </div>
+            <div class="card-body">
+              <p>
+                Get savings and convenience delivered right to your mailbox when
+                you use home delivery through OptumRX, your plan's preffered mail
+                service pharmacy. You could pay less for the same medications.
+              </p>
+              <p class="margin-none bold">Contact Optum Rx</p>
+              <p class="margin-small">
+                OptumRx Preferred Mail Service Pharmacy PO Box 2975 <br>
+                Shawnee Mission, KS <br>
+                66201-1375 <br>
+                Call toll-free: 1-877-266-4832, 24 hours a day, 7 days a week. TTY users, call 711.
+              </p>
+              <a href="#">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card match-height">
+            <div class="card-header display-flex v-center margin-small">
+              <div>
+                <img src="/images/icon-svgs/pharmacy.svg" alt="Pharmacy" class="img-medium" style="padding-right: 10px;" />
+              </div>
+              <div>
+                <h2 class="h4 margin-none">
+                    Pharmacy Saver offers prescriptions as low as $XX.XX
+                </h2>
+              </div>
+            </div>
+            <div class="card-body">
+                <p>
+                  Pharmacy SaverTM is a cost savings prescription drug program
+                  available to you as a plan member. UnitedHealthcare® has worked
+                  with many of our network pharmacies to offer even lower prices
+                  on many common prescription drugs. You may be able to pay less
+                  than your plan co-pay for your prescription drugs with the Pharmacy
+                  Saver program.
+                </p>
+                <a href="#">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="loading-block"></div>
+  </div>
+  <div class="container--base gray">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <a href="#collapseInfo" role="button" data-toggle="collapse"
+            aria-expanded="false" aria-controls="collapseInfo" class="display-block collapse-expand">
+            More Information
+            <span class="material-icons">keyboard_arrow_down</span>
+          </a>
+          <div class="collapse-wrapper">
+            <div class="collapse" id="collapseInfo">
+              <p>This directory is current as of the first Sunday of each month.</p>
+              <p>
+                All network pharmacies may not be listed in this directory.
+                Inclusion of a pharmacy does not guarantee that the pharmacy
+                is open, is at the same location as listed in this online directory,
+                or is included in the network. The pharmacy network may change
+                at any time. You will receive notice when necessary. Please contact
+                UnitedHealthcare® for details.
+              </p>
+              <p>
+                If you would like a Pharmacy Directory mailed to you, please contact
+                UnitedHealthcare. You can also print a directory from your online search results.
+              </p>
+              <p class="margin-none">
+                AARP® Medicare Plans insured through UnitedHealthcare have contracts
+                with pharmacies that equal or exceed CMS requirements for pharmacy access
+                in your area.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="countyModal" tabindex="-1" role="dialog" aria-labelledby="countyModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" data-dismiss="modal" aria-label="Close" class="close">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            	 viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve" class="close-button">
+            	 <path fill="#196ECF" d="M397.337,105.027 C399.791,105.269 401.829,106.368 403.63,107.996 C407.651,112.016 407.651,118.535
+            		 403.63,122.555 L270.209,255.976 L403.63,389.397 C407.651,393.418 407.651,399.937 403.63,403.957 C399.61,407.978 393.091,407.978
+            		 389.071,403.957 L256,270.886 L122.929,403.957 C118.909,407.978 112.39,407.978 108.37,403.957 C104.349,399.937 104.349,393.418
+            		 108.37,389.397 L241.791,255.976 L108.37,122.555 C104.349,118.535 104.349,112.016 108.37,107.996 C110.171,106.368 112.209,105.269
+            		 114.663,105.027 C118.196,105.027 120.259,105.501 122.929,107.996 L256,241.067 L389.071,107.996 C391.741,105.501 393.804,105.027
+            		 397.337,105.027 z" />
+            </svg>
+          </button>
+          <h1 class="modal-title h3 margin-none" id="countyModalLabel">Select a County</h1>
+        </div>
+        <div class="modal-body" style="padding-bottom: 30px;">
+          <p>Please confirm the county of your residence</p>
+          <a href="#" data-dismiss="modal" aria-label="Close">County One</a>
+          <br>
+          <a href="#" class="border-none" data-dismiss="modal" aria-label="Close">County Two</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbmYpZ-If4XUPHONtC87GHZOjXuvzj1sk"></script>
+<script src="/scripts/vendor/maplabel.js"></script>
+
+
+      <!-- Tooltips -->
+      <div class="tooltip-templates">
+          <div id="tooltip-large">
+              <p class="bold margin-extra-small">Lorem Ipsum</p>
+              <span class="text-small">
+                  Id elit reprehenderit fugiat Lorem in magna aliqua sunt ut est id ullamco dolor ut ad.
+              </span>
+          </div>
+          <div id="tooltip-small">
+              <span class="text-small">
+                  Aute enim nisi consectetur excepteur esse cupidatat Lorem excepteur laborum sunt occaecat nulla culpa magna cillum.
+              </span>
+          </div>
+          <div id="tooltip-costs">
+            <span class="text-small">
+                This is the amount you pay as your share of your prescription drug costs,
+                such as deductibles (if applicable), co-pays/co-insurance and the amounts
+                you pay in the coverage gap.
+            </span>
+          </div>
+      </div>
+
+            <section class="container--base contact-us">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h2 class="h3 medium margin-small">Need help?</h2>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="display-flex v-center margin-small">
+                      <img src="/images/icon-svgs/computer.svg" alt="Tech Support" class="img-small">
+                      <div class="padding-left-small">
+                        <h3 class="h4 margin-none">Technical Support</h3>
+                      </div>
+                    </div>
+                    <a href="tel:1-800-555-5555" class="display-inline-block margin-extra-small text-large">1-800-XXX-XXXX</a>
+                    <p>
+                      TTY users, call <a href="tel:711">711</a>
+                    </p>
+                    <p>
+                      8 am-8 pm local time, 7 days a week
+                    </p>
+                  </div>
+                  <div class="col-md-4 border-left">
+                    <div class="display-flex v-center margin-small">
+                      <img src="/images/icon-svgs/plan.svg" alt="Plan Support" class="img-small">
+                      <div class="padding-left-small">
+                        <h3 class="h4 margin-none">Plan Support</h3>
+                      </div>
+                    </div>
+                    <a href="tel:1-800-555-5555" class="display-inline-block margin-extra-small text-large">1-800-XXX-XXXX</a>
+                    <p>
+                      TTY users, call <a href="tel:711">711</a>
+                    </p>
+                    <p>
+                      8 am-8 pm local time, 7 days a week
+                    </p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <p class="margin-none">
+                      See more ways to <a href="/contact/contact-us-ma.html" class="lowercase">contact us</a>.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+            </main>
+
+    <!-- Start: Footer -->
+    <footer class="nav-footer" role="contentinfo" aria-label="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h1 class="h6 medium">Member Support</h1>
+            <ul class="nav-footer--list">
+              <li>Customer Service 1-800-555-5555</li>
+              <li><a href="#">All Contact Info</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h1 class="h6 medium">Quick Links</h1>
+            <ul class="nav-footer--list">
+              <li><a href="#">Find A Provider</a></li>
+              <li><a href="#">Send Feedback</a></li>
+              <li><a href="#">Report Incorrect Info</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h1 class="h6 medium">Ask A Nurse</h1>
+            <ul class="nav-footer--list">
+              <li>Registered nurses available 24/7</li>
+              <li>1-888-842-4224</li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12"><span style="font-size: .875rem;">UHC &copy; 2016 | All Rights Reserved</span></div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+    <!-- Start: Footer scripts -->
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    
+    <!-- Vendor scripts -->
+    <script src="/scripts/vendor/jquery-3.1.1.min.js"></script>
+    <script src="/scripts/vendor/lockrroom.js"></script>
+    <script src="/scripts/vendor/select2.min.js"></script>
+    <script src="/scripts/vendor/select2-tab-fix.js"></script>
+    <script src="/scripts/vendor/rivets.bundled.min.js"></script>
+    <script src="/scripts/vendor/rivets.js"></script>
+    <script src="/scripts/vendor/jquery.matchHeight.js"></script>
+    <script src="/scripts/vendor/slick.min.js"></script>
+    <script src="/scripts/vendor/TweenLite.min.js"></script>
+    <script src="/scripts/vendor/plugins/CSSPlugin.min.js"></script>
+    <script src="/scripts/vendor/jquery.autocomplete.min.js"></script>
+    <script src="/scripts/vendor/bootstrap.min.js"></script>
+    
+    <script src="/scripts/vendor/jquery.validate.min.js"></script>
+    <script src="/scripts/vendor/tooltipster.bundle.min.js"></script>
+    <script src="/scripts/vendor/awesomplete.js"></script>
+    
+    
+    
+    
+    <script src="/scripts/main.js"></script>
+    <script src="/scripts/navigation.js"></script>
+    
+    
+      <script src="/scripts/pages/pharmacy-locator.js"></script>
+</body>
+</html>

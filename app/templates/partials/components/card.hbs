@@ -1,0 +1,176 @@
+<!-- Start: Card component -->
+<div class="card{{#if type}} {{type}}{{/if}}">
+  <div class="row">
+    <div class="col-md-12">
+      {{!-- If type = feature --}}
+      {{#eq type "feature"}}
+        {{!-- Title --}}
+        <h1 class="{{#eq title-size "large"}}h3 medium{{/eq}}{{#eq title-size "small"}}h5{{/eq}} margin-none">{{title}}</h1>
+        {{!-- Subtitle --}}
+        {{#if subtitle}}
+          <h2 class="h5 margin-none">{{subtitle}}</h2>
+        {{/if}}
+      {{/eq}}
+      {{!-- If type = rider --}}
+      {{#eq type "--rider"}}
+        <header class="card-header">
+          <div class="icon-wrapper">
+            <div class="header-icon {{icon-color}}">
+              <img src="/images/icon-svgs/{{icon}}.svg" alt="{{icon}}" />
+            </div>
+          </div>
+          <div class="text-wrapper">
+            <h1 class="h3 medium margin-none">
+              {{title}}
+            </h1>
+            <span class="sub-text gray ">{{subtitle}}</span>
+          </div>
+        </header>
+        <section class="card-body">
+          {{!-- If error --}}
+          {{#if error}}
+            <div class="message-block error">
+              <div class="message-block-header">Removed from plan</div>
+              <div class="message-block-body">
+                a diam et sem commodo pulvinar. Praesent finibus Rider will take effect
+                <span class="bold">{{this.error}}</span>
+                magna sodales.
+              </div>
+            </div>
+          {{/if}}
+          {{!-- If success --}}
+          {{#if success}}
+            <div class="message-block success">
+              <div class="message-block-header">Added to plan</div>
+              <div class="message-block-body">
+                a diam et sem commodo pulvinar. Praesent finibus Rider will take effect
+                <span class="bold">{{this.success}}</span>
+                magna sodales.
+              </div>
+            </div>
+          {{/if}}
+          <span>{{body}}</span>
+          {{!-- If collapse-ID --}}
+          {{#if collapse-ID}}
+            <ul class="links">
+              <li>
+                <a href="#{{collapse-ID}}" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="{{collapse-ID}}">
+                  VIEW MORE
+                  <span class="material-icons">keyboard_arrow_down</span>
+                </a>
+              </li>
+            </ul>
+            <div id="{{collapse-ID}}" class="collapse">
+              <div class="collapseInner">
+                <ul>
+                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                  <li>
+                    <a href="#">
+                      View / Download PDF
+                      <img src="/images/icon-svgs/PDF_outlined.svg" alt="PDF DL" />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          {{/if}}
+          <button type="button" data-toggle="modal" data-target="#{{rider-type}}BenefitModal" class="btn btn--primary"><span class="material-icons">{{rider-type}}</span>{{rider-type}} this benefit</button>
+        </section>
+      {{/eq}}
+      {{!-- If type = large-card --}}
+      {{#eq type "large-card"}}
+        <section class="card-body-main margin-large clearfix">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="img-wrapper">
+                <div class="img">
+                  <img src="http://placehold.it/200x200" alt="card image" />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-7">
+              <div class="text-wrapper margin-small">
+                <h1 class="h3 medium margin-small">
+                  {{title}}
+                </h1>
+                <p class="sub-text gray">{{body}}</p>
+                <button type="button" class="btn btn--primary">Main CTA</button>
+              </div>
+              <a href="#collapseLargeCard1" class="collapse-toggle" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="collapseLargeCard1">VIEW MORE<span class="material-icons">keyboard_arrow_down</span></a>
+            </div>
+          </div>
+        </section>
+        <section id="collapseLargeCard1" class="card-body-collapse" aria-expanded="false">
+          <div class="row">
+            <div class="col-md-6">
+              <h1 class="h5 semi-bold margin-small">
+                Why call Nurse Healthline?
+              </h1>
+              <ul class="margin-small">
+                <li>Understand your symptoms</li>
+                <li>Understand your symptoms</li>
+                <li>Understand your symptoms</li>
+                <li>Understand your symptoms</li>
+                <li>Understand your symptoms</li>
+              </ul>
+              <p class="margin-small">There is no additonal cost to you as an insured member covered under an AARP Medicare Supplement plan.</p>
+              <a href="#" class="text-large">XXX-XXX-XXXX</a>
+              <p class="text-medium">24 hours / 7 days a week</p>
+            </div>
+            <div class="col-md-5 col-md-offset-1">
+              <div class="video-tout">
+                <div class="video-thumbnail">
+                  <img src="http://placehold.it/356x220"/>
+                  <a href="#" class="video-play"></a>
+                </div>
+                <p>See how a registered nurse can help you explore your treatement options.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      {{/eq}}
+
+    </div>
+  </div>
+  {{!-- If type = feature --}}
+  {{#eq type "feature"}}
+    <div class="row">
+      {{!-- Column size one --}}
+      {{#eq col-size "1"}}
+        <div class="col-md-12">
+          <p class="margin-none">{{body}}</p>
+        </div>
+      {{/eq}}
+      {{!-- Col size one --}}
+      {{#eq col-size "1"}}
+        <div class="col-md-12">
+          {{#each col-1}}
+            <span class="bold">{{title}}:</span>
+            <span>&nbsp;{{content}}</span>
+            <br>
+          {{/each}}
+        </div>
+      {{/eq}}
+      {{!-- Col size two --}}
+      {{#eq col-size "2"}}
+        <div class="col-md-6">
+          {{#each col-1}}
+            <span class="bold">{{title}}:</span>
+            <span>&nbsp;{{content}}</span>
+            <br>
+          {{/each}}
+        </div>
+        <div class="col-md-6">
+          {{#each col-2}}
+            <span class="bold">{{title}}</span>
+            <h1 class="h4 margin-responsive">{{content}}</h1>
+            {{#if button}}
+              <button class="btn btn--primary margin-none">{{button}}</button>
+            {{/if}}
+          {{/each}}
+        </div>
+      {{/eq}}
+    </div>
+  {{/eq}}
+</div>

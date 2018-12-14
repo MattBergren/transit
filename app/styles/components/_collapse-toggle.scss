@@ -1,0 +1,35 @@
+.collapse-toggle {
+    color: $color-digital-blue;
+    font-size: 16px;
+    text-transform: uppercase;
+    display: block;
+
+    span.material-icons {
+        font-weight: 600;
+        vertical-align: middle;
+        transition: transform $transition-speed;
+        position: relative;
+        top: -2px;
+    }
+
+    span.collapsed-label {
+        margin-right: 4px;
+    }
+
+    span.expanded-label {
+        display: none;
+        margin-right: 4px;
+    }
+
+    &[aria-expanded='true'] {
+        span.material-icons {
+            transform: rotate(-180deg);
+        }
+        span.expanded-label {
+            display: inline-block;
+        }
+        span.collapsed-label {
+            display: none;
+        }
+    }
+}

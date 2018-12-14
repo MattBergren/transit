@@ -1,0 +1,93 @@
+<section class="container--base">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="h2 margin-small">
+                    Premium Payments Overview
+                </h2>
+                <p class="span" data-tooltip="large" data-tooltip-label="Total amount due tooltip">
+                    <span class="bold">Total Amount Due:</span>
+                </p>
+                <p class="h4">$XX.XX</p>
+                <div class="table-body margin-large">
+                    {{#if ship}}
+                        <div class="table-body-row">
+                            <div class="table-body-cell">
+                                <span class="bold">Paid Through Date:</span>
+                            </div>
+                            <div class="table-body-cell">
+                                10/20/2016
+                            </div>
+                        </div>
+                    {{else}}
+                        <div class="table-body-row">
+                            <div class="table-body-cell" data-tooltip="small" data-tooltip-label="Credit balance tooltip">
+                                <span class="bold">Credit Balance:</span>
+                            </div>
+                            <div class="table-body-cell">
+                                $XX.XX
+                            </div>
+                        </div>
+                    {{/if}}
+                    <div class="table-body-row">
+                        <div class="table-body-cell">
+                            <span class="bold">Payment Method:</span>
+                        </div>
+                        <div class="table-body-cell">
+                            {{method}} {{#if auto}}{{#if ship}}(Recurring){{else}}(Automatic){{/if}}{{/if}}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="message-block error hidden" id="{{#if ship}}cancellingRecurringPayment{{else}}cancellingAutomaticPayment{{/if}}">
+                    <div class="message-block-header">Your {{#if ship}}recurring{{else}}automatic{{/if}} payment has been cancelled.</div>
+                    <div class="message-block-body">
+                        <p class="margin-bottom">
+                            Your payment method will continue to display as EFT until the first of next month.
+                        </p>
+                    </div>
+                </div>
+
+                {{#if variation}}
+                <div class="message-block success variation-el">
+                    <div class="message-block-header">Your Payment Has Been Submitted</div>
+                    <div class="message-block-body">
+                        <p class="margin-bottom">
+                            It typically takes 1-3 business days for your payment to be processed and applied to your account.
+                        </p>
+                    </div>
+                </div>
+                {{/if}}
+
+                <div class="margin-small">
+
+                    {{#if ship}}
+                        <a href="/payments/ship/onetimepay/form.html" class="btn btn--primary">Make a One-Time Payment</a>
+                    {{else}}
+                        <a href="/payments/federal/onetimepay/form.html" class="btn btn--primary">Make a One-Time Payment</a>
+                    {{/if}}
+
+                    {{#if auto}}
+                        {{#if ship}}
+                            <a href="#" class="btn btn--primary" id="editRecurringPaymentButton" data-toggle="modal" data-target="#editRecurringPaymentsModal">Edit Recurring Payments</a>
+                        {{else}}
+                            <a href="#" class="btn btn--primary" id="editAutomaticPaymentButton" data-toggle="modal" data-target="#editAutomaticPaymentsModal">Edit Automatic Payments</a>
+                        {{/if}}
+                    {{else}}
+                        {{#if ship}}
+                            <a href="/payments/ship/recurring/form.html" class="btn btn--primary">Set Up Recurring Payments</a>
+                        {{else}}
+                            <a href="/payments/federal/automatic/form.html" class="btn btn--primary">Set Up Automatic Payments</a>
+                        {{/if}}
+                    {{/if}}
+
+
+                </div>
+                {{#if ship}}
+                    <p class="margin-small"><strong>Note:</strong> When you set up recurring payments using Electronic Funds Transfer (EFT) you will save $2.00 off the total monthly rate for your household!</p>
+                    <p class="italic">With recurring EFT, your household payment will be deducted from your checking account every month</p>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</section>

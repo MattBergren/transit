@@ -1,0 +1,230 @@
+.drug-cost-estimator {
+    .pharmacy-standard-block,
+    .mail-service-block,
+    .selected-pharmacy,
+    .pharmacy-retail-block {
+        display: none;
+    }
+
+    .pharmacy-saver-block,
+    .mail-service-block,
+    .pharmacy-retail-block {
+        width: 100%;
+
+        .display-flex {
+            div:last-of-type {
+                flex-shrink: 1;
+                max-width: 100%;
+            }
+        }
+    }
+
+    #alt-search {
+        margin-top: $spacing-large;
+
+        #lipitor-radios,
+        #drug-radios {
+            display: flex;
+            flex-direction: column;
+
+            a {
+                display: block;
+
+                &:not(:last-of-type) {
+                    margin-bottom: $spacing-small;
+                }
+            }
+        }
+    }
+
+    // Affix
+    .affix-wrapper {
+        &.affix {
+            position: static;
+            top: 40px;
+        }
+
+        &.affix-top {
+            position: static;
+        }
+
+        &.affix-bottom {
+            position: fixed !important;
+        }
+
+        @media screen and (min-width: $breakpoint-md) {
+            &.affix {
+                position: fixed;
+            }
+        }
+    }
+
+    // Add a drug
+    .add-drug-slick {
+        background-color: $color-white;
+        display: block;
+        height: auto;
+        overflow: hidden;
+
+        .slick-slide {
+            padding: $spacing-inner;
+            padding-top: 3rem;
+            position: relative;
+
+            .slick-header {
+                margin-bottom: $spacing-large;
+                padding: 0 75px;
+                text-align: center;
+            }
+
+            .slick-body {
+                .display-flex {
+                    flex-direction: column;
+
+                    @media screen and (min-width: $breakpoint-sm) {
+                        flex-direction: row;
+                    }
+                }
+
+                .easy-autocomplete {
+                    margin-bottom: 15px;
+
+                    input {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .top-left {
+                position: absolute;
+                top: $spacing-inner/2;
+                left: $spacing-inner;
+            }
+
+            .top-right {
+                position: absolute;
+                top: $spacing-inner/2;
+                right: $spacing-inner;
+            }
+        }
+    }
+
+    .add-drug {
+        .add-drug-slide:not(:first-of-type) {
+            display: none;
+        }
+
+        .add-drug-slide {
+            position: relative;
+
+            .add-drug-slide-header {
+                margin-bottom: $spacing-large;
+                text-align: center;
+            }
+        }
+    }
+
+    // General styles
+    #main-search {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    #drug-search-input {
+        margin-bottom: $spacing-small;
+        width: 100%;
+    }
+
+    #drug-search-button {
+        margin-bottom: 0;
+        margin-left: inherit;
+        margin-right: inherit;
+        white-space: nowrap;
+    }
+
+    #zipcode-wrapper {
+        display: flex;
+        flex-direction: column;
+        margin-top: $spacing-small;
+        width: 100%;
+
+        @media screen and (min-width: $breakpoint-sm) {
+            max-width: 400px;
+        }
+
+        @media screen and (min-width: $breakpoint-md) {
+            margin-left: $spacing-small;
+        }
+    }
+
+    #zipcode {
+        flex-basis: 100%;
+        margin-bottom: $spacing-small;
+        max-width: 100%;
+        min-height: 42px;
+
+        @media screen and (min-width: $breakpoint-md) {
+            margin-bottom: 0;
+        }
+    }
+
+    #zipcode-button {
+        @media screen and (max-width: $breakpoint-sm) {
+            max-width: none;
+        }
+    }
+
+    .select-pharmacy {
+        font-size: 0.875rem;
+        max-width: 140px;
+        padding: 0;
+        width: 100%;
+    }
+
+    @media screen and (min-width: $breakpoint-sm) {
+        #main-search {
+            flex-direction: row;
+        }
+
+        #drug-search-input {
+            margin-bottom: 0;
+            max-width: 300px;
+        }
+
+        .select-pharmacy {
+            padding: 10px;
+        }
+    }
+
+    @media screen and (min-width: $breakpoint-md) {
+        #zipcode-wrapper {
+            display: inline-flex;
+            flex-direction: row;
+            width: auto;
+        }
+
+        #zipcode {
+            flex-basis: auto;
+            margin-bottom: 0;
+            margin-left: 0.5rem;
+            max-width: 150px;
+        }
+    }
+
+    .modal-content {
+        overflow: hidden;
+
+        .modal-body {
+            padding: 0;
+
+            .add-drug-animation-wrapper {
+                // overflow: hidden;
+                // background-color: $color-white;
+
+                .add-drug {
+                    padding: 0 $spacing-inner;
+                }
+            }
+        }
+    }
+}

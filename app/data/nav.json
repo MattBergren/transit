@@ -1,0 +1,22 @@
+{
+  "navigation": [
+    {
+      "link-text": "Home"
+    },
+    {
+      "link-text": "Find Care & Costs"
+    },
+    {
+      "link-text": "Claims & Accounts"
+    },
+    {
+      "link-text": "Coverage & Benefits"
+    },
+    {
+      "link-text": "Pharmacies & Prescriptions"
+    },
+    {
+      "link-text": "Health & Wellness"
+    }
+  ]
+}

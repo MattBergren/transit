@@ -1,0 +1,1 @@
+function throttle(o,e){var l=Date.now();return function(){l+e-Date.now()<0&&(o(),l=Date.now())}}function closeCollapse(){var o=$(".collapse"),e=$(window).width();e>991?o.collapse("show"):o.collapse("hide")}$(document).ready(function(){$("#carousel").slick({dots:!0,arrows:!0})}),window.addEventListener("resize",throttle(closeCollapse,50)),closeCollapse();

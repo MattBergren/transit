@@ -1,0 +1,40 @@
+<section class="container--base equal-margins-mobile">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="h3 medium margin-none">Register for Online Account Access</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <ul class="progress-step-bar">
+          <li class="step-bullet{{#if step1}} active{{/if}}">
+            <div class="step-labels">
+              <p>Step 1</p>
+              <span>Personal Information</span>
+            </div>
+          </li>
+          <li class="step-bullet{{#if step2}} active{{/if}}">
+            <div class="step-labels">
+              <p>Step 2</p>
+              <span>Plan Information</span>
+            </div>
+          </li>
+          <li class="step-bullet{{#if step3}} active{{/if}}{{#if complete}} complete{{/if}}">
+            <div class="step-labels">
+              <p>Step 3</p>
+              <span>Create Account</span>
+            </div>
+          </li>
+          {{!-- <li class="step-bullet">
+            <div class="step-labels">
+              <p>Step 4</p>
+              <span>Registration Confirmation</span>
+            </div>
+          </li> --}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

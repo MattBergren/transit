@@ -1,0 +1,45 @@
+---
+title: setup
+layout: default
+iframe: true
+hasScript:
+  - cc-enhancement-app
+---
+
+<div id="cc-enhancement">
+    
+    {{> cc-intro title="Update Payment Method" plan="Medicare Prescription Drug Plan"}}
+
+    <section class="payment-selection">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-5">
+                    <form action="">
+                        {{> cc-select-payment-method selectedPaymentMethod.update}}
+                    </form>
+                </div>
+                <div class="col-sm-6 col-md-5">
+                    <aside class="info-panel" aria-labelledby="info-panel__title">
+                        <div class="info-panel__header">
+                            <span class="material-icons md-36" aria-hidden="true">access_alarm</span>
+                            <h4 id="info-panel__title">&nbsp;Helpful Reminders</h4>
+                        </div>
+                        <div class="info-panel__body">
+                            <dl class="dl-horizontal">
+                                <dt>Next Payment</dt>
+                                <dd>$27.00</dd>
+                                <dt>Due</dt>
+                                <dd>10/01/2018</dd>
+                                <dt>Current Method</dt>
+                                <dd>Monthly Direct Billing</dd>
+                            </dl>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+            {{> cc-ssa-info}}
+        </div>
+    </section>
+
+{{> ssa-modal }}
+</div>

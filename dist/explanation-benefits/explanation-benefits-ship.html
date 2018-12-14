@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Turn off telephone number detection. -->
+    <meta name="format-detection" content="telephone=no">
+    <title>Explanation of Benefits (EOB)</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <!-- Place favicon.ico in the root directory -->
+
+
+    <link rel="stylesheet" href="/styles/vendor/slick-theme.css">
+    <link rel="stylesheet" href="/styles/vendor/slick.css">
+    <link rel="stylesheet" href="/styles/vendor/tooltipster-new.css">
+    <link rel="stylesheet" href="/styles/vendor/bootstrap.css">
+    <link rel="stylesheet" href="/styles/vendor/awesomplete.css">
+
+    <link rel="stylesheet" href="/styles/mir-main.css">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/cc-enhancement.css">
+
+    <link rel="stylesheet" href="/styles/print.css">
+
+
+    <link rel="stylesheet" href="/styles/vendor/common.css">
+
+    <script src="/scripts/vendor/modernizr.js"></script>
+
+</head>
+<body>
+  <div class="uhc-body-wrapper">
+    <div class="uhc-body-light-box"></div>
+    <div class="rivets-loading" rv-show="data.loading" style="position: fixed; top:0; left:0; right:0; bottom:0; background-color: white; z-index:9999;"></div>
+    <!-- Start: Navigation -->
+    <nav class="uhcg-nav">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="uhcg-nav-header">
+          <div class="header-wrapper">
+            <div class="logo-container">
+              <img src="/images/logos/uhc-logo.svg" alt="Main Logo" class="img-responsive">
+              <div class="logo-divider"></div>
+              <img src="/images/logos/mirum-logo.png" alt="Partner Logo" class="img-responsive">
+            </div>
+            <div class="icon-container">
+              <a href="#" class="menu-icon" aria-label="Menu">
+                <div class="menu-line-wrapper">
+                  <div class="menu-line"></div>
+                  <div class="menu-line"></div>
+                  <div class="menu-line"></div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <ul class="uhc-nav">
+            <li class="uhc-nav-item--secondary">
+              <a href="#" class="uhc-nav-item-link">
+                <img src="/images/icon-svgs/nav-phone.svg" alt="Phone">
+                Contact Us
+              </a>
+            </li>
+            <li class="uhc-nav-item--secondary">
+              <a href="#" class="uhc-nav-item-link">
+                <span class="count-circle">2</span>
+                <img src="/images/icon-svgs/nav-mail.svg" alt="Message">
+                Messages
+              </a>
+            </li>
+            <li class="uhc-nav-item--secondary">
+              <a href="#" class="uhc-nav-item-link">
+                <img src="/images/icon-svgs/nav-doc.svg" alt="Documents">
+                My Documents
+              </a>
+            </li>
+            <li class="uhc-nav-item--secondary has-sub-nav">
+              <a href="#" class="uhc-nav-item-link" id="nav-profile">
+                <img src="/images/icon-svgs/nav-user.svg" alt="User">
+                Profile
+              </a>
+              <ul class="sub-nav">
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Update Profile</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Go Green Preferences</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Change Password</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Sign Out</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="nav-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="uhc-nav">
+            <li class="uhc-nav-item"><a href="#" class="uhc-nav-item-link">Home</a></li>
+            <li class="uhc-nav-item has-sub-nav">
+              <a href="#" class="uhc-nav-item-link">Care & Costs</a>
+              <ul class="sub-nav">
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Provider Search</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Pharmacy Locator</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Drug Look Up</a></li>
+              </ul>
+            </li>
+            <li class="uhc-nav-item has-sub-nav">
+              <a href="#" class="uhc-nav-item-link">Benefits</a>
+              <ul class="sub-nav">
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Benefits Summary</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Forms & Resources</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Order Materials</a></li>
+              </ul>
+            </li>
+            <li class="uhc-nav-item has-sub-nav">
+              <a href="#" class="uhc-nav-item-link">Claims</a>
+              <ul class="sub-nav">
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Claims Search</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">EOB Search</a></li>
+              </ul>
+            </li>
+            <li class="uhc-nav-item"><a href="#" class="uhc-nav-item-link">Premium Payments</a></li>
+            <li class="uhc-nav-item"><a href="#" class="uhc-nav-item-link">Health & Wellness</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+    
+
+    <!-- Start: Page header -->
+    <header class="benefits-coverage page-header-wrapper" role="banner" aria-label="header">
+      <div class="page-header">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="display-flex v-center">
+                <div class="page-header--left">
+                  <h1 class="h4 margin-none">
+                    Explanation of Benefits (EOB)
+                  </h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+
+
+      <div class="explanation-benefits">
+  <div class="container--base">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="h3 medium">EOB Search</h2>
+          <p class="margin-none">&lt;General text about EOBs that can be used on all EOB pages&gt; Lorem ipsum dolor sit amet.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div>
+            <fieldset>
+              <legend class="sr-only">EOB Search</legend>
+              <div class="table-body responsive wide">
+                <div class="table-body-row">
+                  <div class="table-body-cell">
+                    <label for="date-range">Date Range:</label>
+                  </div>
+                  <div class="table-body-cell">
+                    <div class="select--regular">
+                      <select name="date-range" class="date-range" id="date-range">
+                        <option value="90 Days">Last 90 Days</option>
+                          <option value="3-6 Months">Last 3-6 Months</option>
+                          <option value="6-12 Months">Last 6-12 Months</option>
+                          <option value="12-18 Months">Last 12-18 Months</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="table-body-row custom-search-fields hidden">
+                  <div class="table-body-cell"></div>
+                  <div class="table-body-cell">
+                   <div class="custom-search-input">
+                        <label for="custom-from">From</label>
+                        <input type="date" id="custom-from">
+                    </div>
+                    <div class="custom-search-input">
+                        <label for="custom-to">to</label>
+                        <input type="date" id="custom-to">
+                    </div>
+                  </div>
+                  <div class="table-body-cell">
+                    <button class="btn custom-date-search-btn"><span class="btn btn--primary">Search</span></button>
+                  </div>
+                </div>
+  
+              </div>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container--base gray">
+    <div class="container">
+          <div id="medical-results" class="search-container" aria-hidden="false">
+            <div class="row">
+              <div class="col-md-12">
+                <h2 class="h4">
+                  You have
+                  <span class="bold number-title">3</span>
+                  <span class="bold">EOBs</span> for the
+                  <span class="bold days-title">Last 90 days</span>
+                </h2>
+                <p>
+                  EOB statements that were created prior to December 2013 will not be posted to this site. EOB statements posted to this site will look slightly different than EOB statements that included a check. The electronic copies do not include an image of the check.
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-8">
+                <a href="#collapseEOB" role="button" data-toggle="collapse"
+                  aria-expanded="false" aria-controls="collapseEOB" class="display-inline-block collapse-expand">
+                  Learn More About My Medical EOB
+                  <span class="material-icons">keyboard_arrow_down</span>
+                </a>
+                <div class="collapse-wrapper margin-small">
+                  <div class="collapse" id="collapseEOB">
+                      <p class="margin-none">
+                        Qui non exercitation aliquip do pariatur voluptate officia culpa consectetur mollit laborum reprehenderit.
+                        Laborum enim aliquip dolor consequat nisi pariatur dolore esse aliqua officia laborum consequat voluptate.
+                        Fugiat veniam officia id laboris in excepteur voluptate exercitation fugiat ullamco ullamco incididunt pariatur
+                        fugiat reprehenderit voluptate. Pariatur nisi do aute aliqua consectetur cupidatat adipisicing officia consectetur
+                        culpa qui anim dolore dolore. Tempor ad ut excepteur cillum velit commodo sit nisi aliquip aute veniam aliqua anim
+                        dolor aute voluptate deserunt. In anim et reprehenderit veniam in ipsum laboris incididunt voluptate sint.
+                      </p>
+                  </div>
+                </div>
+            
+                <ul class="document-list-new margin-large">
+                  <li>
+                    <a href="#"><img src="/images/icon-svgs/PDF_outlined.svg" alt="PDF">EOB Statement <span class="doc-specs">(PDF, size)</span></a>
+                    <p>12/01/2016</p>
+                  </li>
+                  <li>
+                    <a href="#"><img src="/images/icon-svgs/PDF_outlined.svg" alt="PDF">EOB Statement <span class="doc-specs">(PDF, size)</span></a>
+                    <p>11/01/2016</p>
+                  </li>
+                  <li>
+                    <a href="#"><img src="/images/icon-svgs/PDF_outlined.svg" alt="PDF">EOB Statement <span class="doc-specs">(PDF, size)</span></a>
+                    <p>10/01/2016</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+      <div id="error-results" class="hidden search-container" aria-hidden="true">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="h4 margin-none">
+              You have
+              <span class="bold number-title">0</span>
+              <span class="bold eob-title">Prescription Drug EOBs</span> for the
+              <span class="bold days-title">Last Custom Days</span>
+            </h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <p class="margin-large">The Medical EOB is a summary of the claims we get for your medical care in a particular month. For example, if we get claims in April, you’ll get a EOB in May. If there are no claims in May, you won’t get a EOB in June.</p>
+            <p class="color-red semi-bold"><!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        	 viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve" height="1.5rem" style="vertical-align: bottom; max-width: 1.5rem;">
+        	<g>
+        		<path fill="#E91B18" d="M270.2,372c0,8.4-6.7,15.3-14.8,15.3c-7.5,0-14.2-7-14.2-15.3
+        			c0-8.3,6.7-15.3,14.5-15.3C263.8,356.7,270.2,363.7,270.2,372z M267.6,252.1l-6.2,79.6h-11.5l-5.9-79.6V197
+        			h23.6V252.1z"/>
+        		<path fill="#E91B18" d="M438.1,428.7L438.1,428.7H73.9c-3.4,0-6.5-1.8-8.3-4.7c-1.7-2.9-1.8-6.6-0.1-9.5
+        			L247.6,88.2c1.7-3,4.9-4.9,8.4-4.9c3.5,0,6.7,1.9,8.4,4.9l181.9,325.7c0.9,1.5,1.5,3.3,1.5,5.2
+        			C447.7,424.4,443.4,428.7,438.1,428.7z M90.2,409.5h331.6L256,112.6L90.2,409.5z"/>
+        	</g>
+        </svg>
+         No results were found. Please select a different Date Range to search again. Only EOBs from the Last 18 months are searchable.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="loading-block"></div>
+  </div>
+  <div class="container--base form-disclaimer yellow">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-10 col-md-9">
+          <div class="display-flex v-center">
+            <div>
+              <img src="/images/icon-svgs/info_outlined.svg" alt="Info" class="img-medium">
+            </div>
+            <div>
+              <span class="text-small"><span class="bold">This page contains documents in PDF format.</span> PDF (Portable Document Format) files can be viewed with Adobe® Reader®. If you don't already have this viewer on your computer, download it free from the <a href="#" class="text-link text-small">Adobe website.</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <!-- Tooltips -->
+      <div class="tooltip-templates">
+          <div id="tooltip-large">
+              <p class="bold margin-extra-small">Lorem Ipsum</p>
+              <span class="text-small">
+                  Id elit reprehenderit fugiat Lorem in magna aliqua sunt ut est id ullamco dolor ut ad.
+              </span>
+          </div>
+          <div id="tooltip-small">
+              <span class="text-small">
+                  Aute enim nisi consectetur excepteur esse cupidatat Lorem excepteur laborum sunt occaecat nulla culpa magna cillum.
+              </span>
+          </div>
+          <div id="tooltip-costs">
+            <span class="text-small">
+                This is the amount you pay as your share of your prescription drug costs,
+                such as deductibles (if applicable), co-pays/co-insurance and the amounts
+                you pay in the coverage gap.
+            </span>
+          </div>
+      </div>
+
+          <section class="container--base contact-us">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <h2 class="h3 medium margin-small">Need help?</h2>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="display-flex v-center margin-small">
+                    <img src="/images/icon-svgs/computer.svg" alt="Tech Support" class="img-small">
+                    <div class="padding-left-small">
+                      <h3 class="h4 margin-none">Technical Support</h3>
+                    </div>
+                  </div>
+                  <a href="tel:1-800-555-5555" class="display-inline-block margin-extra-small text-large">1-800-XXX-XXXX</a>
+                  <p>
+                    TTY users, call <a href="tel:711">711</a>
+                  </p>
+                  <p>
+                    8 am-8 pm local time, 7 days a week
+                  </p>
+                </div>
+                  <div class="col-md-4 border-left">
+                    <div class="display-flex v-center margin-small">
+                      <img src="/images/icon-svgs/question.svg" alt="General Questions" class="img-small">
+                      <div class="padding-left-small">
+                        <h3 class="h4 margin-none">General Questions</h3>
+                      </div>
+                    </div>
+                    <a href="tel:1-800-555-5555" class="display-inline-block margin-extra-small text-large">1-800-XXX-XXXX</a>
+                    <p>
+                      TTY users, call <a href="tel:711">711</a>
+                    </p>
+                    <p>
+                      8 am-8 pm local time, 7 days a week
+                    </p>
+                  </div>
+                <div class="col-md-4 border-left">
+                  <div class="display-flex v-center margin-small">
+                    <img src="/images/icon-svgs/claim.svg" alt="claim Support" class="img-small">
+                    <div class="padding-left-small">
+                      <h3 class="h4 margin-none">Claims Support</h3>
+                    </div>
+                  </div>
+                  <a href="tel:1-800-555-5555" class="display-inline-block margin-extra-small text-large">1-800-XXX-XXXX</a>
+                  <p>
+                    TTY users, call <a href="tel:711">711</a>
+                  </p>
+                  <p>
+                    8 am-8 pm local time, 7 days a week
+                  </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <p class="margin-none">
+                    See more ways to <a href="/contact/contact-us-ship.html" class="lowercase">contact us</a>.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+    </main>
+
+    <!-- Start: Footer -->
+    <footer class="nav-footer" role="contentinfo" aria-label="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h1 class="h6 medium">Member Support</h1>
+            <ul class="nav-footer--list">
+              <li>Customer Service 1-800-555-5555</li>
+              <li><a href="#">All Contact Info</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h1 class="h6 medium">Quick Links</h1>
+            <ul class="nav-footer--list">
+              <li><a href="#">Find A Provider</a></li>
+              <li><a href="#">Send Feedback</a></li>
+              <li><a href="#">Report Incorrect Info</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h1 class="h6 medium">Ask A Nurse</h1>
+            <ul class="nav-footer--list">
+              <li>Registered nurses available 24/7</li>
+              <li>1-888-842-4224</li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12"><span style="font-size: .875rem;">UHC &copy; 2016 | All Rights Reserved</span></div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+    <!-- Start: Footer scripts -->
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    
+    <!-- Vendor scripts -->
+    <script src="/scripts/vendor/jquery-3.1.1.min.js"></script>
+    <script src="/scripts/vendor/lockrroom.js"></script>
+    <script src="/scripts/vendor/select2.min.js"></script>
+    <script src="/scripts/vendor/select2-tab-fix.js"></script>
+    <script src="/scripts/vendor/rivets.bundled.min.js"></script>
+    <script src="/scripts/vendor/rivets.js"></script>
+    <script src="/scripts/vendor/jquery.matchHeight.js"></script>
+    <script src="/scripts/vendor/slick.min.js"></script>
+    <script src="/scripts/vendor/TweenLite.min.js"></script>
+    <script src="/scripts/vendor/plugins/CSSPlugin.min.js"></script>
+    <script src="/scripts/vendor/jquery.autocomplete.min.js"></script>
+    <script src="/scripts/vendor/bootstrap.min.js"></script>
+    
+    <script src="/scripts/vendor/jquery.validate.min.js"></script>
+    <script src="/scripts/vendor/tooltipster.bundle.min.js"></script>
+    <script src="/scripts/vendor/awesomplete.js"></script>
+    
+    
+    
+    
+    <script src="/scripts/main.js"></script>
+    <script src="/scripts/navigation.js"></script>
+    
+    
+      <script src="/scripts/pages/explanation-benefits.js"></script>
+</body>
+</html>

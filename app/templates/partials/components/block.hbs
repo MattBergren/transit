@@ -1,0 +1,107 @@
+<!-- Start: Block component -->
+{{!-- If block has type --}}
+<div class="block{{#if type}} {{type}}{{/if}}">
+  {{!-- If header exists --}}
+  {{#if header}}
+    <header class="block-header">
+      {{header}}
+    </header>
+  {{/if}}
+  <section class="block-body padding-left">
+    {{!-- If body exists --}}
+    {{#if body}}
+      <div class="row">
+        <div class="col-md-12">
+          <span>{{body}}</span>
+        </div>
+      </div>
+    {{/if}}
+    <div class="row">
+      {{!-- Col size one --}}
+      {{#eq col-size "1"}}
+        <div class="col-md-12">
+          {{#if promo}}
+            <p class="margin-small">
+              {{promo}}
+              <a href="{{promo-link}}">{{promo-link}}</a>
+            </p>
+            <button class="btn btn--primary">Learn More</button>
+          {{/if}}
+          {{!-- If col-1 exists --}}
+          {{#if col-1}}
+            {{#each col-1}}
+              {{!-- If header exists --}}
+              {{#if header}}
+                <span class="bold title">{{header}}</span>
+              {{/if}}
+              <div class="table-body">
+                <div class="table-body-row">
+                  {{!-- If title exists --}}
+                  {{#if title}}
+                    <span class="bold table-body-cell">{{title}}:</span>
+                  {{/if}}
+                  {{!-- If content exists --}}
+                  {{#if content}}
+                    <span class="table-body-cell">{{content}}</span>
+                    <br>
+                  {{/if}}
+                </div>
+              </div>
+            {{/each}}
+          {{/if}}
+        </div>
+      {{/eq}}
+      {{!-- Col size 2 --}}
+      {{#eq col-size "2"}}
+        <div class="col-md-6">
+          {{!-- If col-1 exists --}}
+          {{#if col-1}}
+            {{#each col-1}}
+              {{!-- If header exists --}}
+              {{#if header}}
+                <span class="bold title">{{header}}</span>
+              {{/if}}
+              <div class="table-body">
+                <div class="table-body-row">
+                  {{!-- If title exists --}}
+                  {{#if title}}
+                    <span class="bold table-body-cell">{{title}}:</span>
+                  {{/if}}
+                  {{!-- If content exists --}}
+                  {{#if content}}
+                    <span class="table-body-cell">{{content}}</span>
+                    <br>
+                  {{/if}}
+                </div>
+              </div>
+            {{/each}}
+          {{/if}}
+        </div>
+        <div class="col-md-6">
+          {{!-- If col-1 exists --}}
+          {{#if col-2}}
+            {{#each col-2}}
+              {{!-- If header exists --}}
+              {{#if header}}
+                <span class="bold title">{{header}}</span>
+              {{/if}}
+              <div class="table-body">
+                <div class="table-body-row">
+                  {{!-- If title exists --}}
+                  {{#if title}}
+                    <span class="bold table-body-cell">{{title}}:</span>
+                  {{/if}}
+                  {{!-- If content exists --}}
+                  {{#if content}}
+                    <span class="table-body-cell">{{content}}</span>
+                    <br>
+                  {{/if}}
+                </div>
+              </div>
+            {{/each}}
+          {{/if}}
+        </div>
+      {{/eq}}
+    </div>
+  </section>
+</div>

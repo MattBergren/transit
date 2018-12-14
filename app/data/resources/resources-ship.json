@@ -1,0 +1,103 @@
+{
+  "plan-materials": {
+    "english": [
+      {
+        "title": "Plan Benefits Table",
+        "type": "pdf",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation."
+      },
+      {
+        "title": "Outline of Coverage",
+        "type": "pdf"
+      },
+      {
+        "title": "Plan Overview",
+        "type": "pdf"
+      }
+    ]
+  },
+  "annual-changes": {
+    "year-2016": [
+      {
+        "title": "Annual Notice of Changes",
+        "type": "pdf"
+      },
+      {
+        "title": "Evidence of Coverage",
+        "type": "pdf"
+      },
+      {
+        "title": "Comprehensive Formulary",
+        "type": "pdf"
+      }
+    ],
+    "year-2017": [
+      {
+        "title": "Annual Notice of Changes",
+        "type": "pdf"
+      },
+      {
+        "title": "Evidence of Coverage",
+        "type": "pdf"
+      },
+      {
+        "title": "Non-Discrimination Notice",
+        "type": "pdf"
+      },
+      {
+        "title": "Comprehensive Formulary",
+        "type": "pdf"
+      }
+    ],
+    "directory": [
+      {
+        "title": "2016 Provider Directory",
+        "type": "pdf"
+      },
+      {
+        "title": "2016 Pharmacy Directory Information",
+        "type": "pdf"
+      },
+      {
+        "title": "2017 Provider Directory",
+        "type": "pdf"
+      },
+      {
+        "title": "2017 Pharmacy Directory Information",
+        "type": "pdf"
+      }
+    ]
+  },
+  "resources": {
+    "resources": [
+      {
+        "title": "Electronic Funds Transfer Form (EFT)",
+        "type": "pdf"
+      },
+      {
+        "title": "Privacy Authorization form",
+        "type": "pdf"
+      },
+      {
+        "title": "Alternate Payer Authorization form",
+        "type": "pdf"
+      },
+      {
+        "title": "Authorization for Release of Information",
+        "type": "pdf"
+      },
+      {
+        "title": "Third Party Designee form",
+        "type": "pdf"
+      },
+      {
+        "title": "A Guide to Health Insurance for People with Medicare",
+        "type": "pdf"
+      },
+      {
+        "title": "Part A Deductible Waiver Hospital list",
+        "type": "pdf"
+      }
+    ]
+  }
+}

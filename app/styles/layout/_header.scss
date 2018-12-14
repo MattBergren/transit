@@ -1,0 +1,31 @@
+.page-header-wrapper {
+  .page-header {
+    padding: 20px 0;
+
+    .display-flex.v-center {
+      flex-direction: column;
+
+      & > div {
+        width: 100%;
+
+        &:first-child {
+          margin-bottom: $spacing-extra-small;
+        }
+      }
+
+      @media screen and (min-width: $breakpoint-sm) {
+        flex-direction: row;
+        justify-content: space-between;
+
+        & > div {
+          width: auto;
+
+          &:first-child {
+            margin-bottom: 0;
+            max-width: 40%;
+          }
+        }
+      }
+    }
+  }
+}

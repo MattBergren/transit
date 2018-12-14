@@ -1,0 +1,145 @@
+<!-- Select your payment method header -->
+<h3 class="h4 color-blue medium margin-large">Select your payment method</h3>
+{{#if toggle}}
+<form id="payment-type-form" class="margin-small">
+    <div class="radio-block">
+        <input type="radio" name="payment-type" id="payment-checking" value="checking">
+        <label for="payment-checking" class="color-black">EFT-Checking</label>
+    </div>
+    <div class="radio-block">
+        <input type="radio" name="payment-type" id="payment-credit" value="credit">
+        <label for="payment-credit" class="color-black">Credit Card</label>
+    </div>
+</form>
+{{else}}
+<div class="margin-large">
+<a href="#" title="Pay with credit card" class="cc-payment-link"><img src="/images/icon-svgs/payment.svg" alt="credit card">Pay with credit card</a>
+</div>
+{{/if}}
+{{!-- Start: Credit card --}}
+{{#if cc}}
+<div class="collapse-wrapper">
+    <div class="collapse" id="collapseCredit">
+
+        <div class="payment-form__saved-cards margin-medium" id="savedCardRadios">
+            <fieldset class="padding-left-large">
+              <legend class="sr-only">Credit Card</legend>
+              <div class="radio-block">
+                  <input type="radio" name="cc-picker" id="visa1" value="visa1" checked>
+                  <label for="visa1" class="color-black">Use Visa Ending in 1234</label>
+              </div>
+              <div class="radio-block">
+                  <input type="radio" name="cc-picker" id="visa2" value="visa2">
+                  <label for="visa2" class="color-black">Use Visa Ending in 5678</label>
+              </div>
+            </fieldset>
+        </div>
+
+        <div class="margin-medium padding-left-large">
+            <a href="#" id="showCreditCardForm">
+              <span class="material-icons">add</span>
+              <span class="bold">Add a New Credit Card</span>
+            </a>
+        </div>
+
+        <div class="longform hidden" data-form="eft-form" id="creditCardForm">
+            <div class="form-header">
+                <p class="italic">* Required Field</p>
+            </div>
+            <div class="longform__row">
+                <div class="longform__row-label">
+                    <label class="field-label" for="card-type">Card Type:</label>
+                </div>
+                <div class="longform__row-input">
+                    <div class="select--regular">
+                        <select id="card-type">
+                            <option value="visa">Visa</option>
+                            <option value="mastercard">Mastercard</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="longform__row">
+                <div class="longform__row-label">
+                    <label class="field-label" for="card-name">Name on Card:</label>
+                </div>
+                <div class="longform__row-input">
+                    <div class="field">
+                        <input type="text" data-formfield id="card-name">
+                    </div>
+                    <p class="field-error">This field is required.</p>
+                </div>
+            </div>
+            <div class="longform__row">
+                <div class="longform__row-label">
+                    <label class="field-label" for="cc-number">Credit Card Number:</label>
+                </div>
+                <div class="longform__row-input">
+                    <div class="field">
+                        <input type="text" inputmode="numeric" maxlength="16" data-formfield id="cc-number" data-validation="numbersAndSpaces">
+                      <p class="field-error">This field is required.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="longform__row">
+                <div class="longform__row-label">
+                    <span class="field-label bold">Expiration Date:</span>
+                    <label for="expiration-month" class="sr-only">Expiration Month</label>
+                    <label for="expiration-year" class="sr-only">Expiration Year</label>
+                </div>
+                <div class="longform__row-input">
+                    <fieldset>
+                        <legend class="sr-only">Expiration Date</legend>
+                        <div class="select--date select--regular display-inline-block ">
+                            <select id="expiration-month">
+                                <option selected disabled hidden>Month</option>
+                                <option value="">XX</option>
+                                <option value="">XX</option>
+                                <option value="">XX</option>
+                                <option value="">XX</option>
+                            </select>
+                        </div>
+                        <div class="select--date select--regular display-inline-block">
+                            <select id="expiration-year">
+                                <option selected disabled hidden>Year</option>
+                                <option value="">XXXX</option>
+                                <option value="">XXXX</option>
+                                <option value="">XXXX</option>
+                                <option value="">XXXX</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                    <p class="field-error">This field is required.</p>
+                </div>
+            </div>
+            <div class="longform__row">
+                <div class="longform__row-label">
+                </div>
+                <div class="longform__row-input">
+                    <div class="checkbox-block margin-small">
+                        <input type="checkbox" class="custom-checkbox" id="savePayment">
+                        <label for="savePayment">Save payment for future use</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="longform__row error-summary hidden">
+                <p>
+                    <span class="error-flag"></span>
+                    <span class="error-summary-count"></span> errors found in the form
+                </p>
+            </div>
+
+        </div>
+
+        <div class="margin-medium">
+            <a href="{{cancelUrl}}" class="btn btn--secondary">Cancel</a>
+            <button class="btn submit-payment" type="submit"><span class="btn btn-primary">Continue</span></button>
+        </div>
+        <p class="italic margin-none">
+            You'll have a chance to review and confirm this information again before submitting your payment.
+        </p>
+
+    </div>
+</div>
+{{/if}}

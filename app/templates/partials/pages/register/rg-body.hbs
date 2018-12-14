@@ -1,0 +1,36 @@
+<div class="container--base gray">
+  <div class="container">
+    <form id="register-form">
+      {{#if step1}}{{> rg-step1 }}{{/if}}
+      {{#if step2}}{{> rg-step2 }}{{/if}}
+      {{#if step3}}{{> rg-step3 }}{{/if}}
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          {{#if additional}}
+          <div class="hidden-warning hidden">
+            <p class="bold color-red"><img src="/images/icon-svgs/important.svg" alt="important" class="img-text">Creating a new online account for the selected plans will delete your existing online account and any preferences saved with it.</p>
+          </div>
+          {{/if}}
+          <div class="btn-group{{#if step3}}--change-order{{/if}}">
+            <a href="#" class="btn btn--secondary">
+              {{#if step1}}Cancel{{/if}}
+              {{#or step2 step3}}Previous{{/or}}
+            </a>
+            <a href="{{#if step1}}{{#unless additional}}/register/step-1/register-step1-additional.html{{/unless}}{{#if additional}}/register/register-step2.html{{/if}}{{/if}}{{#if step2}}{{#unless additional}}/register/register-step3.html{{/unless}}{{#if additional}}/register/register-step3.html{{/if}}{{/if}}{{#if step3}}/register/register-confirmation.html{{/if}}"
+                class="btn btn--primary next-btn"{{#if step2}} formnovalidate="formnovalidate"{{/if}} id="continue-btn" role="button">
+                {{#or step1 step2}}Next{{/or}}
+                {{#if step3}}Confirm Registration{{/if}}
+            </a>
+          </div>
+        </div>
+      </div>
+      {{#if step1}}
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <p class="bold margin-none">Already have an account? <a href="#">Sign In</a></p>
+        </div>
+      </div>
+      {{/if}}
+    </form>
+  </div>
+</div>

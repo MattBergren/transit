@@ -1,0 +1,57 @@
+<!-- Start: Card basic -->
+<div class="card rider{{#if attribute}} {{attribute}}{{/if}}">
+  <div class="card-header clearfix">
+    <div class="pull-left">
+      <p class="subtitle">{{title}}</p>
+      <p class="h6 subtitle gray margin-none">{{subtitle}}</p>
+    </div>
+    <div class="pull-right">
+      <img src="/images/icon-svgs/{{icon}}.svg" alt="{{icon}}" class="img-small" />
+    </div>
+  </div>
+  <div class="card-body">
+    {{!-- If: Has success --}}
+    {{#if success}}
+      <div class="message-block success">
+        <div class="message-block-header">Added To Plan</div>
+        <div class="message-block-body">
+          <p class="margin-bottom">
+            A diam et sem commodo pulvinar. Praesent finibus Rider will take effect
+            <span class="bold">{{this.success}}</span>
+            magna sodales.
+          </p>
+        </div>
+      </div>
+    {{/if}}
+    {{!-- If: Has error --}}
+    {{#unless variation}}
+    {{#if error}}
+      <div class="message-block error">
+        <div class="message-block-header">Removed From Plan</div>
+        <div class="message-block-body">
+          <p class="margin-bottom">
+            A diam et sem commodo pulvinar. Praesent finibus Rider will take effect
+            <span class="bold">{{this.error}}</span>
+            magna sodales.
+          </p>
+        </div>
+      </div>
+    {{/if}}
+    {{/unless}}
+    {{!-- Body --}}
+    <ul class="margin-small">
+      <li>Enim et voluptate officia enim voluptate anim aliqua.</li>
+      <li>Ex dolor nostrud est quis velit ex ad et magna ut qui.</li>
+    </ul>
+    <a href="#"><img src="/images/icon-svgs/PDF_outlined.svg" alt="PDF" />VIEW / DOWNLOAD PDF</a>
+  </div>
+  {{#unless force-add}}
+  <button data-toggle="modal" data-target="#{{rider-type}}BenefitModal" class="btn">
+    <span class="btn btn--{{#eq rider-type 'add' }}primary{{/eq}}{{#eq rider-type 'remove' }}secondary{{/eq}}">{{rider-type}} this rider</span>
+  </button>
+  {{else}}
+  <button data-toggle="modal" data-target="#addNewBenefitModal" class="btn">
+    <span class="btn btn--primary">Add this rider</span>
+  </button>
+  {{/unless}}
+</div>

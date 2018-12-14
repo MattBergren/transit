@@ -1,0 +1,47 @@
+<h2 class="h3">Form Elements</h2>
+
+<form>
+  {{!-- Input field --}}
+  <div class="display-block margin-small">
+    <label for="input-field">Input Field</label>
+    <input type="text" id="input-field">
+  </div>
+  {{!-- Checkbox --}}
+  <div class="display-block margin-small">
+    <fieldset>
+      <legend>Checkbox Group</legend>
+      <div class="radio-block--checkbox">
+        <input type="checkbox" class="custom-checkbox" id="input-check" name="input-check" value="1">
+        <label for="input-check">Option 1</label>
+      </div>
+      <div class="radio-block--checkbox">
+        <input type="checkbox" class="custom-checkbox" id="input-check2" name="input-check" value="2">
+        <label for="input-check2">Option 2</label>
+      </div>
+    </fieldset>
+  </div>
+  {{!-- Radio button --}}
+  <div class="display-block margin-small">
+    <fieldset>
+      <legend>Radio Group</legend>
+      <div class="radio-block">
+        <input type="radio" id="input-radio" name="input-radio" value="1">
+        <label for="input-radio">Option 1</label>
+      </div>
+      <div class="radio-block">
+        <input type="radio" id="input-radio2" name="input-radio" value="2">
+        <label for="input-radio2">Option 2</label>
+      </div>
+    </fieldset>
+  </div>
+  {{!-- Select box --}}
+  <div class="display-block">
+    <label for="input-select">Select box</label>
+    <div class="select--regular">
+      <select name="input-select" id="input-select">
+        <option value="1">Option 1</option>
+        <option value="1">Option 2</option>
+      </select>
+    </div>
+  </div>
+</form>

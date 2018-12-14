@@ -1,0 +1,143 @@
+.longform {
+    max-width: 600px;
+
+    &__row {
+        display: flex;
+        align-items: top;
+        margin: 1.75rem 0;
+        flex-wrap: wrap;
+        @media (min-width: $breakpoint-sm) {
+            flex-wrap: nowrap;
+        }
+    }
+    &__row-label,
+    &__row-input {
+        margin-right: 0.5rem;
+        flex: 0 0 100%;
+        @media (min-width: $breakpoint-sm) {
+            flex: 0 1 50%;
+        }
+    }
+    &__row-full {
+        flex: 0 0 100%;
+    }
+}
+
+.field-label {
+    display: inline-block;
+    @media (min-width: $breakpoint-sm) {
+        margin-top: 12px;
+    }
+}
+
+.field-saved {
+  display: inline-block;
+  margin-top: 12px;
+}
+
+.field {
+    max-width: 400px;
+    position: relative;
+
+    @media (max-width: $breakpoint-sm) {
+      padding-right: 30px;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+        width: 100%;
+    }
+    &--symbol {
+        &:before {
+            content: attr(data-symbol);
+            position: absolute;
+            top: 10px;
+            left: 8px;
+        }
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 7px;
+        display: none;
+        width: 25px;
+        height: 25px;
+        background-image: url('/images/icon-svgs/important.svg');
+    }
+}
+
+.field-error {
+    margin-top: 0.5rem;
+    max-width: 250px;
+    color: $color-red-base;
+    display: none;
+}
+
+.error-flag {
+    display: none;
+    height: 1.125rem;
+    position: relative;
+    width: 25px;
+
+    &:before {
+        background-image: url('/images/icon-svgs/important.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        content: '';
+        display: block;
+        height: 25px;
+        left: 0;
+        position: absolute;
+        right: 0;
+        width: 25px;
+    }
+}
+
+.error-summary {
+    p {
+        font-weight: bold;
+        color: $color-red-base;
+    }
+    .error-flag {
+        display: inline-block;
+    }
+}
+
+
+
+.has-error {
+    .field-label {
+        color: $color-red-base;
+    }
+    .field {
+        input {
+            border-color: $color-red-base;
+        }
+        &:after {
+            display: block;
+        }
+        &--symbol {
+            &:before {
+                color: $color-red-base;
+            }
+        }
+    }
+    .field-error {
+        display: block;
+    }
+    .error-flag {
+        display: inline-block;
+    }
+
+    fieldset {
+        input[type="checkbox"].custom-checkbox {
+            & + label {
+                color: $color-red-base;
+                &:before {
+                    border-color: $color-red-base;
+                }
+            }
+        }
+    }
+}

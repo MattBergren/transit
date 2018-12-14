@@ -1,0 +1,185 @@
+.medical-claims {
+  // Blue button
+  .blue-button-wrapper {
+    background-color: $color-yellow-light;
+    padding: 30px 0;
+
+    .display-flex {
+      flex-direction: column;
+      align-items: flex-start;
+
+      & > div {
+        &:first-child {
+          margin-bottom: $spacing-small;
+        }
+      }
+
+      @media screen and (min-width: $breakpoint-sm) {
+        flex-direction: row;
+      }
+    }
+
+    .img-large {
+      width: 10em;
+      margin-right: $spacing-large;
+    }
+  }
+
+  // Adjustment details word wrapping
+  #details-text {
+    white-space: nowrap;
+  }
+
+  .mc-summary-margin {
+    margin-bottom: 2px !important;
+  }
+
+  .table-responsive {
+    @media screen and (max-width: 991px) {
+      tr:not(:first-child) {
+        td {
+          flex-direction: column;
+          align-items: flex-start;
+
+          span {
+            &:first-of-type {
+              max-width: none;
+            }
+
+            &:last-of-type {
+              text-align: left;
+              max-width: none;
+            }
+          }
+
+          .table-dots {
+            display: none;
+          }
+        }
+      }
+
+      &.table-prescription {
+        tr:not(:first-child) {
+          td {
+            // Row: Filled
+            &:first-child {
+              //flex-direction: row;
+              //justify-content: flex-start;
+
+              span {
+                &:first-of-type {
+                  //display: none;
+                }
+
+                &:last-of-type {
+                  &:before {
+                    //content: 'Filled ';
+                  }
+                }
+              }
+            }
+
+            // Row: Medication
+            &:nth-child(2) {
+              span {
+                &:first-of-type {
+                  //display: none;
+                }
+
+                &:last-of-type {
+                  //font-size: 1.188rem;
+                  //font-weight: 300;
+                }
+              }
+            }
+
+            // Row: Rx Number
+            &:nth-child(3) {
+              //padding-top: 0;
+
+              span {
+                &:first-child {
+                  //display: none;
+                }
+
+                &:last-of-type {
+                  //font-style: italic;
+
+                  &:before {
+                    //content: 'Rx #'
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      // Row: More info
+      &.more-info {
+        tr:not(:first-child) {
+          td {
+            &:last-of-type {
+              align-items: center;
+
+              span {
+                &:first-of-type {
+                  //display: none;
+                }
+              }
+            }
+
+            // Row: Date
+            &:nth-child(1) {
+              span {
+                &:first-of-type {
+                  //display: none;
+                }
+
+                &:last-of-type {
+                  //font-weight: normal;
+                }
+              }
+            }
+
+            // Row: Provider name
+            &:nth-child(2) {
+              span {
+                &:first-of-type {
+                  //display: none;
+                }
+
+                &:last-of-type {
+                  //font-size: 1.188rem;
+                  //font-weight: 300;
+                }
+              }
+            }
+
+            // Row: Claim type
+            &:nth-child(3) {
+              //padding-top: 0;
+
+              span:first-child {
+                //display: none;
+              }
+              span:last-of-type {
+                //font-style: italic;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .padding-total {
+    @media screen and (min-width: $breakpoint-md) {
+      padding: 0 !important;
+    }
+
+    .card {
+      padding: 10px;
+    }
+  }
+}

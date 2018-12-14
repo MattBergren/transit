@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Turn off telephone number detection. -->
+    <meta name="format-detection" content="telephone=no">
+    <title>Payment Overview Advance Pay Member</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <!-- Place favicon.ico in the root directory -->
+
+
+    <link rel="stylesheet" href="/styles/vendor/slick-theme.css">
+    <link rel="stylesheet" href="/styles/vendor/slick.css">
+    <link rel="stylesheet" href="/styles/vendor/tooltipster-new.css">
+    <link rel="stylesheet" href="/styles/vendor/bootstrap.css">
+    <link rel="stylesheet" href="/styles/vendor/awesomplete.css">
+
+    <link rel="stylesheet" href="/styles/mir-main.css">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/cc-enhancement.css">
+
+    <link rel="stylesheet" href="/styles/print.css">
+
+
+    <link rel="stylesheet" href="/styles/vendor/common.css">
+
+    <script src="/scripts/vendor/modernizr.js"></script>
+
+</head>
+<body>
+  <div class="uhc-body-wrapper">
+    <div class="uhc-body-light-box"></div>
+    <div class="rivets-loading" rv-show="data.loading" style="position: fixed; top:0; left:0; right:0; bottom:0; background-color: white; z-index:9999;"></div>
+    <!-- Start: Navigation -->
+    
+    
+
+    <!-- Start: Page header -->
+
+    <main>
+
+
+      <div id="cc-enhancement">
+
+    <header class="intro">
+        <div class="container">
+            <h1 class="intro__header">Premium Payments Overview
+            </h1>
+            <p class="intro__body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim cupiditate quasi, eos, corrupti odio consequatur consectetur velit maiores eveniet obcaecati nihil nam esse dicta harum eius doloremque sapiente beatae quia.</p>
+        </div>
+    </header>
+    <div class="container">
+        <div class="plan-card">
+        
+            <div class="plan-card__container">
+                <div class="plan-card__alert plan-card--full">
+                    <span class="plan-card__alert-icon material-icons md-18">check_circle</span>
+                    <p class="plan-card__alert-message">Your Medicare Prescription Drug Plan is paid in full. There are no next premium payments scheduled.</p>
+                </div>
+                <div class="plan-card__main">
+                    <h2 class="plan-card__title">Medicare Prescription Drug Plan</h2>
+                    <div class="plan-card__status">
+                        <div class="plan-card__col">
+                            <div class="plan-card__label-row">
+                                <div class="plan-card__label">Total Amount Due</div>
+                                <a href="#" class="material-icons plan-card__icon" data-toggle="modal" data-target="#moreInfoModal" data-content="amount-due-content">info</a>
+                            </div>
+                            <div class="plan-card__amount-row">
+                                <div class="plan-card__amount">$0.00</div>
+                                    <div class="plan-card__paid">Paid through 03/30/2019</div>
+                            </div>
+                        </div>
+                        <div class="plan-card__col">
+                            <div class="plan-card__label-row">
+                                <div class="plan-card__label">Next Premium Payment</div>
+                                <a href="#" class="material-icons plan-card__icon" data-toggle="modal" data-target="#moreInfoModal" data-content="next-payment-content">info</a>
+                            </div>
+                            <div class="plan-card__amount-row">
+                                <div class="plan-card__amount">Paid in Full</div>
+                                <div class="plan-card__paid">Not scheduled yet</div>
+                            </div>
+                        </div>
+                        <div class="plan-card__col">
+                            <div class="plan-card__label-row">
+                                <div class="plan-card__label">Available Credit</div>
+                                <a href="#" class="material-icons plan-card__icon" data-toggle="modal" data-target="#moreInfoModal" data-content="credit-balance-content">info</a>
+                            </div>
+                            <div class="plan-card__amount-row">
+                                <div class="plan-card__amount">$10.00</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plan-card__cta-row">
+                        <div class="plan-card__buttons">
+                            <a href="#" class="plan-card__btn plan-card__btn-primary">Set up Recurring Payments <span class="material-icons">navigate_next</span></a>
+                            <a href="#" class="plan-card__btn plan-card__btn-secondary">Make a One Time Payment <span class="material-icons">navigate_next</span></a>
+                        </div>
+                        <div class="plan-card__payment-method">
+                            <p class="plan-card__payment-method-message">Current payment method is direct billing. <a href="#" data-toggle="modal" data-target="#moreInfoModal" data-content="ways-to-pay-content">Learn about ways to pay.</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="plan-card__footer">
+                
+                    <div class="plan-card__toggle-show">
+                        <a href="#paymentHistoryTable0" data-toggle="collapse" role="button" class="plan-card__table-link"><span class="plan-card__table-icon material-icons">add_box</span>Show Payment History</a>
+                    </div>
+        
+                    <div class="plan-card__toggle-hide">
+                        <a href="#paymentHistoryTable0" data-toggle="collapse" role="button"  class="plan-card__table-link"><span class="plan-card__table-icon material-icons">indeterminate_check_box</span>Hide Payment History</a>
+                        <button type="button" class="plan-card__download-link" data-toggle="modal" data-target="#downloadBillingModal">Download Billing Statements</button>
+                    </div>
+                    <div class="collapse" id="paymentHistoryTable0">
+                        <div class="payment-history-table">
+        
+                            <div class="payment-history-table__header">
+                                <div class="payment-history-table__controls">
+                                    <form action="#">
+                                        <fieldset>
+                                            <legend class="sr-only">Date Range</legend>
+                                        <div class="payment-history-table__form">
+                                            <div class="form-group">
+                                                <label for="paymentsFrom">Show Payments From</label>
+                                                <div class="select--regular">
+                                                <select name="date-range" class="date-range" id="date-range">
+                                                    <option value="90-days">Last 90 Days</option>
+                                                    <option value="6-months">Last 6 Months</option>
+                                                    <option value="12-months">Last 12 Months</option>
+                                                    <option value="24-months">Last 24 Months</option>
+                                                    <option value="current-year">Current Year</option>
+                                                    <option value="custom-search">Custom Search</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                            <span class="payment-history-table__option">OR</span>
+                                            <div class="form-group">
+                                                <label for="custom-from-0">From</label>
+                                                <input aria-required="true" type="date" aria-describedby="format" id="custom-from-0">
+                                                <div id="format">mm/dd/yyyy</div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="custom-from-0">To</label>
+                                                <input type="date" aria-required="true" aria-describedby="format" id="custom-from-0">
+                                                <div id="format">mm/dd/yyyy</div>
+                                            </div>
+                                            <button class="plan-card__btn plan-card__btn-primary" type="submit">Search</button>
+                                            </div>
+                                        </fieldset>
+                                    </form>
+        
+                                </div>
+                            </div>
+        
+                            <div class="payment-history-table__body">
+                                <table class="table-responsive">
+                                    <caption class="sr-only">Payment History Table</caption>
+                                <tr>
+                                    <th scope="col">Due Date</th>
+                                    <th scope="col">Amount Billed</th>
+                                    <th scope="col">Paid Date</th>
+                                    <th scope="col">Amount Paid</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Payment Method</th>
+                                    <th scope="col">Confirmation</th>
+                                </tr>
+                                    <tr>
+                                        <td><span class="mobile-table-header">Due Date</span><div class="table-dots"></div><span class="table-responsive__value">11/1/2018</span></td>
+                                            <td><span class="mobile-table-header"><span>Amount Billed</span></span><div class="table-dots"></div><span class="table-responsive__value">57.00</span></td>
+                                            <td><span class="mobile-table-header">Paid Date</span><div class="table-dots"></div><span class="table-responsive__value">10/10/2018</span></td>
+                                            <td><span class="mobile-table-header">Amount Paid</span><div class="table-dots"></div><span class="table-responsive__value">57.00</span></td>
+                                            <td>
+                                                <span class="mobile-table-header"><span >Status</span></span><div class="table-dots"></div><span class="table-responsive__value paid">
+                                                Paid
+                                            </span></td>
+                                            <td><span class="mobile-table-header">Payment Method</span><div class="table-dots"></div>Credit/Debit Card</td>
+                                            <td><span class="mobile-table-header">Confirmation #</span><div class="table-dots"></div>1234562</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="mobile-table-header">Due Date</span><div class="table-dots"></div><span class="table-responsive__value">10/1/2018</span></td>
+                                            <td><span class="mobile-table-header"><span>Amount Billed</span></span><div class="table-dots"></div><span class="table-responsive__value">57.00</span></td>
+                                            <td><span class="mobile-table-header">Paid Date</span><div class="table-dots"></div><span class="table-responsive__value">9/09/2018</span></td>
+                                            <td><span class="mobile-table-header">Amount Paid</span><div class="table-dots"></div><span class="table-responsive__value">57.00</span></td>
+                                            <td>
+                                                <span class="mobile-table-header"><span >Status</span></span><div class="table-dots"></div><span class="table-responsive__value paid">
+                                                Paid
+                                            </span></td>
+                                            <td><span class="mobile-table-header">Payment Method</span><div class="table-dots"></div>Credit/Debit Card</td>
+                                            <td><span class="mobile-table-header">Confirmation #</span><div class="table-dots"></div>1234561</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="mobile-table-header">Due Date</span><div class="table-dots"></div><span class="table-responsive__value">9/1/2018</span></td>
+                                            <td><span class="mobile-table-header"><span>Amount Billed</span></span><div class="table-dots"></div><span class="table-responsive__value">57.00</span></td>
+                                            <td><span class="mobile-table-header">Paid Date</span><div class="table-dots"></div><span class="table-responsive__value">8/29/2018</span></td>
+                                            <td><span class="mobile-table-header">Amount Paid</span><div class="table-dots"></div><span class="table-responsive__value">57.00</span></td>
+                                            <td>
+                                                <span class="mobile-table-header"><span >Status</span></span><div class="table-dots"></div><span class="table-responsive__value paid">
+                                                Paid
+                                            </span></td>
+                                            <td><span class="mobile-table-header">Payment Method</span><div class="table-dots"></div>Credit/Debit Card</td>
+                                            <td><span class="mobile-table-header">Confirmation #</span><div class="table-dots"></div>1234560</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="mobile-table-header">Due Date</span><div class="table-dots"></div><span class="table-responsive__value">8/1/2018</span></td>
+                                            <td><span class="mobile-table-header"><span>Amount Billed</span></span><div class="table-dots"></div><span class="table-responsive__value">57.00</span></td>
+                                            <td><span class="mobile-table-header">Paid Date</span><div class="table-dots"></div><span class="table-responsive__value">7/16/2018</span></td>
+                                            <td><span class="mobile-table-header">Amount Paid</span><div class="table-dots"></div><span class="table-responsive__value">57.00</span></td>
+                                            <td>
+                                                <span class="mobile-table-header"><span >Status</span></span><div class="table-dots"></div><span class="table-responsive__value paid">
+                                                Paid
+                                            </span></td>
+                                            <td><span class="mobile-table-header">Payment Method</span><div class="table-dots"></div>Credit/Debit Card</td>
+                                            <td><span class="mobile-table-header">Confirmation #</span><div class="table-dots"></div>1234559</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="mobile-table-header">Due Date</span><div class="table-dots"></div><span class="table-responsive__value">7/1/2018</span></td>
+                                            <td><span class="mobile-table-header"><span>Amount Billed</span></span><div class="table-dots"></div><span class="table-responsive__value">57.00</span></td>
+                                            <td><span class="mobile-table-header">Paid Date</span><div class="table-dots"></div><span class="table-responsive__value">6/09/2018</span></td>
+                                            <td><span class="mobile-table-header">Amount Paid</span><div class="table-dots"></div><span class="table-responsive__value">57.00</span></td>
+                                            <td>
+                                                <span class="mobile-table-header"><span >Status</span></span><div class="table-dots"></div><span class="table-responsive__value paid">
+                                                Paid
+                                            </span></td>
+                                            <td><span class="mobile-table-header">Payment Method</span><div class="table-dots"></div>Credit/Debit Card</td>
+                                            <td><span class="mobile-table-header">Confirmation #</span><div class="table-dots"></div>1234558</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="mobile-table-header">Due Date</span><div class="table-dots"></div><span class="table-responsive__value">6/1/2018</span></td>
+                                            <td><span class="mobile-table-header"><span>Amount Billed</span></span><div class="table-dots"></div><span class="table-responsive__value">57.00</span></td>
+                                            <td><span class="mobile-table-header">Paid Date</span><div class="table-dots"></div><span class="table-responsive__value">5/12/2018</span></td>
+                                            <td><span class="mobile-table-header">Amount Paid</span><div class="table-dots"></div><span class="table-responsive__value">81.00</span></td>
+                                            <td>
+                                                <span class="mobile-table-header"><span >Status</span></span><div class="table-dots"></div><span class="table-responsive__value paid">
+                                                Paid
+                                            </span></td>
+                                            <td><span class="mobile-table-header">Payment Method</span><div class="table-dots"></div>Credit/Debit Card</td>
+                                            <td><span class="mobile-table-header">Confirmation #</span><div class="table-dots"></div>123457</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="mobile-table-header">Due Date</span><div class="table-dots"></div><span class="table-responsive__value">5/1/2018</span></td>
+                                            <td><span class="mobile-table-header"><span>Amount Billed</span></span><div class="table-dots"></div><span class="table-responsive__value">57.00</span></td>
+                                            <td><span class="mobile-table-header">Paid Date</span><div class="table-dots"></div><span class="table-responsive__value">4/22/2018</span></td>
+                                            <td><span class="mobile-table-header">Amount Paid</span><div class="table-dots"></div><span class="table-responsive__value">57.00</span></td>
+                                            <td>
+                                                <span class="mobile-table-header"><span >Status</span></span><div class="table-dots"></div><span class="table-responsive__value paid">
+                                                Paid
+                                            </span></td>
+                                            <td><span class="mobile-table-header">Payment Method</span><div class="table-dots"></div>Credit/Debit Card</td>
+                                            <td><span class="mobile-table-header">Confirmation #</span><div class="table-dots"></div>123456</td>
+                                    </tr>
+                                </table>
+                            </div>
+        
+                            <div class="payment-history-table__footer">
+        
+                                <div class="payment-history-table__buttons">
+                                    
+                                    <a href="#" class="plan-card__btn plan-card__btn-secondary"><span class="material-icons">print</span>Print Payment History </a>
+        
+        
+                                    <a href="#" class="plan-card__btn plan-card__btn-secondary"><span class="material-icons">save_alt</span>Download Payment History </a>
+        
+                                </div>
+        
+                                <div class="payment-history-table__contact-links">
+                                    <a href="#">Contact Support</a>
+                                </div>
+        
+                            </div>
+                            <a href="#" class="payment-history-table__learn-more" data-toggle="modal" data-target="#moreInfoModal" data-content="payment-history-content">Learn more about your payment history <span class="material-icons">navigate_next</span></a>
+        
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        
+        </div>
+    </div>
+    
+    <!-- Start: Download Billing modal -->
+    <div id="downloadBillingModal" tabindex="-1" role="alertdialog" aria-labelledby="downloadBillingHeader" aria-modal="true" class="modal fade">
+        <div role="document" class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a class="link link--icon-right link--icon-circled align-right" data-icon="&#xE5CD;" data-dismiss="modal" aria-label="Close">Close</a>
+                    <div class="modal-title">
+                        <h1 id="downloadBillingHeader" class="h3 margin-none">Download billing statements from the available PDF's below</h1>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <ul class="download-billing__list">
+                        <li class="download-billing__item">
+                            <a href="#" class="download-billing__link">October 2018<span class="material-icons">picture_as_pdf</span></a>
+                        </li>
+                        <li class="download-billing__item">
+                            <a href="#" class="download-billing__link">September 2018<span class="material-icons">picture_as_pdf</span></a>
+                        </li>
+                        <li class="download-billing__item">
+                            <a href="#" class="download-billing__link">August 2018<span class="material-icons">picture_as_pdf</span></a>
+                        </li>
+                        <li class="download-billing__item">
+                            <a href="#" class="download-billing__link">July 2018<span class="material-icons">picture_as_pdf</span></a>
+                        </li>
+                        <li class="download-billing__item">
+                            <a href="#" class="download-billing__link">June 2018<span class="material-icons">picture_as_pdf</span></a>
+                        </li>
+                        <li class="download-billing__item">
+                            <a href="#" class="download-billing__link">May 2018<span class="material-icons">picture_as_pdf</span></a>
+                        </li>
+                        <li class="download-billing__item">
+                            <a href="#" class="download-billing__link">April 2018<span class="material-icons">picture_as_pdf</span></a>
+                        </li>
+                        <li class="download-billing__item">
+                            <a href="#" class="download-billing__link">March 2018<span class="material-icons">picture_as_pdf</span></a>
+                        </li>
+                        <li class="download-billing__item">
+                            <a href="#" class="download-billing__link">February 2018<span class="material-icons">picture_as_pdf</span></a>
+                        </li>
+                        <li class="download-billing__item">
+                            <a href="#" class="download-billing__link">January 2018<span class="material-icons">picture_as_pdf</span></a>
+                        </li>
+                        <li class="download-billing__item">
+                            <a href="#" class="download-billing__link">December 2017<span class="material-icons">picture_as_pdf</span></a>
+                        </li>
+                        <li class="download-billing__item">
+                            <a href="#" class="download-billing__link">November 2017<span class="material-icons">picture_as_pdf</span></a>
+                        </li>
+                        <li class="download-billing__item">
+                            <a href="#" class="download-billing__link">October 2017<span class="material-icons">picture_as_pdf</span></a>
+                        </li>
+                        <li class="download-billing__item">
+                            <a href="#" class="download-billing__link">September 2017<span class="material-icons">picture_as_pdf</span></a>
+                        </li>
+                        <li class="download-billing__item">
+                            <a href="#" class="download-billing__link">August 2017<span class="material-icons">picture_as_pdf</span></a>
+                        </li>
+                        <li class="download-billing__item">
+                            <a href="#" class="download-billing__link">July 2017<span class="material-icons">picture_as_pdf</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+    
+                </div>
+            </div>
+        </div>
+    </div>    <!-- Start: More Info Modal -->
+    <div id="moreInfoModal" tabindex="-1" role="alertdialog" aria-labelledby="moreInfoHeader" aria-modal="true" class="modal right fade">
+        <div role="document" class="modal-dialog modal-md">
+            <div id="ways-to-pay-content" class="modal-content">
+                <!-- ways to pay content -->
+                <div id="ways-to-pay-content">
+                    <div class="modal-header">
+                        <a class="link link--icon-right link--icon-circled align-right" data-icon="&#xE5CD;" data-dismiss="modal" aria-label="Close">Close</a>
+                        <div class="modal-title">
+                            <h1 id="moreInfoHeader" class="h3 margin-none">Learn more about ways to pay</h1>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        
+                        <h4>Automatic deduction from your checking account</h4>
+    
+                        <p>To sign up for automatic deductions from your checking account, select the setup automatic payments in the Premium Payments overview section of this page. You can also download and complete the form below and follow the instructions provided. <a href="#">Electronic Funds Transfer (EFT ) Form (PDF)</a></p>
+    
+    
+    
+                        <h4>Automatic deduction from your credit/debit account</h4>
+    
+                        <p>To sign up for automatic deductions from your credit/debit card, select the setup automatic payments in the Premium Payments overview section of this page.</p>
+    
+    
+    
+                        <h4>Monthly Billing</h4>
+    
+                        <p>You may pay by mail each month (we will provide you a monthly bill). You may also make advance payments. If making a payment for the entire year, you will only need to submit one bill along with a check for the total premium amount due for the year.</p>
+    
+    
+    
+    
+                        <p>Mail your Medicare prescription drug plan payment with your bill to:
+    
+                        UnitedHealthcare</p>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+                        <h4>SSA Deduction</h4>
+    
+                        <p>Processing the SSA deduction is completed through the Social Security Administration and may take up to two or more months to begin. During that time, you will receive a monthly bill to make your payments. The first deduction from your Social Security benefit check will include all premiums due from the Social Security deduction effective date.
+    
+                        <a href="#">Social Security Deduction Form (PDF)</a></p>
+    
+                        <p>If you are receiving help from a plan sponsor (former employer, union or trust administrator) or State Pharmaceutical Assistance Program (SPAP) you have the right to elect automatic deductions from your Social Security benefit check.</p>
+    
+    
+    
+                        <p>However, it is important that you know that Social Security does not know if you have other coverage that pays part of your premium, even when the other coverage is paying part of your premium to your Medicare plan.</p>
+    
+    
+                    </div>
+                    <div class="modal-footer">
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- payment history content -->
+            <div id="payment-history-content" class="modal-content"> 
+                <div class="modal-header">
+                    <a class="link link--icon-right link--icon-circled align-right" data-icon="&#xE5CD;" data-dismiss="modal" aria-label="Close">Close</a>
+                    <div class="modal-title">
+                        <h1 id="moreInfoHeader" class="h3 margin-none">Learn more about your payment history</h1>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    
+                    <h4>Amount Billed</h4>
+    
+                    <p>This is the amount of your current monthly premium payment. Some plans do not have a premium and reflect a Billed Amount of $0. If you are a Medicare Advantage or Medicare Advantage – Prescription Drug plan member and have any optional supplemental benefits (riders) on your plan, these payments are also included in your Billed Amount.</p>
+    
+    
+    
+                    <p>If you are a prescription drug plan member and are paying a Late Enrollment Penalty (LEP), this amount is included in your Billed Amount.</p>
+    
+    
+    
+                    <h4>Billed Due Date</h4>
+    
+                    <p>This is the date that your bill was sent out. This is where more information will be presented regarding billing information.</p>
+    
+    
+    
+                    <h4>Payment Date</h4>
+    
+                    <p>This relates to the date your payment was sent.</p>
+    
+    
+    
+                    <h4>Payment Amount</h4>
+    
+                    <p>This is the amount that you have paid towards the corresponding bill.</p>
+    
+    
+    
+                    <h4>Status</h4>
+    
+                    <p>Refers the the status of your payment. There are two payment statuses that will display;
+    
+                    Pending: Means that a payment has been sent, but not processed yet by UHC.
+    
+                    Paid: Means that a payment has been sent and received by UHC.<p>
+    
+    
+    
+                    <h4>Payment Method</h4>
+    
+                    <p>Refers to how you made your payment. </p>
+    
+    
+    
+    
+    
+                    <h4>Confirmation Number</h4>
+    
+                    <p>Every payment you make will have an associated confirmation number. This number is helpful for record keeping purposes or to better identify if there is an issue with a particular payment.</p>
+                </div>
+                <div class="modal-footer"></div>
+            </div>
+            <!-- Amount Due content -->
+            <div id="amount-due-content" class="modal-content">
+                <div class="modal-header">
+                    <a class="link link--icon-right link--icon-circled align-right" data-icon="&#xE5CD;" data-dismiss="modal" aria-label="Close">Close</a>
+                    <div class="modal-title">
+                        <h1 id="moreInfoHeader" class="h3 margin-none">Total Amount Due</h1>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <p>This is the amount of your current monthly premium payment, including any past due billed amount. Some plans do not have a premium and reflect a Total Amount Due of $0.00. If you are a Medicare Advantage or Medicare Advantage-Prescription Drug plan member and have any optional supplemental benefits (riders) on your plan, these payments are also included in your Total Amount Due.</p>
+                    <p>If you are a prescription drug plan member and are paying a Late Enrollment Penalty (LEP), this amount is included in your Total Amount Due.</p>
+                </div>
+                <div class="modal-footer"></div>
+                
+            </div>
+            <!-- Next Payment content -->
+            <div id="next-payment-content" class="modal-content">
+                <div class="modal-header">
+                    <a class="link link--icon-right link--icon-circled align-right" data-icon="&#xE5CD;" data-dismiss="modal" aria-label="Close">Close</a>
+                    <div class="modal-title">
+                        <h1 id="moreInfoHeader" class="h3 margin-none">Next Premium Payment</h1>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <p>This is the amount of your next month's premium payment. It does not include any past due billed amounts. You do not have to wait until the due date to make a payment for future premium amounts.</p>
+                </div>
+                <div class="modal-footer"></div>
+            </div>
+            <!-- Credit Balance content -->
+            <div id="credit-balance-content" class="modal-content">
+                <div class="modal-header">
+                    <a class="link link--icon-right link--icon-circled align-right" data-icon="&#xE5CD;" data-dismiss="modal" aria-label="Close">Close</a>
+                    <div class="modal-title">
+                        <h1 id="moreInfoHeader" class="h3 margin-none">Credit Balance</h1>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <p>This includes any advance payments or adjustment that have resulted in a credit to your premium payment.</p>
+                </div>
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+      <!-- Tooltips -->
+      <div class="tooltip-templates">
+          <div id="tooltip-large">
+              <p class="bold margin-extra-small">Lorem Ipsum</p>
+              <span class="text-small">
+                  Id elit reprehenderit fugiat Lorem in magna aliqua sunt ut est id ullamco dolor ut ad.
+              </span>
+          </div>
+          <div id="tooltip-small">
+              <span class="text-small">
+                  Aute enim nisi consectetur excepteur esse cupidatat Lorem excepteur laborum sunt occaecat nulla culpa magna cillum.
+              </span>
+          </div>
+          <div id="tooltip-costs">
+            <span class="text-small">
+                This is the amount you pay as your share of your prescription drug costs,
+                such as deductibles (if applicable), co-pays/co-insurance and the amounts
+                you pay in the coverage gap.
+            </span>
+          </div>
+      </div>
+
+    </main>
+
+    <!-- Start: Footer -->
+  </div>
+
+    <!-- Start: Footer scripts -->
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    
+    <!-- Vendor scripts -->
+    <script src="/scripts/vendor/jquery-3.1.1.min.js"></script>
+    <script src="/scripts/vendor/lockrroom.js"></script>
+    <script src="/scripts/vendor/select2.min.js"></script>
+    <script src="/scripts/vendor/select2-tab-fix.js"></script>
+    <script src="/scripts/vendor/rivets.bundled.min.js"></script>
+    <script src="/scripts/vendor/rivets.js"></script>
+    <script src="/scripts/vendor/jquery.matchHeight.js"></script>
+    <script src="/scripts/vendor/slick.min.js"></script>
+    <script src="/scripts/vendor/TweenLite.min.js"></script>
+    <script src="/scripts/vendor/plugins/CSSPlugin.min.js"></script>
+    <script src="/scripts/vendor/jquery.autocomplete.min.js"></script>
+    <script src="/scripts/vendor/bootstrap.min.js"></script>
+    
+    <script src="/scripts/vendor/jquery.validate.min.js"></script>
+    <script src="/scripts/vendor/tooltipster.bundle.min.js"></script>
+    <script src="/scripts/vendor/awesomplete.js"></script>
+    
+    
+    
+    
+    <script src="/scripts/main.js"></script>
+    <script src="/scripts/navigation.js"></script>
+    
+    
+      <script src="/scripts/pages/cc-enhancement.js"></script>
+</body>
+</html>

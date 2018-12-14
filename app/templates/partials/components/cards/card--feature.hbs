@@ -1,0 +1,85 @@
+<!-- Start: Card feature component -->
+<div class="card feature{{#if attribute}} {{attribute}}{{/if}}">
+  {{!-- If: has header icon --}}
+  {{#if header-icon}}
+    <div class="card-header display-flex margin-small v-center">
+      <div>
+        <img src="/images/icon-svgs/{{header-icon}}.svg" alt="{{header-icon}}" class="img-medium" />
+      </div>
+      <div style="padding-left: 10px;">
+        <p class="h4 margin-none">
+          {{title}}
+        </p>
+        <span class="sub-text">
+          {{subtitle}}
+        </span>
+      </div>
+    </div>
+    {{else}}
+      <div class="card-header">
+        <h4 class="h3 medium margin-none">{{title}}</h4>
+        <span class="h5 margin-none">{{subtitle}}</span>
+      </div>
+  {{/if}}
+  <div class="card-body">
+    {{!-- If: col 1 --}}
+    {{#eq col-size "1"}}
+      <div class="row">
+        <div class="col-md-12">
+          {{#each col-1}}
+            <p class="margin-small">
+              {{!-- If: has title --}}
+              {{#if title}}
+                <span class="bold">{{title}}:</span>
+              {{/if}}
+              {{content}}
+            </p>
+            {{!-- If: has links --}}
+            {{#if links}}
+              {{#each links}}
+                <ul class="links">
+                  <li>
+                    <a href="#">{{this.link}}</a>
+                  </li>
+                </ul>
+              {{/each}}
+            {{/if}}
+          {{/each}}
+        </div>
+      </div>
+    {{/eq}}
+    {{!-- If: col 2 --}}
+    {{#eq col-size "2"}}
+      <div class="row">
+        {{!-- Col 1 --}}
+        <div class="col-md-6">
+          {{#each col-1}}
+            <p class="margin-none">
+              {{!-- If: has title --}}
+              {{#if title}}
+                <span class="bold">{{title}}:</span>
+              {{/if}}
+              {{content}}
+            </p>
+          {{/each}}
+        </div>
+        {{!-- Col 2 --}}
+        <div class="col-md-6">
+          {{#each col-2}}
+            {{!-- If: has title --}}
+            {{#if title}}
+              <p class="margin-none">
+                <span class="bold">{{title}}:</span>
+              </p>
+              <p class="h4 margin-small">{{content}}</p>
+            {{/if}}
+            {{!-- If: has button --}}
+            {{#if button}}
+              <button class="btn btn--primary">{{button}}</button>
+            {{/if}}
+          {{/each}}
+        </div>
+      </div>
+    {{/eq}}
+  </div>
+</div>

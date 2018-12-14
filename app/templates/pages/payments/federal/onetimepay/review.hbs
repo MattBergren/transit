@@ -1,0 +1,49 @@
+---
+title: One Time Payment Review
+layout: default
+hasFooter: false
+hasHeader: false
+iframe: true
+hasScript:
+- cc-enhancement-app
+---
+
+<div id="cc-enhancement">
+
+    {{> cc-intro title="Review One Time Payment" plan="Medicare Prescription Drug Plan"}}
+
+    <div class="container">
+
+        {{> cc-member-header}}
+
+        {{> payments-review-table paymentsReview.onetimeCredit }}
+        
+        {{>cc-edit-link 
+            linkText="Change Card"
+            url="#"    
+        }}
+
+        <form id="terms-only" action="/payments/federal/onetimepay/submitted.html">
+            {{> payments-fed-confirm-legal}}
+            <div class="container--base">
+                {{> payment-review-actions
+                    continueUrl="/payments/federal/onetimepay/submitted.html"
+                    btnName="Make Payment"
+                }}
+            </div>
+        </form>
+
+        {{> cancel }}
+
+    </div>
+
+
+
+
+
+
+
+</div>
+
+
+

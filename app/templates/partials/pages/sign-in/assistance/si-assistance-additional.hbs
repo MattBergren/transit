@@ -1,0 +1,56 @@
+<div class="container--base gray">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <div class="card">
+          <div class="card-body">
+            <form id="sign-in-form">
+              <fieldset>
+                <legend class="no-error normal">To help us confirm your account, please enter the following personal information.</legend>
+                <div class="field">
+                  <label for="member-id" class="display-inline-block">Member ID Number</label><span data-tooltip="small" data-tooltip-side="right"></span>
+                  <div class="field-input">
+                    <input type="number" name="member-id" id="member-id">
+                  </div>
+                </div>
+                <fieldset>
+                  <legend>Date of Birth:</legend>
+                  <div class="field--dob">
+                  	<div class="field-input">
+                  	  <select name="dob-mm" id="date-mm" style="width: 100%"><option value=""></option></select>
+                  	  <label for="date-mm">MM</label>
+                  	</div>
+                  	<div class="field-input">
+                  	  <select name="dob-dd" id="date-dd" style="width: 100%"><option value=""></option></select>
+                  	  <label for="date-dd">DD</label>
+                  	</div>
+                  	<div class="field-input">
+                  	  <select name="dob-yyyy" id="date-yyyy" style="width: 100%"><option value=""></option></select>
+                  	  <label for="date-yyyy">YYYY</label>
+                  	</div>
+                  </div>
+                </fieldset>
+                <div class="field">
+                  <label for="lastname">Last Name</label>
+                  <div class="field-input">
+                    <input type="text" name="lastname" id="lastname">
+                  </div>
+                </div>
+                <div class="field margin-large">
+                  <label for="zipcode">Zip Code</label>
+                  <div class="field-input">
+                    <input type="number" name="zipcode" id="zipcode">
+                  </div>
+                </div>
+                <div class="btn-group">
+                  <a href="#" class="btn btn--secondary">Cancel</a>
+                  <button class="btn" id="missing-additional-btn"><span class="btn btn--primary">Continue</span></button>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

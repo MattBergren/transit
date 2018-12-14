@@ -1,0 +1,33 @@
+<section class="container--base gray margin-none">
+  <div class="container">
+    <div class="row" id="additional-plan-selector">
+      <div class="col-md-10">
+        <div class="card">
+          <div class="card-header">
+            <h2 class="h4 margin-none">Link Another Plan</h2>
+          </div>
+          <div class="card-body">
+            <p class="margin-large">
+              {{#if federal}}
+              To add another plan to your account, please enter your member ID for that plan exactly as it appears on your member ID card (health insurance card). It will include 7-10 numbers and may be followed by a “-“ with two additional numbers.
+              {{else}}
+              We found additional plans that may be yours. Please enter another Member ID for any other plans that you are enrolled in and click add a plan. If you do not have or want to register additional plans, just skip this step.
+              {{/if}}
+            </p>
+            <form id="register-form">
+              <div class="field margin-large">
+                <label for="multiple-member-id" class="display-inline-block">Member ID Number</label><span data-tooltip="small" data-tooltip-side="right"></span>
+                <div class="field-input">
+                  <input type="number" name="multiple-member-id" id="multiple-member-id">
+                </div>
+              </div>
+              <p class="bold color-red no-plan margin-small hidden">The Member ID you provided does not match the additional plans we found.  Reenter your member ID or click "Next" to continue the registration process.</p>
+              <p class="bold color-red additional-warning margin-small hidden">Additional plans associated with your member information are inactive or have been terminated and cannot be registered for online account access.</p>
+              <button type="submit" class="btn btn-primary"><span class="btn">+ Add a Plan</span></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

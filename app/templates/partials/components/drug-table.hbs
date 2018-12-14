@@ -1,0 +1,16 @@
+<div class="table-body{{#if attribute}} {{attribute}}{{/if}}">
+  {{!-- Each: this object --}}
+  {{#each this}}
+    <div class="table-body-row">
+      {{!-- If: title exists --}}
+      {{#if title}}
+        <div class="table-body-cell">
+          <span class="bold">{{title}}:</span>
+        </div>
+      {{/if}}
+      <div class="table-body-cell">
+        {{content}}
+      </div>
+    </div>
+  {{/each}}
+</div>

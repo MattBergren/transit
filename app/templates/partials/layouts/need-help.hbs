@@ -1,0 +1,69 @@
+<section class="container--base contact-us">
+  <div class="container">
+    {{!-- Start: section header --}}
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="h3 medium margin-small">Need help?</h2>
+      </div>
+    </div>
+    <div class="row">
+      {{!-- Tech support --}}
+      <div class="col-md-4">
+        <div class="display-flex v-center margin-small">
+          <img src="/images/icon-svgs/computer.svg" alt="Tech Support" class="img-small">
+          <div class="padding-left-small">
+            <h3 class="h4 margin-none">Technical Support</h3>
+          </div>
+        </div>
+        <a href="tel:1-800-555-5555" class="display-inline-block margin-extra-small text-large">1-800-XXX-XXXX</a>
+        <p>
+          TTY users, call <a href="tel:711">711</a>
+        </p>
+        <p>
+          8 am-8 pm local time, 7 days a week
+        </p>
+      </div>
+      {{#eq help-type 'SHIP'}}
+        {{!-- General questions --}}
+        <div class="col-md-4 border-left">
+          <div class="display-flex v-center margin-small">
+            <img src="/images/icon-svgs/question.svg" alt="General Questions" class="img-small">
+            <div class="padding-left-small">
+              <h3 class="h4 margin-none">General Questions</h3>
+            </div>
+          </div>
+          <a href="tel:1-800-555-5555" class="display-inline-block margin-extra-small text-large">1-800-XXX-XXXX</a>
+          <p>
+            TTY users, call <a href="tel:711">711</a>
+          </p>
+          <p>
+            8 am-8 pm local time, 7 days a week
+          </p>
+        </div>
+      {{/eq}}
+      {{!-- Plan/claim support --}}
+      <div class="col-md-4 border-left">
+        <div class="display-flex v-center margin-small">
+          <img src="/images/icon-svgs/{{#eq help-type 'SHIP'}}claim{{else}}plan{{/eq}}.svg" alt="{{#eq help-type 'SHIP'}}claim{{else}}Plan{{/eq}} Support" class="img-small">
+          <div class="padding-left-small">
+            <h3 class="h4 margin-none">{{#eq help-type 'SHIP'}}Claims{{else}}Plan{{/eq}} Support</h3>
+          </div>
+        </div>
+        <a href="tel:1-800-555-5555" class="display-inline-block margin-extra-small text-large">1-800-XXX-XXXX</a>
+        <p>
+          TTY users, call <a href="tel:711">711</a>
+        </p>
+        <p>
+          8 am-8 pm local time, 7 days a week
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p class="margin-none">
+          See more ways to <a href="/contact/contact-us-{{#eq help-type 'SHIP'}}ship{{else eq help-type 'PDP'}}pdp{{else eq help-type 'GROUP'}}group{{else}}ma{{/eq}}.html" class="lowercase">contact us</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

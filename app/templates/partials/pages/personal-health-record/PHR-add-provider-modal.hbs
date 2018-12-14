@@ -1,0 +1,125 @@
+<!-- Start: Add modal -->
+<div id="addProviderModal" tabindex="-1" role="dialog" aria-labelledby="addProviderModalLabel" class="modal fade">
+  <div role="document" class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <a class="link link--icon-right link--icon-circled align-right" data-icon="" data-dismiss="modal" aria-label="Close">Cancel</a>
+        <div id="addProviderModalLabel" class="modal-title">
+          <h1 class="h3 margin-none">Add Provider</h1>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-12">
+              * required fields
+              <hr>
+							<div class="table-body responsive margin-small">
+                <form id="add-provider-form">
+                  <legend class="sr-only">Add provider</legend>
+                  <div class="table-body-row field--row">
+                    <div class="table-body-cell">
+                      <label for="provider-name">Physician/Dr. Name: *</label>
+                    </div>
+                    <div class="table-body-cell">
+                      <div class="field-input">
+                        <input type="text" name="provider-name" id="provider-name" data-modalfocus>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="table-body-row field--row">
+                    <div class="table-body-cell">
+                      <label for="provider-specialty">Specialty:</label>
+                    </div>
+                    <div class="table-body-cell">
+                      <div class="field-input">
+                        <div class="select--regular margin-none">
+                          <select name="provider-specialty" id="provider-specialty">
+                            <option value=""></option>
+                            <option value="Allergies/Asthma">Allergies/Asthma</option>
+                            <option value="Anesthesiology">Anesthesiology</option>
+                            <option value="Cardiology">Cardiology</option>
+                            <option value="Dermatology">Dermatology</option>
+                            <option value="Endocrinology">Endocrinology</option>
+                            <option value="Family Practice">Family Practice</option>
+                            <option value="Gastroenterology">Gastroenterology</option>
+                            <option value="General Surgery">General Surgery</option>
+                            <option value="Geriatric Medicine">Geriatric Medicine</option>
+                            <option value="Gynecology">Gynecology</option>
+                            <option value="Hematology">Hematology</option>
+                            <option value="Hospice and Palliative Medicine">Hospice and Palliative Medicine</option>
+                            <option value="Immunology">Immunology</option>
+                            <option value="Infectious Disease">Infectious Disease</option>
+                            <option value="Internal Medicine">Internal Medicine</option>
+                            <option value="Nephrology">Nephrology</option>
+                            <option value="Neurology">Neurology</option>
+                            <option value="Oncology">Oncology</option>
+                            <option value="Ophthalmology">Ophthalmology</option>
+                            <option value="Orthopedics">Orthopedics</option>
+                            <option value="Otorhinolaryngology">Otorhinolaryngology</option>
+                            <option value="Psychiatry">Psychiatry</option>
+                            <option value="Pulmonary">Pulmonary</option>
+                            <option value="Rehabilitative Medicine">Rehabilitative Medicine</option>
+                            <option value="Rheumatology">Rheumatology</option>
+                            <option value="Urology">Urology</option>
+                            <option value="Other">Other</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="table-body-row field--row">
+                    <div class="table-body-cell">
+                      <label for="provider-facility">Facility:</label>
+                    </div>
+                    <div class="table-body-cell">
+                      <div class="field-input">
+                        <input type="text" name="provider-facility" id="provider-facility">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="table-body-row field--row">
+                    <div class="table-body-cell">
+                      <label for="provider-city">City:</label>
+                    </div>
+                    <div class="table-body-cell">
+                      <div class="field-input">
+                        <input type="text" name="provider-city" id="provider-city">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="table-body-row field--row">
+                    <div class="table-body-cell">
+                      <label for="provider-phone">Phone:</label>
+                    </div>
+                    <div class="table-body-cell">
+                      <div class="field-input">
+                        <input type="text" name="provider-phone" id="provider-phone">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="table-body-row field--row">
+                    <div class="table-body-cell">
+                      <label for="provider-date">Date:</label>
+                    </div>
+                    <div class="table-body-cell">
+                      <div class="field-input">
+                        <input type="date" name="provider-date" id="provider-date" pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}">
+                      </div>
+                    </div>
+                  </div>
+                </form>
+							</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn add-provider-form-button">
+          <span class="btn btn--primary btn--medium-width">Add</span>
+        </button>
+        <a href="#" data-dismiss="modal">CANCEL</a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,133 @@
+---
+title: My Personal Health Record
+layout: default
+hasFooter: true
+hasHeader: true
+isPHR: true
+hasScript:
+  - table
+  - personal-health-record
+---
+<div class="personal-health-record">
+
+	<section class="container--base no-margin-bottom">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-6 col-sm-8 margin-none">
+					<h2 class="h3 margin-small">Medications <span class="desktop-only">and Supplements</span></h2>
+				</div>
+				<div class="col-xs-6 col-sm-4 align-right">
+					<button data-toggle="modal" data-target="#addToolsModal" class="btn btn--right">
+						<span class="btn btn--primary">Drug Tools</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="container--base no-margin-bottom margin-top-small">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<!-- Desktop tables start -->
+					<div class="row">
+						<div class="col-md-12">
+							<div class="medication-filters display-flex v-bottom margin-small">
+								<div class="">
+									<p>4 of 12 records</p>
+								</div>
+								<div class="display-flex h-bottom">
+									<fieldset>
+										<legend>
+											<span class="hidden">Medication History:</span>
+										</legend>
+										<div class="table-body responsive wide">
+											<div class="table-body-row">
+												<div class="table-body-cell">
+													<label class="bold" for="date-range">View Records For:</label>
+												</div>
+												<div class="table-body-cell">
+													<div class="select--regular">
+														<select name="date-range" class="date-range" id="date-range">
+															<option value="90-days">Last 90 Days</option>
+															<option value="6-months">Last 6 Months</option>
+															<option value="12-months">Last 12 Months</option>
+															<option value="24-months">Last 24 Months</option>
+															<option value="current-year">All</option>
+														</select>
+													</div>
+												</div>
+											</div>
+										</div>
+									</fieldset>
+								</div>
+							</div>
+							{{> PHR-drug-table }}
+							{{> PHR-record-totals }}
+							{{!-- <a data-toggle="modal" data-target="#addPrescriptionModal" class="btn btn--primary btn--full-width">Add a drug</a> --}}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="divider"></div>
+	<section class="container--base no-margin-bottom">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h2 class="h3 margin-small">Health Care Providers</h2>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="container--base margin-top-small">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="provider-filters display-flex v-bottom margin-small">
+								<div class="">
+									<p>4 of 12 records</p>
+								</div>
+								<div class="display-flex h-bottom">
+									<fieldset>
+										<legend>
+											<span class="hidden">Provider History:</span>
+										</legend>
+										<div class="table-body responsive wide">
+											<div class="table-body-row">
+												<div class="table-body-cell">
+													<label class="bold" for="date-range">View Records For:</label>
+												</div>
+												<div class="table-body-cell">
+													<div class="select--regular">
+														<select name="date-range" class="date-range" id="date-range">
+															<option value="90-days">Last 90 Days</option>
+															<option value="6-months">Last 6 Months</option>
+															<option value="12-months">Last 12 Months</option>
+															<option value="24-months">Last 24 Months</option>
+															<option value="current-year">All</option>
+														</select>
+													</div>
+												</div>
+											</div>
+										</div>
+									</fieldset>
+								</div>
+							</div>
+							{{> PHR-provider-table }}
+							{{> PHR-record-totals }}
+							{{!-- <a data-toggle="modal" data-target="#addProviderModal" class="btn btn--primary btn--full-width">+ Add a provider</a> --}}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	{{> PHR-add-drug-modal }}
+	{{> PHR-tools-modal }}
+	{{> PHR-view-provider-modal }}
+	{{> PHR-add-provider-modal }}
+</div>

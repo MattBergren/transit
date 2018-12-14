@@ -1,0 +1,87 @@
+<div class="container--base">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="h3 medium">EOB Search</h2>
+        <p class="margin-none">&lt;General text about EOBs that can be used on all EOB pages&gt; Lorem ipsum dolor sit amet.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div>
+          <fieldset>
+            <legend class="sr-only">EOB Search</legend>
+            <div class="table-body responsive wide">
+              {{#if mapd}}
+                <div class="table-body-row">
+                  <div class="table-body-cell">
+                    <label for="eob-type{{#if combo}}-{{combo}}{{/if}}">EOB Type:</label>
+                  </div>
+                  <div class="table-body-cell">
+                    <div class="select--regular">
+                      <select name="eob-type" class="eob-type" id="eob-type{{#if combo}}-{{combo}}{{/if}}">
+                        <option value="Medical">Medical</option>
+                        <option value="Prescription Drug">Prescription Drug</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              {{/if}}
+              <div class="table-body-row">
+                <div class="table-body-cell">
+                  <label for="date-range{{#if combo}}-{{combo}}{{/if}}">Date Range:</label>
+                </div>
+                <div class="table-body-cell">
+                  <div class="select--regular">
+                    <select name="date-range" class="date-range" id="date-range{{#if combo}}-{{combo}}{{/if}}">
+                      <option value="90 Days">Last 90 Days</option>
+                      {{#if ship}}
+                        <option value="3-6 Months">Last 3-6 Months</option>
+                        <option value="6-12 Months">Last 6-12 Months</option>
+                        <option value="12-18 Months">Last 12-18 Months</option>
+                        {{else}}
+                          <option value="6 Months">Last 6 Months</option>
+                          <option value="12 Months">Last 12 Months</option>
+                          <option value="18 Months">Last 18 Months</option>
+                          <option value="custom-search">Custom Search</option>
+                      {{/if}}
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="table-body-row custom-search-fields hidden">
+                <div class="table-body-cell"></div>
+                <div class="table-body-cell">
+                 <div class="custom-search-input">
+                      <label for="custom-from{{#if combo}}{{combo}}{{/if}}">From</label>
+                      <input type="date" id="custom-from{{#if combo}}{{combo}}{{/if}}">
+                  </div>
+                  <div class="custom-search-input">
+                      <label for="custom-to{{#if combo}}{{combo}}{{/if}}">to</label>
+                      <input type="date" id="custom-to{{#if combo}}{{combo}}{{/if}}">
+                  </div>
+                </div>
+                <div class="table-body-cell">
+                  <button class="btn custom-date-search-btn"><span class="btn btn--primary">Search</span></button>
+                </div>
+              </div>
+
+              {{!-- <div class="table-body-row">
+                <div class="table-body-cell"></div>
+                <div class="table-body-cell">
+                  <div class="custom-date-search" aria-hidden="true">
+                    <label for="date-from{{#if combo}}-{{combo}}{{/if}}" class="display-inline-block">From</label>
+                    <input type="date" name="date-from" id="date-from{{#if combo}}-{{combo}}{{/if}}" class="date-from">
+                    <label for="date-to{{#if combo}}-{{combo}}{{/if}}" class="display-inline-block">To</label>
+                    <input type="date" name="date-to" id="date-to{{#if combo}}-{{combo}}{{/if}}" class="date-to">
+                    <button type="button" class="btn btn--primary custom-date-search-btn">Search</button>
+                  </div>
+                </div>
+              </div> --}}
+            </div>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

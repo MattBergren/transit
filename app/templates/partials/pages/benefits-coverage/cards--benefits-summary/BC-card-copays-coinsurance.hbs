@@ -1,0 +1,126 @@
+{{!-- Start: medical copays or coinsurances section --}}
+<div class="row">
+  <div class="col-md-8 margin-small">
+    <h3 class="h4 color-blue medium margin-small">Medical copays or coinsurances</h3>
+    <p>
+      Section heading tool tip copy goes here.
+      Lorem ipsum medical copays are like a type of cost sharing lorem ipsum.
+      Coinsurance is a percentage of cost sharing lorem ipsum...
+    </p>
+  </div>
+</div>
+<div class="row">
+  {{!-- Card 1 --}}
+  <div class="col-sm-6 col-md-3">
+    <div class="card match-height">
+      <div class="card-header margin-small">
+        <span class="subtitle" data-tooltip="small" data-tooltip-label="Office Visits Tooltip" {{#if variation}}data-tooltip-side="right"{{/if}}>Office Visits</span>
+      </div>
+      <div class="card-body">
+        <div class="margin-medium">
+          <p class="bold">Primary Care Physician</p>
+          {{> table-small BC-ma.table-small.office-visits}}
+        </div>
+        <p class="bold margin-small">Specialist</p>
+        {{> table-small BC-ma.table-small.office-visits}}
+      </div>
+    </div>
+  </div>
+  {{!-- Card 2 --}}
+  <div class="col-sm-6 col-md-3">
+    <div class="card match-height">
+      <div class="card-header margin-small">
+        <span class="subtitle">Hospital Visits</span>
+      </div>
+      <div class="card-body">
+        <div class="margin-medium">
+          <p class="bold margin-small">Inpatient Visits</p>
+          <p class="h4 margin-none">$XXX.XX</p>
+          <span class="italic">max per day</span>
+        </div>
+        <div class="margin-medium">
+          {{> table-small BC-ma.table-small.inpatient-hospital-visits}}
+        </div>
+        <p class="bold margin-small">Outpatient Visits</p>
+        <p class="h4 margin-none">$XXX.XX</p>
+        <span class="italic">max per day</span>
+      </div>
+    </div>
+  </div>
+  {{!-- Card 3 --}}
+  <div class="col-sm-6 col-md-3">
+    <div class="card match-height">
+      <div class="card-header margin-small">
+        <span class="subtitle" data-tooltip="small" data-tooltip-label="Outpatient Surgery Center Tooltip" {{#if variation}}data-tooltip-side="right"{{/if}}>Outpatient Surgery Center</span>
+      </div>
+      <div class="card-body">
+        {{> table-small BC-ma.table-small.outpatient-care}}
+      </div>
+    </div>
+  </div>
+  {{!-- Card 4 --}}
+  <div class="col-sm-6 col-md-3">
+    <div class="card match-height">
+      <div class="card-header margin-small">
+        <span class="subtitle">Emergency Care</span>
+      </div>
+      <div class="card-body">
+        <div class="margin-medium">
+          <p class="h4 margin-none">XX%</p>
+          <span class="italic">lorem ipsum</span>
+        </div>
+        <span>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  {{!-- Card 5 --}}
+  <div class="col-sm-6 col-md-3">
+    <div class="card match-height">
+      <div class="card-header margin-small">
+        <span class="subtitle">Ambulance</span>
+      </div>
+      <div class="card-body">
+        <div class="margin-medium">
+          <p class="h4 margin-none">XX%</p>
+          <span class="italic">lorem ipsum</span>
+        </div>
+        <span>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+        </span>
+      </div>
+    </div>
+  </div>
+  {{#if type-ma}}
+    {{!-- Card 6 --}}
+    <div class="col-sm-6 col-md-3">
+      <div class="card match-height">
+        <div class="card-header margin-small">
+          <span class="subtitle" data-tooltip="small" data-tooltip-label="Riders Tooltip" {{#if variation}}data-tooltip-side="right"{{/if}}>Optional Service Benefits (Riders)</span>
+        </div>
+        <div class="card-body">
+          <a href="#" class="lowercase display-block">High Option Dental</a>
+          <p class="text-small margin-small">+ $37.00/mo.</p>
+          <a href="#" class="lowercase display-block">Fitness</a>
+          <p class="text-small margin-large">+ $37.00/mo.</p>
+          <a href="#avail-riders" class="btn btn--secondary">Explore Available Riders</a>
+        </div>
+      </div>
+    </div>
+    {{!-- Card 7 --}}
+    <div class="col-sm-6 col-md-3">
+      <div class="card match-height">
+        <div class="card-header margin-small">
+          <span class="subtitle" data-tooltip="small" data-tooltip-label="Riders 2 Tooltip" {{#if variation}}data-tooltip-side="right"{{/if}}>Optional Service Benefits (Riders)</span>
+        </div>
+        <div class="card-body">
+          <p class="italic margin-large">You do not currently have any riders added to your plan.</p>
+          <a href="#avail-riders" class="btn btn--secondary">Explore Available Riders</a>
+        </div>
+      </div>
+    </div>
+    {{/if}}
+</div>

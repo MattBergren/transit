@@ -1,0 +1,19 @@
+---
+title: My Personal Health Record
+layout: default
+hasFooter: true
+hasHeader: true
+hasPHRTabs:
+  - Medications and Supplements
+  - Health Care Providers
+hasScript:
+  - table
+  - personal-health-record
+---
+<div class="personal-health-record">
+  {{> PHR-combo-section }}
+	{{> PHR-add-drug-modal }}
+	{{> PHR-tools-modal }}
+	{{> PHR-view-provider-modal }}
+	{{> PHR-add-provider-modal }}
+</div>

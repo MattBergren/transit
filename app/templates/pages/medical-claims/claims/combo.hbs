@@ -1,0 +1,28 @@
+---
+title: My Claims
+layout: default
+hasFooter: true
+hasHeader: true
+hasTabs:
+  - Prescription Drug Plan
+  - Other Plans
+hasScript:
+  - medical-claims
+  - table
+---
+<div class="medical-claims">
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane fade in active" id="tab-1" aria-label="PDP">
+      {{> mc-summary-intro type="mapd" variation="pdp"}}
+      {{> mc-summary-claims type="mapd" variation="pdp"}}
+      {{> need-help help-type="PDP" }}
+    </div>
+    <div role="tabpanel" class="tab-pane fade" id="tab-2" aria-label="SHIP">
+      {{> mc-summary-intro type="ship" combo="true" }}
+      {{> mc-summary-claims type="ship" }}
+      {{> mc-summary-info }}
+      <div class="divider"></div>
+      {{> need-help help-type='SHIP' }}
+    </div>
+  </div>
+</div>

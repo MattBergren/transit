@@ -1,0 +1,17 @@
+---
+title: Online Registration
+layout: default
+hasHeader: true
+hasUnauthFooter: true
+altNav: true
+hasScript:
+  - register
+---
+<div class="register">
+  {{> rg-progress step2="true" }}
+  {{> rg-body step2="true"}}
+  {{> rg-addplan-modal }}
+  {{> rg-existing-modal }}
+  {{> rg-existing-warning-modal }}
+  {{> questions }}
+</div>

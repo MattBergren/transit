@@ -1,0 +1,77 @@
+---
+title: Pattern Library
+layout: pattern-library
+hasScript:
+  - pattern-library
+  - table
+---
+<div class="pattern-library">
+  <section class="container--base">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="h3 medium">Pattern Library</h1>
+          <p class="margin-none">Pattern Library Lorem ipsum commodo sint esse qui excepteur incididunt culpa nisi culpa est reprehenderit anim ex officia aliquip ipsum.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container--base gray padding-none">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="container-library">
+            <div class="nav-wrapper">
+              <nav class="navbar navbar-default" id="navbar">
+                <div class="container-fluid">
+                  <!-- Brand and toggle get grouped for better mobile display -->
+                  <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                  </div>
+
+                  <!-- Collect the nav links, forms, and other content for toggling -->
+                  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                      <li><a href="#typography">Typography <span class="sr-only">(current)</span></a></li>
+                      <li><a href="#colors">Colors</a></li>
+                      <li><a href="#links">Buttons & Links</a></li>
+                      <li><a href="#forms">Form Elements</a></li>
+                      <li><a href="#tables">Tables & Lists</a></li>
+                      <li><a href="#components">Components</a></li>
+                    </ul>
+                  </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+              </nav>
+            </div>
+            <div class="container-body">
+              <div class="container-body-section" id="typography">
+                {{> library-typography }}
+              </div>
+              <div class="container-body-section" id="colors">
+                {{> library-colors }}
+              </div>
+              <div class="container-body-section" id="links">
+                {{> library-links }}
+              </div>
+              <div class="container-body-section" id="forms">
+                {{> library-forms }}
+              </div>
+              <div class="container-body-section" id="tables">
+                {{> library-tables }}
+              </div>
+              <div class="container-body-section" id="components">
+                {{> library-components }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

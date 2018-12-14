@@ -1,0 +1,108 @@
+<div class="container--base gray">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        {{!-- Map toggle --}}
+        <ul class="map-toggle">
+          <li>
+            <a href="#collapseMap" role="button" data-toggle="collapse" aria-expanded="true" aria-controls="collapseMap" class="toggle-show">
+              Map <span class="material-icons">keyboard_arrow_down</span>
+            </a>
+          </li>
+        </ul>
+        {{!-- Map --}}
+        <div class="collapse-wrapper">
+          <div class="collapse in" id="collapseMap">
+            <div class="map-wrapper">
+              <div id="map"></div>
+            </div>
+          </div>
+        </div>
+        {{#eq type "MAPD"}}
+          {{> PL-results PL.MAPD }}
+        {{/eq}}
+        {{#eq type "PDP"}}
+          {{> PL-results PL.PDP }}
+        {{/eq}}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card match-height">
+          <div class="card-header display-flex v-center margin-small">
+            <div>
+              <img src="/images/icon-svgs/mail.svg" alt="Mail" class="img-medium" style="padding-right: 10px;" />
+            </div>
+            <div>
+              <h2 class="h4 margin-none">Preferred Mail Service Pharmacy</h2>
+            </div>
+          </div>
+          <div class="card-body">
+            <p>
+              Get savings and convenience delivered right to your mailbox when
+              you use home delivery through OptumRX, your plan's preffered mail
+              service pharmacy. You could pay less for the same medications.
+            </p>
+            <p class="margin-none bold">Contact Optum Rx</p>
+            <p class="margin-small">
+              OptumRx Preferred Mail Service Pharmacy PO Box 2975 <br>
+              Shawnee Mission, KS <br>
+              66201-1375 <br>
+              Call toll-free: 1-877-266-4832, 24 hours a day, 7 days a week. TTY users, call 711.
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card match-height">
+          <div class="card-header display-flex v-center margin-small">
+            <div>
+              <img src="/images/icon-svgs/pharmacy.svg" alt="Pharmacy" class="img-medium" style="padding-right: 10px;" />
+            </div>
+            <div>
+              <h2 class="h4 margin-none">
+                {{#eq type "MAPD"}}
+                  Pharmacy Saver offers prescriptions as low as $XX.XX
+                {{/eq}}
+                {{#eq type "PDP"}}
+                  Preferred Retail Pharmacy Network
+                {{/eq}}
+              </h2>
+            </div>
+          </div>
+          <div class="card-body">
+            {{#eq type "MAPD"}}
+              <p>
+                Pharmacy SaverTM is a cost savings prescription drug program
+                available to you as a plan member. UnitedHealthcare® has worked
+                with many of our network pharmacies to offer even lower prices
+                on many common prescription drugs. You may be able to pay less
+                than your plan co-pay for your prescription drugs with the Pharmacy
+                Saver program.
+              </p>
+              <a href="#">Learn More</a>
+            {{/eq}}
+            {{#eq type "PDP"}}
+              <p>
+                The Preferred Retail Pharmacy Network may help you save money on
+                your prescription co-pays. UnitedHealthcare has worked with many
+                retail pharmacies to help you get the savings you've been looking
+                for. You could save &lt;XX%&gt; or more on co-pays when you fill your
+                prescriptions at a preferred retail pharmacy.
+              </p>
+              <p>
+                Savings of &lt;XX%&gt; or more apply to Tier 1 and Tier 2 co-pays on
+                the AARP MedicareRx Preferred (PDP) and AARP MedicareRx
+                Saver Plus (PDP) plans at a preferred retail pharmacy compared
+                with the co-pays of standard pharmacies within the network.
+              </p>
+              <a href="/drug-cost-estimator-update.html">Estimate your drug costs</a>
+            {{/eq}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="loading-block"></div>
+</div>

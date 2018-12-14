@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Turn off telephone number detection. -->
+    <meta name="format-detection" content="telephone=no">
+    <title>My Personal Health Record</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <!-- Place favicon.ico in the root directory -->
+
+
+    <link rel="stylesheet" href="/styles/vendor/slick-theme.css">
+    <link rel="stylesheet" href="/styles/vendor/slick.css">
+    <link rel="stylesheet" href="/styles/vendor/tooltipster-new.css">
+    <link rel="stylesheet" href="/styles/vendor/bootstrap.css">
+    <link rel="stylesheet" href="/styles/vendor/awesomplete.css">
+
+    <link rel="stylesheet" href="/styles/mir-main.css">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/cc-enhancement.css">
+
+    <link rel="stylesheet" href="/styles/print.css">
+
+
+    <link rel="stylesheet" href="/styles/vendor/common.css">
+
+    <script src="/scripts/vendor/modernizr.js"></script>
+
+</head>
+<body>
+  <div class="uhc-body-wrapper">
+    <div class="uhc-body-light-box"></div>
+    <div class="rivets-loading" rv-show="data.loading" style="position: fixed; top:0; left:0; right:0; bottom:0; background-color: white; z-index:9999;"></div>
+    <!-- Start: Navigation -->
+    <nav class="uhcg-nav">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="uhcg-nav-header">
+          <div class="header-wrapper">
+            <div class="logo-container">
+              <img src="/images/logos/uhc-logo.svg" alt="Main Logo" class="img-responsive">
+              <div class="logo-divider"></div>
+              <img src="/images/logos/mirum-logo.png" alt="Partner Logo" class="img-responsive">
+            </div>
+            <div class="icon-container">
+              <a href="#" class="menu-icon" aria-label="Menu">
+                <div class="menu-line-wrapper">
+                  <div class="menu-line"></div>
+                  <div class="menu-line"></div>
+                  <div class="menu-line"></div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <ul class="uhc-nav">
+            <li class="uhc-nav-item--secondary">
+              <a href="#" class="uhc-nav-item-link">
+                <img src="/images/icon-svgs/nav-phone.svg" alt="Phone">
+                Contact Us
+              </a>
+            </li>
+            <li class="uhc-nav-item--secondary">
+              <a href="#" class="uhc-nav-item-link">
+                <span class="count-circle">2</span>
+                <img src="/images/icon-svgs/nav-mail.svg" alt="Message">
+                Messages
+              </a>
+            </li>
+            <li class="uhc-nav-item--secondary">
+              <a href="#" class="uhc-nav-item-link">
+                <img src="/images/icon-svgs/nav-doc.svg" alt="Documents">
+                My Documents
+              </a>
+            </li>
+            <li class="uhc-nav-item--secondary has-sub-nav">
+              <a href="#" class="uhc-nav-item-link" id="nav-profile">
+                <img src="/images/icon-svgs/nav-user.svg" alt="User">
+                Profile
+              </a>
+              <ul class="sub-nav">
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Update Profile</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Go Green Preferences</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Change Password</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Sign Out</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="nav-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="uhc-nav">
+            <li class="uhc-nav-item"><a href="#" class="uhc-nav-item-link">Home</a></li>
+            <li class="uhc-nav-item has-sub-nav">
+              <a href="#" class="uhc-nav-item-link">Care & Costs</a>
+              <ul class="sub-nav">
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Provider Search</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Pharmacy Locator</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Drug Look Up</a></li>
+              </ul>
+            </li>
+            <li class="uhc-nav-item has-sub-nav">
+              <a href="#" class="uhc-nav-item-link">Benefits</a>
+              <ul class="sub-nav">
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Benefits Summary</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Forms & Resources</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Order Materials</a></li>
+              </ul>
+            </li>
+            <li class="uhc-nav-item has-sub-nav">
+              <a href="#" class="uhc-nav-item-link">Claims</a>
+              <ul class="sub-nav">
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Claims Search</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">EOB Search</a></li>
+              </ul>
+            </li>
+            <li class="uhc-nav-item"><a href="#" class="uhc-nav-item-link">Premium Payments</a></li>
+            <li class="uhc-nav-item"><a href="#" class="uhc-nav-item-link">Health & Wellness</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+    
+
+    <!-- Start: Page header -->
+    <header class="benefits-coverage page-header-wrapper" role="banner" aria-label="header">
+      <div class="page-header">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="display-flex v-center">
+                <div class="page-header--left">
+                  <h1 class="h4 margin-none">
+                    My Personal Health Record
+                  </h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+
+
+        <div class="tabs-header">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="tabs-mobile">
+										<div class="row">
+											<div class="container margin-medium">
+												<div class="row">
+													<div class="col-sm-8 col-md-6">
+														<p>Find health records of your medications and providers that are pulled from your
+															<a href="#" class="lowercase">claims</a>. You can keep this list up-to-date by entering your own records below.</p>
+													</div>
+												</div>
+											</div>
+                       <div class="container print-email-container">
+                       	<div class="row">
+                       		<div class="col-sm-12">
+                       			<div class="display-flex card v-center">
+                       				<div class="card-content">
+                       					<div class="card-body">
+                       						<p class="margin-none">
+                       							Bring a copy to your doctor’s appointment.
+                       						</p>
+                       					</div>
+                       				</div>
+                               <div class="card-buttons">
+                                 <a href="myPHR.pdf" target="_blank" class="phr-print-button display-inline-block" role="button">Print Records
+                                   <svg width="17" height="17" viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg">
+                                     <title>Print Records</title>
+                                     <g fill="#196ECF" fill-rule="evenodd">
+                                       <path d="M13.104 8.5c-.352 0-.637-.286-.637-.638 0-.35.285-.637.637-.637.352 0 .638.286.638.638 0 .35-.286.637-.638.637zm1.994-4.25H1.902C.852 4.25 0 5.103 0 6.152v5.546c0 1.05.853 1.902 1.902 1.902h.648v-1.812c0-1.344 1.092-2.438 2.436-2.438h7.03c1.345 0 2.434 1.094 2.434 2.438V13.6h.648c1.05 0 1.902-.853 1.902-1.902V6.152c0-1.05-.853-1.902-1.902-1.902zM13.6 1.576C13.6.706 12.907 0 12.056 0H5.078C4.184 0 3.4.736 3.4 1.576V3.4h10.2V1.576"
+                                       />
+                                       <path d="M13.6 11.788c0-.876-.707-1.588-1.583-1.588h-7.03c-.876 0-1.587.712-1.587 1.588v3.642c0 .866.704 1.57 1.57 1.57h7.06c.866 0 1.57-.704 1.57-1.57v-3.642"
+                                       />
+                                     </g>
+                                   </svg>
+                                 </a>
+                                 <a href="#" data-toggle="modal" data-target="#emailRecordsModal" class="phr-email-button display-inline-block" role="button">Email Records
+                                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="-471 275 17 17">
+                                     <g fill="#196ECF">
+                                       <path d="M-462.5 283.5l4.9-3.8 2.8-2.1c-.1 0-.2-.1-.3-.1h-15l7.6 6M-456.6 281.1l-2.5 1.7 5.1 5v-8.6l-2.6 1.9M-460.4 283.6l-1.4 1.1c-.2.2-.4.2-.7.2s-.5-.1-.7-.2l-1.5-1.2-5.6 5.9c.1.1.3.1.4.1h14.6c.1 0 .2 0 .3-.1l-5.4-5.8M-471 279.2v8.6l5.1-5-5.1-3.6"
+                                       />
+                                     </g>
+                                   </svg>
+                                 </a>
+                               </div>
+                       			</div>
+                       		</div>
+                       	</div>
+                       </div>
+										</div>
+                    <label for="tab-select">Select to view Medications or Providers</label>
+                    <div class="select--regular select--medium margin-none">
+                      <select name="tab-select" id="tab-select">
+                        <option value="tab-1">Medications and Supplements</option>
+                        <option value="tab-2">Health Care Providers</option>
+                      </select>
+                    </div>
+                </div>
+                <div class="tabs-desktop">
+									<div class="row">
+										<div class="container margin-medium">
+											<div class="row">
+												<div class="col-sm-8 col-md-6">
+													<p>Find health records of your medications and providers that are pulled from your
+														<a href="#" class="lowercase">claims</a>. You can keep this list up-to-date by entering your own records below.</p>
+												</div>
+											</div>
+										</div>
+                     <div class="container print-email-container">
+                     	<div class="row">
+                     		<div class="col-sm-12">
+                     			<div class="display-flex card v-center">
+                     				<div class="card-content">
+                     					<div class="card-body">
+                     						<p class="margin-none">
+                     							Bring a copy to your doctor’s appointment.
+                     						</p>
+                     					</div>
+                     				</div>
+                             <div class="card-buttons">
+                               <a href="myPHR.pdf" target="_blank" class="phr-print-button display-inline-block" role="button">Print Records
+                                 <svg width="17" height="17" viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg">
+                                   <title>Print Records</title>
+                                   <g fill="#196ECF" fill-rule="evenodd">
+                                     <path d="M13.104 8.5c-.352 0-.637-.286-.637-.638 0-.35.285-.637.637-.637.352 0 .638.286.638.638 0 .35-.286.637-.638.637zm1.994-4.25H1.902C.852 4.25 0 5.103 0 6.152v5.546c0 1.05.853 1.902 1.902 1.902h.648v-1.812c0-1.344 1.092-2.438 2.436-2.438h7.03c1.345 0 2.434 1.094 2.434 2.438V13.6h.648c1.05 0 1.902-.853 1.902-1.902V6.152c0-1.05-.853-1.902-1.902-1.902zM13.6 1.576C13.6.706 12.907 0 12.056 0H5.078C4.184 0 3.4.736 3.4 1.576V3.4h10.2V1.576"
+                                     />
+                                     <path d="M13.6 11.788c0-.876-.707-1.588-1.583-1.588h-7.03c-.876 0-1.587.712-1.587 1.588v3.642c0 .866.704 1.57 1.57 1.57h7.06c.866 0 1.57-.704 1.57-1.57v-3.642"
+                                     />
+                                   </g>
+                                 </svg>
+                               </a>
+                               <a href="#" data-toggle="modal" data-target="#emailRecordsModal" class="phr-email-button display-inline-block" role="button">Email Records
+                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-471 275 17 17">
+                                   <g fill="#196ECF">
+                                     <path d="M-462.5 283.5l4.9-3.8 2.8-2.1c-.1 0-.2-.1-.3-.1h-15l7.6 6M-456.6 281.1l-2.5 1.7 5.1 5v-8.6l-2.6 1.9M-460.4 283.6l-1.4 1.1c-.2.2-.4.2-.7.2s-.5-.1-.7-.2l-1.5-1.2-5.6 5.9c.1.1.3.1.4.1h14.6c.1 0 .2 0 .3-.1l-5.4-5.8M-471 279.2v8.6l5.1-5-5.1-3.6"
+                                     />
+                                   </g>
+                                 </svg>
+                               </a>
+                             </div>
+                     			</div>
+                     		</div>
+                     	</div>
+                     </div>
+									</div>
+                  <p class="bold margin-small">Select to view Medications or Providers</p>
+                  <ul class="nav nav-tabs" role="tablist">
+                      <li role="presentation" class="active">
+                        <a href="#tab-1" aria-controls="tab-1" role="tab" data-toggle="tab">
+                          Medications and Supplements
+                        </a>
+                      </li>
+                      <li role="presentation" >
+                        <a href="#tab-2" aria-controls="tab-2" role="tab" data-toggle="tab">
+                          Health Care Providers
+                        </a>
+                      </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <div class="personal-health-record">
+  <!-- Tab panes -->
+  <div class="tab-content">
+  	<div role="tabpanel" class="tab-pane fade in active" id="tab-1" aria-label="Medications and Supplements">
+  		<section class="container--base no-margin-bottom">
+  			<div class="container">
+  				<div class="row">
+  					<div class="col-xs-6 col-sm-6 col-md-6 no-margin-bottom">
+  						<button data-toggle="modal" data-target="#addToolsModal" class="btn">
+  							<span class="btn btn--primary">Drug Tools</span>
+  						</button>
+  					</div>
+  					<div class="col-xs-6 col-sm-6 col-md-6 align-right no-margin-bottom">
+  						<button data-toggle="modal" data-target="#addPrescriptionModal" class="btn btn--right">
+  							<span class="btn btn--primary">Add a drug</span>
+  						</button>
+  					</div>
+  				</div>
+  			</div>
+  		</section>
+  		<section class="container--base">
+  			<div class="container">
+  				<div class="row">
+  					<div class="col-md-12">
+  						<div class="row">
+  							<div class="col-md-12">
+  								<table class="phr-table phr-drug-table table-responsive margin-small">
+  								    <tr>
+  								      <th>Name</th>
+  								      <th>Provider</th>
+  								      <th>Frequency</th>
+  								      <th>Date Prescribed</th>
+  								    </tr>
+  								    <tr class="drug-row">
+  								      <td>
+  								        <a href="#">SYNTHROID 200MCG TABLET ORAL<img src="/images/icon-svgs/external-link.svg" alt="" class="external-link" /></a>
+  								      </td>
+  								      <td>
+  								        <span class="provider-name">Smithsberg, Jonathen; MD</span>
+  								      </td>
+  								      <td>
+  								        <span class="mobile-table-header">Frequency</span>
+  								        <div class="table-dots"></div>
+  								        <span>1 per day</span>
+  								      </td>
+  								      <td>
+  								        <span class="mobile-table-header">Date Prescribed</span>
+  								        <div class="table-dots"></div>
+  								        <span>11/20/2017</span>
+  								      </td>
+  								    </tr>
+  								    <tr class="drug-row">
+  								      <td>
+  								        <a href="#">Hydrochlorothiazide 10 MG<img src="/images/icon-svgs/external-link.svg" alt="" class="external-link" /></a>
+  								      </td>
+  								      <td>
+  								        <span class="provider-name">Smithsberg, Jonathen; MD</span>
+  								      </td>
+  								      <td>
+  								        <span class="mobile-table-header">Frequency</span>
+  								        <div class="table-dots"></div>
+  								        <span>2 per day</span>
+  								      </td>
+  								      <td>
+  								        <span class="mobile-table-header">Date Prescribed</span>
+  								        <div class="table-dots"></div>
+  								        <span>11/20/2017</span>
+  								      </td>
+  								    </tr>
+  								    <tr class="drug-row">
+  								      <td>
+  								        <a href="#">ALBUTEROL INHALANT 0.63 MG/3ML
+  								          <img src="/images/icon-svgs/external-link.svg" alt="" class="external-link" />
+  								        </a>
+  								      </td>
+  								      <td>
+  								        <span class="provider-name">Swain, Roselin; MD</span>
+  								      </td>
+  								      <td>
+  								        <span class="mobile-table-header">Frequency</span>
+  								        <div class="table-dots"></div>
+  								        <span>PRN</span>
+  								      </td>
+  								      <td>
+  								        <span class="mobile-table-header">Date Prescribed</span>
+  								        <div class="table-dots"></div>
+  								        <span>6/15/2017</span>
+  								      </td>
+  								    </tr>
+  								    <tr class="drug-row">
+  								      <td>
+  								        <a href="#" target="_blank">MECLIZINE HCL 12.5MG<img src="/images/icon-svgs/external-link.svg" alt="" class="external-link" /></a>
+  								      </td>
+  								      <td>
+  								        <span class="provider-name">Swain, Roselin; MD</span>
+  								      </td>
+  								      <td>
+  								        <span class="mobile-table-header">Frequency</span>
+  								        <div class="table-dots"></div>
+  								        <span>1 per day</span>
+  								      </td>
+  								      <td>
+  								        <span class="mobile-table-header">Date Prescribed</span>
+  								        <div class="table-dots"></div>
+  								        <span>6/15/2017</span>
+  								      </td>
+  								    </tr>
+  								    <tr class="drug-row">
+  								      <td>
+  								        <a href="#">BACTROBAN 2% OINT.<img src="/images/icon-svgs/external-link.svg" alt="" class="external-link" /></a>
+  								      </td>
+  								      <td>
+  								        <span class="provider-name">Swain, Roselin; MD</span>
+  								      </td>
+  								      <td>
+  								        <span class="mobile-table-header">Frequency</span>
+  								        <div class="table-dots"></div>
+  								        <span>3 per day</span>
+  								      </td>
+  								      <td>
+  								        <span class="mobile-table-header">Date Prescribed</span>
+  								        <div class="table-dots"></div>
+  								        <span>10/10/2016</span>
+  								      </td>
+  								    </tr>
+  								    <tr class="drug-row">
+  								      <td>
+  								        <a href="#">Sertraline HCL 50MG<img src="/images/icon-svgs/external-link.svg" alt="" class="external-link" /></a>
+  								      </td>
+  								      <td>
+  								        <span class="provider-name">Swain, Roselin; MD</span>
+  								      </td>
+  								      <td>
+  								        <span class="mobile-table-header">Frequency</span>
+  								        <div class="table-dots"></div>
+  								        <span>1 per day</span>
+  								      </td>
+  								      <td>
+  								        <span class="mobile-table-header">Date Prescribed</span>
+  								        <div class="table-dots"></div>
+  								        <span>10/10/2016</span>
+  								      </td>
+  								    </tr>
+  								    <tr class="drug-row">
+  								      <td>
+  								        <a href="#">Levothyroxine 25MCG<img src="/images/icon-svgs/external-link.svg" alt="" class="external-link" /></a>
+  								      </td>
+  								      <td>
+  								        <span class="provider-name">Swain, Roselin; MD</span>
+  								      </td>
+  								      <td>
+  								        <span class="mobile-table-header">Frequency</span>
+  								        <div class="table-dots"></div>
+  								        <span>1 per day</span>
+  								      </td>
+  								      <td>
+  								        <span class="mobile-table-header">Date Prescribed</span>
+  								        <div class="table-dots"></div>
+  								        <span>10/10/2016</span>
+  								      </td>
+  								    </tr>
+  								    <tr class="drug-row">
+  								      <td>
+  								        <a href="#">Lisinopril 5MG<img src="/images/icon-svgs/external-link.svg" alt="" class="external-link" /></a>
+  								      </td>
+  								      <td>
+  								        <span class="provider-name">Swain, Roselin; MD</span>
+  								      </td>
+  								      <td>
+  								        <span class="mobile-table-header">Frequency</span>
+  								        <div class="table-dots"></div>
+  								        <span>1 per day</span>
+  								      </td>
+  								      <td>
+  								        <span class="mobile-table-header">Date Prescribed</span>
+  								        <div class="table-dots"></div>
+  								        <span>10/10/2016</span>
+  								      </td>
+  								    </tr>
+  								    <tr class="drug-row">
+  								      <td>
+  								        <a href="#">ZITHROMAX 250MG
+  								          <img src="/images/icon-svgs/external-link.svg" alt="" class="external-link" />
+  								        </a>
+  								      </td>
+  								      <td>
+  								        <span class="provider-name">Franklin, Timothy; MD</span>
+  								      </td>
+  								      <td>
+  								        <span class="mobile-table-header">Frequency</span>
+  								        <div class="table-dots"></div>
+  								        <span>1 per day</span>
+  								      </td>
+  								      <td>
+  								        <span class="mobile-table-header">Date Prescribed</span>
+  								        <div class="table-dots"></div>
+  								        <span>5/3/2017</span>
+  								      </td>
+  								    </tr>
+  								    <tr class="drug-row">
+  								      <td>
+  								        <a href="#">Omeprazole 20 MG<img src="/images/icon-svgs/external-link.svg" alt="" class="external-link" /></a>
+  								      </td>
+  								      <td>
+  								        <span class="provider-name">Wali, Sanjay; MD</span>
+  								      </td>
+  								      <td>
+  								        <span class="mobile-table-header">Frequency</span>
+  								        <div class="table-dots"></div>
+  								        <span>1 per day</span>
+  								      </td>
+  								      <td>
+  								        <span class="mobile-table-header">Date Prescribed</span>
+  								        <div class="table-dots"></div>
+  								        <span>3/16/2016</span>
+  								      </td>
+  								    </tr>
+  								    <tr class="drug-row">
+  								      <td>
+  								        <a href="#">Lipitor 10 MG<img src="/images/icon-svgs/external-link.svg" alt="" class="external-link" /></a>
+  								      </td>
+  								      <td>
+  								        <span class="provider-name">Wali, Sanjay; MD</span>
+  								      </td>
+  								      <td>
+  								        <span class="mobile-table-header">Frequency</span>
+  								        <div class="table-dots"></div>
+  								        <span>1 per day</span>
+  								      </td>
+  								      <td>
+  								        <span class="mobile-table-header">Date Prescribed</span>
+  								        <div class="table-dots"></div>
+  								        <span>8/20/2015</span>
+  								      </td>
+  								    </tr>
+  								    <tr class="drug-row">
+  								      <td>
+  								        <a href="#">Amlodipine 5MG<img src="/images/icon-svgs/external-link.svg" alt="" class="external-link" /></a>
+  								      </td>
+  								      <td>
+  								        <span class="provider-name">Ramirez, Steven; MD</span>
+  								      </td>
+  								      <td>
+  								        <span class="mobile-table-header">Frequency</span>
+  								        <div class="table-dots"></div>
+  								        <span>1 per day</span>
+  								      </td>
+  								      <td>
+  								        <span class="mobile-table-header">Date Prescribed</span>
+  								        <div class="table-dots"></div>
+  								        <span>3/3/2015</span>
+  								      </td>
+  								    </tr>
+  								    <tr class="drug-row">
+  								      <td>
+  								        <a href="#">Simvastatin 20MG<img src="/images/icon-svgs/external-link.svg" alt="" class="external-link" /></a>
+  								      </td>
+  								      <td>
+  								        <span class="provider-name">Ramirez, Steven; MD</span>
+  								      </td>
+  								      <td>
+  								        <span class="mobile-table-header">Frequency</span>
+  								        <div class="table-dots"></div>
+  								        <span>1 per day</span>
+  								      </td>
+  								      <td>
+  								        <span class="mobile-table-header">Date Prescribed</span>
+  								        <div class="table-dots"></div>
+  								        <span>3/3/2015</span>
+  								      </td>
+  								    </tr>
+  								    <tr class="drug-row">
+  								      <td>
+  								        <a href="#">Clotrimazole 10MG<img src="/images/icon-svgs/external-link.svg" alt="" class="external-link" /></a>
+  								      </td>
+  								      <td>
+  								        <span class="provider-name">Ramirez, Steven; MD</span>
+  								      </td>
+  								      <td>
+  								        <span class="mobile-table-header">Frequency</span>
+  								        <div class="table-dots"></div>
+  								        <span>5 per day</span>
+  								      </td>
+  								      <td>
+  								        <span class="mobile-table-header">Date Prescribed</span>
+  								        <div class="table-dots"></div>
+  								        <span>3/3/2015</span>
+  								      </td>
+  								    </tr>
+  								    <tr class="drug-row">
+  								      <td>
+  								        <a href="#">Metoprolol ER 25MG<img src="/images/icon-svgs/external-link.svg" alt="" class="external-link" /></a>
+  								      </td>
+  								      <td>
+  								        <span class="provider-name">Ramirez, Steven; MD</span>
+  								      </td>
+  								      <td>
+  								        <span class="mobile-table-header">Frequency</span>
+  								        <div class="table-dots"></div>
+  								        <span>1 per day</span>
+  								      </td>
+  								      <td>
+  								        <span class="mobile-table-header">Date Prescribed</span>
+  								        <div class="table-dots"></div>
+  								        <span>1/26/2015</span>
+  								      </td>
+  								    </tr>
+  								</table>
+  							</div>
+  						</div>
+  					</div>
+  				</div>
+  			</div>
+  		</section>
+  	</div>
+  	<div role="tabpanel" class="tab-pane fade" id="tab-2" aria-label="Health Care Providers">
+  		<section class="container--base no-margin-bottom">
+  			<div class="container">
+  				<div class="row">
+  					<div class="col-xs-6 col-sm-6 col-md-6 no-margin-bottom">
+  						<button data-toggle="modal" data-target="#addToolsModal" class="btn">
+  							<span class="btn btn--primary">Drug Tools</span>
+  						</button>
+  					</div>
+  					<div class="col-xs-6 col-sm-6 col-md-6 align-right no-margin-bottom">
+  						<button data-toggle="modal" data-target="#addProviderModal" class="btn btn--right">
+  							<span class="btn btn--primary">+ Add a provider</span>
+  						</button>
+  					</div>
+  				</div>
+  			</div>
+  		</section>
+  		<section class="container--base">
+  			<div class="container">
+  				<div class="row">
+  					<div class="col-md-12">
+  						<div class="row">
+  							<div class="col-md-12">
+  								<table class="phr-table phr-provider-table table-responsive margin-small">
+  								  <tr>
+  								    <th>Provider</th>
+  								    <th>Specialty</th>
+  								    <th class="print-only">Facility</th>
+  								    <th>City</th>
+  								    <th class="print-only">Phone #</th>
+  								    <th>Date of Record</th>
+  								  </tr>
+  								    <tr class="provider-row">
+  								      <td data-provider-name="Smithsberg, Jonathen; MD">
+  								        <a href="#" class="provider-name">Smithsberg, Jonathen; MD</a>
+  								        <span class="primary-care-provider">Primary care provider</span>
+  								      </td>
+  								      <td data-provider-specialty="General">
+  								        <span class="mobile-table-header">Specialty</span>
+  								        <div class="table-dots"></div>
+  								        <span>General</span>
+  								      </td>
+  								      <td data-provider-facility="Western Health Center" class="print-only">
+  								        <span class="mobile-table-header">Facility</span>
+  								        <div class="table-dots"></div>
+  								        <span>Western Health Center</span>
+  								      </td>
+  								      <td data-provider-city="Eden Prairie" data-provider-state="">
+  								        <span class="mobile-table-header">Location</span>
+  								        <div class="table-dots"></div>
+  								        <span>Eden Prairie</span>
+  								      </td>
+  								      <td data-provider-phone="(123) 456-7890" class="print-only">
+  								        <span class="mobile-table-header">Phone</span>
+  								        <div class="table-dots"></div>
+  								        <span>(123) 456-7890</span>
+  								      </td>
+  								      <td data-provider-date="11/20/17">
+  								        <span class="mobile-table-header">Date of Record</span>
+  								        <div class="table-dots"></div>
+  								        <span>11/20/17</span>
+  								      </td>
+  								    </tr>
+  								    <tr class="provider-row">
+  								      <td data-provider-name="Swain, Roselin; MD">
+  								        <a href="#" class="provider-name">Swain, Roselin; MD</a>
+  								      </td>
+  								      <td data-provider-specialty="General">
+  								        <span class="mobile-table-header">Specialty</span>
+  								        <div class="table-dots"></div>
+  								        <span>General</span>
+  								      </td>
+  								      <td data-provider-facility="Facility Name" class="print-only">
+  								        <span class="mobile-table-header">Facility</span>
+  								        <div class="table-dots"></div>
+  								        <span>Facility Name</span>
+  								      </td>
+  								      <td data-provider-city="Eden Prairie" data-provider-state="">
+  								        <span class="mobile-table-header">Location</span>
+  								        <div class="table-dots"></div>
+  								        <span>Eden Prairie</span>
+  								      </td>
+  								      <td data-provider-phone="(123) 456-7890" class="print-only">
+  								        <span class="mobile-table-header">Phone</span>
+  								        <div class="table-dots"></div>
+  								        <span>(123) 456-7890</span>
+  								      </td>
+  								      <td data-provider-date="6/15/17">
+  								        <span class="mobile-table-header">Date of Record</span>
+  								        <div class="table-dots"></div>
+  								        <span>6/15/17</span>
+  								      </td>
+  								    </tr>
+  								    <tr class="provider-row">
+  								      <td data-provider-name="Franklin, Timothy; MD">
+  								        <a href="#" class="provider-name">Franklin, Timothy; MD</a>
+  								      </td>
+  								      <td data-provider-specialty="Allergist">
+  								        <span class="mobile-table-header">Specialty</span>
+  								        <div class="table-dots"></div>
+  								        <span>Allergist</span>
+  								      </td>
+  								      <td data-provider-facility="Facility Name" class="print-only">
+  								        <span class="mobile-table-header">Facility</span>
+  								        <div class="table-dots"></div>
+  								        <span>Facility Name</span>
+  								      </td>
+  								      <td data-provider-city="Bloomington" data-provider-state="">
+  								        <span class="mobile-table-header">Location</span>
+  								        <div class="table-dots"></div>
+  								        <span>Bloomington</span>
+  								      </td>
+  								      <td data-provider-phone="(123) 456-7890" class="print-only">
+  								        <span class="mobile-table-header">Phone</span>
+  								        <div class="table-dots"></div>
+  								        <span>(123) 456-7890</span>
+  								      </td>
+  								      <td data-provider-date="5/3/17">
+  								        <span class="mobile-table-header">Date of Record</span>
+  								        <div class="table-dots"></div>
+  								        <span>5/3/17</span>
+  								      </td>
+  								    </tr>
+  								    <tr class="provider-row">
+  								      <td data-provider-name="Wali, Sanjay; MD">
+  								        <a href="#" class="provider-name">Wali, Sanjay; MD</a>
+  								      </td>
+  								      <td data-provider-specialty="Cardiothoracic Surgeon">
+  								        <span class="mobile-table-header">Specialty</span>
+  								        <div class="table-dots"></div>
+  								        <span>Cardiothoracic Surgeon</span>
+  								      </td>
+  								      <td data-provider-facility="Facility Name" class="print-only">
+  								        <span class="mobile-table-header">Facility</span>
+  								        <div class="table-dots"></div>
+  								        <span>Facility Name</span>
+  								      </td>
+  								      <td data-provider-city="Minneapolis" data-provider-state="">
+  								        <span class="mobile-table-header">Location</span>
+  								        <div class="table-dots"></div>
+  								        <span>Minneapolis</span>
+  								      </td>
+  								      <td data-provider-phone="(123) 456-7890" class="print-only">
+  								        <span class="mobile-table-header">Phone</span>
+  								        <div class="table-dots"></div>
+  								        <span>(123) 456-7890</span>
+  								      </td>
+  								      <td data-provider-date="8/20/2015">
+  								        <span class="mobile-table-header">Date of Record</span>
+  								        <div class="table-dots"></div>
+  								        <span>8/20/2015</span>
+  								      </td>
+  								    </tr>
+  								    <tr class="provider-row">
+  								      <td data-provider-name="Ramirez, Steven; MD">
+  								        <a href="#" class="provider-name">Ramirez, Steven; MD</a>
+  								      </td>
+  								      <td data-provider-specialty="General">
+  								        <span class="mobile-table-header">Specialty</span>
+  								        <div class="table-dots"></div>
+  								        <span>General</span>
+  								      </td>
+  								      <td data-provider-facility="Facility Name" class="print-only">
+  								        <span class="mobile-table-header">Facility</span>
+  								        <div class="table-dots"></div>
+  								        <span>Facility Name</span>
+  								      </td>
+  								      <td data-provider-city="Bloomington" data-provider-state="">
+  								        <span class="mobile-table-header">Location</span>
+  								        <div class="table-dots"></div>
+  								        <span>Bloomington</span>
+  								      </td>
+  								      <td data-provider-phone="(123) 456-7890" class="print-only">
+  								        <span class="mobile-table-header">Phone</span>
+  								        <div class="table-dots"></div>
+  								        <span>(123) 456-7890</span>
+  								      </td>
+  								      <td data-provider-date="3/3/2014">
+  								        <span class="mobile-table-header">Date of Record</span>
+  								        <div class="table-dots"></div>
+  								        <span>3/3/2014</span>
+  								      </td>
+  								    </tr>
+  								</table>
+  								<a data-toggle="modal" data-target="#addProviderModal" class="btn btn--primary btn--full-width">+ Add a provider</a>
+  							</div>
+  						</div>
+  					</div>
+  				</div>
+  			</div>
+  		</section>
+  	</div>
+  </div>
+	<!-- Start: Add modal -->
+	<div id="addDrugModal" tabindex="-1" role="dialog" aria-labelledby="addDrugModalLabel" class="modal fade">
+	  <div role="document" class="modal-dialog modal-md">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <a class="link link--icon-right link--icon-circled align-right" data-icon="" data-dismiss="modal" aria-label="Cancel" type="button">Cancel</a>
+	        <div id="addDrugModalLabel" class="modal-title">
+	          <h1 class="h3 margin-none">Add Drug</h1>
+	        </div>
+	      </div>
+	      <div class="modal-body">
+	        <div class="container-fluid">
+	          <div class="row">
+	            <div class="col-sm-12">
+	              * required fields
+	              <hr>
+								<div class="table-body responsive margin-small">
+	                <form action="" id="add-drug-form">
+	                  <legend class="sr-only">Add medication</legend>
+	                  <div class="table-body-row field--row">
+	                    <div class="table-body-cell">
+	                      <label for="drug-name">Drug Name: *</label>
+	                    </div>
+	                    <div class="table-body-cell">
+	                      <div class="field-input">
+	                        <input type="text" name="drug-name" id="drug-name">
+	                      </div>
+	                    </div>
+	                  </div>
+	                  <div class="table-body-row field--row">
+	                    <div class="table-body-cell">
+	                      <label for="drug-strength">Strength:</label>
+	                    </div>
+	                    <div class="table-body-cell">
+	                      <div class="field-input">
+	                        <input type="text" name="drug-strength" id="drug-strength">
+	                      </div>
+	                    </div>
+	                  </div>
+	                  <div class="table-body-row field--row">
+	                    <div class="table-body-cell">
+	                      <label for="drug-frequency">Frequency:</label>
+	                    </div>
+	                    <div class="table-body-cell">
+	                      <div class="field-input">
+	                        <input type="text" name="drug-frequency" id="drug-frequency">
+	                      </div>
+	                    </div>
+	                  </div>
+	                  <div class="table-body-row field--row">
+	                    <div class="table-body-cell">
+	                      <label for="drug-provider">Provider:</label>
+	                    </div>
+	                    <div class="table-body-cell">
+	                      <div class="field-input">
+	                        <input type="text" name="drug-provider" id="drug-provider">
+	                      </div>
+	                    </div>
+	                  </div>
+	                  <div class="table-body-row field--row">
+	                    <div class="table-body-cell">
+	                      <label for="drug-date">Date:</label>
+	                    </div>
+	                    <div class="table-body-cell">
+	                      <div class="field-input">
+	                        <input type="date" name="drug-date" id="drug-date" pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}">
+	                      </div>
+	                    </div>
+	                  </div>
+	                </form>
+								</div>
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn add-drug-form-button">
+	          <span class="btn btn--primary btn--medium-width">Add Drug</span>
+	        </button>
+	        <a href="#" data-dismiss="modal">CANCEL</a>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- Start: Add modal -->
+	<div id="drugToolsModal" tabindex="-1" role="dialog" aria-labelledby="drugToolsModalLabel" class="modal fade">
+		<div role="document" class="modal-dialog modal-md rx-tools-modal">
+			<div class="modal-content">
+				<div class="modal-header">
+					<a class="link link--icon-right link--icon-circled align-right" data-icon="" data-dismiss="modal" aria-label="Close">Close</a>
+					<div id="drugToolsModalLabel" class="modal-title">
+						<h1 class="h3 margin-none">Drug Tools</h1>
+					</div>
+				</div>
+				<div class="modal-body">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-10 col-md-offset-1">
+								<p>
+	                <a href="#" class="btn btn--primary btn--large-width" target="_blank">Drug Cost Estimator</a>
+								</p>
+								<p>
+	                <a href="#" class="btn btn--primary btn--large-width" target="_blank">Drug Search</a>
+								</p>
+								<p>
+	                <a href="#" class="btn btn--primary btn--large-width" target="_blank">Pill Finder</a>
+								</p>
+								<p>
+	                <a href="#" class="btn btn--primary btn--large-width" target="_blank">Drug Compare</a>
+								</p>
+								<p>
+	                <a href="#" class="btn btn--primary btn--large-width" target="_blank">Drug Interaction</a>
+								</p>
+								<p>
+	                <a href="#" class="btn btn--primary btn--large-width" target="_blank">Drugs A-Z</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Start: Add modal -->
+	<div id="viewProviderModal" tabindex="-1" role="dialog" aria-labelledby="viewProviderModalLabel" class="modal fade">
+	  <div role="document" class="modal-dialog modal-md">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <a class="link link--icon-right link--icon-circled align-right" data-icon="" data-dismiss="modal" aria-label="Close">Close</a>
+	        <div id="viewProviderModalLabel" class="modal-title">
+	          <h1 class="h4 margin-none" id="provider-name">Smithsberg, Jonathen; MD</h1>
+	        </div>
+	      </div>
+	      <div class="modal-body">
+	        <div class="container-fluid">
+	          <div class="row">
+	            <div class="col-sm-12">
+								<div class="table-body margin-small">
+									<div class="table-body-row field--row">
+										<div class="table-body-cell">
+											<label for="provider-name">Specialty:</label>
+										</div>
+										<div class="table-body-cell" id="provider-specialty">
+											Generalist
+										</div>
+									</div>
+	                <div class="table-body-row field--row">
+	                  <div class="table-body-cell">
+	                    <label for="provider-facility">Facility:</label>
+	                  </div>
+	                  <div class="table-body-cell" id="provider-facility">
+	                    ABC Building
+	                  </div>
+	                </div>
+									<div class="table-body-row field--row">
+										<div class="table-body-cell">
+											<label for="provider-city">City:</label>
+										</div>
+										<div class="table-body-cell" id="provider-city">
+											Eden Prairie
+										</div>
+									</div>
+									<div class="table-body-row field--row">
+										<div class="table-body-cell">
+											<label for="provider-phone">Phone:</label>
+										</div>
+										<div class="table-body-cell" id="provider-phone">
+											(777) 777-7777
+										</div>
+									</div>
+									<div class="table-body-row field--row">
+										<div class="table-body-cell">
+											<label for="provider-date">Date:</label>
+										</div>
+										<div class="table-body-cell" id="provider-date">
+											12/15/2014
+										</div>
+									</div>
+								</div>
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+	      <div class="modal-footer">
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- Start: Add modal -->
+	<div id="addProviderModal" tabindex="-1" role="dialog" aria-labelledby="addProviderModalLabel" class="modal fade">
+	  <div role="document" class="modal-dialog modal-md">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <a class="link link--icon-right link--icon-circled align-right" data-icon="" data-dismiss="modal" aria-label="Close">Cancel</a>
+	        <div id="addProviderModalLabel" class="modal-title">
+	          <h1 class="h3 margin-none">Add Provider</h1>
+	        </div>
+	      </div>
+	      <div class="modal-body">
+	        <div class="container-fluid">
+	          <div class="row">
+	            <div class="col-sm-12">
+	              * required fields
+	              <hr>
+								<div class="table-body responsive margin-small">
+	                <form id="add-provider-form">
+	                  <legend class="sr-only">Add provider</legend>
+	                  <div class="table-body-row field--row">
+	                    <div class="table-body-cell">
+	                      <label for="provider-name">Physician/Dr. Name: *</label>
+	                    </div>
+	                    <div class="table-body-cell">
+	                      <div class="field-input">
+	                        <input type="text" name="provider-name" id="provider-name" data-modalfocus>
+	                      </div>
+	                    </div>
+	                  </div>
+	                  <div class="table-body-row field--row">
+	                    <div class="table-body-cell">
+	                      <label for="provider-specialty">Specialty:</label>
+	                    </div>
+	                    <div class="table-body-cell">
+	                      <div class="field-input">
+	                        <div class="select--regular margin-none">
+	                          <select name="provider-specialty" id="provider-specialty">
+	                            <option value=""></option>
+	                            <option value="Allergies/Asthma">Allergies/Asthma</option>
+	                            <option value="Anesthesiology">Anesthesiology</option>
+	                            <option value="Cardiology">Cardiology</option>
+	                            <option value="Dermatology">Dermatology</option>
+	                            <option value="Endocrinology">Endocrinology</option>
+	                            <option value="Family Practice">Family Practice</option>
+	                            <option value="Gastroenterology">Gastroenterology</option>
+	                            <option value="General Surgery">General Surgery</option>
+	                            <option value="Geriatric Medicine">Geriatric Medicine</option>
+	                            <option value="Gynecology">Gynecology</option>
+	                            <option value="Hematology">Hematology</option>
+	                            <option value="Hospice and Palliative Medicine">Hospice and Palliative Medicine</option>
+	                            <option value="Immunology">Immunology</option>
+	                            <option value="Infectious Disease">Infectious Disease</option>
+	                            <option value="Internal Medicine">Internal Medicine</option>
+	                            <option value="Nephrology">Nephrology</option>
+	                            <option value="Neurology">Neurology</option>
+	                            <option value="Oncology">Oncology</option>
+	                            <option value="Ophthalmology">Ophthalmology</option>
+	                            <option value="Orthopedics">Orthopedics</option>
+	                            <option value="Otorhinolaryngology">Otorhinolaryngology</option>
+	                            <option value="Psychiatry">Psychiatry</option>
+	                            <option value="Pulmonary">Pulmonary</option>
+	                            <option value="Rehabilitative Medicine">Rehabilitative Medicine</option>
+	                            <option value="Rheumatology">Rheumatology</option>
+	                            <option value="Urology">Urology</option>
+	                            <option value="Other">Other</option>
+	                          </select>
+	                        </div>
+	                      </div>
+	                    </div>
+	                  </div>
+	                  <div class="table-body-row field--row">
+	                    <div class="table-body-cell">
+	                      <label for="provider-facility">Facility:</label>
+	                    </div>
+	                    <div class="table-body-cell">
+	                      <div class="field-input">
+	                        <input type="text" name="provider-facility" id="provider-facility">
+	                      </div>
+	                    </div>
+	                  </div>
+	                  <div class="table-body-row field--row">
+	                    <div class="table-body-cell">
+	                      <label for="provider-city">City:</label>
+	                    </div>
+	                    <div class="table-body-cell">
+	                      <div class="field-input">
+	                        <input type="text" name="provider-city" id="provider-city">
+	                      </div>
+	                    </div>
+	                  </div>
+	                  <div class="table-body-row field--row">
+	                    <div class="table-body-cell">
+	                      <label for="provider-phone">Phone:</label>
+	                    </div>
+	                    <div class="table-body-cell">
+	                      <div class="field-input">
+	                        <input type="text" name="provider-phone" id="provider-phone">
+	                      </div>
+	                    </div>
+	                  </div>
+	                  <div class="table-body-row field--row">
+	                    <div class="table-body-cell">
+	                      <label for="provider-date">Date:</label>
+	                    </div>
+	                    <div class="table-body-cell">
+	                      <div class="field-input">
+	                        <input type="date" name="provider-date" id="provider-date" pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}">
+	                      </div>
+	                    </div>
+	                  </div>
+	                </form>
+								</div>
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn add-provider-form-button">
+	          <span class="btn btn--primary btn--medium-width">Add</span>
+	        </button>
+	        <a href="#" data-dismiss="modal">CANCEL</a>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+</div>
+
+
+      <!-- Tooltips -->
+      <div class="tooltip-templates">
+          <div id="tooltip-large">
+              <p class="bold margin-extra-small">Lorem Ipsum</p>
+              <span class="text-small">
+                  Id elit reprehenderit fugiat Lorem in magna aliqua sunt ut est id ullamco dolor ut ad.
+              </span>
+          </div>
+          <div id="tooltip-small">
+              <span class="text-small">
+                  Aute enim nisi consectetur excepteur esse cupidatat Lorem excepteur laborum sunt occaecat nulla culpa magna cillum.
+              </span>
+          </div>
+          <div id="tooltip-costs">
+            <span class="text-small">
+                This is the amount you pay as your share of your prescription drug costs,
+                such as deductibles (if applicable), co-pays/co-insurance and the amounts
+                you pay in the coverage gap.
+            </span>
+          </div>
+      </div>
+
+    </main>
+
+    <!-- Start: Footer -->
+    <footer class="nav-footer" role="contentinfo" aria-label="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h1 class="h6 medium">Member Support</h1>
+            <ul class="nav-footer--list">
+              <li>Customer Service 1-800-555-5555</li>
+              <li><a href="#">All Contact Info</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h1 class="h6 medium">Quick Links</h1>
+            <ul class="nav-footer--list">
+              <li><a href="#">Find A Provider</a></li>
+              <li><a href="#">Send Feedback</a></li>
+              <li><a href="#">Report Incorrect Info</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h1 class="h6 medium">Ask A Nurse</h1>
+            <ul class="nav-footer--list">
+              <li>Registered nurses available 24/7</li>
+              <li>1-888-842-4224</li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12"><span style="font-size: .875rem;">UHC &copy; 2016 | All Rights Reserved</span></div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+    <!-- Start: Footer scripts -->
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    
+    <!-- Vendor scripts -->
+    <script src="/scripts/vendor/jquery-3.1.1.min.js"></script>
+    <script src="/scripts/vendor/lockrroom.js"></script>
+    <script src="/scripts/vendor/select2.min.js"></script>
+    <script src="/scripts/vendor/select2-tab-fix.js"></script>
+    <script src="/scripts/vendor/rivets.bundled.min.js"></script>
+    <script src="/scripts/vendor/rivets.js"></script>
+    <script src="/scripts/vendor/jquery.matchHeight.js"></script>
+    <script src="/scripts/vendor/slick.min.js"></script>
+    <script src="/scripts/vendor/TweenLite.min.js"></script>
+    <script src="/scripts/vendor/plugins/CSSPlugin.min.js"></script>
+    <script src="/scripts/vendor/jquery.autocomplete.min.js"></script>
+    <script src="/scripts/vendor/bootstrap.min.js"></script>
+    
+    <script src="/scripts/vendor/jquery.validate.min.js"></script>
+    <script src="/scripts/vendor/tooltipster.bundle.min.js"></script>
+    <script src="/scripts/vendor/awesomplete.js"></script>
+    
+    
+    
+    
+    <script src="/scripts/main.js"></script>
+    <script src="/scripts/navigation.js"></script>
+    
+    
+      <script src="/scripts/pages/table.js"></script>
+      <script src="/scripts/pages/personal-health-record.js"></script>
+</body>
+</html>

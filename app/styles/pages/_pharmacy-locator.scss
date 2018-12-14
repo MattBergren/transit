@@ -1,0 +1,190 @@
+.pharmacy-locator {
+  // Pharmacy filters
+  .filter-wrapper {
+    position: relative;
+    background-color: $color-gray-light;
+
+    @media screen and (min-width: $breakpoint-sm) {
+      border-bottom: 1px solid $color-gray-medium;
+    }
+
+    .filter-header {
+      padding: 30px 0 15px;
+
+      .pharmacy-count {
+        margin-bottom: 0;
+
+        @media screen and (min-width: $breakpoint-sm) {
+          margin-bottom: $spacing-large;
+        }
+      }
+
+      .filter-button {
+        display: inline-block;
+        cursor: pointer;
+        user-select: none;
+        float: right;
+
+        span.material-icons {
+          transition: transform $transition-speed $easeOut;
+        }
+
+        &[data-filter-open='true'] {
+          span.material-icons {
+            transform: rotate(180deg);
+          }
+        }
+
+        @media screen and (min-width: $breakpoint-sm) {
+          float: none;
+        }
+      }
+    }
+
+    .filter-body-wrapper {
+      width: 90%;
+      position: absolute;
+      top: 70%;
+      right: 5%;
+      z-index: 100;
+      display: none;
+      opacity: 0;
+      overflow: hidden;
+      padding-top: 10px;
+
+      .filter-body {
+        width: 100%;
+        background-color: $color-white;
+        border: 1px solid $color-gray-medium;
+        padding: 15px 0;
+        position: relative;
+
+        form {
+          display: flex;
+          flex-wrap: wrap;
+
+          fieldset {
+            &:not(:last-of-type) {
+              margin-right: $spacing-large;
+              margin-bottom: $spacing-small;
+
+              @media screen and (min-width: $breakpoint-md) {
+                margin-bottom: 0;
+              }
+            }
+          }
+
+          &.pharmacyFilters {
+            fieldset:not(:first-of-type) {
+              display: block;
+              @media screen and (min-width: $breakpoint-sm) {
+                border-left: 1px solid $color-gray-medium;
+                padding-left: $spacing-large;
+                margin-left: $spacing-large;
+              }
+            }
+          }
+        }
+
+        &:after, &:before {
+          bottom: 100%;
+          left: 93%;
+          border: solid transparent;
+          content: " ";
+          height: 0;
+          width: 0;
+          position: absolute;
+          pointer-events: none;
+        }
+
+        &:after {
+          border-color: rgba(136, 183, 213, 0);
+          border-bottom-color: $color-white;
+          border-width: 10px;
+          margin-left: -10px;
+        }
+        &:before {
+          border-color: rgba(194, 225, 245, 0);
+          border-bottom-color: $color-gray-medium;
+          border-width: 11px;
+          margin-left: -11px;
+        }
+
+        ul.filter-list {
+          display: block;
+          list-style: none;
+          margin: 0;
+          padding: 0;
+
+          li {
+            padding-bottom: 10px;
+            white-space: nowrap;
+          }
+        }
+      }
+
+      @media screen and (min-width: $breakpoint-md) {
+        position: relative;
+        width: 100%;
+        top: auto;
+        right: auto;
+        padding-top: 0;
+
+        .filter-body {
+          border: none;
+          background-color: $color-gray-light;
+
+          &:after, &:before {
+            display: none;
+          }
+
+          ul.filter-list {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            width: auto;
+            max-height: 200px;
+            max-width: 100%;
+
+            &:not(:only-of-type):not(:first-of-type) {
+              margin-left: $spacing-large;
+            }
+
+            li {
+              margin-right: $spacing-small;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #zipcode-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    vertical-align: middle;
+  }
+
+  #zipcode {
+    max-width: 100%;
+    flex-basis: 100%;
+    margin-bottom: $spacing-small;
+  }
+
+  @media screen and (min-width: $breakpoint-md) {
+    #zipcode-wrapper {
+      display: inline-flex;
+      flex-direction: row;
+      width: auto;
+    }
+
+    #zipcode {
+      flex-basis: auto;
+      margin-bottom: 0;
+      max-width: 150px;
+      margin-left: .5rem;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{{!-- List group --}}
+{{#if original}}
+<ul class="list-group document-list margin-small">
+  {{#each this}}
+    <li class="list-group-item clearfix {{#eq type 'link'}}no-icon{{/eq}}">
+      <div class="pull-left margin-extra-small">
+        {{#eq type "pdf"}}<img src="/images/icon-svgs/PDF_outlined.svg" alt="PDF" class="icon"/>{{/eq}}
+        <span class="bold">{{title}} {{#eq type "pdf"}}<span class="medium">(size)</span>{{/eq}}{{#eq callout "new"}}<span class="new-callout"> NEW</span>{{/eq}}</span>
+        {{#if desc}}
+          <p class="display-block margin-none">{{desc}}</p>
+        {{/if}}
+      </div>
+      <div class="pull-right">
+        {{#eq type "pdf"}}
+          <a href="#">
+            <img src="/images/icon-svgs/eye.svg" alt="View" class="icon"/>
+            <span class="bold">VIEW</span>
+          </a>
+          <a href="#">
+            <img src="/images/icon-svgs/download.svg" alt="Download" class="icon"/>
+            <span class="bold">DOWNLOAD</span>
+          </a>
+        {{/eq}}
+        {{#eq type "link"}}
+          <a href="#">
+            <img src="/images/icon-svgs/external-link.svg" alt="Go to" class="icon"/>
+            <span class="bold">Go To Link</span>
+          </a>
+        {{/eq}}
+      </div>
+
+    </li>
+  {{/each}}
+</ul>
+{{else}}
+
+<ul class="document-list-new margin-small variation-el">
+  {{#each this}}
+  <li>
+    <a href="#">{{#eq type "pdf"}}<img src="/images/icon-svgs/PDF_outlined.svg" alt="PDF">{{/eq}}{{#eq type "link"}}<i class="material-icons">link</i>{{/eq}}{{title}} <span class="doc-specs">({{#eq type "pdf"}}PDF, {{/eq}}size)</span></a>
+    {{#if desc}}
+    <p>{{desc}}</p>
+    {{/if}}
+  </li>
+  {{/each}}
+</ul>
+{{/if}}

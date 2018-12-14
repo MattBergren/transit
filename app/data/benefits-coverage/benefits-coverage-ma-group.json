@@ -1,0 +1,89 @@
+{
+  "blocks": {
+    "hearing": {
+      "header-color": "light-blue",
+      "title": "Routine Hearing Exams",
+      "content": [
+        {
+          "body": "<span class='bold'>$XX.XX</span> co-payment or <span class='bold'>XX%</span> co-insurance"
+        }
+      ],
+      "block-border": {
+        "title": "VENDOR INFORMATION",
+        "col-size": "2",
+        "col-1": [
+          {
+            "title": "Name",
+            "content": "Lorem Ipsum"
+          },
+          {
+            "title": "Address",
+            "content": "1234 Main St.<br>Plainsville, MN<br>55417"
+          }
+        ],
+        "col-2": [
+          {
+            "title": "Phone",
+            "content": "612-123-4567"
+          },
+          {
+            "title": "Website",
+            "content": "www.lipsum.com"
+          }
+        ]
+      }
+    }
+  },
+  "cards": {
+    "intro": {
+      "title": "Plan Name Lorem Ipsum et Dolor sit Amet",
+      "subtitle": "Medicare Advantage Group",
+      "col-size": "2",
+      "col-1": [
+        {
+          "title": "Name",
+          "content": "Jonathan Doe"
+        },
+        {
+          "title": "Member ID",
+          "content": "XXXXXX"
+        },
+        {
+          "title": "Group ID",
+          "content": "XXXXXX"
+        },
+        {
+          "title": "Effective Date",
+          "content": "01/23/16"
+        }
+      ],
+      "col-2": [
+        {
+          "title": "Monthly Premium",
+          "content": "$XX.XX"
+        },
+        {
+          "button": "Make Payment"
+        }
+      ]
+    },
+    "hearing": {
+      "attribute": "margin-small",
+      "header-icon": "hearing-aid",
+      "icon-color": "blue",
+      "title": "Exclusive hearing savings",
+      "subtitle": "JUST FOR UHC MEMBERS",
+      "col-size": "1",
+      "col-1": [
+        {
+          "content": "Instead of paying thousands of dollars for hearing aids, you will pay only the discounted price of <<$599-$799>> for each hearing aid purchased, depending upon the model you choose, from HealthInnovations.com",
+          "links": [
+            {
+              "link": "Learn More"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

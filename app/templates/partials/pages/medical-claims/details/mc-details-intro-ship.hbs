@@ -1,0 +1,82 @@
+<div class="container--base">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="table-body responsive">
+          {{!-- Processed date --}}
+          <div class="table-body-row">
+            <div class="table-body-cell">
+              <span class="bold">Processed Date:</span>
+            </div>
+            <div class="table-body-cell">
+              12/01/2016
+            </div>
+          </div>
+          {{!-- Provider name --}}
+          <div class="table-body-row">
+            <div class="table-body-cell">
+              <span class="bold">Claim #:</span>
+            </div>
+            <div class="table-body-cell">
+              1234-5678-0
+            </div>
+          </div>
+          {{!-- Claim type --}}
+          <div class="table-body-row">
+            <div class="table-body-cell">
+              <span class="bold">Claim Type:</span>
+            </div>
+            <div class="table-body-cell">
+              {{#if snf}}
+                Med Supp Hospital/SNF
+              {{else if indemnitysnf}}
+                Indemnity/Hospital/SNF
+              {{else if medserve}}
+                Med Supp/Indemnity - Medical Services
+              {{else if rx}}
+                Indemnity/Prescription Drugs
+              {{else if other}}
+                Indemnity/Other
+              {{else if partb}}
+                Part B Services
+              {{else}}
+              {{/if}}
+            </div>
+          </div>
+          {{!-- Service dates --}}
+          <div class="table-body-row">
+            <div class="table-body-cell">
+              <span class="bold">Explanation of Benefits (EOB):</span>
+            </div>
+            <div class="table-body-cell">
+              <span data-tooltip="small">Available</span> <br />
+              <a href="#" class="margin-top-small display-block">View EOB (PDF)</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p>EOB statements posted to this site will look slightly different than EOB statements that included a check, printed and mailed to members. The electronic copies do not include an image of the check.</p>
+      </div>
+    </div>
+    {{#unless other}}
+      <div class="row">
+        <div class="col-sm-3">
+
+          <div class="card promo match-height padding-none" style="min-height: 94px;">
+            <h2 class="h3 margin-none">$0.00</h2>
+            <span class="text-small">Paid to You</span>
+          </div>
+        </div>
+        <div class="col-sm-3 border-left-sm">
+          <div class="card promo match-height padding-none" style="min-height: 94px;">
+            <h2 class="h3 margin-none">$30.00</h2>
+            <span class="text-small">Paid to Provider</span>
+          </div>
+        </div>
+      </div>
+    {{/unless}}
+  </div>
+</div>

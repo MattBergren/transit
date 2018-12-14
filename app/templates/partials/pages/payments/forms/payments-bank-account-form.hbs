@@ -1,0 +1,118 @@
+<div class="form-header">
+	<h4 class="h5 bold">EFT Checking</h4>
+	<!--<p class="italic">* Required Field</p>-->
+</div>
+<div class="table-body responsive wide margin-large">
+	{{!-- Account Type --}}
+	<div class="table-body-row field--row">
+		<div class="table-body-cell">
+      <p class="bold margin-none">Account Type: *</p>
+		</div>
+		<div class="table-body-cell">
+			<p class="margin-none">Checking</p>
+		</div>
+	</div>
+	{{!-- Routing number --}}
+	<div class="table-body-row field--row">
+		<div class="table-body-cell">
+			<label for="auto-payments-routing">Routing Number: *</label>
+		</div>
+		<div class="table-body-cell">
+			<div class="field-input">
+				<input type="number" name="auto-payments-routing" id="auto-payments-routing">
+			</div>
+		</div>
+	</div>
+	{{!-- Routing number confirm --}}
+	<div class="table-body-row field--row">
+		<div class="table-body-cell">
+			<label for="auto-payments-routing-confirm">Confirm Routing Number: *</label>
+		</div>
+		<div class="table-body-cell">
+			<div class="field-input">
+				<input type="number" name="auto-payments-routing-confirm" id="auto-payments-routing-confirm">
+			</div>
+		</div>
+	</div>
+	{{!-- Account number --}}
+	<div class="table-body-row field--row">
+		<div class="table-body-cell" data-tooltip="small" data-tooltip-label="Account number tooltip">
+			<label for="auto-payments-account-number" class="display-inline-block">Account Number: *</label>
+		</div>
+		<div class="table-body-cell">
+			<div class="field-input">
+				<input type="number" name="auto-payments-account-number" id="auto-payments-account-number">
+			</div>
+		</div>
+	</div>
+	{{!-- Account number confirm --}}
+	<div class="table-body-row field--row">
+		<div class="table-body-cell">
+			<label for="auto-payments-account-number-confirm" class="display-inline-block">Confirm Account Number: *</label>
+		</div>
+		<div class="table-body-cell">
+			<div class="field-input">
+				<input type="number" name="auto-payments-account-number-confirm" id="auto-payments-account-number-confirm">
+			</div>
+		</div>
+	</div>
+	{{!-- First name --}}
+	<div class="table-body-row field--row">
+		<div class="table-body-cell">
+			<label for="auto-payments-first-name" class="display-inline-block">Account Holder First Name: *</label>
+		</div>
+		<div class="table-body-cell">
+			<div class="field-input">
+				<input type="text" name="auto-payments-first-name" id="auto-payments-first-name">
+			</div>
+		</div>
+	</div>
+	{{!-- Middle name --}}
+	<div class="table-body-row field--row">
+		<div class="table-body-cell">
+			<label for="auto-payments-middle-name" class="display-inline-block">Account Holder Middle Name:</label>
+		</div>
+		<div class="table-body-cell">
+			<div class="field-input">
+				<input type="text" name="auto-payments-middle-name" id="auto-payments-middle-name">
+			</div>
+		</div>
+	</div>
+	{{!-- Last name --}}
+	<div class="table-body-row field--row">
+		<div class="table-body-cell">
+			<label for="auto-payments-last-name" class="display-inline-block">Account Holder Last Name: *</label>
+		</div>
+		<div class="table-body-cell">
+			<div class="field-input">
+				<input type="text" name="auto-payments-last-name" id="auto-payments-last-name">
+			</div>
+		</div>
+	</div>
+</div>
+<div class="field--row">
+  <div class="field-input checkbox">
+    <div class="checkbox-block">
+      <input type="checkbox" name="auto-payments-sig-consent" id="auto-payments-sig-consent" class="checkbox--large custom-checkbox">
+      <label for="auto-payments-sig-consent">Electronic Signature Consent</label>
+    </div>
+  </div>
+</div>
+<div class="scrollable-text-block margin-large">
+    <p class="text-small" role="dialog" aria-label="EFT terms">
+        To make a one-time Electronic Funds Transfer (EFT) for the amount shown
+        below, you must provide your electronic signature. Your electronic signature
+        is binding, just as if you had signed a paper form. Your consent to use your
+        electronic signature applies only to this EFT form. If you prefer to submit
+        a non-electronic form, please access the Forms and Resources (link to forms
+        and resources) page to download, complete and mail the form to the address
+        provided. When completing the form, you will be asked to
+    </p>
+</div>
+<div class="display-block margin-large">
+	<div class="btn-group">
+		<a href="{{cancelUrl}}" class="btn btn--secondary">Cancel</a>
+		<button class="btn submit-payment" type="submit"><span class="btn-primary">Continue</span></button>
+	</div>
+</div>
+<p class="margin-none italic">You'll have a chance to review and confirm this information again before submitting your payment.</p>

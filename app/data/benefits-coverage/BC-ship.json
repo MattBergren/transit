@@ -1,0 +1,70 @@
+{
+  "table-small": {
+    "title-section-one": [
+      {
+        "title": "Name",
+        "content": "Jonathan Doe"
+      },
+      {
+        "title": "Member ID",
+        "content": "XXXXXX"
+      },
+      {
+        "title": "Effective Date",
+        "content": "XX/XX/XX"
+      }
+    ],
+    "annual-deductible": [
+      {
+        "title": "Tier 1 drugs",
+        "content": "$2.00 copay"
+      },
+      {
+        "title": "Tier 2 drugs",
+        "content": "$8.00 copay"
+      },
+      {
+        "title": "Tier 3, 4, & 5 drugs",
+        "content": "You pay full drug cost until you’ve reached your $210.00 deductible amount"
+      }
+    ],
+    "initial-coverage": [
+      {
+        "title": "Tier 1 drugs",
+        "content": "$2.00 copay"
+      },
+      {
+        "title": "Tier 2 drugs",
+        "content": "$8.00 copay"
+      },
+      {
+        "title": "Tier 3 drugs",
+        "content": "$45.00 copay"
+      },
+      {
+        "title": "Tier 4 drugs",
+        "content": "$95.00 copay"
+      },
+      {
+        "title": "Tier 5 drugs",
+        "content": "28% co-insurance"
+      }
+    ],
+    "coverage-gap": [
+      {
+        "title": "All drugs",
+        "content": "You pay full drug cost until you've spent $XXX.XX in year-to-date out of pocket costs"
+      }
+    ],
+    "catastrophic-coverage": [
+      {
+        "title": "Tier 1 drugs",
+        "content": "$2.95 copay or 5% co-insurance*"
+      },
+      {
+        "title": "Tier 2, 3, 4 & 5 drugs",
+        "content": "$7.40 copay or 5% co-insurance*"
+      }
+    ]
+  }
+}

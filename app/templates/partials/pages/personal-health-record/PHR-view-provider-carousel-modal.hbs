@@ -1,0 +1,79 @@
+<!-- Start: Add modal -->
+<div id="viewProviderCarouselModal" tabindex="-1" role="dialog" aria-labelledby="viewProviderCarouselModalLabel" class="modal fade">
+  <div role="document" class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <a class="link link--icon-right link--icon-circled align-right" data-icon="" data-dismiss="modal" aria-label="Close">Close</a>
+      </div>
+      <div class="modal-body">
+        <div id="provider-carousel">
+          {{#each PHR-providers.providers as |provider providerKey|}}
+            <div class="container-fluid">
+              <div id="viewProviderCarouselModalLabel" class="modal-title">
+                <h1 class="h4 margin-small" id="provider-name">{{provider.name}}</h1>{{#if provider.primary}}<span>Primary care provider</span>{{/if}}
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="table-body margin-small">
+                    <div class="table-body-row field--row">
+                      <div class="table-body-cell">
+                        <label for="provider-specialty">Specialty:</label>
+                      </div>
+                      <div class="table-body-cell" id="provider-specialty">
+                        {{provider.specialty}}
+                      </div>
+                    </div>
+                    <div class="table-body-row field--row">
+                      <div class="table-body-cell">
+                        <label for="provider-facility">Facility:</label>
+                      </div>
+                      <div class="table-body-cell" id="provider-facility">
+                        {{provider.facility}}
+                      </div>
+                    </div>
+                    <div class="table-body-row field--row">
+                      <div class="table-body-cell">
+                        <label for="provider-city">City:</label>
+                      </div>
+                      <div class="table-body-cell" id="provider-city">
+                        {{provider.city}}
+                      </div>
+                    </div>
+                    <div class="table-body-row field--row">
+                      <div class="table-body-cell">
+                        <label for="provider-phone">Phone:</label>
+                      </div>
+                      <div class="table-body-cell" id="provider-phone">
+                        {{provider.phone}}
+                      </div>
+                    </div>
+                    <div class="table-body-row field--row">
+                      <div class="table-body-cell">
+                        <label for="provider-date">Date:</label>
+                      </div>
+                      <div class="table-body-cell" id="provider-date">
+                        {{provider.date}}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {{/each}}
+        </div>
+        <div class="container-fluid padding-none">
+          <div class="row btn-row">
+            <div class="col-xs-6 align-left">
+              <a class="slick-prev--provider" role="button" aria-label="Previous" style="">Previous</a>
+            </div>
+            <div class="col-xs-6 align-right">
+              <a class="slick-next--provider" role="button" aria-label="Next" style="">Next</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{!-- <div class="modal-footer">
+      </div> --}}
+    </div>
+  </div>
+</div>

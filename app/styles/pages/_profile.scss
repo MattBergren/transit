@@ -1,0 +1,296 @@
+.profile {
+  form {
+    padding: 0;
+    margin: 0;
+  }
+  .section-header {
+    &.border-bottom {
+      border-bottom: solid 1px $color-gray-medium;
+    }
+
+    h1, h2, h3, h4 {
+      margin: 0 20px 0 0;
+    }
+
+    .link-plan {
+      top: -4px;
+      position: relative;
+
+      @media (max-width: $breakpoint-sm - 1px) {
+        float: right;
+        top: 0;
+      }
+    }
+  }
+
+  .check-icon {
+    display: inline-block;
+    &:before {
+        content: '';
+        height: 1em;
+        width: 1em;
+        display: inline-block;
+        background: url('/images/icon-svgs/check-circle.svg');
+        vertical-align: middle;
+        margin-right: 5px;
+    }
+  }
+
+  .iframe-column {
+    &.col-xs-6 {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  .iframe-placeholder {
+    position: relative;
+    height: 500px;
+    background: $color-white;
+
+    &.has-border {
+      border: solid 1px $color-gray-medium;
+    }
+
+    .fpo-text {
+      transform: translate(-50%,-50%);
+      top: 50%;
+      left: 50%;
+      position: absolute;
+      display: block;
+    }
+  }
+
+  .tabs-header {
+    background: $color-white;
+  }
+
+  .nav-tabs > li.active > a,
+  .nav-tabs > li.active > a:hover,
+  .nav-tabs > li.active > a:focus {
+    background-color: $color-gray-light;
+
+    &:after {
+      background-color: $color-gray-light;
+    }
+  }
+
+  .tabs-desktop {
+    float: left;
+  }
+
+  .tabs-mobile {
+    float: left;
+
+    @media (max-width: $breakpoint-sm - 1px) {
+      float: none;
+    }
+  }
+
+  .plan-label {
+    display: block;
+    margin: 0 0 15px;
+
+    @media (min-width: $breakpoint-md) {
+      display: none;
+    }
+
+    @media (max-width: $breakpoint-sm - 1px) {
+      float: none;
+    }
+  }
+
+  .tabs-float {
+    float: left;
+    padding: 20px 10px 0 35px;
+
+    @media (max-width: $breakpoint-md - 1px) {
+      padding: 0px 0px 0 0px;
+      float: none;
+      clear: left;
+    }
+  }
+
+  .card-animation-wrapper {
+    overflow: hidden;
+    background-color: #fff;
+    border: solid 1px #fff;
+
+    &.adding,
+    &.editing {
+      border: solid 1px $color-digital-blue;
+    }
+
+    &.adding {
+      .card-header {
+        display: none;
+      }
+
+      &.editing {
+        .card-header {
+          display: block;
+        }
+      }
+    }
+
+    &.editing {
+      .cancel-btn {
+        display: block;
+      }
+      .edit-btn {
+        display: none;
+      }
+    }
+
+    &.simple,
+    &.simple.adding,
+    &.simple.adding.editing {
+      border: 0 none;
+
+      .card {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+
+  .card {
+    .card-header {
+      margin-bottom: 20px;
+      .card-title {
+        float: left;
+      }
+      .edit-btn,
+      .cancel-btn {
+        float: right;
+      }
+    }
+    .card-body {
+      .card-slide {
+        display: none;
+      }
+    }
+    .field:not(.field--dob) {
+      .field-input {
+        max-width: 300px;
+        width: 100%;
+        min-width: 200px;
+
+        @media (max-width: $breakpoint-sm - 1px) {
+          padding-right: 0;
+        }
+      }
+    }
+
+    .field--dob {
+      margin-top: 0;
+      margin-right: -32px;
+
+      &.field-has-error {
+        margin-right: 0;
+      }
+
+      .field-input {
+        input {
+          padding-right: 10px;
+        }
+      }
+    }
+
+    .cancel-btn {
+      display: none;
+      &.link--icon-circled {
+        margin: -1px 0 0 0;
+      }
+    }
+
+    .edit-btn {
+      display: block;
+      position: relative;
+      padding-right: 22px;
+
+      svg {
+        position: absolute;
+        display: block;
+        top: 2px;
+        right: 0;
+        height: 17px;
+        width: 17px;
+        fill: $color-digital-blue;
+      }
+    }
+
+    &.account-profile {
+      .save-btn {
+        @media (min-width: 768px) {
+          display: inline-block;
+          margin-right: 20px;
+        }
+      }
+      .cancel-btn {
+        text-align: center;
+        @media (min-width: 768px) {
+          display: inline-block;
+        }
+      }
+    }
+
+  }
+
+  .go-green-thanks {
+    background: $color-green-light;
+    padding: 20px 20px;
+    display: none;
+  }
+
+  .go-green-img {
+    max-height: 85px;
+    width: 100%;
+    display: inline-block;
+    fill: $color-green-medium;
+
+    &.small {
+      max-height: 35px;
+      width: 22px;
+      display: inline-block;
+      fill: $color-green-medium;
+    }
+  }
+
+  .go-green-label {
+    & + span {
+      margin-left: 28px;
+    }
+  }
+
+  .preferences-wrapper {
+    border-top: solid 1px $color-gray-medium;
+    border-bottom: solid 1px $color-gray-medium;
+    padding: 20px 0;
+
+    .radio-block {
+      margin: 0 -25px 0 0;
+      min-height: 22px;
+      display: inline-block;
+    }
+
+    fieldset {
+      clear: both;
+      .row {
+        & > div {
+          &[class*='col-']:not(:only-of-type) {
+            margin: 5px 0;
+          }
+        }
+      }
+    }
+
+    legend {
+      margin: 0;
+      padding: 0;
+
+      &.field-has-error {
+        color: $color-black;
+      }
+    }
+  }
+}

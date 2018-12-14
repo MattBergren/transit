@@ -1,0 +1,72 @@
+<div class="card margin-small">
+  <section class="card-body">
+    <div class="row">
+      <div class="col-md-4 margin-extra-small">
+        <p class="subtitle drug-title">{{title}}</p>
+        <p class="margin-none text-small color-gray">
+          <span class="bold">Qty:</span>
+          <span class="drug-qty">{{qty}}</span> every
+          <span class="drug-freq">{{freq}}</span> months
+        </p>
+        <p class="margin-none text-small color-gray">
+          <span class="bold">Tier:</span>
+          {{tier}}
+        </p>
+        {{!-- If: has drug limits --}}
+        {{#if drug-limits}}
+          <span class="bold text-small color-gray">Drug Limits:</span>
+          <p class="margin-none text-small color-gray">
+            {{> tooltip size='large'}}
+            {{drug-limits}}
+          </p>
+          <p class="margin-none text-small color-gray">
+            {{> tooltip size='small'}}
+            Limited Access (LA)
+            <a href="#" class="text-small">
+              <img src="/images/icon-svgs/PDF_outlined.svg" alt="PDF" class="img-text" style="margin: 0 5px;"/>
+              View PDF
+            </a>
+          </p>
+        {{/if}}
+      </div>
+      <div class="col-md-8 margin-extra-small">
+        <p class="margin-small text-small">
+          {{> tooltip size='small'}}
+          Annual Drug Co-Pays and/or Co-Insurance by Stages:
+        </p>
+        <div class="row">
+          <div class="col-md-4 margin-small">
+            <p class="margin-none semi-bold">$<span class="drug-tiers">---.--</span></p>
+            <span class="italic text-small">Initial Coverage</span>
+          </div>
+          <div class="col-md-4 margin-small">
+            <p class="margin-none semi-bold">$<span class="drug-tiers">---.--</span></p>
+            <span class="italic text-small">Coverage Gap</span>
+          </div>
+          <div class="col-md-4 margin-small">
+            <p class="margin-none semi-bold">$<span class="drug-tiers">---.--</span></p>
+            <span class="italic text-small">Catastrophic Coverage</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8 col-md-push-4 match-height-inner">
+        {{!-- Save money --}}
+        <div class="display-flex v-center" style="height: 100%;">
+          <div>
+            <img src="/images/icon-svgs/money.svg" class="img-small" alt="money"/>
+            Save $XX.XX by
+            <a href="#" class="lowercase">switching to a generic</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-md-pull-8 match-height-inner">
+        <div class="display-flex v-center" style="height: 100%;">
+          <a href="#" class="edit-drug">Edit</a>
+          <a href="#" class="delete-drug">Delete</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

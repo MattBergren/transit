@@ -1,0 +1,75 @@
+<div class="card-animation-wrapper">
+  <div class="card match-height-once">
+    <div class="card-header">
+      <p class="subtitle semi-bold">Have Us Call You</p>
+      <p class="margin-small">Request a phone call from UnitedHealthcare Customer Service representative.</p>
+    </div>
+    <div class="card-body">
+      <div class="card-slide" aria-hidden="false">
+        <a href="#" class="btn btn--primary" id="call-btn">Send a Request</a>
+      </div>
+
+      <div class="card-slide" aria-hidden="true">
+        <p class="margin-small">Select the topic of your question and enter your phone number to receive a call from a UnitedHealthcare® Customer Service representative.</p>
+        <form id="call-form">
+          <fieldset>
+            <legend class="sr-only">Have Us Call You</legend>
+            <div class="field">
+              <label for="call-question-about">I Have a Question About:</label>
+              <div class="field-input">
+                <div class="select--regular">
+                  <select name="call-question-about" id="call-question-about">
+                    <option value="Benefits">Benefits</option>
+                    <option value="Claims Information">Claims Information</option>
+                    <option value="Finding a Physician or Provider">Finding a Physician or Provider</option>
+                    <option value="Finding a Pharmacy">Finding a Pharmacy</option>
+                    <option value="Billing Information">Billing Information</option>
+                    <option value="Member ID Card">Member ID Card</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="field hidden ask-question-message">
+              <label for="call-more-info">More Information:</label>
+              <div class="field-input">
+                <textarea name="call-more-info" id="call-more-info"></textarea>
+                <p class="display-block align-right color-gray">Characters left: <span class="message-count">1000</span></p>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="call-number">Phone Number:</label>
+              <div class="field-input">
+                <input type="number" name="call-number" id="call-number">
+              </div>
+            </div>
+
+            <button type="submit" name="call-submit" class="btn--center margin-small" id="call-submit"><span class="btn btn--primary">Request a Call</span></button>
+            <a href="#" id="call-cancel" class="display-block align-center">Cancel</a>
+          </fieldset>
+        </form>
+      </div>
+
+      <div class="card-slide" aria-hidden="true">
+        {{#if variation}}
+        <div class="message-block--full-width success margin-none">
+          <div class="message-block-header">
+            <span>Your Request has Been Received</span>
+          </div>
+          <div class="message-block-body">
+            <p>Thank you, We value your input and will be happy to answer your questions. A UnitedHealthcare® Customer Service representative will call you shortly at the number you provided.</p>
+            <p class="margin-none">XXX-XXX-XXXX</p>
+          </div>
+        </div>
+        {{/if}}
+        {{#if variation}}<div class="variation-orig">{{/if}}
+          <p class="color-green-dark bold">{{> check }} Your request has been received</p>
+          <p>Thank you, We value your input and will be happy to answer your questions. A UnitedHealthcare® Customer Service representative will call you shortly at the number you provided.</p>
+          <p class="margin-none">XXX-XXX-XXXX</p>
+        {{#if variation}}</div>{{/if}}
+      </div>
+    </div>
+  </div>
+</div>

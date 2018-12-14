@@ -1,0 +1,174 @@
+<div class="card{{#if no-padding}} padding-none{{/if}}">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card-header">
+        {{#if ship}}
+        <p class="color-blue semi-bold">AARP MEDICARE SUPPLEMENTAL PLAN</p>
+        <p class="color-blue semi-bold margin-large">AARP HOSPITAL IDEMNITY PLAN</p>
+        {{else}}
+        <p class="color-blue semi-bold margin-large">AARP MEDICARERX PREFERRED (PDP)</p>
+        {{/if}}
+      </div>
+      <div class="card-body">
+      {{#if ship}}
+        <form id="preferences-form{{#if uniqueId}}2{{/if}}">
+      {{/if}}
+      {{#if optin}}
+        <form id="preferences-form{{#if uniqueId}}2{{/if}}">
+      {{/if}}
+        <div class="row">
+          {{#unless federal}}
+        <div class="{{#unless full-width}}col-md-9{{/unless}} {{#if full-width}}col-md-12{{/if}} prefs-content" {{#if saved}}style="display:none;"{{/if}}>
+          {{#unless optin}}<p class="bold">Paperless Preferences</p>{{/unless}}
+          <div class="go-green-thanks margin-small">
+            <p class="margin-none"><span class="bold color-green-dark display-block">Thanks for choosing to Go Green!</span> Review which plan materials you’ve chosen to receiver online through paperless delivery.</p>
+          </div>
+          {{/unless}}
+          {{#if federal}}
+          <div class="col-md-12">
+          <div class="iframe-placeholder has-border">
+            <span class="fpo-text">Iframe FPO</span>
+          </div>
+          {{/if}}
+          {{#if ship}}
+          <div class="preferences-wrapper margin-large">
+            <div class="">
+              <div class="col-sm-offset-6 col-xs-offset-4 col-sm-3 col-xs-4 align-center margin-small padding-none">
+                <span class="bold color-blue-link text-uppercase">Paperless</span>
+              </div>
+              <div class="col-sm-3 col-xs-4 align-center margin-small padding-none">
+                <span class="bold color-blue-link text-uppercase">Mail</span>
+              </div>
+            </div>
+            <fieldset class=" margin-small">
+              <legend class="normal col-sm-6 col-xs-4">Explanation of Benefits</legend>
+
+                <div class="col-sm-3 col-xs-4 align-center padding-none">
+                  <div class="radio-block">
+                    <input type="radio" id="eobEmail" name="eob" value="Email" checked>
+                    <label for="eobEmail"><span class="hidden">Paperless</span></label>
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-4 align-center padding-none">
+                  <div class="radio-block">
+                    <input type="radio" id="eobMail" name="eob" value="Mail">
+                    <label for="eobMail"><span class="hidden">Mail</span></label>
+                  </div>
+                </div>
+
+            </fieldset>
+            <fieldset class=" margin-small">
+              <legend class="normal col-sm-6 col-xs-4">Plan Documents</legend>
+                <div class="col-sm-3 col-xs-4 align-center padding-none">
+                  <div class="radio-block">
+                    <input type="radio" id="planDocsEmail" name="planDocs" value="Email" checked>
+                    <label for="planDocsEmail"><span class="hidden">Paperless</span></label>
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-4 align-center padding-none">
+                  <div class="radio-block">
+                    <input type="radio" id="planDocsMail" name="planDocs" value="Mail">
+                    <label for="planDocsMail"><span class="hidden">Mail</span></label>
+                  </div>
+                </div>
+            </fieldset>
+          </div>
+          {{/if}}
+          {{#if ship}}
+          <a href="#collapseElectronicTerms" aria-label="SHIP Electronic Delivery Terms and Conditions" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="collapseElectronicTerms" class="margin-extra-small display-inline-block link-black collapsed">
+            Electronic Delivery Terms and Conditions
+            <span class="material-icons">keyboard_arrow_down</span>
+          </a>
+          <div class="collapse-wrapper margin-large">
+            <div class="collapse" id="collapseElectronicTerms">
+              <p>The list of covered drugs was last updated on &lt;mm.dd.yyyy&gt;.</p>
+              <p>The Formulary may change at any time. You will receive notice when necessary.</p>
+              <p>
+                The drug costs displayed are estimates and may vary based on the specific quantity,
+                strength and/or dosage of the medication and the pharmacy you use.
+              </p>
+              <p>
+                Qui non exercitation aliquip do pariatur voluptate officia culpa consectetur mollit laborum reprehenderit.
+                Laborum enim aliquip dolor consequat nisi pariatur dolore esse aliqua officia laborum consequat voluptate.
+                Fugiat veniam officia id laboris in excepteur voluptate exercitation fugiat ullamco ullamco incididunt pariatur
+                fugiat reprehenderit voluptate. Pariatur nisi do aute aliqua consectetur cupidatat adipisicing officia consectetur
+                culpa qui anim dolore dolore. Tempor ad ut excepteur cillum velit commodo sit nisi aliquip aute veniam aliqua anim
+                dolor aute voluptate deserunt. In anim et reprehenderit veniam in ipsum laboris incididunt voluptate sint.
+              </p>
+            </div>
+          </div>
+          <div class="field">
+            <div class="input-field margin-large">
+              <input type="checkbox" class="custom-checkbox" id="goPaperless{{#if uniqueId}}2{{/if}}" name="goPaperless{{#if uniqueId}}2{{/if}}" value="Paperless">
+              <label for="goPaperless{{#if uniqueId}}2{{/if}}">I have read and agree to the Electronic Delivery Terms and Conditions.</label>
+            </div>
+          </div>
+          <button type="submit" class="btn save-prefs-btn" title="Save Preferences" id="save-prefs-btn{{#if uniqueId}}2{{/if}}"><span class="btn btn--primary">Save Preferences</span></button>
+          {{/if}}
+          {{#if optin}}
+          <div class="field">
+            <div class="input-field margin-large">
+              <input type="checkbox" class="custom-checkbox" id="goPaperless{{#if uniqueId}}2{{/if}}" name="goPaperless{{#if uniqueId}}2{{/if}}" value="Paperless">
+              <label for="goPaperless{{#if uniqueId}}2{{/if}}" class="bold">Go Paperless</label>
+            </div>
+          </div>
+          <a href="#collapseElectronicTerms2" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="collapseElectronicTerms2" class="margin-extra-small display-inline-block link-black collapsed">
+            Electronic Delivery Terms and Conditions
+            <span class="material-icons">keyboard_arrow_down</span>
+          </a>
+          <div class="collapse-wrapper margin-large">
+            <div class="collapse" id="collapseElectronicTerms2">
+              <p>The list of covered drugs was last updated on &lt;mm.dd.yyyy&gt;.</p>
+              <p>The Formulary may change at any time. You will receive notice when necessary.</p>
+              <p>
+                The drug costs displayed are estimates and may vary based on the specific quantity,
+                strength and/or dosage of the medication and the pharmacy you use.
+              </p>
+              <p>
+                Qui non exercitation aliquip do pariatur voluptate officia culpa consectetur mollit laborum reprehenderit.
+                Laborum enim aliquip dolor consequat nisi pariatur dolore esse aliqua officia laborum consequat voluptate.
+                Fugiat veniam officia id laboris in excepteur voluptate exercitation fugiat ullamco ullamco incididunt pariatur
+                fugiat reprehenderit voluptate. Pariatur nisi do aute aliqua consectetur cupidatat adipisicing officia consectetur
+                culpa qui anim dolore dolore. Tempor ad ut excepteur cillum velit commodo sit nisi aliquip aute veniam aliqua anim
+                dolor aute voluptate deserunt. In anim et reprehenderit veniam in ipsum laboris incididunt voluptate sint.
+              </p>
+            </div>
+          </div>
+          <button type="submit" class="btn save-prefs-btn" title="Save Preferences" id="save-prefs-btn{{#if uniqueId}}2{{/if}}"><span class="btn btn--primary">Save Preferences</span></button>
+          {{/if}}
+          </div>
+          <div class="{{#unless full-width}}col-md-9{{/unless}} {{#if full-width}}col-md-12{{/if}} prefs-confirm" style="{{#if saved}}display:block;{{else}}display: none;{{/if}}">
+            <div class="message-block--full-width success margin-large">
+              <div class="message-block-header">
+                {{#if saved}}
+                  <span>You already selected paperless delivery</span>
+                {{else}}
+                  <span>Your preferences have been updated</span>
+                {{/if}}
+              </div>
+              <div class="message-block-body">
+                <p class="margin-none">Thank you for choosing to Go Green!  It may take up to two mail cycles for your updated delivery preferences to take effect. Your mailing cycle-the length of time between documents-varies by document. When the paper mailings stop, you will receive an email notification alerting you that a new document has been posted to your online account.</p>
+              </div>
+            </div>
+            <a href="#" class="edit-prefs-btn display-block margin-large" title="Edit Preferences" role="button">Edit Preferences</a>
+            {{#if combo}}
+              <a href="/profile/profile-combo.html" class="btn btn--primary" title="Back to My Profile" role="button">Back to my profile</a>
+            {{else}}
+              {{#if splash}}
+                <a href="/profile/profile-ship.html" class="btn btn--primary" title="Back to My Profile" role="button">GO TO MY ACCOUNT HOME</a>
+              {{else}}
+              <a href="/profile/profile-ship.html" class="btn btn--primary" title="Back to My Profile" role="button">Back to my profile</a>
+              {{/if}}
+            {{/if}}
+          </div>
+        </div>
+      {{#if ship}}
+        </form>
+      {{/if}}
+      {{#if optin}}
+        </form>
+      {{/if}}
+      </div>
+    </div>
+  </div>
+</div>

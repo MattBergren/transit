@@ -1,0 +1,103 @@
+<nav class="uhcg-nav{{#if altNav}} unauthenticated{{/if}}">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="uhcg-nav-header">
+          <div class="header-wrapper">
+            <div class="logo-container">
+              <img src="/images/logos/uhc-logo.svg" alt="Main Logo" class="img-responsive">
+              {{#unless altNav}}
+              <div class="logo-divider"></div>
+              <img src="/images/logos/mirum-logo.png" alt="Partner Logo" class="img-responsive">
+              {{/unless}}
+            </div>
+            {{#unless altNav}}
+            <div class="icon-container">
+              <a href="#" class="menu-icon" aria-label="Menu">
+                <div class="menu-line-wrapper">
+                  <div class="menu-line"></div>
+                  <div class="menu-line"></div>
+                  <div class="menu-line"></div>
+                </div>
+              </a>
+            </div>
+            {{/unless}}
+          </div>
+          {{#unless altNav}}
+          <ul class="uhc-nav">
+            <li class="uhc-nav-item--secondary">
+              <a href="#" class="uhc-nav-item-link">
+                <img src="/images/icon-svgs/nav-phone.svg" alt="Phone">
+                Contact Us
+              </a>
+            </li>
+            <li class="uhc-nav-item--secondary">
+              <a href="#" class="uhc-nav-item-link">
+                <span class="count-circle">2</span>
+                <img src="/images/icon-svgs/nav-mail.svg" alt="Message">
+                Messages
+              </a>
+            </li>
+            <li class="uhc-nav-item--secondary">
+              <a href="#" class="uhc-nav-item-link">
+                <img src="/images/icon-svgs/nav-doc.svg" alt="Documents">
+                My Documents
+              </a>
+            </li>
+            <li class="uhc-nav-item--secondary has-sub-nav">
+              <a href="#" class="uhc-nav-item-link" id="nav-profile">
+                <img src="/images/icon-svgs/nav-user.svg" alt="User">
+                Profile
+              </a>
+              <ul class="sub-nav">
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Update Profile</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Go Green Preferences</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Change Password</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Sign Out</a></li>
+              </ul>
+            </li>
+          </ul>
+          {{/unless}}
+        </div>
+      </div>
+    </div>
+  </div>
+  {{#unless altNav}}
+  <div class="nav-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="uhc-nav">
+            <li class="uhc-nav-item"><a href="#" class="uhc-nav-item-link">Home</a></li>
+            <li class="uhc-nav-item has-sub-nav">
+              <a href="#" class="uhc-nav-item-link">Care & Costs</a>
+              <ul class="sub-nav">
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Provider Search</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Pharmacy Locator</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Drug Look Up</a></li>
+              </ul>
+            </li>
+            <li class="uhc-nav-item has-sub-nav">
+              <a href="#" class="uhc-nav-item-link">Benefits</a>
+              <ul class="sub-nav">
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Benefits Summary</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Forms & Resources</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Order Materials</a></li>
+              </ul>
+            </li>
+            <li class="uhc-nav-item has-sub-nav">
+              <a href="#" class="uhc-nav-item-link">Claims</a>
+              <ul class="sub-nav">
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Claims Search</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">EOB Search</a></li>
+              </ul>
+            </li>
+            <li class="uhc-nav-item"><a href="#" class="uhc-nav-item-link">Premium Payments</a></li>
+            <li class="uhc-nav-item"><a href="#" class="uhc-nav-item-link">Health & Wellness</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{/unless}}
+</nav>

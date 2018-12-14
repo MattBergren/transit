@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Turn off telephone number detection. -->
+    <meta name="format-detection" content="telephone=no">
+    <title>Payments</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <!-- Place favicon.ico in the root directory -->
+
+
+    <link rel="stylesheet" href="/styles/vendor/slick-theme.css">
+    <link rel="stylesheet" href="/styles/vendor/slick.css">
+    <link rel="stylesheet" href="/styles/vendor/tooltipster-new.css">
+    <link rel="stylesheet" href="/styles/vendor/bootstrap.css">
+    <link rel="stylesheet" href="/styles/vendor/awesomplete.css">
+
+    <link rel="stylesheet" href="/styles/mir-main.css">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/cc-enhancement.css">
+
+    <link rel="stylesheet" href="/styles/print.css">
+
+
+    <link rel="stylesheet" href="/styles/vendor/common.css">
+
+    <script src="/scripts/vendor/modernizr.js"></script>
+
+</head>
+<body>
+  <div class="uhc-body-wrapper">
+    <div class="uhc-body-light-box"></div>
+    <div class="rivets-loading" rv-show="data.loading" style="position: fixed; top:0; left:0; right:0; bottom:0; background-color: white; z-index:9999;"></div>
+    <!-- Start: Navigation -->
+    <nav class="uhcg-nav">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="uhcg-nav-header">
+          <div class="header-wrapper">
+            <div class="logo-container">
+              <img src="/images/logos/uhc-logo.svg" alt="Main Logo" class="img-responsive">
+              <div class="logo-divider"></div>
+              <img src="/images/logos/mirum-logo.png" alt="Partner Logo" class="img-responsive">
+            </div>
+            <div class="icon-container">
+              <a href="#" class="menu-icon" aria-label="Menu">
+                <div class="menu-line-wrapper">
+                  <div class="menu-line"></div>
+                  <div class="menu-line"></div>
+                  <div class="menu-line"></div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <ul class="uhc-nav">
+            <li class="uhc-nav-item--secondary">
+              <a href="#" class="uhc-nav-item-link">
+                <img src="/images/icon-svgs/nav-phone.svg" alt="Phone">
+                Contact Us
+              </a>
+            </li>
+            <li class="uhc-nav-item--secondary">
+              <a href="#" class="uhc-nav-item-link">
+                <span class="count-circle">2</span>
+                <img src="/images/icon-svgs/nav-mail.svg" alt="Message">
+                Messages
+              </a>
+            </li>
+            <li class="uhc-nav-item--secondary">
+              <a href="#" class="uhc-nav-item-link">
+                <img src="/images/icon-svgs/nav-doc.svg" alt="Documents">
+                My Documents
+              </a>
+            </li>
+            <li class="uhc-nav-item--secondary has-sub-nav">
+              <a href="#" class="uhc-nav-item-link" id="nav-profile">
+                <img src="/images/icon-svgs/nav-user.svg" alt="User">
+                Profile
+              </a>
+              <ul class="sub-nav">
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Update Profile</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Go Green Preferences</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Change Password</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Sign Out</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="nav-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="uhc-nav">
+            <li class="uhc-nav-item"><a href="#" class="uhc-nav-item-link">Home</a></li>
+            <li class="uhc-nav-item has-sub-nav">
+              <a href="#" class="uhc-nav-item-link">Care & Costs</a>
+              <ul class="sub-nav">
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Provider Search</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Pharmacy Locator</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Drug Look Up</a></li>
+              </ul>
+            </li>
+            <li class="uhc-nav-item has-sub-nav">
+              <a href="#" class="uhc-nav-item-link">Benefits</a>
+              <ul class="sub-nav">
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Benefits Summary</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Forms & Resources</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Order Materials</a></li>
+              </ul>
+            </li>
+            <li class="uhc-nav-item has-sub-nav">
+              <a href="#" class="uhc-nav-item-link">Claims</a>
+              <ul class="sub-nav">
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Claims Search</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">EOB Search</a></li>
+              </ul>
+            </li>
+            <li class="uhc-nav-item"><a href="#" class="uhc-nav-item-link">Premium Payments</a></li>
+            <li class="uhc-nav-item"><a href="#" class="uhc-nav-item-link">Health & Wellness</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+    
+
+    <!-- Start: Page header -->
+    <header class="benefits-coverage page-header-wrapper" role="banner" aria-label="header">
+      <div class="page-header">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="display-flex v-center">
+                <div class="page-header--left">
+                  <h1 class="h4 margin-none">
+                    Payments
+                  </h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+
+
+      <div class="payments">
+    <section class="container--base">
+        <div class="container">
+          <form class="margin-large" id="auto-payments" action="/payments/federal/automatic/review-eft.html">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="h3 medium margin-small">Recurring Payments</h2>
+                    <p class="margin-small">
+                        It’s easy to pay your premium. Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit. Nunc dapibus, sem a consequat varius, metus dolor convallis
+                        justo, sit amet interdum justo orci at sapien.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="h4 color-blue medium margin-small">Amount to be paid</h3>
+                    The current premium amount due each month
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- Select your payment method header -->
+                    <h3 class="h4 color-blue medium margin-large">Select your payment method</h3>
+                    <div class="margin-large">
+                    <a href="#" title="Pay with credit card" class="cc-payment-link"><img src="/images/icon-svgs/payment.svg" alt="credit card">Pay with credit card</a>
+                    </div>
+
+                    <div class="form-header">
+                    	<h4 class="h5 bold">EFT Checking</h4>
+                    	<!--<p class="italic">* Required Field</p>-->
+                    </div>
+                    <div class="table-body responsive wide margin-large">
+                    	<div class="table-body-row field--row">
+                    		<div class="table-body-cell">
+                          <p class="bold margin-none">Account Type: *</p>
+                    		</div>
+                    		<div class="table-body-cell">
+                    			<p class="margin-none">Checking</p>
+                    		</div>
+                    	</div>
+                    	<div class="table-body-row field--row">
+                    		<div class="table-body-cell">
+                    			<label for="auto-payments-routing">Routing Number: *</label>
+                    		</div>
+                    		<div class="table-body-cell">
+                    			<div class="field-input">
+                    				<input type="number" name="auto-payments-routing" id="auto-payments-routing">
+                    			</div>
+                    		</div>
+                    	</div>
+                    	<div class="table-body-row field--row">
+                    		<div class="table-body-cell">
+                    			<label for="auto-payments-routing-confirm">Confirm Routing Number: *</label>
+                    		</div>
+                    		<div class="table-body-cell">
+                    			<div class="field-input">
+                    				<input type="number" name="auto-payments-routing-confirm" id="auto-payments-routing-confirm">
+                    			</div>
+                    		</div>
+                    	</div>
+                    	<div class="table-body-row field--row">
+                    		<div class="table-body-cell" data-tooltip="small" data-tooltip-label="Account number tooltip">
+                    			<label for="auto-payments-account-number" class="display-inline-block">Account Number: *</label>
+                    		</div>
+                    		<div class="table-body-cell">
+                    			<div class="field-input">
+                    				<input type="number" name="auto-payments-account-number" id="auto-payments-account-number">
+                    			</div>
+                    		</div>
+                    	</div>
+                    	<div class="table-body-row field--row">
+                    		<div class="table-body-cell">
+                    			<label for="auto-payments-account-number-confirm" class="display-inline-block">Confirm Account Number: *</label>
+                    		</div>
+                    		<div class="table-body-cell">
+                    			<div class="field-input">
+                    				<input type="number" name="auto-payments-account-number-confirm" id="auto-payments-account-number-confirm">
+                    			</div>
+                    		</div>
+                    	</div>
+                    	<div class="table-body-row field--row">
+                    		<div class="table-body-cell">
+                    			<label for="auto-payments-first-name" class="display-inline-block">Account Holder First Name: *</label>
+                    		</div>
+                    		<div class="table-body-cell">
+                    			<div class="field-input">
+                    				<input type="text" name="auto-payments-first-name" id="auto-payments-first-name">
+                    			</div>
+                    		</div>
+                    	</div>
+                    	<div class="table-body-row field--row">
+                    		<div class="table-body-cell">
+                    			<label for="auto-payments-middle-name" class="display-inline-block">Account Holder Middle Name:</label>
+                    		</div>
+                    		<div class="table-body-cell">
+                    			<div class="field-input">
+                    				<input type="text" name="auto-payments-middle-name" id="auto-payments-middle-name">
+                    			</div>
+                    		</div>
+                    	</div>
+                    	<div class="table-body-row field--row">
+                    		<div class="table-body-cell">
+                    			<label for="auto-payments-last-name" class="display-inline-block">Account Holder Last Name: *</label>
+                    		</div>
+                    		<div class="table-body-cell">
+                    			<div class="field-input">
+                    				<input type="text" name="auto-payments-last-name" id="auto-payments-last-name">
+                    			</div>
+                    		</div>
+                    	</div>
+                    </div>
+                    <div class="field--row">
+                      <div class="field-input checkbox">
+                        <div class="checkbox-block">
+                          <input type="checkbox" name="auto-payments-sig-consent" id="auto-payments-sig-consent" class="checkbox--large custom-checkbox">
+                          <label for="auto-payments-sig-consent">Electronic Signature Consent</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="scrollable-text-block margin-large">
+                        <p class="text-small" role="dialog" aria-label="EFT terms">
+                            To make a one-time Electronic Funds Transfer (EFT) for the amount shown
+                            below, you must provide your electronic signature. Your electronic signature
+                            is binding, just as if you had signed a paper form. Your consent to use your
+                            electronic signature applies only to this EFT form. If you prefer to submit
+                            a non-electronic form, please access the Forms and Resources (link to forms
+                            and resources) page to download, complete and mail the form to the address
+                            provided. When completing the form, you will be asked to
+                        </p>
+                    </div>
+                    <div class="display-block margin-large">
+                    	<div class="btn-group">
+                    		<a href="/payments/ship/overview/monthly.html" class="btn btn--secondary">Cancel</a>
+                    		<button class="btn submit-payment" type="submit"><span class="btn-primary">Continue</span></button>
+                    	</div>
+                    </div>
+                    <p class="margin-none italic">You'll have a chance to review and confirm this information again before submitting your payment.</p>
+
+                </div>
+            </div>
+          </form>
+        </div>
+    </section>
+</div>
+
+
+      <!-- Tooltips -->
+      <div class="tooltip-templates">
+          <div id="tooltip-large">
+              <p class="bold margin-extra-small">Lorem Ipsum</p>
+              <span class="text-small">
+                  Id elit reprehenderit fugiat Lorem in magna aliqua sunt ut est id ullamco dolor ut ad.
+              </span>
+          </div>
+          <div id="tooltip-small">
+              <span class="text-small">
+                  Aute enim nisi consectetur excepteur esse cupidatat Lorem excepteur laborum sunt occaecat nulla culpa magna cillum.
+              </span>
+          </div>
+          <div id="tooltip-costs">
+            <span class="text-small">
+                This is the amount you pay as your share of your prescription drug costs,
+                such as deductibles (if applicable), co-pays/co-insurance and the amounts
+                you pay in the coverage gap.
+            </span>
+          </div>
+      </div>
+
+    </main>
+
+    <!-- Start: Footer -->
+    <footer class="nav-footer" role="contentinfo" aria-label="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h1 class="h6 medium">Member Support</h1>
+            <ul class="nav-footer--list">
+              <li>Customer Service 1-800-555-5555</li>
+              <li><a href="#">All Contact Info</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h1 class="h6 medium">Quick Links</h1>
+            <ul class="nav-footer--list">
+              <li><a href="#">Find A Provider</a></li>
+              <li><a href="#">Send Feedback</a></li>
+              <li><a href="#">Report Incorrect Info</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h1 class="h6 medium">Ask A Nurse</h1>
+            <ul class="nav-footer--list">
+              <li>Registered nurses available 24/7</li>
+              <li>1-888-842-4224</li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12"><span style="font-size: .875rem;">UHC &copy; 2016 | All Rights Reserved</span></div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+    <!-- Start: Footer scripts -->
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    
+    <!-- Vendor scripts -->
+    <script src="/scripts/vendor/jquery-3.1.1.min.js"></script>
+    <script src="/scripts/vendor/lockrroom.js"></script>
+    <script src="/scripts/vendor/select2.min.js"></script>
+    <script src="/scripts/vendor/select2-tab-fix.js"></script>
+    <script src="/scripts/vendor/rivets.bundled.min.js"></script>
+    <script src="/scripts/vendor/rivets.js"></script>
+    <script src="/scripts/vendor/jquery.matchHeight.js"></script>
+    <script src="/scripts/vendor/slick.min.js"></script>
+    <script src="/scripts/vendor/TweenLite.min.js"></script>
+    <script src="/scripts/vendor/plugins/CSSPlugin.min.js"></script>
+    <script src="/scripts/vendor/jquery.autocomplete.min.js"></script>
+    <script src="/scripts/vendor/bootstrap.min.js"></script>
+    
+    <script src="/scripts/vendor/jquery.validate.min.js"></script>
+    <script src="/scripts/vendor/tooltipster.bundle.min.js"></script>
+    <script src="/scripts/vendor/awesomplete.js"></script>
+    
+    
+    
+    
+    <script src="/scripts/main.js"></script>
+    <script src="/scripts/navigation.js"></script>
+    
+    
+      <script src="/scripts/pages/payments.js"></script>
+      <script src="/scripts/pages/form-validation.js"></script>
+</body>
+</html>

@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Turn off telephone number detection. -->
+    <meta name="format-detection" content="telephone=no">
+    <title>My Profile and Preferences</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <!-- Place favicon.ico in the root directory -->
+
+
+    <link rel="stylesheet" href="/styles/vendor/slick-theme.css">
+    <link rel="stylesheet" href="/styles/vendor/slick.css">
+    <link rel="stylesheet" href="/styles/vendor/tooltipster-new.css">
+    <link rel="stylesheet" href="/styles/vendor/bootstrap.css">
+    <link rel="stylesheet" href="/styles/vendor/awesomplete.css">
+
+    <link rel="stylesheet" href="/styles/mir-main.css">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/cc-enhancement.css">
+
+    <link rel="stylesheet" href="/styles/print.css">
+
+
+    <link rel="stylesheet" href="/styles/vendor/common.css">
+
+    <script src="/scripts/vendor/modernizr.js"></script>
+
+</head>
+<body>
+  <div class="uhc-body-wrapper">
+    <div class="uhc-body-light-box"></div>
+    <div class="rivets-loading" rv-show="data.loading" style="position: fixed; top:0; left:0; right:0; bottom:0; background-color: white; z-index:9999;"></div>
+    <!-- Start: Navigation -->
+    <nav class="uhcg-nav">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="uhcg-nav-header">
+          <div class="header-wrapper">
+            <div class="logo-container">
+              <img src="/images/logos/uhc-logo.svg" alt="Main Logo" class="img-responsive">
+              <div class="logo-divider"></div>
+              <img src="/images/logos/mirum-logo.png" alt="Partner Logo" class="img-responsive">
+            </div>
+            <div class="icon-container">
+              <a href="#" class="menu-icon" aria-label="Menu">
+                <div class="menu-line-wrapper">
+                  <div class="menu-line"></div>
+                  <div class="menu-line"></div>
+                  <div class="menu-line"></div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <ul class="uhc-nav">
+            <li class="uhc-nav-item--secondary">
+              <a href="#" class="uhc-nav-item-link">
+                <img src="/images/icon-svgs/nav-phone.svg" alt="Phone">
+                Contact Us
+              </a>
+            </li>
+            <li class="uhc-nav-item--secondary">
+              <a href="#" class="uhc-nav-item-link">
+                <span class="count-circle">2</span>
+                <img src="/images/icon-svgs/nav-mail.svg" alt="Message">
+                Messages
+              </a>
+            </li>
+            <li class="uhc-nav-item--secondary">
+              <a href="#" class="uhc-nav-item-link">
+                <img src="/images/icon-svgs/nav-doc.svg" alt="Documents">
+                My Documents
+              </a>
+            </li>
+            <li class="uhc-nav-item--secondary has-sub-nav">
+              <a href="#" class="uhc-nav-item-link" id="nav-profile">
+                <img src="/images/icon-svgs/nav-user.svg" alt="User">
+                Profile
+              </a>
+              <ul class="sub-nav">
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Update Profile</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Go Green Preferences</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Change Password</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Sign Out</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="nav-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="uhc-nav">
+            <li class="uhc-nav-item"><a href="#" class="uhc-nav-item-link">Home</a></li>
+            <li class="uhc-nav-item has-sub-nav">
+              <a href="#" class="uhc-nav-item-link">Care & Costs</a>
+              <ul class="sub-nav">
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Provider Search</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Pharmacy Locator</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Drug Look Up</a></li>
+              </ul>
+            </li>
+            <li class="uhc-nav-item has-sub-nav">
+              <a href="#" class="uhc-nav-item-link">Benefits</a>
+              <ul class="sub-nav">
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Benefits Summary</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Forms & Resources</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Order Materials</a></li>
+              </ul>
+            </li>
+            <li class="uhc-nav-item has-sub-nav">
+              <a href="#" class="uhc-nav-item-link">Claims</a>
+              <ul class="sub-nav">
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Claims Search</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">EOB Search</a></li>
+              </ul>
+            </li>
+            <li class="uhc-nav-item"><a href="#" class="uhc-nav-item-link">Premium Payments</a></li>
+            <li class="uhc-nav-item"><a href="#" class="uhc-nav-item-link">Health & Wellness</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+    
+
+    <!-- Start: Page header -->
+    <header class="benefits-coverage page-header-wrapper" role="banner" aria-label="header">
+      <div class="page-header">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="display-flex v-center">
+                <div class="page-header--left">
+                  <h1 class="h4 margin-none">
+                    My Profile and Preferences
+                  </h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+
+
+      <div class="profile">
+  <section class="container--base">
+    <div class="container">
+      <div class="row section-header">
+        <div class="col-md-8 margin-large">
+          <h2 class="h3 medium">Account Profile</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+          <div class="card-animation-wrapper simple">
+            <div class="card account-profile padding-none">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-sm-12 margin-small">
+                    <span class="bold">Username</span>
+                    <span class="display-block">&lt;username&gt;</span>
+                  </div>
+                </div>
+                <!-- fields display -->
+                <div class="card-slide" aria-hidden="false">
+                  <div class="row margin-small">
+                    <div class="col-sm-12">
+                      <span class="bold">Password</span>
+                      <span class="display-block">&lt;**********&gt;</span>
+                    </div>
+                  </div>
+                  <a href="#" class="edit-btn display-inline-block" role="button">Edit Password
+                    <svg version="1.1" id="Artwork" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                       viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+                    <line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="6.4" y1="9.7" x2="9.8" y2="6.3"/>
+                    <path d="M21.1,16.6c0-0.2-0.1-0.5-0.3-0.6L7.7,2.8C7.5,2.7,7.2,2.6,7,2.6c-0.3,0-0.5,0.1-0.7,0.3L2.9,6.4c-0.4,0.4-0.4,1,0,1.4
+                      L16,20.9c0.2,0.2,0.4,0.3,0.6,0.3l3.7,0.2c0,0,0,0,0.1,0c0.3,0,0.5-0.1,0.7-0.3c0.2-0.2,0.3-0.5,0.3-0.8L21.1,16.6z M7,5l1.8,1.8
+                      l-2.1,2L5,7L7,5z M17.2,19.2L16,18l2-2l1.2,1.2l0.2,2.2L17.2,19.2z"/>
+                    <rect fill="none" width="24" height="24"/>
+                    </svg>
+                  </a>
+                </div>
+                <!-- fields edit -->
+                <div class="card-slide" aria-hidden="true">
+                  <form id="password-form">
+                    <div class="field">
+                      <label for="passwordOld" class="bold">Current Password</label>
+                      <div class="field-input">
+                        <input type="password" name="passwordOld" id="passwordOld"/>
+                      </div>
+                    </div>
+                    <div class="field">
+                      <label for="passwordNew" class="bold">New Password</label>
+                      <div class="field-input">
+                        <input type="password" name="passwordNew" id="passwordNew" class="tooltip-password"/>
+                      </div>
+                    </div>
+                    <div class="field margin-large">
+                      <label for="passwordNewConfirm" class="bold">Confirm New Password</label>
+                      <div class="field-input">
+                        <input type="password" name="passwordNewConfirm" id="passwordNewConfirm"/>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-12">
+                        <button type="button" name="password-submit" class="btn--center margin-small save-btn"><span class="btn btn--primary">Save</span></button>
+                        <a href="#" class="cancel-btn" role="button">Cancel</a>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="tabs-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+            <div class="tabs-mobile margin-small">
+  
+              <label for="tab-select">Select one of your plans to see corresponding details:</label>
+              <div class="select--regular select--medium margin-none">
+                <select name="tab-select" id="tab-select">
+                  <option value="tab-1">Prescription Drug Plan</option>
+                  <option value="tab-2">Medicare Supplement Plan</option>
+                </select>
+              </div>
+  
+            </div>
+          <div class="tabs-desktop">
+            <!--<p class="bold margin-small">Select one of your plans to see corresponding details:</p>-->
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active">
+                  <a href="#tab-1" aria-controls="tab-1" role="tab" data-toggle="tab">
+                    Prescription Drug Plan
+                  </a>
+                </li>
+                <li role="presentation">
+                  <a href="#tab-2" aria-controls="tab-2" role="tab" data-toggle="tab">
+                    Medicare Supplement Plan
+                  </a>
+                </li>
+            </ul>
+          </div>
+          <div class="tabs-float">
+            <a href="profile-link-plan.html" class="link-plan" role="button">+ Link Another Plan</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="container--base gray">
+    <div class="container">
+      <div class="tab-content">
+          <div role="tabpanel" aria-label="Federal Plans" class="tab-pane fade active in" id="tab-1">
+              <div class="row">
+                <div class="col-md-12">
+                  <h2 class="h4 color-blue medium margin-small">
+                      AARP MedicareRX Preferred (PDP)
+                  </h2>
+                  <p><span class="bold">MEMBER NAME:</span> XXXXXXXXX</p>
+                  <p><span class="bold">MEMBER ID:</span> XXXXXXXXX</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-8">
+                  <h3 class="h4 margin-small ">Contact Information</h3>
+                    <p class="margin-small">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <div class="iframe-placeholder">
+                      <span class="fpo-text">Iframe FPO</span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                  <h3 class="h4 margin-small ">Communication Preferences</h3>
+                  <div class="card-animation-wrapper margin-large">
+                    <div class="card ">
+                      <div class="card-header clearfix">
+                        <p class="subtitle semi-bold margin-none card-title">Plan Materials Delivery</p>
+                      </div>
+                      <div class="card-body">
+                        <p class="margin-large">
+                          <img src="/images/icon-svgs/go-green.svg" alt="Plan Support" class="img-responsive go-green-img small">
+                          <span class="bold">Go Green: Paperless Delivery</span>
+                            <span class="display-block">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</span>
+                        </p>
+                            <a href="/go-green/go-green-combo.html" class="" role="button">Edit Preferences</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div role="tabpanel" aria-label="SHIP Plans" class="tab-pane fade" id="tab-2">
+              <div class="row">
+                <div class="col-md-12">
+                  <h2 class="h4 color-blue medium margin-small">
+                      AARP Medicare Suppement Plan
+                  </h2>
+                  <p><span class="bold">MEMBER NAME:</span> XXXXXXXXX</p>
+                  <p><span class="bold">MEMBER ID:</span> XXXXXXXXX</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-8">
+                  <h3 class="h4 margin-small match-height">Contact Information</h3>
+                    <div class="row">
+                    <div class="col-md-6 margin-none">
+                      <div class="row">
+                        <div class="col-md-12 margin-none">
+                          <div class="card-animation-wrapper margin-large">
+                        <div class="card ">
+                          <div class="card-header clearfix">
+                            <p class="subtitle semi-bold margin-none card-title">Email</p>
+                            <a href="#" class="edit-btn" role="button" aria-label="Edit Email">Edit
+                              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+                              <line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="6.4" y1="9.7" x2="9.8" y2="6.3"/>
+                              <path d="M21.1,16.6c0-0.2-0.1-0.5-0.3-0.6L7.7,2.8C7.5,2.7,7.2,2.6,7,2.6c-0.3,0-0.5,0.1-0.7,0.3L2.9,6.4c-0.4,0.4-0.4,1,0,1.4
+                                L16,20.9c0.2,0.2,0.4,0.3,0.6,0.3l3.7,0.2c0,0,0,0,0.1,0c0.3,0,0.5-0.1,0.7-0.3c0.2-0.2,0.3-0.5,0.3-0.8L21.1,16.6z M7,5l1.8,1.8
+                                l-2.1,2L5,7L7,5z M17.2,19.2L16,18l2-2l1.2,1.2l0.2,2.2L17.2,19.2z"/>
+                              <rect fill="none" width="24" height="24"/>
+                              </svg>
+                            </a>
+                            <a class="cancel-btn link link--icon-right link--icon-circled align-right" data-icon="" data-dismiss="modal" role="button" aria-label="Close Email Edit">Cancel</a>
+                          </div>
+                          <div class="card-body">
+                            <div class="card-slide" aria-hidden="false">
+                              <div class="row">
+                                <div class="col-sm-12">
+                                  <span class="bold">Email Address</span>
+                                  <span class="display-block">&lt;name@domain.com&gt;</span>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- fields display -->
+                            <div class="card-slide" aria-hidden="true">
+                              <div class="row">
+                                <div class="col-sm-12">
+                                  <span class="bold">Email Address</span>
+                                  <span class="display-block">&lt;name@domain.com&gt;</span>
+                                </div>
+                              </div>
+                              <form id="email-form">
+                                <div class="field">
+                                  <label for="emailNew" class="bold">New Email</label>
+                                  <div class="field-input">
+                                    <input type="text" name="emailNew" id="emailNew"/>
+                                  </div>
+                                </div>
+                                <div class="field">
+                                  <label for="emailNewConfirm" class="bold">Confirm New Email</label>
+                                  <div class="field-input">
+                                    <input type="text" name="emailNewConfirm" id="emailNewConfirm"/>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-xs-12">
+                                    <button type="submit" class="btn--center margin-small save-btn"><span class="btn btn--primary">Save</span></button>
+                                    <a href="#" class="display-block align-center cancel-btn" role="button" aria-label="Cancel Email Edit">Cancel</a>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12 margin-none">
+                          <div class="card-animation-wrapper margin-large hidden-sm hidden-xs">
+                        <div class="card">
+                          <div class="card-header clearfix">
+                            <p class="subtitle semi-bold margin-none card-title">Permenant Address</p>
+                          </div>
+                          <div class="card-body">
+                            <div class="row">
+                              <div class="col-sm-12 margin-small">
+                                <span class="">&lt;address&gt;</span>
+                                <span class="display-block">&lt;city, state, zip&gt;</span>
+                              </div>
+                            </div>
+                            <p>To update your permenant address please <a href="#" class="text-link" title="Contact us"  role="button">contact us</a>
+                          </div>
+                        </div>
+                      </div>
+                        </div>
+                      </div>
+              
+                    </div>
+                    <div class="col-md-6 margin-none">
+                      <div class="row">
+                        <div class="col-md-12 margin-none">
+                          <div class="card-animation-wrapper margin-large">
+                        <div class="card ">
+                          <div class="card-header clearfix">
+                            <p class="subtitle semi-bold margin-none card-title">Phone</p>
+                            <a href="#" class="edit-btn" role="button" aria-label="Edit Phone">Edit
+                              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+                              <line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="6.4" y1="9.7" x2="9.8" y2="6.3"/>
+                              <path d="M21.1,16.6c0-0.2-0.1-0.5-0.3-0.6L7.7,2.8C7.5,2.7,7.2,2.6,7,2.6c-0.3,0-0.5,0.1-0.7,0.3L2.9,6.4c-0.4,0.4-0.4,1,0,1.4
+                                L16,20.9c0.2,0.2,0.4,0.3,0.6,0.3l3.7,0.2c0,0,0,0,0.1,0c0.3,0,0.5-0.1,0.7-0.3c0.2-0.2,0.3-0.5,0.3-0.8L21.1,16.6z M7,5l1.8,1.8
+                                l-2.1,2L5,7L7,5z M17.2,19.2L16,18l2-2l1.2,1.2l0.2,2.2L17.2,19.2z"/>
+                              <rect fill="none" width="24" height="24"/>
+                              </svg>
+                            </a>
+                            <a class="cancel-btn link link--icon-right link--icon-circled align-right" data-icon="" data-dismiss="modal" role="button" aria-label="Close Phone Edit">Cancel</a>
+                          </div>
+                          <div class="card-body">
+                            <div class="card-slide" aria-hidden="false">
+                              <div class="row">
+                                <div class="col-sm-12 margin-small">
+                                  <span class="bold">Daytime Phone</span>
+                                  <span class="display-block">(612) 867-5309</span>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-sm-12">
+                                  <span class="bold">Evening Phone</span>
+                                  <span class="display-block">(612) 867-5309</span>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- fields display -->
+                            <div class="card-slide" aria-hidden="true">
+                              <form id="phone-form">
+                                <div class="field">
+                                  <label for="daytimePhone" class="bold">Daytime Phone</label>
+                                  <div class="field-input">
+                                    <input type="text" name="daytimePhone" id="daytimePhone"/>
+                                  </div>
+                                </div>
+                                <div class="field">
+                                  <label for="eveningPhone" class="bold">Evening Phone</label>
+                                  <div class="field-input">
+                                    <input type="text" name="eveningPhone" id="eveningPhone"/>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-xs-12">
+                                    <button type="submit" class="btn--center margin-small save-btn"><span class="btn btn--primary">Save</span></button>
+                                    <a href="#" class="display-block align-center cancel-btn" role="button"  aria-label="Cancel Phone Edit">Cancel</a>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12 margin-none hidden-md hidden-lg">
+                          <div class="card-animation-wrapper margin-large">
+                        <div class="card">
+                          <div class="card-header clearfix">
+                            <p class="subtitle semi-bold margin-none card-title">Permenant Address</p>
+                          </div>
+                          <div class="card-body">
+                            <div class="row">
+                              <div class="col-sm-12 margin-small">
+                                <span class="">&lt;address&gt;</span>
+                                <span class="display-block">&lt;city, state, zip&gt;</span>
+                              </div>
+                            </div>
+                            <p>To update your permenant address please <a href="#" class="text-link" title="Contact us" role="button">contact us</a>
+                          </div>
+                        </div>
+                      </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12 margin-none">
+                          <div class="card-animation-wrapper margin-large adding">
+                        <div class="card">
+                          <div class="card-header clearfix">
+                            <p class="subtitle semi-bold margin-none card-title">Temporary Address</p>
+                            <a href="#" class="edit-btn" role="button" aria-label="Edit Temporary Address">Edit
+                              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+                              <line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="6.4" y1="9.7" x2="9.8" y2="6.3"/>
+                              <path d="M21.1,16.6c0-0.2-0.1-0.5-0.3-0.6L7.7,2.8C7.5,2.7,7.2,2.6,7,2.6c-0.3,0-0.5,0.1-0.7,0.3L2.9,6.4c-0.4,0.4-0.4,1,0,1.4
+                                L16,20.9c0.2,0.2,0.4,0.3,0.6,0.3l3.7,0.2c0,0,0,0,0.1,0c0.3,0,0.5-0.1,0.7-0.3c0.2-0.2,0.3-0.5,0.3-0.8L21.1,16.6z M7,5l1.8,1.8
+                                l-2.1,2L5,7L7,5z M17.2,19.2L16,18l2-2l1.2,1.2l0.2,2.2L17.2,19.2z"/>
+                              <rect fill="none" width="24" height="24"/>
+                              </svg>
+                            </a>
+                            <a class="cancel-btn link link--icon-right link--icon-circled align-right" data-icon="" data-dismiss="modal" role="button" aria-label="Close Temporary Address">Cancel</a>
+                          </div>
+                          <div class="card-body">
+              
+                            <div class="card-slide" aria-hidden="false">
+                              <div class="row">
+                                <div class="col-sm-12 align-center">
+                                  <a href="#" class="add-address-btn" role="button">+ Add Temporary Address</a>
+                                </div>
+                              </div>
+                            </div>
+              
+                            <div class="card-slide" aria-hidden="true">
+                              <form id="address-1-form" class="address-form">
+                                <fieldset>
+                                  <legend class="hidden">Another Temporary Address</legend>
+                                <div class="field">
+                                  <label for="altStreet" class="bold">Street Address</label>
+                                  <div class="field-input">
+                                    <input type="text" name="altStreet" id="altStreet"/>
+                                  </div>
+                                </div>
+                                <div class="field">
+                                  <label for="altStreet2" class="bold">Street Address 2 <span class="normal">(optional)</span></label>
+                                  <div class="field-input">
+                                    <input type="text" name="altStreet2" id="altStreet2"/>
+                                  </div>
+                                </div>
+                                <div class="field">
+                                  <label for="altCity" class="bold">City</label>
+                                  <div class="field-input">
+                                    <input type="text" name="altCity" id="altCity"/>
+                                  </div>
+                                </div>
+                                <div class="field">
+                                  <label for="altState" class="bold">State</label>
+                                  <div class="select--regular">
+                                    <select name="altState" id="altState">
+                                      <option value="">Select State</option>
+                                      <option value="California">California</option>
+                                    </select>
+                                  </div>
+                                </div>
+                                <div class="field">
+                                  <label for="altZip" class="bold">Zip</label>
+                                  <div class="field-input">
+                                    <input type="number" name="altZip" id="altZip"/>
+                                  </div>
+                                </div>
+                                <fieldset class="margin-small dob-fieldset">
+                                  <legend>Start Date</legend>
+                                  <div class="field--dob field--start-date">
+                                  	<div class="field-input">
+                                  	  <select name="startDateMM" id="startDateMM" style="width: 100%"><option value=""></option></select>
+                                  	  <label for="startDateMM">MM</label>
+                                  	</div>
+                                  	<div class="field-input">
+                                  	  <select name="startDateDD" id="startDateDD" style="width: 100%"><option value=""></option></select>
+                                  	  <label for="startDateDD">DD</label>
+                                  	</div>
+                                  	<div class="field-input">
+                                  	  <select name="startDateYYYY" id="startDateYYYY" style="width: 100%"><option value=""></option></select>
+                                  	  <label for="startDateYYYY">YYYY</label>
+                                  	</div>
+                                  </div>
+                                </fieldset>
+                                <fieldset class="margin-small dob-fieldset">
+                                  <legend>End Date</legend>
+                                  <div class="field--dob field--end-date">
+                                  	<div class="field-input">
+                                  	  <select name="endDateMM" id="endDateMM" style="width: 100%"><option value=""></option></select>
+                                  	  <label for="endDateMM">MM</label>
+                                  	</div>
+                                  	<div class="field-input">
+                                  	  <select name="endDateDD" id="endDateDD" style="width: 100%"><option value=""></option></select>
+                                  	  <label for="endDateDD">DD</label>
+                                  	</div>
+                                  	<div class="field-input">
+                                  	  <select name="endDateYYYY" id="endDateYYYY" style="width: 100%"><option value=""></option></select>
+                                  	  <label for="endDateYYYY">YYYY</label>
+                                  	</div>
+                                  </div>
+                                </fieldset>
+                                <div class="row">
+                                  <div class="col-xs-12">
+                                    <p>Note: If you make an address change that begins on a future date, that change won’t be reflected on your plan information until the date it becomes effective.</p>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-xs-12">
+                                    <button type="submit" class="btn--center margin-small save-btn"><span class="btn btn--primary">Save</span></button>
+                                    <a href="#" class="display-block align-center cancel-btn" role="button"  aria-label="Cancel Temporary Address Edit">Cancel</a>
+                                  </div>
+                                </div>
+                              </fieldset>
+                              </form>
+                            </div>
+              
+                            <div class="card-slide" aria-hidden="true">
+                              <div class="row">
+                                <div class="col-sm-12 margin-small">
+                                  <span class="">&lt;address&gt;</span>
+                                  <span class="display-block">&lt;city, state, zip&gt;</span>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-sm-12 margin-small">
+                                  <span class="bold">Start Date</span>
+                                  <span class="display-block">01/01/2017</span>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-sm-12 margin-none">
+                                  <span class="bold">End Date</span>
+                                  <span class="display-block">01/01/2018</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12 col-md-pull-12 margin-none">
+                          <div class="card-animation-wrapper adding hidden">
+                        <div class="card">
+                          <div class="card-header clearfix">
+                            <p class="subtitle semi-bold margin-none card-title">Temporary Address</p>
+                            <a href="#" class="edit-btn" role="button">Edit
+                              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+                              <line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="6.4" y1="9.7" x2="9.8" y2="6.3"/>
+                              <path d="M21.1,16.6c0-0.2-0.1-0.5-0.3-0.6L7.7,2.8C7.5,2.7,7.2,2.6,7,2.6c-0.3,0-0.5,0.1-0.7,0.3L2.9,6.4c-0.4,0.4-0.4,1,0,1.4
+                                L16,20.9c0.2,0.2,0.4,0.3,0.6,0.3l3.7,0.2c0,0,0,0,0.1,0c0.3,0,0.5-0.1,0.7-0.3c0.2-0.2,0.3-0.5,0.3-0.8L21.1,16.6z M7,5l1.8,1.8
+                                l-2.1,2L5,7L7,5z M17.2,19.2L16,18l2-2l1.2,1.2l0.2,2.2L17.2,19.2z"/>
+                              <rect fill="none" width="24" height="24"/>
+                              </svg>
+                            </a>
+                            <a class="cancel-btn link link--icon-right link--icon-circled align-right" data-icon="" data-dismiss="modal" role="button" aria-label="Close Address Edit">Cancel</a>
+                          </div>
+                          <div class="card-body">
+              
+                            <div class="card-slide" aria-hidden="false">
+                              <div class="row">
+                                <div class="col-sm-12 align-center">
+                                  <a href="#" class="add-address-btn" title="Add Temporary Address" role="button">+ Add Temporary Address</a>
+                                </div>
+                              </div>
+                            </div>
+              
+                            <div class="card-slide" aria-hidden="true">
+                              <form id="address-2-form" class="address-form">
+                                <fieldset>
+                                  <legend class="hidden">Temporary Address</legend>
+                                <div class="field">
+                                  <label for="alt2Street" class="bold">Street Address</label>
+                                  <div class="field-input">
+                                    <input type="text" name="alt2Street" id="alt2Street"/>
+                                  </div>
+                                </div>
+                                <div class="field">
+                                  <label for="alt2Street2" class="bold">Street Address 2 <span class="normal">(optional)</span></label>
+                                  <div class="field-input">
+                                    <input type="text" name="alt2Street2" id="alt2Street2"/>
+                                  </div>
+                                </div>
+                                <div class="field">
+                                  <label for="altCity2" class="bold">City</label>
+                                  <div class="field-input">
+                                    <input type="text" name="altCity2" id="altCity2"/>
+                                  </div>
+                                </div>
+                                <div class="field">
+                                  <label for="altState2" class="bold">State</label>
+                                  <div class="select--regular">
+                                    <select name="altState2" id="altState2">
+                                      <option value="">Select State</option>
+                                      <option value="California">California</option>
+                                    </select>
+                                  </div>
+                                </div>
+                                <div class="field">
+                                  <label for="altZip2" class="bold">Zip</label>
+                                  <div class="field-input">
+                                    <input type="number" name="altZip2" id="altZip2"/>
+                                  </div>
+                                </div>
+                                <fieldset class="margin-small">
+                                  <legend>Start Date</legend>
+                                  <div class="field--dob field--start-date">
+                                  	<div class="field-input">
+                                  	  <select name="startDateMM2" id="startDateMM2" style="width: 100%"><option value=""></option></select>
+                                  	  <label for="startDateMM2">MM</label>
+                                  	</div>
+                                  	<div class="field-input">
+                                  	  <select name="startDateDD2" id="startDateDD2" style="width: 100%"><option value=""></option></select>
+                                  	  <label for="startDateDD2">DD</label>
+                                  	</div>
+                                  	<div class="field-input">
+                                  	  <select name="startDateYYYY2" id="startDateYYYY2" style="width: 100%"><option value=""></option></select>
+                                  	  <label for="startDateYYYY2">YYYY</label>
+                                  	</div>
+                                  </div>
+                                </fieldset>
+                                <fieldset class="margin-small">
+                                  <legend>End Date</legend>
+                                  <div class="field--dob field--end-date">
+                                  	<div class="field-input">
+                                  	  <select name="endDateMM2" id="endDateMM2" style="width: 100%"><option value=""></option></select>
+                                  	  <label for="endDateMM2">MM</label>
+                                  	</div>
+                                  	<div class="field-input">
+                                  	  <select name="endDateDD2" id="endDateDD2" style="width: 100%"><option value=""></option></select>
+                                  	  <label for="endDateDD2">DD</label>
+                                  	</div>
+                                  	<div class="field-input">
+                                  	  <select name="endDateYYYY2" id="endDateYYYY2" style="width: 100%"><option value=""></option></select>
+                                  	  <label for="endDateYYYY2">YYYY</label>
+                                  	</div>
+                                  </div>
+                                </fieldset>
+                                <div class="row">
+                                  <div class="col-xs-12">
+                                    <p>Note: If you make an address change that begins on a future date, that change won’t be reflected on your plan information until the date it becomes effective.</p>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-xs-12">
+                                    <button type="submit" class="btn--center margin-small save-btn"><span class="btn btn--primary">Save</span></button>
+                                    <a href="#" class="display-block align-center cancel-btn" role="button"  aria-label="Cancel Address Edit">Cancel</a>
+                                  </div>
+                                </div>
+                              </fieldset>
+                              </form>
+                            </div>
+              
+                            <div class="card-slide" aria-hidden="true">
+                              <div class="row">
+                                <div class="col-sm-12 margin-small">
+                                  <span class="">&lt;address&gt;</span>
+                                  <span class="display-block">&lt;city, state, zip&gt;</span>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-sm-12 margin-small">
+                                  <span class="bold">Start Date</span>
+                                  <span class="display-block">01/01/2017</span>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-sm-12 margin-none">
+                                  <span class="bold">End Date</span>
+                                  <span class="display-block">01/01/2018</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                        </div>
+                      </div>
+                    </div>
+              
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <h3 class="h4 margin-small match-height">Communication Preferences</h3>
+                  <div class="card-animation-wrapper margin-large">
+                    <div class="card ">
+                      <div class="card-header clearfix">
+                        <p class="subtitle semi-bold margin-none card-title">Plan Materials Delivery</p>
+                      </div>
+                      <div class="card-body">
+                        <p class="margin-large">
+                          <img src="/images/icon-svgs/go-green.svg" alt="Plan Support" class="img-responsive go-green-img small">
+                          <span class="bold">Go Green: Paperless Delivery</span>
+                            <span class="display-block">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</span>
+                        </p>
+                            <a href="/go-green/go-green-combo.html" class="" role="button">Edit Preferences</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+      <!-- Tooltips -->
+      <div class="tooltip-templates">
+          <div id="tooltip-large">
+              <p class="bold margin-extra-small">Lorem Ipsum</p>
+              <span class="text-small">
+                  Id elit reprehenderit fugiat Lorem in magna aliqua sunt ut est id ullamco dolor ut ad.
+              </span>
+          </div>
+          <div id="tooltip-small">
+              <span class="text-small">
+                  Aute enim nisi consectetur excepteur esse cupidatat Lorem excepteur laborum sunt occaecat nulla culpa magna cillum.
+              </span>
+          </div>
+          <div id="tooltip-costs">
+            <span class="text-small">
+                This is the amount you pay as your share of your prescription drug costs,
+                such as deductibles (if applicable), co-pays/co-insurance and the amounts
+                you pay in the coverage gap.
+            </span>
+          </div>
+            <div id="tooltip-username"></div>
+            <div id="tooltip-password"></div>
+      </div>
+
+            <section class="container--base contact-us">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h2 class="h3 medium margin-small">Need help?</h2>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="display-flex v-center margin-small">
+                      <img src="/images/icon-svgs/computer.svg" alt="Tech Support" class="img-small">
+                      <div class="padding-left-small">
+                        <h3 class="h4 margin-none">Technical Support</h3>
+                      </div>
+                    </div>
+                    <a href="tel:1-800-555-5555" class="display-inline-block margin-extra-small text-large">1-800-XXX-XXXX</a>
+                    <p>
+                      TTY users, call <a href="tel:711">711</a>
+                    </p>
+                    <p>
+                      8 am-8 pm local time, 7 days a week
+                    </p>
+                  </div>
+                  <div class="col-md-4 border-left">
+                    <div class="display-flex v-center margin-small">
+                      <img src="/images/icon-svgs/plan.svg" alt="Plan Support" class="img-small">
+                      <div class="padding-left-small">
+                        <h3 class="h4 margin-none">Plan Support</h3>
+                      </div>
+                    </div>
+                    <a href="tel:1-800-555-5555" class="display-inline-block margin-extra-small text-large">1-800-XXX-XXXX</a>
+                    <p>
+                      TTY users, call <a href="tel:711">711</a>
+                    </p>
+                    <p>
+                      8 am-8 pm local time, 7 days a week
+                    </p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <p class="margin-none">
+                      See more ways to <a href="/contact/contact-us-ma.html" class="lowercase">contact us</a>.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+            </main>
+
+    <!-- Start: Footer -->
+    <footer class="nav-footer" role="contentinfo" aria-label="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h1 class="h6 medium">Member Support</h1>
+            <ul class="nav-footer--list">
+              <li>Customer Service 1-800-555-5555</li>
+              <li><a href="#">All Contact Info</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h1 class="h6 medium">Quick Links</h1>
+            <ul class="nav-footer--list">
+              <li><a href="#">Find A Provider</a></li>
+              <li><a href="#">Send Feedback</a></li>
+              <li><a href="#">Report Incorrect Info</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h1 class="h6 medium">Ask A Nurse</h1>
+            <ul class="nav-footer--list">
+              <li>Registered nurses available 24/7</li>
+              <li>1-888-842-4224</li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12"><span style="font-size: .875rem;">UHC &copy; 2016 | All Rights Reserved</span></div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+    <!-- Start: Footer scripts -->
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    
+    <!-- Vendor scripts -->
+    <script src="/scripts/vendor/jquery-3.1.1.min.js"></script>
+    <script src="/scripts/vendor/lockrroom.js"></script>
+    <script src="/scripts/vendor/select2.min.js"></script>
+    <script src="/scripts/vendor/select2-tab-fix.js"></script>
+    <script src="/scripts/vendor/rivets.bundled.min.js"></script>
+    <script src="/scripts/vendor/rivets.js"></script>
+    <script src="/scripts/vendor/jquery.matchHeight.js"></script>
+    <script src="/scripts/vendor/slick.min.js"></script>
+    <script src="/scripts/vendor/TweenLite.min.js"></script>
+    <script src="/scripts/vendor/plugins/CSSPlugin.min.js"></script>
+    <script src="/scripts/vendor/jquery.autocomplete.min.js"></script>
+    <script src="/scripts/vendor/bootstrap.min.js"></script>
+    
+    <script src="/scripts/vendor/jquery.validate.min.js"></script>
+    <script src="/scripts/vendor/tooltipster.bundle.min.js"></script>
+    <script src="/scripts/vendor/awesomplete.js"></script>
+    
+    
+    
+    
+    <script src="/scripts/main.js"></script>
+    <script src="/scripts/navigation.js"></script>
+    
+    
+      <script src="/scripts/pages/profile.js"></script>
+</body>
+</html>

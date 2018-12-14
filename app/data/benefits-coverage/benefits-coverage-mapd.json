@@ -1,0 +1,44 @@
+{
+  "cards": {
+    "intro": {
+      "title": "Plan Name Lorem Ipsum et Dolor sit Amet",
+      "subtitle": "Medicare Advantage Prescription Drug Plan",
+      "col-size": "2",
+      "col-1": [
+        {
+          "title": "Name",
+          "content": "Jonathan Doe"
+        },
+        {
+          "title": "Member ID",
+          "content": "XXXXXX"
+        },
+        {
+          "title": "Group ID",
+          "content": "XXXXXX"
+        },
+        {
+          "title": "Effective Date",
+          "content": "01/23/16"
+        },
+        {
+          "title": "Late-Enrollment",
+          "content": "XX"
+        },
+        {
+          "title": "Extra Help Level",
+          "content": "XX"
+        }
+      ],
+      "col-2": [
+        {
+          "title": "Monthly Premium",
+          "content": "$XX.XX"
+        },
+        {
+          "button": "Make Payment"
+        }
+      ]
+    }
+  }
+}

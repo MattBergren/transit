@@ -1,0 +1,36 @@
+<section class="container--base">
+  <div class="container">
+    <div class="row">
+      {{!-- Header --}}
+      <div class="col-md-12">
+        <div class="page-title">
+          <div class="display-flex v-center">
+            <img src="/images/icon-svgs/plan.svg" alt="plan" class="img-large hidden-xs" />
+            <div class="padding-left">
+              <h2 class="h2 margin-none">
+                Plan Name Lorem Ipsum et Dolor sit Amet
+              </h2>
+              <span class="subtitle large">Medicare Advantage Prescription Drug Plan</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      {{!-- Col 1 --}}
+      <div class="col-md-4 match-height">
+        {{> table-small BC-mapd.table-small.title-section-one}}
+      </div>
+      {{!-- Col 2 --}}
+      <div class="col-md-4 border-left match-height">
+        {{> table-small BC-mapd.table-small.title-section-two}}
+      </div>
+      {{!-- Col 3 --}}
+      <div class="col-md-4 border-left match-height">
+        <span class="bold" data-tooltip="large" {{#if variation}}data-tooltip-side="right"{{/if}}>Monthly Premium:</span>
+        <p class="h4 margin-small">$XX.XX</p>
+        <a  href="/payments/federal/overview/monthly.html" class="btn btn--primary">Make Payment</a>
+      </div>
+    </div>
+  </div>
+</section>

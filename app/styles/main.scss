@@ -1,0 +1,78 @@
+$icon-font-path: '../fonts/';
+
+// bower:scss
+@import "bower_components/sassy-maps/sass/_sassy-maps.scss";
+@import "bower_components/breakpoint-sass/stylesheets/_breakpoint.scss";
+@import "bower_components/slick-carousel/slick/slick.scss";
+@import "bower_components/select2/src/scss/core.scss";
+// endbower
+
+// @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+
+@import 'vendor/normalize';
+
+// Configuration and helpers
+@import
+    'abstracts/breakpoints',
+    'abstracts/functions',
+    'abstracts/mixins',
+    'abstracts/variables';
+
+// Base stuff
+@import
+    'base/base',
+    'base/colors',
+    'base/fonts',
+    'base/typography',
+    'base/reset',
+    'base/helpers';
+
+// Layout-related sections
+@import
+    'layout/header',
+    'layout/footer',
+    'layout/forms',
+    'layout/navigation';
+
+// Components
+@import
+    'components/blocks',
+    'components/buttons',
+    'components/cards',
+    'components/containers',
+    'components/maps',
+    'components/message-blocks',
+    'components/tables',
+    'components/collapse-toggle',
+    // 'components/formfields',
+    'components/icon-links',
+    'components/calendar';
+
+// Page-specific styles
+@import
+    'pages/benefits-coverage',
+    'pages/value-added-services',
+    'pages/drug-estimator',
+    'pages/home',
+    'pages/payments',
+    'pages/pharmacy-locator',
+    'pages/resources',
+    'pages/order-materials',
+    'pages/medical-claims',
+    'pages/explanation-benefits',
+    'pages/contact-us',
+    'pages/dashboard',
+    'pages/pattern-library',
+    'pages/register',
+		'pages/profile',
+		'pages/personal-health-record';
+
+
+// Themes
+@import
+    'themes/bootstrap',
+    'themes/default';
+
+// Vendors
+@import 'vendor/tooltip',
+        'vendor/autocomplete';

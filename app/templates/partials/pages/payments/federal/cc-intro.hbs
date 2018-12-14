@@ -1,0 +1,19 @@
+<header class="intro">
+    <div class="container">
+        {{#if backBtn}}
+        <a href="{{href}}" class="intro__back-btn lowercase"><span class="material-icons md-36">arrow_left</span>Back to payment options</a>
+        {{/if}}
+        {{#if confirm}}
+            <h1 class="intro__header intro__header--success">{{title}}</h1>
+            <h2 class="intro__subhead">{{secondaryHeader}}</h2>
+            <p class="intro__body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim cupiditate quasi, eos, corrupti odio consequatur consectetur velit maiores eveniet obcaecati nihil nam esse dicta harum eius doloremque sapiente beatae quia.</p>
+        {{else}}
+        <h1 class="intro__header">{{title}}
+            {{#if plan}}
+            <small>&nbsp;for {{plan}}</small>
+            {{/if}}
+        </h1>
+        <p class="intro__body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim cupiditate quasi, eos, corrupti odio consequatur consectetur velit maiores eveniet obcaecati nihil nam esse dicta harum eius doloremque sapiente beatae quia.</p>
+        {{/if}}
+    </div>
+</header>

@@ -1,0 +1,21 @@
+---
+title: Payment Overview Advance Pay Member
+layout: default
+hasFooter: false
+hasHeader: false
+iframe: true
+hasScript:
+    - cc-enhancement
+---
+<div id="cc-enhancement">
+
+    {{> cc-intro title="Premium Payments Overview" }}
+
+    <div class="container">
+        {{> cc-plan-card paymentsPlans.members.fullPayment }}
+    </div>
+    
+    {{> download-billing-modal }}
+    {{> more-info-modal }}
+
+</div>

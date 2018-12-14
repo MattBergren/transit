@@ -1,0 +1,29 @@
+.tooltip-templates {
+  display: none;
+}
+
+.tooltipster-default {
+  background-color: white;
+  border: none;
+  color: black;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  border-top: 1px solid rgba(0,0,0,0.1);
+  border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+.tooltip-info {
+  cursor: pointer;
+
+  &.small-icon {
+    font-size: .875em;
+  }
+
+  &:hover path {
+    fill: $color-btn-primary-hover;
+  }
+}
+
+.tooltip-small, .tooltip-large {
+  display: inline;
+  vertical-align: middle;
+}

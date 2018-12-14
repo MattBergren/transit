@@ -1,0 +1,22 @@
+{
+    "onetimeEft": {
+        "type": "EFT-Checking (One-Time)",
+        "eft": true,
+        "recurring": false
+    },
+    "onetimeCredit": {
+        "type": "Credit Card (One-Time)",
+        "eft": false,
+        "recurring": false
+    },
+    "autoEft": {
+        "type": "EFT-Checking (Automatic)",
+        "eft": true,
+        "recurring": true
+    },
+    "autoCredit": {
+        "type": "(Automatic)",
+        "eft": false,
+        "recurring": true
+    }
+}

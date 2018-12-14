@@ -1,0 +1,59 @@
+{{!-- Start: drug list --}}
+<div class="row fluid">
+    <div class="do-not-use">
+        DEV NOTE: ONLY USE STEP 3 TAB CONTENT & LAYOUT.
+    </div>
+    {{!-- Drug component --}}
+    <div class="col-md-3 col-sm-6" rv-each-drug="data.DCE.savedDrugs.drugs">
+        <div class="drug-container">
+            <div class="card match-height-drug">
+                <div class="card-body display-flex direction-column" style="height: 100%;">
+                    <p class="subtitle">{ drug.title }</p>
+                    <p class="text-small color-gray">
+                        <span class="bold">Qty:</span>
+                        { drug.qty } Every { drug.freq } month(s)
+                    </p>
+                    <div class="message-block success" rv-if="drug.generic">
+                        <div class="message-block-body display-flex">
+                            <div>
+                                <img src="/images/icon-svgs/money.svg" alt="Money" class="img-small" />
+                            </div>
+                            <div>
+                                <p class="margin-extra-small">
+                                    <span class="color-green-dark bold">Save $XX.XX</span>
+                                    by switching to a generic
+                                </p>
+                                <a href="#" onclick="openGenericModal(this, event)">Switch Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="links" style="flex-grow: 1; display: flex; align-items: flex-end;">
+                        <li class="margin-none">
+                            <a href="#" class="edit-drug">Edit</a>
+                        </li>
+                        <li class="margin-none">
+                            <a href="#" class="delete-drug">Delete</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{!-- Add a drug button --}}
+    <div class="col-md-3 col-sm-6">
+        <a href="#" class="card card--add match-height-drug width-100" id="add-drug" data-toggle="modal"
+            data-target="#drugModal">
+            + Add a Drug
+        </a>
+    </div>
+</div>
+<hr> {{!-- Buttons --}}
+<div class="row">
+    <div class="col-md-12 align-center" role="tablist">
+        <a href="#pharmacy-tab" aria-controls="pharmacy-tab" role="tab" data-toggle="tab"
+            class="btn btn--primary">
+            Next: Select Pharmacy
+        </a>
+    </div>
+</div>
+{{> DCE-drug-info }}

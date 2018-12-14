@@ -1,0 +1,29 @@
+<h2 class="h3">Buttons & Links</h2>
+
+{{!-- Links --}}
+<h3 class="h5 semi-bold text-uppercase margin-small">Links</h3>
+<span class="display-block margin-extra-small"><a href="#">Regular text link</a></span>
+<span class="display-block margin-large">Inline text <a href="#" class="lowercase">link</a></span>
+
+{{!-- Buttons --}}
+<h3 class="h5 semi-bold text-uppercase margin-small">Buttons</h3>
+<div class="display-block margin-large">
+  <p>As links:</p>
+  <a href="#" class="btn btn--primary">Primary Button</a>
+  <a href="#" class="btn btn--secondary">Secondary Button</a>
+</div>
+<div class="display-block margin-large">
+  <p>As buttons in a button group:</p>
+  <div class="btn-group btn-group--medium">
+    <button type="button" class="btn">
+      <span class="btn btn--primary">Primary Button</span>
+    </button>
+    <button type="button" class="btn">
+      <span class="btn btn--secondary">Secondary Button</span>
+    </button>
+  </div>
+</div>
+
+{{!-- Tooltips --}}
+<h3 class="h5 semi-bold text-uppercase margin-small">Tooltips</h3>
+{{> tooltip size="small" }} Inline tooltip

@@ -1,0 +1,186 @@
+<div id="table-claims">
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="h4 margin-none">
+        You have <span class="bold provider-result">20 claims from all providers</span> from the
+        <span class="bold claim-days">Last 90 days</span>
+      </h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <p class="margin-none">
+        Click on the “more info” link to see details about a specific claim.
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 margin-small">
+      {{!-- Collapse --}}
+      <a href="#collapseInfo2" role="button" data-toggle="collapse"
+        aria-expanded="false" aria-controls="collapseInfo2" class="display-block collapse-expand">
+        Learn More About Your Cost Breakdown
+        <span class="material-icons">keyboard_arrow_down</span>
+      </a>
+      <div class="collapse-wrapper margin-small">
+        <div class="collapse" id="collapseInfo2">
+          <p class="bold margin-none">Claim type</p>
+          <p>
+            Qui aute quis laboris culpa velit dolore id cillum cupidatat
+            officia in ex velit ea sint exercitation. Proident non mollit
+            pariatur minim officia ad officia sit magna aute labore.
+          </p>
+          <p class="bold margin-none">Amount provider has billed for the plan</p>
+          <p>
+            Qui aute quis laboris culpa velit dolore id cillum cupidatat
+            officia in ex velit ea sint exercitation. Proident non mollit
+            pariatur minim officia ad officia sit magna aute labore.
+          </p>
+          <p class="bold margin-none">Claim Status</p>
+          <p>
+            Qui aute quis laboris culpa velit dolore id cillum cupidatat
+            officia in ex velit ea sint exercitation. Proident non mollit
+            pariatur minim officia ad officia sit magna aute labore.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{!-- Table start --}}
+  <div class="row">
+    <div class="col-md-12 margin-large">
+      <table class="table-responsive more-info">
+        <tr>
+          <th>Service Date</th>
+          <th>Provider Name</th>
+          <th data-tooltip="small" data-tooltip-label="Provider type tooltip" data-tooltip-mobile>Provider Type</th>
+          <th>Charged</th>
+          <th>Paid to You</th>
+          <th>Paid to Provider</th>
+          <th>Processed Date</th>
+          <th>Claim Detail</th>
+        </tr>
+        {{!-- 1 --}}
+        <tr>
+          <td class="hidden-md hidden-lg"><span class="subtitle margin-none">Doogie Howser, M.D.</span><span>Service provided on 10/01/2016</span><span>Claim processed on 12/15/2016</span></td>
+          <td class="hidden-sm hidden-xs"><span class="table-responsive__value">10/01/2016</span><span class="table-responsive__key italic text-small">Service Date</span></td>
+          <td class="hidden-sm hidden-xs"><span class="table-responsive__value">Doogie Howser, M.D.</span><span class="table-responsive__key italic text-small">Provider Name</span></td>
+          <td><span class="table-responsive__value">Med Part B Services</span><span class="table-responsive__key italic text-small">Provider Type</span></td>
+          <td><span class="table-responsive__value">$XXX.XX</span><span class="table-responsive__key italic text-small">Charged</span></td>
+          <td><span class="table-responsive__value">Pending</span><span class="table-responsive__key italic text-small">Paid to You</span></td>
+          <td><span class="table-responsive__value">Pending</span><span class="table-responsive__key italic text-small">Paid to Provider</span></td>
+          <td class="hidden-sm hidden-xs"><span class="table-responsive__value">12/15/2016</span><span class="table-responsive__key italic text-small">Processed Date</span></td>
+          <td><a href="/medical-claims/details/ship-partb.html">More Info</a></td>
+        </tr>
+        {{!-- 2 --}}
+        <tr>
+          <td class="hidden-md hidden-lg"><span class="subtitle margin-none">Penrose St Francis</span><span>Service provided on 11/08/2016</span><span>Claim processed on 12/15/2016</span></td>
+          <td class="hidden-sm hidden-xs"><span class="table-responsive__value">11/08/2016</span><span class="table-responsive__key italic text-small">Service Date</span></td>
+          <td class="hidden-sm hidden-xs"><span class="table-responsive__value">Penrose St Francis</span><span class="table-responsive__key italic text-small">Provider Name</span></td>
+          <td><span class="table-responsive__value">Med Supp Hospital SNF</span><span class="table-responsive__key italic text-small">Provider Type</span></td>
+          <td><span class="table-responsive__value">$XXX.XX</span><span class="table-responsive__key italic text-small">Charged</span></td>
+          <td><span class="table-responsive__value">Pending</span><span class="table-responsive__key italic text-small">Paid to You</span></td>
+          <td><span class="table-responsive__value">Pending</span><span class="table-responsive__key italic text-small">Paid to Provider</span></td>
+          <td class="hidden-sm hidden-xs"><span class="table-responsive__value">12/15/2016</span><span class="table-responsive__key italic text-small">Processed Date</span></td>
+          <td><a href="/medical-claims/details/ship-partb.html">More Info</a></td>
+        </tr>
+        {{!-- 3 --}}
+        <tr>
+          <td class="hidden-md hidden-lg"><span class="subtitle margin-none">Doogie Howser, M.D.</span><span>Service provided on 10/01/2016</span><span>Claim processed on 12/15/2016</span></td>
+          <td class="hidden-sm hidden-xs"><span class="table-responsive__value">10/01/2016</span><span class="table-responsive__key italic text-small">Service Date</span></td>
+          <td class="hidden-sm hidden-xs"><span class="table-responsive__value">Doogie Howser, M.D.</span><span class="table-responsive__key italic text-small">Provider Name</span></td>
+          <td><span class="table-responsive__value">Med Part B Services</span><span class="table-responsive__key italic text-small">Provider Type</span></td>
+          <td><span class="table-responsive__value">$XXX.XX</span><span class="table-responsive__key italic text-small">Charged</span></td>
+          <td><span class="table-responsive__value">Pending</span><span class="table-responsive__key italic text-small">Paid to You</span></td>
+          <td><span class="table-responsive__value">Pending</span><span class="table-responsive__key italic text-small">Paid to Provider</span></td>
+          <td class="hidden-sm hidden-xs"><span class="table-responsive__value">12/15/2016</span><span class="table-responsive__key italic text-small">Processed Date</span></td>
+          <td><a href="/medical-claims/details/ship-partb.html">More Info</a></td>
+        </tr>
+        {{!-- 4 --}}
+        <tr>
+          <td class="hidden-md hidden-lg"><span class="subtitle margin-none">Doogie Howser, M.D.</span><span>Service provided on 10/01/2016</span><span>Claim processed on 12/15/2016</span></td>
+          <td class="hidden-sm hidden-xs"><span class="table-responsive__value">10/01/2016</span><span class="table-responsive__key italic text-small">Service Date</span></td>
+          <td class="hidden-sm hidden-xs"><span class="table-responsive__value">Doogie Howser, M.D.</span><span class="table-responsive__key italic text-small">Provider Name</span></td>
+          <td><span class="table-responsive__value">Med Part B Services</span><span class="table-responsive__key italic text-small">Provider Type</span></td>
+          <td><span class="table-responsive__value">$XXX.XX</span><span class="table-responsive__key italic text-small">Charged</span></td>
+          <td><span class="table-responsive__value">Pending</span><span class="table-responsive__key italic text-small">Paid to You</span></td>
+          <td><span class="table-responsive__value">Pending</span><span class="table-responsive__key italic text-small">Paid to Provider</span></td>
+          <td class="hidden-sm hidden-xs"><span class="table-responsive__value">12/15/2016</span><span class="table-responsive__key italic text-small">Processed Date</span></td>
+          <td><a href="/medical-claims/details/ship-partb.html">More Info</a></td>
+        </tr>
+        {{!-- 5 --}}
+        <tr>
+          <td class="hidden-md hidden-lg"><span class="subtitle margin-none">Doogie Howser, M.D.</span><span>Service provided on 10/01/2016</span><span>Claim processed on 12/15/2016</span></td>
+          <td class="hidden-sm hidden-xs"><span class="table-responsive__value">10/01/2016</span><span class="table-responsive__key italic text-small">Service Date</span></td>
+          <td class="hidden-sm hidden-xs"><span class="table-responsive__value">Doogie Howser, M.D.</span><span class="table-responsive__key italic text-small">Provider Name</span></td>
+          <td><span class="table-responsive__value">Med Part B Services</span><span class="table-responsive__key italic text-small">Provider Type</span></td>
+          <td><span class="table-responsive__value">$XXX.XX</span><span class="table-responsive__key italic text-small">Charged</span></td>
+          <td><span class="table-responsive__value">Pending</span><span class="table-responsive__key italic text-small">Paid to You</span></td>
+          <td><span class="table-responsive__value">Pending</span><span class="table-responsive__key italic text-small">Paid to Provider</span></td>
+          <td class="hidden-sm hidden-xs"><span class="table-responsive__value">12/15/2016</span><span class="table-responsive__key italic text-small">Processed Date</span></td>
+          <td><a href="/medical-claims/details/ship-partb.html">More Info</a></td>
+        </tr>
+        {{!-- 6 --}}
+        <tr>
+          <td class="hidden-md hidden-lg"><span class="subtitle margin-none">Doogie Howser, M.D.</span><span>Service provided on 10/01/2016</span><span>Claim processed on 12/15/2016</span></td>
+          <td class="hidden-sm hidden-xs"><span class="table-responsive__value">10/01/2016</span><span class="table-responsive__key italic text-small">Service Date</span></td>
+          <td class="hidden-sm hidden-xs"><span class="table-responsive__value">Doogie Howser, M.D.</span><span class="table-responsive__key italic text-small">Provider Name</span></td>
+          <td><span class="table-responsive__value">Med Part B Services</span><span class="table-responsive__key italic text-small">Provider Type</span></td>
+          <td><span class="table-responsive__value">$XXX.XX</span><span class="table-responsive__key italic text-small">Charged</span></td>
+          <td><span class="table-responsive__value">Pending</span><span class="table-responsive__key italic text-small">Paid to You</span></td>
+          <td><span class="table-responsive__value">Pending</span><span class="table-responsive__key italic text-small">Paid to Provider</span></td>
+          <td class="hidden-sm hidden-xs"><span class="table-responsive__value">12/15/2016</span><span class="table-responsive__key italic text-small">Processed Date</span></td>
+          <td><a href="/medical-claims/details/ship-partb.html">More Info</a></td>
+        </tr>
+        {{!-- 7 --}}
+        <tr>
+          <td class="hidden-md hidden-lg"><span class="subtitle margin-none">Doogie Howser, M.D.</span><span>Service provided on 10/01/2016</span><span>Claim processed on 12/15/2016</span></td>
+          <td class="hidden-sm hidden-xs"><span class="table-responsive__value">10/01/2016</span><span class="table-responsive__key italic text-small">Service Date</span></td>
+          <td class="hidden-sm hidden-xs"><span class="table-responsive__value">Doogie Howser, M.D.</span><span class="table-responsive__key italic text-small">Provider Name</span></td>
+          <td><span class="table-responsive__value">Med Part B Services</span><span class="table-responsive__key italic text-small">Provider Type</span></td>
+          <td><span class="table-responsive__value">$XXX.XX</span><span class="table-responsive__key italic text-small">Charged</span></td>
+          <td><span class="table-responsive__value">Pending</span><span class="table-responsive__key italic text-small">Paid to You</span></td>
+          <td><span class="table-responsive__value">Pending</span><span class="table-responsive__key italic text-small">Paid to Provider</span></td>
+          <td class="hidden-sm hidden-xs"><span class="table-responsive__value">12/15/2016</span><span class="table-responsive__key italic text-small">Processed Date</span></td>
+          <td><a href="/medical-claims/details/ship-partb.html">More Info</a></td>
+        </tr>
+        {{!-- 8 --}}
+        <tr>
+          <td class="hidden-md hidden-lg"><span class="subtitle margin-none">Doogie Howser, M.D.</span><span>Service provided on 10/01/2016</span><span>Claim processed on 12/15/2016</span></td>
+          <td class="hidden-sm hidden-xs"><span class="table-responsive__value">10/01/2016</span><span class="table-responsive__key italic text-small">Service Date</span></td>
+          <td class="hidden-sm hidden-xs"><span class="table-responsive__value">Doogie Howser, M.D.</span><span class="table-responsive__key italic text-small">Provider Name</span></td>
+          <td><span class="table-responsive__value">Med Part B Services</span><span class="table-responsive__key italic text-small">Provider Type</span></td>
+          <td><span class="table-responsive__value">$XXX.XX</span><span class="table-responsive__key italic text-small">Charged</span></td>
+          <td><span class="table-responsive__value">Pending</span><span class="table-responsive__key italic text-small">Paid to You</span></td>
+          <td><span class="table-responsive__value">Pending</span><span class="table-responsive__key italic text-small">Paid to Provider</span></td>
+          <td class="hidden-sm hidden-xs"><span class="table-responsive__value">12/15/2016</span><span class="table-responsive__key italic text-small">Processed Date</span></td>
+          <td><a href="/medical-claims/details/ship-partb.html">More Info</a></td>
+        </tr>
+        {{!-- 9 --}}
+        <tr>
+          <td class="hidden-md hidden-lg"><span class="subtitle margin-none">Doogie Howser, M.D.</span><span>Service provided on 10/01/2016</span><span>Claim processed on 12/15/2016</span></td>
+          <td class="hidden-sm hidden-xs"><span class="table-responsive__value">10/01/2016</span><span class="table-responsive__key italic text-small">Service Date</span></td>
+          <td class="hidden-sm hidden-xs"><span class="table-responsive__value">Doogie Howser, M.D.</span><span class="table-responsive__key italic text-small">Provider Name</span></td>
+          <td><span class="table-responsive__value">Med Part B Services</span><span class="table-responsive__key italic text-small">Provider Type</span></td>
+          <td><span class="table-responsive__value">$XXX.XX</span><span class="table-responsive__key italic text-small">Charged</span></td>
+          <td><span class="table-responsive__value">Pending</span><span class="table-responsive__key italic text-small">Paid to You</span></td>
+          <td><span class="table-responsive__value">Pending</span><span class="table-responsive__key italic text-small">Paid to Provider</span></td>
+          <td class="hidden-sm hidden-xs"><span class="table-responsive__value">12/15/2016</span><span class="table-responsive__key italic text-small">Processed Date</span></td>
+          <td><a href="/medical-claims/details/ship-partb.html">More Info</a></td>
+        </tr>
+        {{!-- 10 --}}
+        <tr>
+          <td class="hidden-md hidden-lg"><span class="subtitle margin-none">Doogie Howser, M.D.</span><span>Service provided on 10/01/2016</span><span>Claim processed on 12/15/2016</span></td>
+          <td class="hidden-sm hidden-xs"><span class="table-responsive__value">10/01/2016</span><span class="table-responsive__key italic text-small">Service Date</span></td>
+          <td class="hidden-sm hidden-xs"><span class="table-responsive__value">Doogie Howser, M.D.</span><span class="table-responsive__key italic text-small">Provider Name</span></td>
+          <td><span class="table-responsive__value">Med Part B Services</span><span class="table-responsive__key italic text-small">Provider Type</span></td>
+          <td><span class="table-responsive__value">$XXX.XX</span><span class="table-responsive__key italic text-small">Charged</span></td>
+          <td><span class="table-responsive__value">Pending</span><span class="table-responsive__key italic text-small">Paid to You</span></td>
+          <td><span class="table-responsive__value">Pending</span><span class="table-responsive__key italic text-small">Paid to Provider</span></td>
+          <td class="hidden-sm hidden-xs"><span class="table-responsive__value">12/15/2016</span><span class="table-responsive__key italic text-small">Processed Date</span></td>
+          <td><a href="/medical-claims/details/ship-partb.html">More Info</a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+---
+title: Payments
+layout: default
+hasFooter: true
+hasHeader: true
+hasScript:
+- table
+- variation
+hasHelp: FED
+---
+<div class="payments">
+    <section class="container--base">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 margin-small">
+                    <h2 class="h2 margin-small">
+                        One-Time Payment Submitted
+                    </h2>
+                    <p class="color-green-dark bold text-medium variation-el"><img src="/images/icon-svgs/check-circle.svg" alt="check" class="check-circle-icon"> Your payment is being processed.</p>
+                    <p class="margin">Thank you for your payment. Your payment is being processed. It typically takes 1 – 3 business days for your payment to be processed and applied to your account. Please print this page for your records.</p>
+
+                    {{> payments-review-table paymentsReview.onetimeEft }}
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    {{> payment-submitted-agreement }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    {{> payment-submitted-footer }}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+</div>
+{{> variation-toggles }}

@@ -1,0 +1,84 @@
+<!-- Start: Add modal -->
+<div id="addDrugModal" tabindex="-1" role="dialog" aria-labelledby="addDrugModalLabel" class="modal fade">
+  <div role="document" class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <a class="link link--icon-right link--icon-circled align-right" data-icon="" data-dismiss="modal" aria-label="Cancel" type="button">Cancel</a>
+        <div id="addDrugModalLabel" class="modal-title">
+          <h1 class="h3 margin-none">Add Drug</h1>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-12">
+              * required fields
+              <hr>
+							<div class="table-body responsive margin-small">
+                <form action="" id="add-drug-form">
+                  <legend class="sr-only">Add medication</legend>
+                  <div class="table-body-row field--row">
+                    <div class="table-body-cell">
+                      <label for="drug-name">Drug Name: *</label>
+                    </div>
+                    <div class="table-body-cell">
+                      <div class="field-input">
+                        <input type="text" name="drug-name" id="drug-name">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="table-body-row field--row">
+                    <div class="table-body-cell">
+                      <label for="drug-strength">Strength:</label>
+                    </div>
+                    <div class="table-body-cell">
+                      <div class="field-input">
+                        <input type="text" name="drug-strength" id="drug-strength">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="table-body-row field--row">
+                    <div class="table-body-cell">
+                      <label for="drug-frequency">Frequency:</label>
+                    </div>
+                    <div class="table-body-cell">
+                      <div class="field-input">
+                        <input type="text" name="drug-frequency" id="drug-frequency">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="table-body-row field--row">
+                    <div class="table-body-cell">
+                      <label for="drug-provider">Provider:</label>
+                    </div>
+                    <div class="table-body-cell">
+                      <div class="field-input">
+                        <input type="text" name="drug-provider" id="drug-provider">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="table-body-row field--row">
+                    <div class="table-body-cell">
+                      <label for="drug-date">Date:</label>
+                    </div>
+                    <div class="table-body-cell">
+                      <div class="field-input">
+                        <input type="date" name="drug-date" id="drug-date" pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}">
+                      </div>
+                    </div>
+                  </div>
+                </form>
+							</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn add-drug-form-button">
+          <span class="btn btn--primary btn--medium-width">Add Drug</span>
+        </button>
+        <a href="#" data-dismiss="modal">CANCEL</a>
+      </div>
+    </div>
+  </div>
+</div>

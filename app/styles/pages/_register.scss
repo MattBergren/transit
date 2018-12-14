@@ -1,0 +1,388 @@
+.register {
+  #additional-info {
+    display: none;
+  }
+
+  .field.additional-plan {
+    margin-top: $spacing-large;
+    margin-bottom: 0;
+  }
+
+  .field-or-option {
+    display: flex;
+    justify-content: space-between;
+    max-width: 780px;
+    flex-wrap: wrap;
+
+    .field:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .error {
+      flex: 1 1 100%;
+      margin-top: $spacing-small;
+    }
+
+    span {
+      align-self: center;
+      padding: 0 $spacing-small;
+      text-align: center;
+      display: block;
+      position: relative;
+      max-width: 300px;
+
+      &:before {
+        content: 'or';
+        display: inline-block;
+        position: relative;
+        padding: 0 5px;
+        background-color: $color-white;
+        z-index: 10;
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 100%;
+        height: 1px;
+        background-color: $color-black;
+        z-index: 5;
+      }
+    }
+
+    & > fieldset:last-of-type {
+      padding-left: 34px;
+    }
+
+    @media (max-width: $breakpoint-md - 1px) {
+      flex-direction: column;
+
+      & > fieldset:last-of-type {
+        padding-left: 0;
+        order: -2;
+        margin-bottom: $spacing-small;
+      }
+
+      span {
+        order: -1;
+        align-self: flex-start;
+        transform: translateX(150px) translateX(-75%);
+      }
+    }
+  }
+
+  .error-icon {
+    height: 1.2em;
+    width: auto;
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+
+  .progress-step-bar {
+    // Variables
+    $diameter-large: 2em;
+    $diameter-regular: 1.5em;
+    $diameter-small: 0.5em;
+    $height-regular: 0.250em;
+    $height-large: 0.375em;
+    $regular-color: $color-gray-base;
+    $highlight-color: $color-green-dark;
+
+    // Functions
+    @function divide($n, $d) {
+      @return $n / $d;
+    }
+
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    position: relative;
+    margin-top: 10px;
+    padding-top: (($diameter-small * 4) / 2) - $height-regular;
+
+    @media (max-width: $breakpoint-sm - 1px) {
+      padding-bottom: 2em + ($diameter-small);
+    }
+
+    .step-bullet {
+      display: block;
+      position: relative;
+      margin: 0;
+      flex: 1 0 0;
+      flex-grow: 1;
+
+      &:before {
+        content: '\E5CA';
+        font-family: 'Material Icons';
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+        position: relative;
+        color: $color-white;
+        font-weight: 600;
+        height: $diameter-small;
+        overflow: visible;
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        border-radius: 50%;
+        width: $diameter-small;
+        height: $diameter-small;
+        background-color: $highlight-color;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%) scale(3);
+        z-index: 50;
+      }
+
+      .step-labels {
+        display: block;
+        color: $color-digital-gray;
+        text-transform: uppercase;
+        text-align: center;
+        position: relative;
+        padding-top: $diameter-regular;
+
+        &:before {
+          content: '';
+          display: block;
+          position: absolute;
+          top: -$height-large;
+          left: 0;
+          width: 100%;
+          height: $height-regular;
+          transform: scale(1.5);
+          background: linear-gradient(90deg, $highlight-color 50%, $highlight-color 50%);
+          z-index: 3;
+        }
+
+        &:after {
+          content: '';
+          display: block;
+          position: absolute;
+          top: -$height-large;
+          left: 0;
+          width: 100%;
+          height: $height-regular;
+          background: linear-gradient(90deg, $regular-color 50%, $regular-color 50%);
+          z-index: 2;
+        }
+
+        p {
+          margin: 0;
+          font-weight: 600;
+        }
+
+        @media (max-width: $breakpoint-sm - 1px) {
+          p, span {
+            display: none;
+          }
+        }
+      }
+
+      &:first-child {
+        .step-labels {
+          &:before {
+            background: linear-gradient(90deg, transparent 50%, $highlight-color 50%);
+          }
+          &:after {
+            background: linear-gradient(90deg, transparent 50%, $regular-color 50%);
+          }
+        }
+      }
+
+      &:first-child.active {
+        .step-labels {
+          &:before {
+            display: none;
+          }
+
+          @media (max-width: $breakpoint-sm - 1px) {
+            text-align: left;
+
+            p, span {
+              text-align: left;
+              left: 50%;
+              transform: translateX(-$diameter-regular);
+            }
+          }
+        }
+      }
+
+      &:last-child.active {
+        .step-labels {
+          @media (max-width: $breakpoint-sm - 1px) {
+            text-align: right;
+
+            p, span {
+              width: 100%;
+              text-align: right;
+              left: auto;
+              right: 50%;
+              transform: translateX($diameter-regular);
+              direction: rtl;
+            }
+          }
+        }
+      }
+
+      &:last-child {
+        .step-labels {
+          &:before {
+            background: linear-gradient(90deg, $highlight-color 50%, transparent 50%);
+          }
+          &:after {
+            background: linear-gradient(90deg, $regular-color 50%, transparent 50%);
+          }
+        }
+      }
+
+      &.active {
+        &:before {
+          content: '';
+          display: block;
+          width: $diameter-small;
+          height: $diameter-small;
+          border-radius: 50%;
+          margin: 0 auto;
+          z-index: 100;
+          position: relative;
+          background-color: $color-white;
+          transform: scale(1.5);
+        }
+
+        // Complete styles
+        &.complete {
+          &:before {
+            content: '\E5CA';
+            font-family: 'Material Icons';
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+            position: relative;
+            color: $color-white;
+            font-weight: 600;
+            width: auto;
+            overflow: visible;
+            background-color: transparent;
+            transform: scale(1);
+          }
+
+          &:after {
+            background-color: $highlight-color;
+            transform: translateX(-50%) scale(3);
+          }
+
+          .step-labels {
+            color: $color-digital-gray;
+          }
+        }
+
+        &:after {
+          content: '';
+          display: block;
+          border-radius: 50%;
+          background-color: $color-teal-base;
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translateX(-50%) scale(4);
+          z-index: 50;
+        }
+
+        .step-labels {
+          color: inherit;
+
+          &:before {
+            background: linear-gradient(90deg, $highlight-color 50%, transparent 50%);
+          }
+
+          p {
+            // color: $color-teal-base;
+          }
+
+          @media (max-width: $breakpoint-sm - 1px) {
+            padding: 0;
+
+            p, span {
+              display: block;
+              position: absolute;
+              left: 50%;
+              transform: translateX(-50%);
+              width: auto;
+              white-space: nowrap;
+            }
+
+            p {
+              top: $diameter-regular;
+              white-space: nowrap;
+            }
+
+            span {
+              top: $diameter-regular + 1.25em;
+            }
+          }
+        }
+
+        & ~ .step-bullet {
+          &:before {
+            content: '';
+            display: block;
+            width: $diameter-small;
+            height: $diameter-small;
+            border-radius: 50%;
+            background-color: $regular-color;
+            margin: 0 auto;
+            position: relative;
+            z-index: 100;
+          }
+
+          &:after {
+            display: none;
+          }
+
+          .step-labels{
+            &:before {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#tooltip-username, #tooltip-password {
+  & > p {
+    margin-bottom: 7px;
+    padding-left: 1.4em;
+    position: relative;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      background: url('/images/icon-svgs/important.svg');
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &.success {
+      &:before {
+        background: url('/images/icon-svgs/check.svg');
+      }
+    }
+  }
+}

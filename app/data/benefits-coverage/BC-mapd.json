@@ -1,0 +1,46 @@
+{
+  "table-small": {
+    "title-section-one": [
+      {
+        "title": "Name",
+        "content": "Jonathan Doe"
+      },
+      {
+        "title": "Member ID",
+        "content": "XXXXXX"
+      },
+      {
+        "title": "Group ID",
+        "content": "XXXXXX"
+      }
+    ],
+    "title-section-two": [
+      {
+        "title": "Effective Date",
+        "content": "XX/XX/XX"
+      },
+      {
+        "title": "Late-Enrollment",
+        "content": "XX"
+      },
+      {
+        "title": "Extra Help Level",
+        "content": "XX"
+      }
+    ],
+    "initial-coverage": [
+      {
+        "title": "Covered generic drugs",
+        "content": "$XX.XX or you'll never pay more than 15%"
+      },
+      {
+        "title": "All other covered drugs",
+        "content": "$XX.XX or you'll never pay more than 15%"
+      },
+      {
+        "title": "All other covered drugs",
+        "content": "<#>"
+      }
+    ]
+  }
+}

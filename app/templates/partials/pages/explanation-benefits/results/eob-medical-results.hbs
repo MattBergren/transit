@@ -1,0 +1,71 @@
+<div class="row">
+  <div class="col-md-12">
+    <h2 class="h4">
+      You have
+      <span class="bold number-title">3</span>
+      {{#if ship}}<span class="bold">EOBs</span>{{else}}<span class="bold eob-title">Medical EOBs</span>{{/if}} for the
+      <span class="bold days-title">Last 90 days</span>
+    </h2>
+    <p>
+      {{#if ship}}
+      EOB statements that were created prior to December 2013 will not be posted to this site. EOB statements posted to this site will look slightly different than EOB statements that included a check. The electronic copies do not include an image of the check.
+      {{else}}
+      The Medical EOB is a summary of the claims we get for your medical care in a particular month. For example, if we get claims in April, you’ll get a EOB in May. If there are no claims in May, you won’t get a EOB in June.
+      {{/if}}
+    </p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-8">
+    <a href="#collapseEOB" role="button" data-toggle="collapse"
+      aria-expanded="false" aria-controls="collapseEOB" class="display-inline-block collapse-expand">
+      Learn More About My Medical EOB
+      <span class="material-icons">keyboard_arrow_down</span>
+    </a>
+    <div class="collapse-wrapper margin-small">
+      <div class="collapse" id="collapseEOB">
+        {{#if ship}}
+          <p class="margin-none">
+            Qui non exercitation aliquip do pariatur voluptate officia culpa consectetur mollit laborum reprehenderit.
+            Laborum enim aliquip dolor consequat nisi pariatur dolore esse aliqua officia laborum consequat voluptate.
+            Fugiat veniam officia id laboris in excepteur voluptate exercitation fugiat ullamco ullamco incididunt pariatur
+            fugiat reprehenderit voluptate. Pariatur nisi do aute aliqua consectetur cupidatat adipisicing officia consectetur
+            culpa qui anim dolore dolore. Tempor ad ut excepteur cillum velit commodo sit nisi aliquip aute veniam aliqua anim
+            dolor aute voluptate deserunt. In anim et reprehenderit veniam in ipsum laboris incididunt voluptate sint.
+          </p>
+          {{else}}
+            {{!-- PDF --}}
+            <ul class="document-list-new margin-large">
+              <li>
+                <a href="#"><img src="/images/icon-svgs/PDF_outlined.svg" alt="PDF">How to read your Medical EOB <span class="doc-specs">(PDF, size)</span></a>
+              </li>
+            </ul>
+
+            <ul class="video-list-group">
+              <li class="video-list-group-item">
+                <a href="#" class="video-box" data-toggle="modal" data-target="#videoModal">Video</a>
+                <div class="display-inline-block">
+                  <p class="bold">How to read your Medical EOB</p>
+                  <a href="#" data-toggle="modal" data-target="#videoModal">Watch Video</a>
+                </div>
+              </li>
+            </ul>
+        {{/if}}
+      </div>
+    </div>
+
+    {{> eob-table }}
+  </div>
+</div>
+{{#unless ship}}
+  <div class="row">
+    <div class="col-md-12">
+      <p>In some instances, the “Download EOB” link may open an Explanation of Payment (PDF) if you are owed money based on your health care claims.</p>
+      <p class="margin-none">
+        <span class="bold">Is there a provider listed on an EOB that you do not recognize?</span>
+        There are times when your doctor contracts with a facility or a lab for services. If you have any questions about your EOB,
+        <a href="#" class="lowercase">contact UnitedHealthcare</a>.
+      </p>
+    </div>
+  </div>
+{{/unless}}

@@ -1,0 +1,247 @@
+{{!-- Modal --}}
+<div class="modal fade" id="drugModal" tabindex="-1" role="dialog" aria-labelledby="drugModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a class="link link--icon-right link--icon-circled align-right" data-icon="&#xE5CD;"
+                    data-dismiss="modal" aria-label="Close">Cancel</a>
+                <h2 class="modal-title sr-only" id="drugModalLabel">Add a new drug</h2>
+            </div>
+            <div class="modal-body full-padding">
+                <div class="add-drug-animation-wrapper">
+                    <div class="add-drug">
+                        {{!-- Slide 1 --}}
+                        <section class="add-drug-slide" aria-hidden="false" tabindex="0">
+                            <header class="add-drug-slide-header">
+                                <h2 class="subtitle margin-none">Add a New Drug</h2>
+                            </header>
+                            <div class="add-drug-slide-body">
+                                <form id="add-drug-search">
+                                    <div class="display-flex h-center" id="main-search">
+                                        <div class="field--inline">
+                                            <label for="drug-search-input" class="sr-only">Drug Search</label>
+                                            <div class="field-input">
+                                                <input type="text" id="drug-search-input" name="drug-search-input" aria-autocomplete="list">
+                                            </div>
+                                        </div>
+                                        <button class="btn" id="drug-search-button" aria-controls="alt-search" aria-expanded="false">
+                                            <span class="btn btn--primary" data-button-icon="search">
+                                                Search
+                                            </span>
+                                        </button>
+                                    </div>
+                                    <div id="alt-search" class="margin-large" style="display: none;" tabindex="-1">
+                                        <div class="row">
+                                            <div class="col-sm-10 col-md-offset-2 align-left">
+                                                <fieldset id="alt-search-radios">
+                                                    <legend class="margin-small">Select Matching Drug *</legend>
+                                                    <div id="lipitor-radios" class="hidden">
+                                                        <a href="#" role="button" onkeypress="btnSpacePress(this, event)" onclick="btnClick(this, event)">Lipitor</a>
+                                                        <a href="#" role="button" onkeypress="btnSpacePress(this, event)" onclick="btnClick(this, event)">Liphetamine and Dextroamphetamine</a>
+                                                    </div>
+                                                    <div id="drug-radios" class="hidden">
+                                                        <a href="#" role="button" onkeypress="btnSpacePress(this, event)" onclick="btnClick(this, event)">Drug A</a>
+                                                        <a href="#" role="button" onkeypress="btnSpacePress(this, event)" onclick="btnClick(this, event)">Drug B</a>
+                                                        <a href="#" role="button" onkeypress="btnSpacePress(this, event)" onclick="btnClick(this, event)">Drug C</a>
+                                                        <a href="#" role="button" onkeypress="btnSpacePress(this, event)" onclick="btnClick(this, event)">Drug D</a>
+                                                        <a href="#" role="button" onkeypress="btnSpacePress(this, event)" onclick="btnClick(this, event)">Drug E</a>
+                                                        <a href="#" role="button" onkeypress="btnSpacePress(this, event)" onclick="btnClick(this, event)">Drug F</a>
+                                                        <a href="#" role="button" onkeypress="btnSpacePress(this, event)" onclick="btnClick(this, event)">Drug G</a>
+                                                        <a href="#" role="button" onkeypress="btnSpacePress(this, event)" onclick="btnClick(this, event)">Drug H</a>
+                                                        <a href="#" role="button" onkeypress="btnSpacePress(this, event)" onclick="btnClick(this, event)">Drug I</a>
+                                                    </div>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="display-block align-center">
+                                        <a href="#" data-dismiss="modal" aria-label="Close">Cancel</a>
+                                    </div>
+                                    <div class="form-error-block align-center"></div>
+                                </form>
+                            </div>
+                        </section>
+                        {{!-- Slide 2 --}}
+                        <section class="add-drug-slide" aria-hidden="true" tabindex="-1">
+                            <header class="add-drug-slide-header">
+                                <h2 class="subtitle margin-none">Add Drug Details</h2>
+                            </header>
+                            <div class="add-drug-slide-body">
+                                <h3 class="h4 margin-none drug-name">Nexium</h3>
+                                * required fields
+                                <hr>
+                                <form id="add-drug-details">
+                                    <div class="table-body responsive">
+                                        {{!-- Dosage start --}}
+                                        <div class="table-body-row field--row-small">
+                                            <div class="table-body-cell">
+                                                <span class="bold">Dosage *</span>
+                                            </div>
+                                            <div class="table-body-cell">
+                                                <fieldset id="dosage-radios">
+                                                    <legend class="sr-only">Dosage *</legend>
+                                                    <div class="radio-block">
+                                                        <input type="radio" id="radio-1" name="dosage" value="20" checked="checked">
+                                                        <label for="radio-1">20MG</label>
+                                                    </div>
+                                                    <div class="radio-block">
+                                                        <input type="radio" id="radio-2" name="dosage" value="40">
+                                                        <label for="radio-2">40MG</label>
+                                                    </div>
+                                                    <div class="radio-block">
+                                                        <input type="radio" id="radio-3" name="dosage" value="80">
+                                                        <label for="radio-3">80MG</label>
+                                                    </div>
+                                                    <div class="radio-block">
+                                                        <input type="radio" id="radio-4" name="dosage" value="120">
+                                                        <label for="radio-4">120MG</label>
+                                                    </div>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                        {{!-- Package start --}}
+                                        <div class="table-body-row field--row-small">
+                                            <div class="table-body-cell">
+                                                <span class="bold">Package *</span>
+                                            </div>
+                                            <div class="table-body-cell">
+                                                <fieldset id="dosage-package">
+                                                    <legend class="sr-only">Package *</legend>
+                                                    <div class="radio-block">
+                                                        <input type="radio" id="package" name="package" value="20" checked="checked">
+                                                        <label for="package">Pen of 2 (sold in a package
+                                                            of 1)</label>
+                                                    </div>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                        {{!-- Quantity start --}}
+                                        <div class="table-body-row field--row-small">
+                                            <div class="table-body-cell">
+                                                <label for="quantity">Select Your Quantity *</label>
+                                            </div>
+                                            <div class="table-body-cell">
+                                                <div class="field-input--radio">
+                                                    <input type="number" name="quantity" id="quantity" placeholder="Quantity" class="input-small"
+                                                        value="30" min="1">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {{!-- Frequency start --}}
+                                        <div class="table-body-row field--row-small">
+                                            <div class="table-body-cell">
+                                                <label for="frequency">Select Your Frequency *</label>
+                                            </div>
+                                            <div class="table-body-cell">
+                                                <div class="select--regular margin-large">
+                                                    <select name="frequency" id="frequency">
+                                                        <option value="1">Every 1 Month</option>
+                                                        <option value="3">Every 3 Months</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="btn-group--center margin-small">
+                                        <a href="#" class="btn btn--secondary drug-back">Back</a>
+                                        <button id="drug-dosage-button" class="btn">
+                                            <span class="btn btn--primary">Continue</span>
+                                        </button>
+                                    </div>
+                                    <a href="#" class="display-block align-center" data-dismiss="modal">Cancel</a>
+                                </form>
+                            </div>
+                        </section>
+                        {{!-- Slide 3 --}}
+                        <section class="add-drug-slide" aria-hidden="true" tabindex="-1">
+                            <header class="add-drug-slide-header">
+                                <h2 class="subtitle margin-none">Savings Opportunity</h2>
+                            </header>
+                            <section class="add-drug-slide-body">
+                                <h3 class="h4 margin-none drug-name">Nexium 40mg Daily</h3>
+                                <hr>
+                                <div class="message-block success full-width">
+                                    <div class="message-block-body display-flex v-center">
+                                        <div>
+                                            <img src="/images/icon-svgs/money.svg" alt="Money" class="img-small" style="padding-right: 5px;"
+                                            />
+                                        </div>
+                                        <div>
+                                            Save money by
+                                            <span class="bold color-green-dark">switching to a generic drug</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="margin-large">
+                                    You may be able to save money by switching to a generic drug. The following generic
+                                    drug is available for the drug you entered:
+                                </p>
+                                <h3 class="h4 margin-small drug-name-generic">Acme Nonexium 40mg Daily</h3>
+                                <form>
+                                    <fieldset class="margin-large" id="generic-check">
+                                        <legend class="sr-only">Choose option</legend>
+                                        <div class="display-block margin-extra-small">
+                                            <div class="radio-block">
+                                                <input type="radio" id="generic-1" name="generic-radio" value="generic">
+                                                <label for="generic-1">Switch to Generic</label>
+                                            </div>
+                                        </div>
+                                        <div class="display-block">
+                                            <div class="radio-block display-block">
+                                                <input type="radio" id="generic-2" name="generic-radio" value="original" checked="checked">
+                                                <label for="generic-2">Keep Brand Name Drug</label>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                    <div class="btn-group--center margin-small">
+                                        <a href="#" class="btn btn--secondary drug-back">Back</a>
+                                        <button class="btn" id="save-drug-button">
+                                            <span class="btn btn--primary">Save Drug</span>
+                                        </button>
+                                    </div>
+                                    <a href="#" class="display-block align-center" data-dismiss="modal">Cancel</a>
+                                </form>
+                            </section>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="genericModal" tabindex="-1" role="dialog" aria-labelledby="genericModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a class="link link--icon-right link--icon-circled align-right" data-icon="&#xE5CD;"
+                    data-dismiss="modal" aria-label="Close">Cancel</a>
+                <h2 class="modal-title sr-only" id="genericModalLabel">Switch To Generic</h2>
+            </div>
+            <div class="modal-body full-padding">
+                <h2 class="subtitle margin-none">Savings Opportunity</h2>
+                <h3 class="h4 margin-none drug-name">Nexium 40mg Daily</h3>
+                <hr>
+                <div class="message-block success full-width">
+                    <div class="message-block-body display-flex v-center">
+                        <div>
+                            <img src="/images/icon-svgs/money.svg" alt="Money" class="img-small" style="padding-right: 5px;"
+                            />
+                        </div>
+                        <div>
+                            Save money by
+                            <span class="bold color-green-dark">switching to a generic drug</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="margin-large">
+                    You may be able to save money by switching to a generic drug. The following generic
+                    drug is available for the drug you entered:
+                </p>
+                <h3 class="h4 margin-large generic-name">Acme Nonexium 40mg Daily</h3>
+                <a href="#" data-dismiss="modal" class="btn btn--center btn--primary margin-small">Switch to Generic</a>
+                <a href="#" data-dismiss="modal" class="display-block align-center">Cancel</a>
+            </div>
+        </div>
+    </div>
+</div>

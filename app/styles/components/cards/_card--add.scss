@@ -1,0 +1,23 @@
+&.card--add {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid $color-digital-blue;
+  color: $color-digital-blue;
+  text-transform: uppercase;
+  font-weight: 500;
+  min-height: 125px;
+  cursor: pointer;
+
+  &:hover {
+    border-color: $color-btn-primary-hover;
+    color: $color-btn-primary-hover;
+  }
+
+  &:active {
+    background-color: $color-digital-blue;
+    border-color: $color-digital-blue;
+    color: $color-white;
+  }
+}

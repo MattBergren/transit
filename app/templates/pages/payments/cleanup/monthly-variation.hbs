@@ -1,0 +1,19 @@
+---
+title: Payments
+layout: default
+hasFooter: true
+hasHeader: true
+hasScript:
+    - table
+    - payment-history
+    - variation
+hasHelp: FED
+---
+<div class="payments">
+    {{> payments-overview
+        paymentsOverview.federalMonthly
+        variation="true"
+    }}
+    {{> payments-history}}
+</div>
+{{> variation-toggles }}

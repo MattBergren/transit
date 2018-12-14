@@ -1,0 +1,49 @@
+---
+title: One Time Payment Review
+layout: default
+hasFooter: false
+hasHeader: false
+iframe: true
+hasScript:
+- cc-enhancement-app
+---
+
+<div id="cc-enhancement">
+
+    {{> cc-intro title="Review Automatic Recurring Payments" plan="Medicare Prescription Drug Plan"}}
+
+    <div class="container">
+
+        {{> cc-member-header status="true" type="Setup Automatic Recurring Payments"}}
+
+        {{> payments-review-table paymentsReview.autoEft }}
+        
+        {{>cc-edit-link 
+            linkText="Edit Payment Details"
+            url="checking-form.html"    
+        }}
+
+        <form id="terms-only" action="/payments/federal/onetimepay/submitted.html">
+            {{> payments-fed-confirm-legal}}
+            <div class="container--base">
+                {{> payment-review-actions
+                    continueUrl="/payments/federal/onetimepay/submitted.html"
+                    btnName="Continue"
+                }}
+            </div>
+        </form>
+
+        {{> cancel }}
+
+    </div>
+
+
+
+
+
+
+
+</div>
+
+
+

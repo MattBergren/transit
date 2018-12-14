@@ -1,0 +1,219 @@
+{
+  "plan-materials": {
+    "english": [
+      {
+        "title": "Getting Started Guide",
+        "type": "pdf",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation."
+      },
+      {
+        "title": "Benefit Highlights",
+        "type": "pdf"
+      },
+      {
+        "title": "Summary of Benefits",
+        "type": "pdf"
+      },
+      {
+        "title": "Certificate of Coverage",
+        "type": "pdf"
+      },
+      {
+        "title": "Evidence of Coverage",
+        "type": "pdf"
+      },
+      {
+        "title": "Provider Directory",
+        "type": "pdf"
+      },
+      {
+        "title": "Provider Access Booklet",
+        "type": "pdf"
+      },
+      {
+        "title": "Member/Provider Guide to Care",
+        "type": "pdf"
+      },
+      {
+        "title": "Formulary/Drug List - Abridged",
+        "type": "pdf"
+      },
+      {
+        "title": "Formulary/Drug List - Comprehensive",
+        "type": "pdf"
+      }
+    ]
+  },
+  "annual-changes": {
+    "year-2016": [
+      {
+        "title": "Annual Notice of Changes",
+        "type": "pdf"
+      },
+      {
+        "title": "Evidence of Coverage",
+        "type": "pdf"
+      },
+      {
+        "title": "Comprehensive Formulary",
+        "type": "pdf"
+      }
+    ],
+    "year-2017": [
+      {
+        "title": "Annual Notice of Changes",
+        "type": "pdf"
+      },
+      {
+        "title": "Evidence of Coverage",
+        "type": "pdf"
+      },
+      {
+        "title": "Non-Discrimination Notice",
+        "type": "pdf"
+      },
+      {
+        "title": "Comprehensive Formulary",
+        "type": "pdf"
+      }
+    ],
+    "directory": [
+      {
+        "title": "2016 Provider Directory",
+        "type": "pdf"
+      },
+      {
+        "title": "2016 Pharmacy Directory Information",
+        "type": "pdf"
+      },
+      {
+        "title": "2017 Provider Directory",
+        "type": "pdf"
+      },
+      {
+        "title": "2017 Pharmacy Directory Information",
+        "type": "pdf"
+      }
+    ]
+  },
+  "resources": {
+    "drug-mail-order": [
+      {
+        "title": "Prescription Mail Order For - Preferred Mail Service through OptumRx",
+        "type": "pdf"
+      }
+    ],
+    "premium-payment-claim": [
+      {
+        "title": "How to read your bill",
+        "type": "pdf"
+      },
+      {
+        "title": "Electronic Funds Transfer Form (EFT)",
+        "type": "pdf"
+      },
+      {
+        "title": "Premium Deduction from Social Security Payment Form",
+        "type": "pdf"
+      },
+      {
+        "title": "Medical Reimbursement Form",
+        "type": "pdf"
+      },
+      {
+        "title": "Medical Reimbursement Form – For outside of United States and U.S. Territories",
+        "type": "pdf"
+      },
+      {
+        "title": "Prescription Mail Order Form - Preferred Mail Service Pharmacy through OptumRx ",
+        "type": "pdf"
+      },
+      {
+        "title": "Prescription Drug Reimbursement Form",
+        "type": "pdf"
+      }
+    ],
+    "authorization": [
+      {
+        "title": "How to appoint a representative",
+        "type": "link"
+      },
+      {
+        "title": "Appointment of Representative Form",
+        "type": "link"
+      },
+      {
+        "title": "Authorization to Share Personal Information Form",
+        "type": "pdf"
+      },
+      {
+        "title": "Medication Prior Authorization Request Form",
+        "type": "pdf"
+      },
+      {
+        "title": "Medicare Part D Coverage Determination Request Form",
+        "type": "pdf"
+      },
+      {
+        "title": "Specialty Pharmacy Prior Authorization Request Forms",
+        "type": "link"
+      },
+      {
+        "title": "Redetermination Request Form",
+        "type": "pdf"
+      }
+    ],
+    "other": [
+      {
+        "title": "Appeals and Grievances – Medicare Advantage Plans",
+        "type": "link"
+      },
+      {
+        "title": "Commitment to quality",
+        "type": "pdf"
+      },
+      {
+        "title": "UnitedHealthcare Medicare Advantage Coverage Summaries",
+        "type": "link"
+      },
+      {
+        "title": "Member rights and responsibilities",
+        "type": "link"
+      },
+      {
+        "title": "Potential for Contract Termination",
+        "type": "pdf"
+      },
+      {
+        "title": "Prescription drug coverage determinations and appeals, drug conditions and limitations and quality assurance policies",
+        "type": "link"
+      },
+      {
+        "title": "Prescription Drug Transition Process",
+        "type": "link"
+      },
+      {
+        "title": "Medication Therapy Management (MTM) Program",
+        "type": "link"
+      },
+      {
+        "title": "60-day formulary change notice",
+        "type": "link"
+      },
+      {
+        "title": "Seasonal flu shot information",
+        "type": "link"
+      }
+    ],
+    "disenrollment": [
+      {
+        "title": "Disenrollement Form (Online)",
+        "type": "link"
+      },
+      {
+        "title": "Disenrollement Form",
+        "type": "pdf"
+      }
+    ]
+  }
+}

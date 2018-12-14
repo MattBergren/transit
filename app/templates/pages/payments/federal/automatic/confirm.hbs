@@ -1,0 +1,84 @@
+---
+title: Payments
+layout: default
+hasFooter: false
+hasHeader: false
+iframe: true
+hasScript:
+- cc-enhancement-app
+---
+
+<div id="cc-enhancement">
+
+    {{> cc-intro title="Your Automatic Recurring Payment Start Date is 01/01/2018" confirm="true" secondaryHeader="Payment method will continue to appear as Monthly Billing until the first of the month" }}
+
+    <div class="container">
+
+       {{> cc-member-header status="true" type="Setup Automatic Recurring Payments"}}
+
+       <div class="payment-alert">
+           <p class="payment-alert__message"><span class="bold">If you need to cover any outstanding payments before the effective start date</span>, you can make a one-time payment now.</p>
+            <a class="btn btn--primary" href="#">Make a one-time payment</a>
+       </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <h3 class="confirmation__header">Your confirmation number is: <span class="confirmation__number">012345678</span></h3>
+
+                {{> payments-review-table paymentsReview.autoEft }}
+
+                <div class="cc-btn-group">
+                     <button class="btn btn--primary cc-btn-group__primary">Back To Overview</button>
+                     <a class="cc-btn-group__secondary" href="#">View PDF</a>
+                </div>
+
+                <div class="print-message">
+                    <span class="print-message__icon material-icons md-18">print</span><h4 class="print-message__header">Pease print this page for your records</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore quidem culpa eligendi nam unde a ab rem tempore perspiciatis nihil, consequatur, quasi nemo similique sed ex blanditiis quia, accusantium quo.</p>
+                </div>
+                
+
+            </div>
+            <div class="col-sm-6">
+
+                {{> payment-submitted-agreement}}
+                
+                
+
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+{{!-- <div class="payments">
+    <div class="container--base">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 margin-small">
+                    <h1 class="h2 margin-small">
+                        Automatic Payment Submitted
+                    </h1>
+                    <p class="margin">Thank you for setting up automatic payments. Payments will be automatically deducted on or around the fifth day of each month. If your account is past due, you can make a one-time premium payment by returning to the Premium Payments overview. Please print this page for your records.</p>
+
+                    {{> payments-review-table paymentsReview.autoCredit }}
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    {{> payment-submitted-agreement }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    {{> payment-submitted-footer }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+</div> --}}

@@ -1,0 +1,17 @@
+---
+title: checking form
+layout: default
+iframe: true
+hasScript:
+  - cc-enhancement-app
+backBtn: true
+---
+
+<div id="cc-enhancement">
+    
+    {{> cc-intro title="Set Up Automatic Recurring Payments" plan="Medicare Prescription Drug Plan"}}
+    {{> cc-checking-form btnName="Authorize"}}
+    {{> cancel }}
+    {{> authorization }}
+    {{> abandon }}
+</div>

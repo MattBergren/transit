@@ -1,0 +1,1 @@
+$(document).ready(function(){function e(e,s){s?e.removeClass("hidden"):e.addClass("hidden")}$(".js-payment-date").each(function(){var s=$(this);s.change(function(){var t=$("option",s).filter(":selected").val(),n=s.closest(".js-history-filters").find(".js-customhistorydates");"custom-search"===t?e(n,!0):e(n,!1)})})});

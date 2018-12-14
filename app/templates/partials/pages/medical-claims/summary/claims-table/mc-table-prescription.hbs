@@ -1,0 +1,168 @@
+<div class="table-prescription" {{#unless display}}style="display: none;"{{/unless}}>
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="h4 margin-none">
+        You have <span class="bold">20 prescription drug claims</span> from the
+        <span class="bold claim-days">Last 90 days</span>
+      </h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 margin-small">
+      {{!-- Collapse --}}
+      <a href="#collapseInfo3" role="button" data-toggle="collapse"
+        aria-expanded="false" aria-controls="collapseInfo3" class="display-block collapse-expand">
+        Learn More About Your Cost Breakdown
+        <span class="material-icons">keyboard_arrow_down</span>
+      </a>
+      <div class="collapse-wrapper margin-small">
+        <div class="collapse" id="collapseInfo3">
+          <p class="bold margin-none">Plan Paid</p>
+          <p>
+            Qui aute quis laboris culpa velit dolore id cillum cupidatat
+            officia in ex velit ea sint exercitation. Proident non mollit
+            pariatur minim officia ad officia sit magna aute labore.
+          </p>
+          <p class="bold margin-none">You Paid</p>
+          <p>
+            Qui aute quis laboris culpa velit dolore id cillum cupidatat
+            officia in ex velit ea sint exercitation. Proident non mollit
+            pariatur minim officia ad officia sit magna aute labore.
+          </p>
+          <p class="bold margin-none">Other Payments</p>
+          <p>
+            Qui aute quis laboris culpa velit dolore id cillum cupidatat
+            officia in ex velit ea sint exercitation. Proident non mollit
+            pariatur minim officia ad officia sit magna aute labore.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{!-- Table start --}}
+  <div class="row">
+    <div class="col-md-12 margin-large">
+      <table class="table-responsive table-prescription">
+        <tr>
+          <th>Date Filled</th>
+          <th>Medication</th>
+          <th>Rx Number</th>
+          <th>Pharmacy</th>
+          <th data-tooltip="small" data-tooltip-label="Plan paid tooltip" data-tooltip-mobile>Plan Paid</th>
+          <th data-tooltip="small" data-tooltip-label="You paid tooltip" data-tooltip-mobile>You Paid</th>
+          <th data-tooltip="small" data-tooltip-label="Other payments tooltip" data-tooltip-mobile>Other Payments</th>
+        </tr>
+        {{!-- 1 --}}
+        <tr>
+          <td class="hidden-md hidden-lg"><span class="subtitle margin-none">DOXIL INJ 2MG/ML</span><span>Filled on XX/XX/XXXX</span></td>
+          <td class="hidden-sm hidden-xs"><div class="table-dots"></div><span class="table-responsive__value">XX/XX/XXXX</span><span class="table-responsive__key italic text-small">Date Filled</span></td>
+          <td class="hidden-sm hidden-xs"><div class="table-dots"></div><span class="table-responsive__value">DOXIL INJ 2MG/ML</span><span class="table-responsive__key italic text-small">Medication</span></td>
+          <td><div class="table-dots"></div><span class="table-responsive__value">000000000000</span><span class="table-responsive__key italic text-small">Rx Number</span></td>
+          <td><div class="table-dots"></div><span class="table-responsive__value">WALGREENS #13877</span><span class="table-responsive__key italic text-small">Pharmacy</span></td>
+          <td><div class="table-dots"></div><span class="table-responsive__value">$XX.XX</span><span class="table-responsive__key italic text-small">Plan Paid</span></td>
+          <td><div class="table-dots"></div><span class="table-responsive__value">$XX.XX</span><span class="table-responsive__key italic text-small">You Paid</span></td>
+          <td><div class="table-dots"></div><span class="table-responsive__value">$XX.XX</span><span class="table-responsive__key italic text-small">Other Payments</span></td>
+        </tr>
+        {{!-- 2 --}}
+        <tr>
+          <td class="hidden-md hidden-lg"><span class="subtitle margin-none">DOXIL INJ 2MG/ML</span><span>Filled on XX/XX/XXXX</span></td>
+          <td class="hidden-sm hidden-xs"><div class="table-dots"></div><span class="table-responsive__value">XX/XX/XXXX</span><span class="table-responsive__key italic text-small">Date Filled</span></td>
+          <td class="hidden-sm hidden-xs"><div class="table-dots"></div><span class="table-responsive__value">DOXIL INJ 2MG/ML</span><span class="table-responsive__key italic text-small">Medication</span></td>
+          <td><div class="table-dots"></div><span class="table-responsive__value">000000000000</span><span class="table-responsive__key italic text-small">Rx Number</span></td>
+          <td><div class="table-dots"></div><span class="table-responsive__value">WALGREENS #13877</span><span class="table-responsive__key italic text-small">Pharmacy</span></td>
+          <td><div class="table-dots"></div><span class="table-responsive__value">$XX.XX</span><span class="table-responsive__key italic text-small">Plan Paid</span></td>
+          <td><div class="table-dots"></div><span class="table-responsive__value">$XX.XX</span><span class="table-responsive__key italic text-small">You Paid</span></td>
+          <td><div class="table-dots"></div><span class="table-responsive__value">$XX.XX</span><span class="table-responsive__key italic text-small">Other Payments</span></td>
+        </tr>
+        {{!-- 3 --}}
+        <tr>
+          <td class="hidden-md hidden-lg"><span class="subtitle margin-none">DOXIL INJ 2MG/ML</span><span>Filled on XX/XX/XXXX</span></td>
+          <td class="hidden-sm hidden-xs"><div class="table-dots"></div><span class="table-responsive__value">XX/XX/XXXX</span><span class="table-responsive__key italic text-small">Date Filled</span></td>
+          <td class="hidden-sm hidden-xs"><div class="table-dots"></div><span class="table-responsive__value">DOXIL INJ 2MG/ML</span><span class="table-responsive__key italic text-small">Medication</span></td>
+          <td><div class="table-dots"></div><span class="table-responsive__value">000000000000</span><span class="table-responsive__key italic text-small">Rx Number</span></td>
+          <td><div class="table-dots"></div><span class="table-responsive__value">WALGREENS #13877</span><span class="table-responsive__key italic text-small">Pharmacy</span></td>
+          <td><div class="table-dots"></div><span class="table-responsive__value">$XX.XX</span><span class="table-responsive__key italic text-small">Plan Paid</span></td>
+          <td><div class="table-dots"></div><span class="table-responsive__value">$XX.XX</span><span class="table-responsive__key italic text-small">You Paid</span></td>
+          <td><div class="table-dots"></div><span class="table-responsive__value">$XX.XX</span><span class="table-responsive__key italic text-small">Other Payments</span></td>
+        </tr>
+        {{!-- 4 --}}
+        <tr>
+          <td class="hidden-md hidden-lg"><span class="subtitle margin-none">DOXIL INJ 2MG/ML</span><span>Filled on XX/XX/XXXX</span></td>
+          <td class="hidden-sm hidden-xs"><div class="table-dots"></div><span class="table-responsive__value">XX/XX/XXXX</span><span class="table-responsive__key italic text-small">Date Filled</span></td>
+          <td class="hidden-sm hidden-xs"><div class="table-dots"></div><span class="table-responsive__value">DOXIL INJ 2MG/ML</span><span class="table-responsive__key italic text-small">Medication</span></td>
+          <td><div class="table-dots"></div><span class="table-responsive__value">000000000000</span><span class="table-responsive__key italic text-small">Rx Number</span></td>
+          <td><div class="table-dots"></div><span class="table-responsive__value">WALGREENS #13877</span><span class="table-responsive__key italic text-small">Pharmacy</span></td>
+          <td><div class="table-dots"></div><span class="table-responsive__value">$XX.XX</span><span class="table-responsive__key italic text-small">Plan Paid</span></td>
+          <td><div class="table-dots"></div><span class="table-responsive__value">$XX.XX</span><span class="table-responsive__key italic text-small">You Paid</span></td>
+          <td><div class="table-dots"></div><span class="table-responsive__value">$XX.XX</span><span class="table-responsive__key italic text-small">Other Payments</span></td>
+        </tr>
+        {{!-- 5 --}}
+        <tr>
+          <td class="hidden-md hidden-lg"><span class="subtitle margin-none">DOXIL INJ 2MG/ML</span><span>Filled on XX/XX/XXXX</span></td>
+          <td class="hidden-sm hidden-xs"><div class="table-dots"></div><span class="table-responsive__value">XX/XX/XXXX</span><span class="table-responsive__key italic text-small">Date Filled</span></td>
+          <td class="hidden-sm hidden-xs"><div class="table-dots"></div><span class="table-responsive__value">DOXIL INJ 2MG/ML</span><span class="table-responsive__key italic text-small">Medication</span></td>
+          <td><div class="table-dots"></div><span class="table-responsive__value">000000000000</span><span class="table-responsive__key italic text-small">Rx Number</span></td>
+          <td><div class="table-dots"></div><span class="table-responsive__value">WALGREENS #13877</span><span class="table-responsive__key italic text-small">Pharmacy</span></td>
+          <td><div class="table-dots"></div><span class="table-responsive__value">$XX.XX</span><span class="table-responsive__key italic text-small">Plan Paid</span></td>
+          <td><div class="table-dots"></div><span class="table-responsive__value">$XX.XX</span><span class="table-responsive__key italic text-small">You Paid</span></td>
+          <td><div class="table-dots"></div><span class="table-responsive__value">$XX.XX</span><span class="table-responsive__key italic text-small">Other Payments</span></td>
+        </tr>
+        {{!-- 6 --}}
+        <tr>
+          <td class="hidden-md hidden-lg"><span class="subtitle margin-none">DOXIL INJ 2MG/ML</span><span>Filled on XX/XX/XXXX</span></td>
+          <td class="hidden-sm hidden-xs"><div class="table-dots"></div><span class="table-responsive__value">XX/XX/XXXX</span><span class="table-responsive__key italic text-small">Date Filled</span></td>
+          <td class="hidden-sm hidden-xs"><div class="table-dots"></div><span class="table-responsive__value">DOXIL INJ 2MG/ML</span><span class="table-responsive__key italic text-small">Medication</span></td>
+          <td><div class="table-dots"></div><span class="table-responsive__value">000000000000</span><span class="table-responsive__key italic text-small">Rx Number</span></td>
+          <td><div class="table-dots"></div><span class="table-responsive__value">WALGREENS #13877</span><span class="table-responsive__key italic text-small">Pharmacy</span></td>
+          <td><div class="table-dots"></div><span class="table-responsive__value">$XX.XX</span><span class="table-responsive__key italic text-small">Plan Paid</span></td>
+          <td><div class="table-dots"></div><span class="table-responsive__value">$XX.XX</span><span class="table-responsive__key italic text-small">You Paid</span></td>
+          <td><div class="table-dots"></div><span class="table-responsive__value">$XX.XX</span><span class="table-responsive__key italic text-small">Other Payments</span></td>
+        </tr>
+        {{!-- 7 --}}
+        <tr>
+          <td class="hidden-md hidden-lg"><span class="subtitle margin-none">DOXIL INJ 2MG/ML</span><span>Filled on XX/XX/XXXX</span></td>
+          <td class="hidden-sm hidden-xs"><div class="table-dots"></div><span class="table-responsive__value">XX/XX/XXXX</span><span class="table-responsive__key italic text-small">Date Filled</span></td>
+          <td class="hidden-sm hidden-xs"><div class="table-dots"></div><span class="table-responsive__value">DOXIL INJ 2MG/ML</span><span class="table-responsive__key italic text-small">Medication</span></td>
+          <td><div class="table-dots"></div><span class="table-responsive__value">000000000000</span><span class="table-responsive__key italic text-small">Rx Number</span></td>
+          <td><div class="table-dots"></div><span class="table-responsive__value">WALGREENS #13877</span><span class="table-responsive__key italic text-small">Pharmacy</span></td>
+          <td><div class="table-dots"></div><span class="table-responsive__value">$XX.XX</span><span class="table-responsive__key italic text-small">Plan Paid</span></td>
+          <td><div class="table-dots"></div><span class="table-responsive__value">$XX.XX</span><span class="table-responsive__key italic text-small">You Paid</span></td>
+          <td><div class="table-dots"></div><span class="table-responsive__value">$XX.XX</span><span class="table-responsive__key italic text-small">Other Payments</span></td>
+        </tr>
+        {{!-- 8 --}}
+        <tr>
+          <td class="hidden-md hidden-lg"><span class="subtitle margin-none">DOXIL INJ 2MG/ML</span><span>Filled on XX/XX/XXXX</span></td>
+          <td class="hidden-sm hidden-xs"><div class="table-dots"></div><span class="table-responsive__value">XX/XX/XXXX</span><span class="table-responsive__key italic text-small">Date Filled</span></td>
+          <td class="hidden-sm hidden-xs"><div class="table-dots"></div><span class="table-responsive__value">DOXIL INJ 2MG/ML</span><span class="table-responsive__key italic text-small">Medication</span></td>
+          <td><div class="table-dots"></div><span class="table-responsive__value">000000000000</span><span class="table-responsive__key italic text-small">Rx Number</span></td>
+          <td><div class="table-dots"></div><span class="table-responsive__value">WALGREENS #13877</span><span class="table-responsive__key italic text-small">Pharmacy</span></td>
+          <td><div class="table-dots"></div><span class="table-responsive__value">$XX.XX</span><span class="table-responsive__key italic text-small">Plan Paid</span></td>
+          <td><div class="table-dots"></div><span class="table-responsive__value">$XX.XX</span><span class="table-responsive__key italic text-small">You Paid</span></td>
+          <td><div class="table-dots"></div><span class="table-responsive__value">$XX.XX</span><span class="table-responsive__key italic text-small">Other Payments</span></td>
+        </tr>
+        {{!-- 9 --}}
+        <tr>
+          <td class="hidden-md hidden-lg"><span class="subtitle margin-none">DOXIL INJ 2MG/ML</span><span>Filled on XX/XX/XXXX</span></td>
+          <td class="hidden-sm hidden-xs"><div class="table-dots"></div><span class="table-responsive__value">XX/XX/XXXX</span><span class="table-responsive__key italic text-small">Date Filled</span></td>
+          <td class="hidden-sm hidden-xs"><div class="table-dots"></div><span class="table-responsive__value">DOXIL INJ 2MG/ML</span><span class="table-responsive__key italic text-small">Medication</span></td>
+          <td><div class="table-dots"></div><span class="table-responsive__value">000000000000</span><span class="table-responsive__key italic text-small">Rx Number</span></td>
+          <td><div class="table-dots"></div><span class="table-responsive__value">WALGREENS #13877</span><span class="table-responsive__key italic text-small">Pharmacy</span></td>
+          <td><div class="table-dots"></div><span class="table-responsive__value">$XX.XX</span><span class="table-responsive__key italic text-small">Plan Paid</span></td>
+          <td><div class="table-dots"></div><span class="table-responsive__value">$XX.XX</span><span class="table-responsive__key italic text-small">You Paid</span></td>
+          <td><div class="table-dots"></div><span class="table-responsive__value">$XX.XX</span><span class="table-responsive__key italic text-small">Other Payments</span></td>
+        </tr>
+        {{!-- 10 --}}
+        <tr>
+          <td class="hidden-md hidden-lg"><span class="subtitle margin-none">DOXIL INJ 2MG/ML</span><span>Filled on XX/XX/XXXX</span></td>
+          <td class="hidden-sm hidden-xs"><div class="table-dots"></div><span class="table-responsive__value">XX/XX/XXXX</span><span class="table-responsive__key italic text-small">Date Filled</span></td>
+          <td class="hidden-sm hidden-xs"><div class="table-dots"></div><span class="table-responsive__value">DOXIL INJ 2MG/ML</span><span class="table-responsive__key italic text-small">Medication</span></td>
+          <td><div class="table-dots"></div><span class="table-responsive__value">000000000000</span><span class="table-responsive__key italic text-small">Rx Number</span></td>
+          <td><div class="table-dots"></div><span class="table-responsive__value">WALGREENS #13877</span><span class="table-responsive__key italic text-small">Pharmacy</span></td>
+          <td><div class="table-dots"></div><span class="table-responsive__value">$XX.XX</span><span class="table-responsive__key italic text-small">Plan Paid</span></td>
+          <td><div class="table-dots"></div><span class="table-responsive__value">$XX.XX</span><span class="table-responsive__key italic text-small">You Paid</span></td>
+          <td><div class="table-dots"></div><span class="table-responsive__value">$XX.XX</span><span class="table-responsive__key italic text-small">Other Payments</span></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

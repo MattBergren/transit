@@ -1,0 +1,22 @@
+---
+title: Drug Cost Estimator
+layout: default
+hasFooter: false
+hasHeader: true
+hasScript:
+    - drug-cost-estimator/dce-drugs-update
+    - drug-cost-estimator/dce-pharmacy-update
+    - drug-cost-estimator/jquery.tooltip
+---
+<div class="drug-cost-estimator">
+    {{> DCE-svg-defs }}
+    {{!-- {{> DCE-summary }} --}}
+    {{> DCE-tabs }}
+    {{!-- {{> form-disclaimer}} --}}
+    {{!-- {{> need-help }} --}}
+    {{!-- {{> BC-ma-disclaimers }} --}}
+    {{> DCE-modals }}
+</div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbmYpZ-If4XUPHONtC87GHZOjXuvzj1sk"></script>
+<script src="/scripts/vendor/maplabel.js"></script>

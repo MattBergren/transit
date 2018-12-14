@@ -1,0 +1,115 @@
+html,body,p,a {
+  font-size: 16px;
+  font-weight: 400;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: $color-digital-blue;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  &.lowercase {
+    text-transform: none;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Headlines
+// -----------------------------------------------------------------------------
+.h1,.h2,.h3,.h4,.h5,.h6 {
+  margin-top: 0;
+  margin-bottom: $spacing-large;
+  word-break: break-word;
+  color: $color-black;
+}
+ .h1 {
+   font-size: 2.667rem;
+   font-weight: 300;
+ }
+ .h2 {
+   font-size: 1.833rem;
+   font-weight: 300;
+ }
+ .h3 {
+   font-size: 1.417rem;
+   font-weight: 300;
+ }
+ .h4 {
+   font-size: 1.25rem;
+   font-weight: 300;
+ }
+ .h5,.h6 {
+   font-size: 1rem;
+   font-weight: 300;
+ }
+
+ p {
+   margin-bottom: 10px;
+   max-width: 660px;
+ }
+
+ /**
+  * Desktop styles
+  */
+@media (min-width: $breakpoint-sm) {
+  // -----------------------------------------------------------------------------
+  // Headlines
+  // -----------------------------------------------------------------------------
+  .h1 {
+    font-size: 3.125rem;
+  }
+  .h2 {
+    font-size: 2.375rem;
+  }
+  .h3 {
+    font-size: 2.125rem;
+  }
+  .h4 {
+    font-size: 1.5625rem;
+  }
+  .h5 {
+    font-size: 1.1875rem;
+  }
+  .h6 {
+    font-size: 0.9375rem;
+  }
+}
+
+// Material icons
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal !important;
+  font-style: normal;
+  font-size: 1em;
+  display: inline-block;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  vertical-align: middle;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+a.text-link {
+    font-weight: normal;
+    text-transform: none;
+    text-decoration: underline;
+}

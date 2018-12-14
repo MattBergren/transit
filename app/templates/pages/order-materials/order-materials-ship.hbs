@@ -1,0 +1,14 @@
+---
+title: Order Plan Materials
+layout: default
+hasFooter: true
+hasHeader: true
+hasScript:
+  - order-materials
+hasHelp: SHIP
+---
+<div class="order-materials">
+  {{> om-items ship="true" }}
+  {{> om-form-card }}
+  {{> om-modal }}
+</div>

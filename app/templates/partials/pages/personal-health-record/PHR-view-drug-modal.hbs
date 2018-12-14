@@ -1,0 +1,102 @@
+<!-- Start: Add modal -->
+<div id="viewDrugModal" tabindex="-1" role="dialog" aria-labelledby="viewDrugModalLabel" class="modal fade">
+  <div role="document" class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <a class="link link--icon-right link--icon-circled align-right" data-icon="" data-dismiss="modal" aria-label="Cancel" role="button">Cancel</a>
+        <div id="viewDrugModalLabel" class="modal-title">
+          <h1 class="h3 margin-none">Edit or Delete Drug</h1>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="card-animation-wrapper card">
+          <div class="card-body">
+            <div class="card-slide" aria-hidden="false">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-sm-12">
+                    * required fields
+                    <hr>
+                    <div class="table-body responsive margin-small">
+                      <form action="" id="edit-drug-form">
+                        <div class="table-body-row field--row">
+                          <div class="table-body-cell">
+                            <label for="drug-name">Drug Name: *</label>
+                          </div>
+                          <div class="table-body-cell">
+                            <div class="field-input">
+                              <input type="text" name="drug-name" id="drug-name" aria-required="true" data-modalfocus>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="table-body-row field--row">
+                          <div class="table-body-cell">
+                            <label for="drug-strength">Strength:</label>
+                          </div>
+                          <div class="table-body-cell">
+                            <div class="field-input">
+                              <input type="text" name="drug-strength" id="drug-strength">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="table-body-row field--row">
+                          <div class="table-body-cell">
+                            <label for="drug-frequency">Frequency:</label>
+                          </div>
+                          <div class="table-body-cell">
+                            <div class="field-input">
+                              <input type="text" name="drug-frequency" id="drug-frequency">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="table-body-row field--row">
+                          <div class="table-body-cell">
+                            <label for="drug-provider">Provider:</label>
+                          </div>
+                          <div class="table-body-cell">
+                            <div class="field-input">
+                              <input type="text" name="drug-provider" id="drug-provider">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="table-body-row field--row">
+                          <div class="table-body-cell">
+                            <label for="drug-date">Date:</label>
+                          </div>
+                          <div class="table-body-cell">
+                            <div class="field-input">
+                              <input type="date" name="drug-date" id="drug-date">
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn save-drug-btn" aria-label="Save Changes">
+                        <span class="btn btn--primary btn--medium-width">Save Changes</span>
+                      </button>
+                      <button type="button" class="btn delete-drug-btn" aria-label="Delete">
+                        <span class="btn btn--secondary btn--medium-width">Delete</span>
+                      </button>
+                      <a href="#" data-dismiss="modal" aria-label="Cancel">CANCEL</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-slide" aria-hidden="true" aria-live="assertive">
+              <h4 class="align-center">Are you sure you want to delete this drug?</h4>
+              <p class="align-center">This cannot be undone.</p>
+              <div class="modal-footer">
+                <button type="button" class="btn delete-drug-yes" aria-label="Delete Drug">
+                  <span class="btn btn--primary btn--medium-width">Delete Drug</span>
+                </button>
+                <a href="#" class="delete-drug-no" aria-label="Cancel">Cancel</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

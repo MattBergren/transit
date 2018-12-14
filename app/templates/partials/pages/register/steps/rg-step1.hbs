@@ -1,0 +1,82 @@
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+    <div class="card">
+      <div class="card-body">
+        <fieldset>
+          <legend class="normal">To help us confirm your account, please enter the following personal information.</legend>
+          <div class="field">
+            <label for="member-id" class="display-inline-block">Member ID Number:</label><span data-tooltip="small" data-tooltip-side="right"></span>
+            <div class="field-input">
+              <input type="number" name="member-id" id="member-id">
+            </div>
+          </div>
+          <fieldset>
+            <legend>Date of Birth:</legend>
+            <div class="field--dob">
+              <div class="field-input">
+                <select name="dob-mm" id="date-mm" style="width: 100%"><option value=""></option></select>
+                <label for="date-mm">MM</label>
+              </div>
+              <div class="field-input">
+                <select name="dob-dd" id="date-dd" style="width: 100%"><option value=""></option></select>
+                <label for="date-dd">DD</label>
+              </div>
+              <div class="field-input">
+                <select name="dob-yyyy" id="date-yyyy" style="width: 100%"><option value=""></option></select>
+                <label for="date-yyyy">YYYY</label>
+              </div>
+            </div>
+          </fieldset>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row" {{#unless additional}}id="additional-info" tabindex="-1" aria-hidden="true"{{/unless}}>
+  <div class="col-md-10 col-md-offset-1">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="h4 margin-none">Additional Information Needed</h3>
+      </div>
+      <div class="card-body">
+        <fieldset>
+          <legend class="sr-only">Complete either question sets one or two to continue</legend>
+          <div class="field-or-option">
+            <fieldset class="field-group">
+              <legend class="sr-only">Question Set One</legend>
+              <div class="field">
+                <label for="zip">ZIP Code (permanent address)</label>
+                <div class="field-input">
+                  <input type="number" name="zip" id="zip">
+                </div>
+              </div>
+              <div class="field">
+                <label for="firstname">First Name</label>
+                <div class="field-input">
+                  <input type="text" name="firstname" id="firstname">
+                </div>
+              </div>
+              <div class="field">
+                <label for="lastname">Last Name</label>
+                <div class="field-input">
+                  <input type="text" name="lastname" id="lastname">
+                </div>
+              </div>
+            </fieldset>
+            <span></span>
+            <fieldset class="field-single">
+              <legend class="sr-only">Question Set Two</legend>
+              <div class="field">
+                <label for="medicareID">Medicare ID</label>
+                <div class="field-input">
+                  <input type="number" name="medicareID" id="medicareID">
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+</div>

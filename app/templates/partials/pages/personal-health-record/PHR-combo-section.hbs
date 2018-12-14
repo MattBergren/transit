@@ -1,0 +1,69 @@
+<!-- Tab panes -->
+<div class="tab-content">
+	<div role="tabpanel" class="tab-pane fade in active" id="tab-1" aria-label="Medications and Supplements">
+		<section class="container--base no-margin-bottom">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-6 col-sm-6 col-md-6 no-margin-bottom">
+						<button data-toggle="modal" data-target="#addToolsModal" class="btn">
+							<span class="btn btn--primary">Drug Tools</span>
+						</button>
+					</div>
+					<div class="col-xs-6 col-sm-6 col-md-6 align-right no-margin-bottom">
+						<button data-toggle="modal" data-target="#addPrescriptionModal" class="btn btn--right">
+							<span class="btn btn--primary">Add a drug</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="container--base">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="row">
+							<div class="col-md-12">
+								{{!-- <p>10 records</p> --}}
+								{{> PHR-drug-table }}
+								{{!-- <a data-toggle="modal" data-target="#addPrescriptionModal" class="btn btn--primary btn--full-width">Add a drug</a> --}}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	<div role="tabpanel" class="tab-pane fade" id="tab-2" aria-label="Health Care Providers">
+		<section class="container--base no-margin-bottom">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-6 col-sm-6 col-md-6 no-margin-bottom">
+						<button data-toggle="modal" data-target="#addToolsModal" class="btn">
+							<span class="btn btn--primary">Drug Tools</span>
+						</button>
+					</div>
+					<div class="col-xs-6 col-sm-6 col-md-6 align-right no-margin-bottom">
+						<button data-toggle="modal" data-target="#addProviderModal" class="btn btn--right">
+							<span class="btn btn--primary">+ Add a provider</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="container--base">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="row">
+							<div class="col-md-12">
+								{{!-- <p>10 records</p> --}}
+								{{> PHR-provider-table }}
+								<a data-toggle="modal" data-target="#addProviderModal" class="btn btn--primary btn--full-width">+ Add a provider</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</div>

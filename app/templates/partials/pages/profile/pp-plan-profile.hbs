@@ -1,0 +1,100 @@
+<div class="tabs-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        {{!-- Mobile --}}
+        {{#if combo}}
+          <div class="tabs-mobile margin-small">
+
+            <label for="tab-select">Select one of your plans to see corresponding details:</label>
+            <div class="select--regular select--medium margin-none">
+              <select name="tab-select" id="tab-select">
+                <option value="tab-1">Prescription Drug Plan</option>
+                <option value="tab-2">Medicare Supplement Plan</option>
+              </select>
+            </div>
+
+          </div>
+        {{/if}}
+        {{#unless combo}}
+          <p class="plan-label bold margin-small">You have 1 active plan</p>
+        {{/unless}}
+        {{!-- Tabs desktop --}}
+        <div class="tabs-desktop">
+          <!--<p class="bold margin-small">Select one of your plans to see corresponding details:</p>-->
+          <ul class="nav nav-tabs" role="tablist">
+            {{#if combo}}
+              <li role="presentation" class="active">
+                <a href="#tab-1" aria-controls="tab-1" role="tab" data-toggle="tab">
+                  Prescription Drug Plan
+                </a>
+              </li>
+              <li role="presentation">
+                <a href="#tab-2" aria-controls="tab-2" role="tab" data-toggle="tab">
+                  Medicare Supplement Plan
+                </a>
+              </li>
+            {{/if}}
+            {{#if federal}}
+              <li role="presentation" class="active">
+                <a href="#tab-1" aria-controls="tab-1" role="tab" data-toggle="tab">
+                  Prescription Drug Plan
+                </a>
+              </li>
+            {{/if}}
+            {{#if ship}}
+              <li role="presentation" class="active">
+                <a href="#tab-1" aria-controls="tab-1" role="tab" data-toggle="tab">
+                  Medicare Supplement Plan
+                </a>
+              </li>
+            {{/if}}
+          </ul>
+        </div>
+        <div class="tabs-float">
+          <a href="profile-link-plan.html" class="link-plan" role="button">+ Link Another Plan</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="container--base gray">
+  <div class="container">
+    <div class="tab-content">
+      {{#if combo}}
+        <div role="tabpanel" aria-label="Federal Plans" class="tab-pane fade active in" id="tab-1">
+          {{#if green-opt}}
+            {{> pp-plan-individual federal="true" combo="true" green-opt="true"}}
+          {{else}}
+            {{> pp-plan-individual federal="true" combo="true"}}
+          {{/if}}
+        </div>
+        <div role="tabpanel" aria-label="SHIP Plans" class="tab-pane fade" id="tab-2">
+          {{#if green-opt}}
+            {{> pp-plan-individual combo="true" green-opt="true"}}
+          {{else}}
+            {{> pp-plan-individual combo="true"}}
+          {{/if}}
+        </div>
+      {{/if}}
+      {{#if federal}}
+        <div role="tabpanel" aria-label="Federal Plans" class="tab-pane fade active in" id="tab-1">
+          {{#if green-opt}}
+            {{> pp-plan-individual federal="true" green-opt="true"}}
+          {{else}}
+            {{> pp-plan-individual federal="true"}}
+          {{/if}}
+        </div>
+      {{/if}}
+      {{#if ship}}
+        <div role="tabpanel" aria-label="SHIP Plans" class="tab-pane fade active in" id="tab-1">
+          {{#if green-opt}}
+            {{> pp-plan-individual green-opt="true"}}
+          {{else}}
+            {{> pp-plan-individual}}
+          {{/if}}
+        </div>
+      {{/if}}
+    </div>
+  </div>
+</section>

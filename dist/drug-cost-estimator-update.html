@@ -1,0 +1,1438 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Turn off telephone number detection. -->
+    <meta name="format-detection" content="telephone=no">
+    <title>Drug Cost Estimator</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <!-- Place favicon.ico in the root directory -->
+
+
+    <link rel="stylesheet" href="/styles/vendor/slick-theme.css">
+    <link rel="stylesheet" href="/styles/vendor/slick.css">
+    <link rel="stylesheet" href="/styles/vendor/tooltipster-new.css">
+    <link rel="stylesheet" href="/styles/vendor/bootstrap.css">
+    <link rel="stylesheet" href="/styles/vendor/awesomplete.css">
+
+    <link rel="stylesheet" href="/styles/mir-main.css">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/cc-enhancement.css">
+
+    <link rel="stylesheet" href="/styles/print.css">
+
+
+    <link rel="stylesheet" href="/styles/vendor/common.css">
+
+    <script src="/scripts/vendor/modernizr.js"></script>
+
+</head>
+<body>
+  <div class="uhc-body-wrapper">
+    <div class="uhc-body-light-box"></div>
+    <div class="rivets-loading" rv-show="data.loading" style="position: fixed; top:0; left:0; right:0; bottom:0; background-color: white; z-index:9999;"></div>
+    <!-- Start: Navigation -->
+    <nav class="uhcg-nav">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="uhcg-nav-header">
+          <div class="header-wrapper">
+            <div class="logo-container">
+              <img src="/images/logos/uhc-logo.svg" alt="Main Logo" class="img-responsive">
+              <div class="logo-divider"></div>
+              <img src="/images/logos/mirum-logo.png" alt="Partner Logo" class="img-responsive">
+            </div>
+            <div class="icon-container">
+              <a href="#" class="menu-icon" aria-label="Menu">
+                <div class="menu-line-wrapper">
+                  <div class="menu-line"></div>
+                  <div class="menu-line"></div>
+                  <div class="menu-line"></div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <ul class="uhc-nav">
+            <li class="uhc-nav-item--secondary">
+              <a href="#" class="uhc-nav-item-link">
+                <img src="/images/icon-svgs/nav-phone.svg" alt="Phone">
+                Contact Us
+              </a>
+            </li>
+            <li class="uhc-nav-item--secondary">
+              <a href="#" class="uhc-nav-item-link">
+                <span class="count-circle">2</span>
+                <img src="/images/icon-svgs/nav-mail.svg" alt="Message">
+                Messages
+              </a>
+            </li>
+            <li class="uhc-nav-item--secondary">
+              <a href="#" class="uhc-nav-item-link">
+                <img src="/images/icon-svgs/nav-doc.svg" alt="Documents">
+                My Documents
+              </a>
+            </li>
+            <li class="uhc-nav-item--secondary has-sub-nav">
+              <a href="#" class="uhc-nav-item-link" id="nav-profile">
+                <img src="/images/icon-svgs/nav-user.svg" alt="User">
+                Profile
+              </a>
+              <ul class="sub-nav">
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Update Profile</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Go Green Preferences</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Change Password</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Sign Out</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="nav-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="uhc-nav">
+            <li class="uhc-nav-item"><a href="#" class="uhc-nav-item-link">Home</a></li>
+            <li class="uhc-nav-item has-sub-nav">
+              <a href="#" class="uhc-nav-item-link">Care & Costs</a>
+              <ul class="sub-nav">
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Provider Search</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Pharmacy Locator</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Drug Look Up</a></li>
+              </ul>
+            </li>
+            <li class="uhc-nav-item has-sub-nav">
+              <a href="#" class="uhc-nav-item-link">Benefits</a>
+              <ul class="sub-nav">
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Benefits Summary</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Forms & Resources</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Order Materials</a></li>
+              </ul>
+            </li>
+            <li class="uhc-nav-item has-sub-nav">
+              <a href="#" class="uhc-nav-item-link">Claims</a>
+              <ul class="sub-nav">
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Claims Search</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">EOB Search</a></li>
+              </ul>
+            </li>
+            <li class="uhc-nav-item"><a href="#" class="uhc-nav-item-link">Premium Payments</a></li>
+            <li class="uhc-nav-item"><a href="#" class="uhc-nav-item-link">Health & Wellness</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+    
+
+    <!-- Start: Page header -->
+    <header class="benefits-coverage page-header-wrapper" role="banner" aria-label="header">
+      <div class="page-header">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="display-flex v-center">
+                <div class="page-header--left">
+                  <h1 class="h4 margin-none">
+                    Drug Cost Estimator
+                  </h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+
+
+      <div class="drug-cost-estimator">
+    <div>
+        <svg id="svg-icons" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs>
+                <symbol id="icon-info" viewBox="0 0 512 512" enable-background="new 0 0 512 512">
+                    <path d="M230.4,384H281.6V230.4H230.4V384z M256,0C114.562,0,0,114.562,0,256s114.562,256,256,256s256-114.562,256-256  S397.438,0,256,0z M256,460.8C143.106,460.8,51.2,368.9,51.2,256c0-112.894,91.906-204.8,204.8-204.8  c112.9,0,204.8,91.906,204.8,204.8C460.8,368.9,368.9,460.8,256,460.8z M230.4,179.2H281.6V128H230.4V179.2z"
+                    />
+                </symbol>
+                <symbol id="external-link" viewBox="243 461 895.9 832">
+                    <title>external link</title>
+                    <path d="M979 888c-17.7 0-32 14.3-32 32v277c0 17.7-14.3 32-32 32H339c-17.7 0-32-14.3-32-32V621c0-17.7 14.3-32 32-32h384l0 0c0.3 0 0.7 0 1 0 17.7 0 32-14.3 32-32s-14.3-32-32-32c-0.3 0-0.7 0-1 0l0 0H307c-35.3 0-64 28.7-64 64v640c0 35.3 28.7 64 64 64h640c35.3 0 64-28.7 64-64V920C1011 902.3 996.7 888 979 888zM1112 461H851c-17.7 0-21.9 10.1-9.4 22.6L945 587 613.9 918.1c-18.8 18.8-18.7 49.1 0 67.9 18.7 18.8 49.1 18.7 67.9 0l331.1-331.1 103.4 103.4c12.5 12.5 22.6 8.3 22.6-9.4V488C1139 470.3 1129.7 461 1112 461z"
+                    />
+                </symbol>
+            </defs>
+        </svg>
+    </div>
+    
+    <section class="container--base gray" style="padding-top: 0;">
+        <div class="arrow-tabs-wrapper margin-large">
+            <ul class="arrow-tabs" role="tablist">
+                <li class="arrow-tab-item active">
+                    <a href="#drugs-tab" aria-controls="drugs-tab" role="tab" data-toggle="tab" id="drug-control">
+                        <p class="margin-none text-small bold color-gray text-no-max">Step 1:</p>
+                        <span>Drugs</span>
+                    </a>
+                </li>
+                <li class="arrow-tab-item">
+                    <a href="#pharmacy-tab" aria-controls="pharmacy-tab" role="tab" data-toggle="tab"
+                        id="pharmacy-control">
+                        <p class="margin-none text-small bold color-gray text-no-max">Step 2:</p>
+                        <span>Pharmacy</span>
+                    </a>
+                </li>
+                <li class="arrow-tab-item">
+                    <a href="#costs-tab" aria-controls="costs-tab" role="tab" data-toggle="tab" id="cost-control">
+                        <p class="margin-none text-small bold color-gray text-no-max">Step 3:</p>
+                        <span>See Your Estimated Cost</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane fade in active" id="drugs-tab" aria-labelledby="drug-control">
+                            <div class="row fluid">
+                                <div class="do-not-use">
+                                    DEV NOTE: ONLY USE STEP 3 TAB CONTENT & LAYOUT.
+                                </div>
+                                <div class="col-md-3 col-sm-6" rv-each-drug="data.DCE.savedDrugs.drugs">
+                                    <div class="drug-container">
+                                        <div class="card match-height-drug">
+                                            <div class="card-body display-flex direction-column" style="height: 100%;">
+                                                <p class="subtitle">{ drug.title }</p>
+                                                <p class="text-small color-gray">
+                                                    <span class="bold">Qty:</span>
+                                                    { drug.qty } Every { drug.freq } month(s)
+                                                </p>
+                                                <div class="message-block success" rv-if="drug.generic">
+                                                    <div class="message-block-body display-flex">
+                                                        <div>
+                                                            <img src="/images/icon-svgs/money.svg" alt="Money" class="img-small" />
+                                                        </div>
+                                                        <div>
+                                                            <p class="margin-extra-small">
+                                                                <span class="color-green-dark bold">Save $XX.XX</span>
+                                                                by switching to a generic
+                                                            </p>
+                                                            <a href="#" onclick="openGenericModal(this, event)">Switch Now</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <ul class="links" style="flex-grow: 1; display: flex; align-items: flex-end;">
+                                                    <li class="margin-none">
+                                                        <a href="#" class="edit-drug">Edit</a>
+                                                    </li>
+                                                    <li class="margin-none">
+                                                        <a href="#" class="delete-drug">Delete</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <a href="#" class="card card--add match-height-drug width-100" id="add-drug" data-toggle="modal"
+                                        data-target="#drugModal">
+                                        + Add a Drug
+                                    </a>
+                                </div>
+                            </div>
+                            <hr> 
+                            <div class="row">
+                                <div class="col-md-12 align-center" role="tablist">
+                                    <a href="#pharmacy-tab" aria-controls="pharmacy-tab" role="tab" data-toggle="tab"
+                                        class="btn btn--primary">
+                                        Next: Select Pharmacy
+                                    </a>
+                                </div>
+                            </div>
+                            <h3 class="h4 color-blue medium margin-small" style="margin-top: 60px;">
+                                More Information
+                            </h3>
+                            <p>
+                                The list of covered drugs was last updated on &lt;mm.dd.yyyy.&gt;.
+                            </p>
+                            <p>
+                                The Formulary may change at any time. You will receive notice when necessary.
+                            </p>
+                            <p>
+                                The drug costs displayed are estimates and may vary based on the specific quantity,
+                                strength and/or dosage of the medication and the pharmacy you use.
+                            </p>
+                            <p>
+                                No drug will move to a higher cost tier unless a new generic version becomes available.
+                                If this occurs, you will be notified in your Prescription Drug Explanation of
+                                Benefits (EOB) 60 days before the change takes effect.
+                            </p>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="pharmacy-tab" aria-labelledby="pharmacy-control">
+                            <form class="margin-small" id="pharmacy-form">
+                                <div class="do-not-use">
+                                    DEV NOTE: ONLY USE STEP 3 TAB CONTENT & LAYOUT.
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="display-inline-flex v-center flex-wrap">
+                                            <div class="h4 margin-none">
+                                                Find a pharmacy withins
+                                                <label for="distance" class="sr-only">Distance</label>
+                                                <div class="select--inline">
+                                                    <select id="distance">
+                                                        <option value="15">15 miles</option>
+                                                        <option value="25">25 miles</option>
+                                                        <option value="50">55 miles</option>
+                                                    </select>
+                                                </div>
+                                                of
+                                            </div>
+                                            <div id="zipcode-wrapper">
+                                                <label for="zipcode" class="sr-only">Zipcode</label>
+                                                <input type="text" id="zipcode" placeholder="Search by ZIP Code" value="90210" class="input-small">
+                                                <button class="btn margin-none" id="zipcode-button" style="min-width: auto; max-height: 42px;">
+                                                    <span class="btn btn--primary" data-button-icon="search">Search</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3 match-height-inner">
+                                        <fieldset class="margin-none" id="pharmacy-type">
+                                            <legend class="text-medium margin-small" style="font-weight: normal;">Pharmacy Type</legend>
+                                            <div class="radio-block" data-tooltip="small" data-tooltip-side="right">
+                                                <input type="radio" name="pharmacy-type" value="standard" id="standard">
+                                                <label for="standard" class="color-black display-inline">Standard Network</label>
+                                            </div>
+                                            <div class="radio-block" data-tooltip="small" data-tooltip-side="right">
+                                                <input type="radio" name="pharmacy-type" value="saver" id="saver" checked="checked">
+                                                <label for="saver" class="color-black display-inline">Pharmacy Saver</label>
+                                            </div>
+                                            <div class="radio-block" data-tooltip="small" data-tooltip-side="right">
+                                                <input type="radio" name="pharmacy-type" value="mail-service" id="mail-service">
+                                                <label for="mail-service" class="color-black display-inline">Preferred Mail Service</label>
+                                            </div>
+                                            <div class="radio-block" data-tooltip="small" data-tooltip-side="right">
+                                                <input type="radio" name="pharmacy-type" value="retail" id="retail">
+                                                <label for="retail" class="color-black display-inline">Preferred Retail</label>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-9 border-left match-height-inner">
+                                        <div class="pharmacy-listing display-flex v-center" style="height: 100%;">
+                                            <div class="mail-service-block">
+                                                <div class="card promo blue">
+                                                    <div class="card-body display-flex v-center">
+                                                        <div>
+                                                            <img src="/images/icon-svgs/mail.svg" alt="Pharmacy" class="img-medium" />
+                                                        </div>
+                                                        <div>
+                                                            <span class="color-blue-dark bold">Preferred Mail Service:</span>
+                                                            Save up to $XX.XX by using the Mail Service Pharmacy.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="pharmacy-saver-block">
+                                                <div class="card promo blue">
+                                                    <div class="card-body display-flex v-center">
+                                                        <div>
+                                                            <img src="/images/icon-svgs/pharmacy.svg" alt="Pharmacy" class="img-medium" />
+                                                        </div>
+                                                        <div>
+                                                            <span class="color-blue-dark bold">Pharmacy Saver:</span>
+                                                            Spend as little as $1.50 on your prescription drug copays using Pharmacy Saver Pharmacies.
+                                                            See how many of your drugs are elegible for Pharmacy
+                                                            Saver below.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="pharmacy-retail-block">
+                                                <div class="card promo blue">
+                                                    <div class="card-body display-flex v-center">
+                                                        <div>
+                                                            <img src="/images/icon-svgs/pharmacy.svg" alt="Pharmacy" class="img-medium" />
+                                                        </div>
+                                                        <div>
+                                                            <span class="color-blue-dark bold">Preferred Retail Pharmacy:</span>
+                                                            Save up to $XX.XX by using a Preferred Retail Pharmacy
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            
+                            <div class="pharmacy-error" style="display: none;">
+                                <p class="color-red">
+                                    There were no results found for the requested search. Broadening your search criteria
+                                    (for example, changing the pharmacy type, search radius and/or your ZIP code)
+                                    may help you get a different result.
+                                </p>
+                            </div>
+                            
+                            <ul class="map-toggle">
+                                <li>
+                                    <a href="#collapseMap" role="button" data-toggle="collapse" aria-expanded="true"
+                                        aria-controls="collapseMap" class="toggle-show">
+                                        Map
+                                        <span class="material-icons">keyboard_arrow_down</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="collapse-wrapper">
+                                <div class="collapse in" id="collapseMap">
+                                    <div class="map-wrapper">
+                                        <div id="map"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="selected-pharmacy pharmacy-container">
+                                <ul class="pharmacy-list" rv-unless="data.DCE.savedPharmacy.name | isEqualTo 'Preferred Mail Service'">
+                                    <li class="selected">
+                                        <div class="row">
+                                            <div class="col-xs-8 col-sm-10 margin-none">
+                                                <div class="row">
+                                                    <div class="col-sm-4 margin-mobile-small">
+                                                        <div class="display-flex margin-small">
+                                                            <div class="map-pin">
+                                                                <img src="/images/icon-svgs/mapmarker-pin-star.svg" alt="Map Pin" class="img-small"
+                                                                />
+                                                            </div>
+                                                            <div>
+                                                                <span class="bold text-medium display-block color-orange-dark pharmacy-name">
+                                                                    { data.DCE.savedPharmacy.name }
+                                                                </span>
+                                                                <p class="color-gray">{ data.DCE.savedPharmacy.address1 }</p>
+                                                                <a href="#" class="show-on-map">Show on Map</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-2 margin-mobile-small">
+                                                        <div class="display-inline-flex">
+                                                            <div class="hidden-pin">
+                                                                <img src="/images/icon-svgs/mapmarker-pin-blue.svg" alt="Map Pin" class="img-small"
+                                                                />
+                                                            </div>
+                                                            <div>
+                                                                <span class="bold">{ data.DCE.savedPharmacy.distance } mi.</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3 margin-mobile-small pharmacy-cost">
+                                                        <div class="display-inline-flex" rv-if="data.DCE.savedPharmacy.cost">
+                                                            <div class="hidden-pin">
+                                                                <img src="/images/icon-svgs/mapmarker-pin-blue.svg" alt="Map Pin" class="img-small"
+                                                                />
+                                                            </div>
+                                                            <div>
+                                                                <span class="bold display-block text-medium">${ data.DCE.savedPharmacy.cost }</span>
+                                                                <span class="color-gray">
+                                                                    total annual drug cost
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3 margin-mobile-small">
+                                                        <div class="display-inline-flex" rv-if="data.DCE.savedPharmacy.savings">
+                                                            <div class="hidden-pin">
+                                                                <img src="/images/icon-svgs/mapmarker-pin-blue.svg" alt="Map Pin" class="img-small"
+                                                                />
+                                                            </div>
+                                                            <div>
+                                                                <span class="bold display-block color-green-dark">Save ${ data.DCE.savedPharmacy.savings } anually</span>
+                                                                <span class="color-gray">
+                                                                    (
+                                                                    <span class="bold">2 of 4 drugs</span> have Pharmacy Saver™
+                                                                    pricing)
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-4 col-sm-2">
+                                                <span class="color-orange-dark bold select-pharmacy display-block align-center">SELECTED</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="pharmacy-list" rv-if="data.DCE.savedPharmacy.name | isEqualTo 'Preferred Mail Service'">
+                                    <li class="selected">
+                                        <div class="row">
+                                            <div class="col-xs-8 col-sm-10">
+                                                <div class="row">
+                                                    <div class="col-md-9">
+                                                        <div class="display-flex">
+                                                            <div>
+                                                                <img src="/images/icon-svgs/mapmarker-pin-star.svg" alt="Map Pin" class="img-medium"
+                                                                />
+                                                            </div>
+                                                            <div>
+                                                                <p class="bold text-medium color-blue-base margin-none" id="selected-name">{ data.DCE.savedPharmacy.name }</p>
+                                                                <p class="color-gray">
+                                                                    { data.DCE.savedPharmacy.address1 }
+                                                                    <br rv-if="data.DCE.savedPharmacy.address2"> { data.DCE.savedPharmacy.address2 }
+                                                                    <br
+                                                                        rv-if="data.DCE.savedPharmacy.phone">
+                                                                        { data.DCE.savedPharmacy.phone }
+                                                                </p>
+                                                                <div>
+                                                                    <p class="semi-bold">
+                                                                        Take advantage of a $0 co-pay for Tier 1 and Tier 2 medications and make the most
+                                                                        of your pharmacy benefits. Begin using
+                                                                        home delivery with OptumRx today.
+                                                                    </p>
+                                                                    <p>
+                                                                        You could pay less for the same medication when you use home delivery through OptumRx,
+                                                                        your plan's preferred mail service pharmacy.
+                                                                    </p>
+                                                                    <p class="margin-large">
+                                                                        Completed orders for a new prescription should arrive within ten business days, completed
+                                                                        refill orders should arrive in about
+                                                                        seven business days. No charge for standard
+                                                                        delivery to U.S. addresses, including
+                                                                        U.S. territories. Pharmacists are available
+                                                                        by phone to answer your questions any
+                                                                        day, anytime.
+                                                                    </p>
+                                                                    <a href="#collapseHomeDel" role="button" data-toggle="collapse" aria-expanded="false"
+                                                                        aria-controls="collapseHomeDel" class="margin-extra-small display-inline-block">
+                                                                        Learn more about starting home delivery
+                                                                        <span class="material-icons">keyboard_arrow_down</span>
+                                                                    </a>
+                                                                    <div class="collapse-wrapper">
+                                                                        <div class="collapse" id="collapseHomeDel">
+                                                                            <p>
+                                                                                OptumRx makes it easy to move to move to home delivery. Get started with only a few
+                                                                                quick steps. We can even contact
+                                                                                your doctor to move your prescription.
+                                                                                Begin using home delivery today.
+                                                                            </p>
+                                                                            <p class="semi-bold margin-extra-small">Go online.</p>
+                                                                            <p>
+                                                                                Set up your account at optumrx.com and select which medication you would like to
+                                                                                enroll in home delivery.
+                                                                            </p>
+                                                                            <p class="semi-bold margin-extra-small">
+                                                                                By phone.
+                                                                            </p>
+                                                                            <p>
+                                                                                Call OptumRx at 1-888-217-0152 (TTY 711), any day, anytime. OptumRx can get you set
+                                                                                up with home delivery right over
+                                                                                the phone.
+                                                                            </p>
+                                                                            <p class="semi-bold margin-extra-small">
+                                                                                By mail.
+                                                                            </p>
+                                                                            <p class="margin-none">
+                                                                                Complete an order form and mail it with your written prescription(s) to OptumRx.
+                                                                                Prescription order form (PDF)
+                                                                                (749.8 KB)
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <span class="text-medium color-green-dark bold">Save $100 annually</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-2 align-right">
+                                                <span class="color-orange-dark bold select-pharmacy display-block align-center">SELECTED</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <hr> 
+                                <div class="row">
+                                    <div class="col-md-12 align-center" role="tablist">
+                                        <a href="#drugs-tab" aria-controls="drugs-tab" role="tab" data-toggle="tab" class="btn btn--secondary drug-tab-show">
+                                            Previous: Add Your Drugs
+                                        </a>
+                                        <a href="#costs-tab" aria-controls="costs-tab" role="tab" data-toggle="tab" class="btn btn--primary costs-tab-show">
+                                            Next: View costs
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h3 class="h4 margin-small">Other Nearby Pharmacies</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div id="pharmacy-results">
+                                <div class="pharmacy-standard-block">
+                                    <ul class="pharmacy-list">
+                                        <li rv-each-pharmacy="data.DCE.pharmacyStandard" rv-show="pharmacy.visible">
+                                            <div class="row">
+                                                <div class="col-xs-8 col-sm-10 margin-none">
+                                                    <div class="row">
+                                                        <div class="col-sm-4 margin-mobile-small">
+                                                            <div class="display-flex">
+                                                                <div class="map-pin">
+                                                                    <img src="/images/icon-svgs/mapmarker-pin-blue.svg" alt="Map Pin" class="img-small"
+                                                                    />
+                                                                    <div class="map-pin-number">
+                                                                        <span rv-text="%pharmacy% | plusOne"></span>
+                                                                    </div>
+                                                                </div>
+                                                                <div>
+                                                                    <span class="bold text-medium display-block color-blue-base pharmacy-name">
+                                                                        { pharmacy.name }
+                                                                    </span>
+                                                                    <p class="color-gray">{ pharmacy.address1 }</p>
+                                                                    <a href="#" class="show-on-map">Show on Map</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-2 margin-mobile-small">
+                                                            <div class="display-inline-flex">
+                                                                <div class="hidden-pin">
+                                                                    <img src="/images/icon-svgs/mapmarker-pin-blue.svg" alt="Map Pin" class="img-small"
+                                                                    />
+                                                                </div>
+                                                                <div>
+                                                                    <span class="bold">{ pharmacy.distance } mi.</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-3 margin-mobile-small pharmacy-cost">
+                                                            <div class="display-inline-flex" rv-if="pharmacy.cost">
+                                                                <div class="hidden-pin">
+                                                                    <img src="/images/icon-svgs/mapmarker-pin-blue.svg" alt="Map Pin" class="img-small"
+                                                                    />
+                                                                </div>
+                                                                <div>
+                                                                    <span class="bold display-block">${ pharmacy.cost }</span>
+                                                                    <span class="color-gray">
+                                                                        total annual drug cost
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-3 margin-mobile-small">
+                                                            <div class="display-inline-flex" rv-if="pharmacy.savings">
+                                                                <div class="hidden-pin">
+                                                                    <img src="/images/icon-svgs/mapmarker-pin-blue.svg" alt="Map Pin" class="img-small"
+                                                                    />
+                                                                </div>
+                                                                <div>
+                                                                    <span class="bold display-block color-green-dark">Save ${ pharmacy.savings } annually</span>
+                                                                    <span class="color-gray">
+                                                                        (
+                                                                        <span class="bold">2 of 4 drugs</span> have Pharmacy Saver™ pricing)
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-4 col-sm-2">
+                                                    <a href="#" class="btn btn--secondary select-pharmacy">Select</a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <nav aria-label="Page navigation">
+                                                <ul class="uhc-pagination">
+                                                    <li>Page 1 of 5</li>
+                                                    <li class="disabled">
+                                                        <a href="#">
+                                                            <span class="material-icons">keyboard_arrow_left</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="material-icons">keyboard_arrow_right</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="pharmacy-saver-block">
+                                    <ul class="pharmacy-list">
+                                        <li rv-each-pharmacy="data.DCE.pharmacySaver" rv-show="pharmacy.visible">
+                                            <div class="row">
+                                                <div class="col-xs-8 col-sm-10 margin-none">
+                                                    <div class="row">
+                                                        <div class="col-sm-4 margin-mobile-small">
+                                                            <div class="display-flex">
+                                                                <div class="map-pin">
+                                                                    <img src="/images/icon-svgs/mapmarker-pin-blue.svg" alt="Map Pin" class="img-small"
+                                                                    />
+                                                                    <div class="map-pin-number">
+                                                                        <span rv-text="%pharmacy% | plusOne"></span>
+                                                                    </div>
+                                                                </div>
+                                                                <div>
+                                                                    <span class="bold text-medium display-block color-blue-base pharmacy-name">
+                                                                        { pharmacy.name }
+                                                                    </span>
+                                                                    <p class="color-gray">{ pharmacy.address1 }</p>
+                                                                    <a href="#" class="show-on-map">Show on Map</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-2 margin-mobile-small">
+                                                            <div class="display-inline-flex">
+                                                                <div class="hidden-pin">
+                                                                    <img src="/images/icon-svgs/mapmarker-pin-blue.svg" alt="Map Pin" class="img-small"
+                                                                    />
+                                                                </div>
+                                                                <div>
+                                                                    <span class="bold">{ pharmacy.distance } mi.</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-3 margin-mobile-small pharmacy-cost">
+                                                            <div class="display-inline-flex" rv-if="pharmacy.cost">
+                                                                <div class="hidden-pin">
+                                                                    <img src="/images/icon-svgs/mapmarker-pin-blue.svg" alt="Map Pin" class="img-small"
+                                                                    />
+                                                                </div>
+                                                                <div>
+                                                                    <span class="bold display-block">${ pharmacy.cost }</span>
+                                                                    <span class="color-gray">
+                                                                        total annual drug cost
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-3 margin-mobile-small">
+                                                            <div class="display-inline-flex" rv-if="pharmacy.savings">
+                                                                <div class="hidden-pin">
+                                                                    <img src="/images/icon-svgs/mapmarker-pin-blue.svg" alt="Map Pin" class="img-small"
+                                                                    />
+                                                                </div>
+                                                                <div>
+                                                                    <span class="bold display-block color-green-dark">Save ${ pharmacy.savings } annually</span>
+                                                                    <span class="color-gray">
+                                                                        (
+                                                                        <span class="bold">2 of 4 drugs</span> have Pharmacy Saver™ pricing)
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-4 col-sm-2">
+                                                    <a href="#" class="btn btn--secondary select-pharmacy">Select</a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <nav aria-label="Page navigation">
+                                                <ul class="uhc-pagination">
+                                                    <li>Page 1 of 5</li>
+                                                    <li class="disabled">
+                                                        <a href="#">
+                                                            <span class="material-icons">keyboard_arrow_left</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="material-icons">keyboard_arrow_right</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="mail-service-block">
+                                    <ul class="pharmacy-list" rv-unless="data.DCE.savedPharmacy.name | isEqualTo 'Preferred Mail Service'">
+                                        <li>
+                                            <div class="row">
+                                                <div class="col-xs-8 col-sm-10">
+                                                    <div class="row">
+                                                        <div class="col-md-9">
+                                                            <span class="color-blue-dark bold text-medium display-block">
+                                                                Preferred Mail Service
+                                                            </span>
+                                                            <p class="color-gray">
+                                                                Delivered to your home
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <span class="bold text-medium color-green-dark">Save $100 annually</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-4 col-sm-2">
+                                                    <a href="#" id="mail-service-select" class="btn btn--secondary">Select</a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <ul class="pharmacy-list" rv-if="data.DCE.savedPharmacy.name | isEqualTo 'Preferred Mail Service'">
+                                        <li>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    No results for your search. Lorem ipsum
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <h2 class="h4 color-blue medium margin-small" style="margin-top: 60px;">
+                                More Information
+                            </h2>
+                            <p>
+                                This directory is current as of &lt;the first Sunday of each month&gt;.
+                            </p>
+                            <p class="italic">
+                                All network pharmacies may not be listed in this directory. Inclusion of a pharmacy
+                                does not guarantee that the pharmacy is open, is at the same location as listed
+                                in this online directory, or is included in the network. The pharmacy network
+                                may change at any time. You will receive notice when necessary. Please contact
+                                UnitedHealthcare® for details.
+                            </p>
+                            <p class="italic">
+                                <span class="bold display-block">Pharmacy Saver Program</span>
+                                Drugs and prices may vary between pharmacies and are subject to change during the
+                                plan year. Prices are based on quantity filled at the pharmacy. Quantities may
+                                be limited by pharmacy based on their dispensing policy or by the plan based
+                                on Quantity Limit requirements; if prescription is in excess of a limit, co-pay
+                                amounts may be higher.
+                            </p>
+                            <p>
+                                This information is not a complete description of benefits. Contact the plan for
+                                more information. Limitations, co-payments, and restrictions may apply. Benefits,
+                                premium and/or co-payment/co-insurance may change on January 1 each year.
+                            </p>
+                            <p style="margin-none">
+                                Other pharmacies are available in our network. Members may use any pharmacy in the
+                                network, but may not receive Pharmacy Saver pricing. Pharmacies participating
+                                in the Pharmacy Saver program may not be available in all areas.
+                            </p>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="costs-tab" aria-labelledby="cost-control">
+                            <div class="theme-uhc-mir">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <p class="color-red bold" rv-if="data.DCE.savedDrugs.noDrugs"><!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            	 viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve" height="1.5rem" style="vertical-align: bottom; max-width: 1.5rem;">
+                            	<g>
+                            		<path fill="#E91B18" d="M270.2,372c0,8.4-6.7,15.3-14.8,15.3c-7.5,0-14.2-7-14.2-15.3
+                            			c0-8.3,6.7-15.3,14.5-15.3C263.8,356.7,270.2,363.7,270.2,372z M267.6,252.1l-6.2,79.6h-11.5l-5.9-79.6V197
+                            			h23.6V252.1z"/>
+                            		<path fill="#E91B18" d="M438.1,428.7L438.1,428.7H73.9c-3.4,0-6.5-1.8-8.3-4.7c-1.7-2.9-1.8-6.6-0.1-9.5
+                            			L247.6,88.2c1.7-3,4.9-4.9,8.4-4.9c3.5,0,6.7,1.9,8.4,4.9l181.9,325.7c0.9,1.5,1.5,3.3,1.5,5.2
+                            			C447.7,424.4,443.4,428.7,438.1,428.7z M90.2,409.5h331.6L256,112.6L90.2,409.5z"/>
+                            	</g>
+                            </svg>
+                             You must add at least one drug to see your costs.</p>
+                                        <p class="color-red bold" rv-unless="data.DCE.savedPharmacy.name"><!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            	 viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve" height="1.5rem" style="vertical-align: bottom; max-width: 1.5rem;">
+                            	<g>
+                            		<path fill="#E91B18" d="M270.2,372c0,8.4-6.7,15.3-14.8,15.3c-7.5,0-14.2-7-14.2-15.3
+                            			c0-8.3,6.7-15.3,14.5-15.3C263.8,356.7,270.2,363.7,270.2,372z M267.6,252.1l-6.2,79.6h-11.5l-5.9-79.6V197
+                            			h23.6V252.1z"/>
+                            		<path fill="#E91B18" d="M438.1,428.7L438.1,428.7H73.9c-3.4,0-6.5-1.8-8.3-4.7c-1.7-2.9-1.8-6.6-0.1-9.5
+                            			L247.6,88.2c1.7-3,4.9-4.9,8.4-4.9c3.5,0,6.7,1.9,8.4,4.9l181.9,325.7c0.9,1.5,1.5,3.3,1.5,5.2
+                            			C447.7,424.4,443.4,428.7,438.1,428.7z M90.2,409.5h331.6L256,112.6L90.2,409.5z"/>
+                            	</g>
+                            </svg>
+                             You must select a pharmacy to see your costs.</p>
+                                    </div>
+                                </div>
+                                <div class="row margin-large">
+                                    <div class="col-md-3">
+                                        <div class="card" id="drug-cost-card">
+                                            <div class="card-header margin-small">
+                                                <h2 class="h2 margin-extra-small no-wrap">$<span class="total-cost">--.--</span></h2>
+                                                <p class="margin-none">
+                                                    Total Estimated Annual Drug Costs <a tabindex="0" class="standalone" rel="tooltip" title="<p>Aute enim nisi consectetur excepteur esse cupidatat Lorem excepteur laborum sunt occaecat nulla culpa magna cillum.</p>">
+                                                        <svg class="icon-info">
+                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-info"></use>
+                                                        </svg>
+                                                    </a>
+                                                </p>
+                                            </div>
+                                            <div class="card-body">
+                                                <hr> 
+                                                <div class="margin-small">
+                                                    <div class="table-body">
+                                                        <div class="table-body-row">
+                                                            <div class="table-body-cell" style="padding-right: 0;">
+                                                                <a href="#" class="display-block margin-small edit-drug-list">Edit Drug List</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="table-body-row">
+                                                            <div class="table-body-cell" style="padding-right: 0;">
+                                                                <a href="#" class="display-block edit-pharmacy">Edit Pharmacy</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <p class="margin-small">See what your drug cost might be for plans available in your area.</p>
+                                                <button class="cta-button primary" style="font-size: 14px; width: 100%;">Back to plans</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="drug-container margin-large">
+                                            <div class="row" rv-each-drug="data.DCE.savedDrugs.drugs">
+                                                <div class="col-md-12">
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="col-md-12 margin-none">
+                                                                    <p class="subtitle">{ drug.title }</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-sm-6">
+                                                                    <div class="row">
+                                                                        <div class="col-sm-6">
+                                                                            <p class="color-gray bold margin-none">Qty:</p>
+                                                                            <p class="color-gray margin-extra-small">{ drug.qty } Every { drug.freq } month(s)</p>
+                                                                            <p class="color-gray bold margin-none">Tier:</p>
+                                                                            <p class="color-gray margin-none">Tier 1</p>
+                                                                        </div>
+                                                                        <div class="col-sm-6"><!-- rv-if="drug.limits" -->
+                                                                            <p class="color-gray bold margin-none">Drug Limits:</p>
+                                                                            <p class="margin-none color-gray" data-tooltip="small"> PA</p>
+                                                                            <p class="margin-none color-gray" data-tooltip="small"> QL</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2 margin-small border-left-sm">
+                                                                    <p class="margin-none semi-bold">$
+                                                                        <span class="drug-tiers">---.--</span>
+                                                                    </p>
+                                                                    <span class="italic text-small">Initial Coverage Stage</span>
+                                                                </div>
+                                                                <div class="col-sm-2 margin-small">
+                                                                    <p class="margin-none semi-bold">$
+                                                                        <span class="drug-tiers">---.--</span>
+                                                                    </p>
+                                                                    <span class="italic text-small">Coverage Gap Stage</span>
+                                                                </div>
+                                                                <div class="col-sm-2 margin-small">
+                                                                    <p class="margin-none semi-bold">$
+                                                                        <span class="drug-tiers">---.--</span>
+                                                                    </p>
+                                                                    <span class="italic text-small">Catastrophic Coverage Stage</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="bold margin-small">Drug Coverage Legend</p>
+                                        <div class="row">
+                                            <div class="col-md-4 margin-none">
+                                                <ul class="style-none">
+                                                    <li> NC - Not Covered <a tabindex="0" class="standalone" rel="tooltip" title="<p>Aute enim nisi consectetur excepteur esse cupidatat Lorem excepteur laborum sunt occaecat nulla culpa magna cillum.</p>">
+                                                        <svg class="icon-info">
+                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-info"></use>
+                                                        </svg>
+                                                    </a></li>
+                                                    <li> LA - Limited Access <a tabindex="0" class="standalone" rel="tooltip" title="<p>Aute enim nisi consectetur excepteur esse cupidatat Lorem excepteur laborum sunt occaecat nulla culpa magna cillum.</p>">
+                                                        <svg class="icon-info">
+                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-info"></use>
+                                                        </svg>
+                                                    </a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-4 margin-none">
+                                                <ul class="style-none">
+                                                    <li> ST - Step Therapy <a tabindex="0" class="standalone" rel="tooltip" title="<p>Aute enim nisi consectetur excepteur esse cupidatat Lorem excepteur laborum sunt occaecat nulla culpa magna cillum.</p>">
+                                                        <svg class="icon-info">
+                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-info"></use>
+                                                        </svg>
+                                                    </a></li>
+                                                    <li> PA - Prior Authorization <a tabindex="0" class="standalone" rel="tooltip" title="<p>Aute enim nisi consectetur excepteur esse cupidatat Lorem excepteur laborum sunt occaecat nulla culpa magna cillum.</p>">
+                                                        <svg class="icon-info">
+                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-info"></use>
+                                                        </svg>
+                                                    </a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-4 margin-large">
+                                                <ul class="style-none">
+                                                    <li> QL - Quantity Limits <a tabindex="0" class="standalone" rel="tooltip" title="<p>Aute enim nisi consectetur excepteur esse cupidatat Lorem excepteur laborum sunt occaecat nulla culpa magna cillum.</p>">
+                                                        <svg class="icon-info">
+                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-info"></use>
+                                                        </svg>
+                                                    </a></li>
+                                                    <li> ADC - Additional Drug Coverage <a tabindex="0" class="standalone" rel="tooltip" title="<p>Aute enim nisi consectetur excepteur esse cupidatat Lorem excepteur laborum sunt occaecat nulla culpa magna cillum.</p>">
+                                                        <svg class="icon-info">
+                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-info"></use>
+                                                        </svg>
+                                                    </a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="margin-extra-small display-block">
+                                            <a href="#collapseTiers" role="button" data-toggle="collapse" aria-expanded="false"
+                                                aria-controls="collapseTiers" class="display-block collapse-expand">
+                                                Learn More about Drug Pricing Tiers<img id="arr1" src="images/icon-svgs/arrow_dwn.png" alt="arrow" class="custom-material-icons">
+                                            </a>
+                                            <div class="collapse-wrapper">
+                                                <div class="collapse" id="collapseTiers">
+                                                    <p class="bold margin-extra-small">Tier 1 Drugs</p>
+                                                    <p class="margin-small">
+                                                        Nulla ea veniam nostrud reprehenderit eiusmod excepteur adipisicing nulla cupidatat
+                                                        cupidatat. Excepteur amet exercitation minim sint nulla occaecat
+                                                        dolor anim duis proident ad ea voluptate do enim consequat
+                                                        ea.
+                                                    </p>
+                                                    <p class="bold margin-extra-small">Tier 2 Drugs</p>
+                                                    <p class="margin-small">
+                                                        Nulla ea veniam nostrud reprehenderit eiusmod excepteur adipisicing nulla cupidatat
+                                                        cupidatat. Excepteur amet exercitation minim sint nulla occaecat
+                                                        dolor anim duis proident ad ea voluptate do enim consequat
+                                                        ea.
+                                                    </p>
+                                                    <p class="bold margin-extra-small">Tier 3 Drugs</p>
+                                                    <p class="margin-small">
+                                                        Nulla ea veniam nostrud reprehenderit eiusmod excepteur adipisicing nulla cupidatat
+                                                        cupidatat. Excepteur amet exercitation minim sint nulla occaecat
+                                                        dolor anim duis proident ad ea voluptate do enim consequat
+                                                        ea.
+                                                    </p>
+                                                    <p class="bold margin-extra-small">Tier 4 Drugs</p>
+                                                    <p class="margin-small">
+                                                        Nulla ea veniam nostrud reprehenderit eiusmod excepteur adipisicing nulla cupidatat
+                                                        cupidatat. Excepteur amet exercitation minim sint nulla occaecat
+                                                        dolor anim duis proident ad ea voluptate do enim consequat
+                                                        ea.
+                                                    </p>
+                                                    <p class="bold margin-extra-small">Tier 5 Drugs</p>
+                                                    <p class="margin-small">
+                                                        Nulla ea veniam nostrud reprehenderit eiusmod excepteur adipisicing nulla cupidatat
+                                                        cupidatat. Excepteur amet exercitation minim sint nulla occaecat
+                                                        dolor anim duis proident ad ea voluptate do enim consequat
+                                                        ea.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="margin-extra-small display-block">
+                                            <a href="#collapseStages" role="button" data-toggle="collapse" aria-expanded="false"
+                                                aria-controls="collapseStages" class="display-block collapse-expand">
+                                                Learn More about Drug Pricing Stages<img id="arr1" src="images/icon-svgs/arrow_dwn.png" alt="arrow" class="custom-material-icons">
+                                            </a>
+                                            <div class="collapse-wrapper margin-large">
+                                                <div class="collapse" id="collapseStages">
+                                                    <p class="bold margin-extra-small">Annual Deductible Stage</p>
+                                                    <p class="margin-small">
+                                                        Nulla ea veniam nostrud reprehenderit eiusmod excepteur adipisicing nulla cupidatat
+                                                        cupidatat. Excepteur amet exercitation minim sint nulla occaecat
+                                                        dolor anim duis proident ad ea voluptate do enim consequat
+                                                        ea.
+                                                    </p>
+                                                    <p class="bold margin-extra-small">Initial Coverage Stage</p>
+                                                    <p class="margin-small">
+                                                        Nulla ea veniam nostrud reprehenderit eiusmod excepteur adipisicing nulla cupidatat
+                                                        cupidatat. Excepteur amet exercitation minim sint nulla occaecat
+                                                        dolor anim duis proident ad ea voluptate do enim consequat
+                                                        ea.
+                                                    </p>
+                                                    <p class="bold margin-extra-small">Catastrophic Coverage Stage</p>
+                                                    <p class="margin-small">
+                                                        Nulla ea veniam nostrud reprehenderit eiusmod excepteur adipisicing nulla cupidatat
+                                                        cupidatat. Excepteur amet exercitation minim sint nulla occaecat
+                                                        dolor anim duis proident ad ea voluptate do enim consequat
+                                                        ea.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="margin-extra-small display-block">
+                                            <a href="#importantDisclaimer" role="button" data-toggle="collapse" aria-expanded="false"
+                                                aria-controls="importantDisclaimer" class="display-block collapse-expand">
+                                                Important Disclaimer Information<img id="arr1" src="images/icon-svgs/arrow_dwn.png" alt="arrow" class="custom-material-icons">
+                                            </a>
+                                            <div class="collapse-wrapper">
+                                                <div class="collapse" id="importantDisclaimer">
+                            
+                                                    <p>The list of covered drugs was last updated on 03.26.2018.</p>
+                            
+                                                    <p><b>The drug costs displayed are estimates and may vary based on the specific quantity, strength and/or dosage of the medication and the pharmacy you use.</b> It may be important to look beyond your current needs at the value of having Medicare prescription drug insurance. Enrolling when you become eligible may help give you peace of mind, should your drug needs become more significant in the future. It may also help you avoid the Medicare late enrollment penalty.</p>
+                            
+                                                    <p>No drug will move to a higher cost tier unless a new generic version becomes available. If this occurs, you will be notified in your Prescription Drug Explanation of Benefits (EOB) 60 days before the change takes effect.</p>
+                            
+                                                    <p>The Formulary and/or pharmacy directory may change at any time. You will receive notice when necessary.</p>
+                            
+                                                    <p><b>Medicare Advantage plans</b></p>
+                            
+                                                    <p>Find important information about coverage determinations and appeals,
+                                                        quality assurance policies, grievances, drug conditions and limitations. <a href="https://www.aarpmedicareplans.com/content/aarpmedicareplans/en/health-plans/medicare-advantage-plans/resources-plan-material/ma-medicare-forms/medicare-appeals.html">View coverage determinations and appeals process</a>.</p>
+                            
+                                                    <p>Learn about prior authorization criteria, step therapy criteria and the <a href="https://www.aarpmedicareplans.com/content/aarpmedicareplans/en/health-plans/medicare-advantage-plans/resources-plan-material/ma-medicare-forms/medicare-appeals.html">60-day formulary change notice</a>.
+                                                        <br>
+                                                    </p>
+                            
+                                                    <p>Note: the drug list <a tabindex="0" class="standalone" rel="tooltip" id="5abb29b7-6b6b-47c0-98fb-9e98024a3b2f_toolTip"
+                                                            title="<p>A list of drugs covered by your Medicare Part D plan benefit. A drug list may also be referred to as a covered medications list (CML), a preferred drug list (PDL), a select drug list or a formulary. These drugs are dispensed through participating pharmacies to covered members. Drug lists may differ between plans with prescription drug coverage.</p><p>Carefully weigh the differences in drug lists against the Medicare plan costs and other features when choosing a plan that may best meet your needs. A drug list may change during the year.</p>">
+                                                            <svg class="icon-info">
+                                                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-info"></use>
+                                                            </svg></a> may change during the plan year.</p>
+                            
+                                                    <p>View the <a href="https://www.aarpmedicareplans.com/content/aarpmedicareplans/en/health-plans/medicare-advantage-plans/resources-plan-material/ma-medicare-forms/ma-drug-transition.html">UnitedHealthcare prescriptinon drug transition process</a>.</p>
+                            
+                                                    <p><b>Medicare prescription drug plans</b></p>
+                            
+                                                    <p>Find important information about coverage determinations and appeals, quality assurance policies, grievances, drug conditions and limitations. <a href="https://www.aarpmedicareplans.com/content/aarpmedicareplans/en/health-plans/prescription-drug-plans/resources/pdp-medicare-forms/medicare-appeals.html">View coverage determinations and appeals process</a>.</p>
+                            
+                                                    <p>Learn about prior authorization criteria, step therapy criteria and the <a href="https://www.aarpmedicareplans.com/content/aarpmedicareplans/en/health-plans/prescription-drug-plans/resources/pdp-medicare-forms/medicare-appeals.html">60-day formulary change notice</a>.</p>
+                            
+                                                    <p>Note: the drug list <a tabindex="0" class="standalone" rel="tooltip" id="8575f694-3ff4-4f5e-8331-73a01d2767bd_toolTip"
+                                                            title="<p>A list of drugs covered by your Medicare Part D plan benefit. A drug list may also be referred to as a covered medications list (CML), a preferred drug list (PDL), a select drug list or a formulary. These drugs are dispensed through participating pharmacies to covered members. Drug lists may differ between plans with prescription drug coverage.</p><p>Carefully weigh the differences in drug lists against the Medicare plan costs and other features when choosing a plan that may best meet your needs. A drug list may change during the year.</p>">
+                                                            <svg class="icon-info">
+                                                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-info"></use>
+                                                            </svg>
+                                                        </a> may change during the plan year.</p>
+                            
+                                                    <p>View the <a href="https://www.aarpmedicareplans.com/content/aarpmedicareplans/en/health-plans/prescription-drug-plans/resources/pdp-medicare-forms/prescription-drug-transition.html">UnitedHealthcare prescription drug transition process</a>.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="modal fade" id="drugModal" tabindex="-1" role="dialog" aria-labelledby="drugModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a class="link link--icon-right link--icon-circled align-right" data-icon="&#xE5CD;"
+                        data-dismiss="modal" aria-label="Close">Cancel</a>
+                    <h2 class="modal-title sr-only" id="drugModalLabel">Add a new drug</h2>
+                </div>
+                <div class="modal-body full-padding">
+                    <div class="add-drug-animation-wrapper">
+                        <div class="add-drug">
+                            <section class="add-drug-slide" aria-hidden="false" tabindex="0">
+                                <header class="add-drug-slide-header">
+                                    <h2 class="subtitle margin-none">Add a New Drug</h2>
+                                </header>
+                                <div class="add-drug-slide-body">
+                                    <form id="add-drug-search">
+                                        <div class="display-flex h-center" id="main-search">
+                                            <div class="field--inline">
+                                                <label for="drug-search-input" class="sr-only">Drug Search</label>
+                                                <div class="field-input">
+                                                    <input type="text" id="drug-search-input" name="drug-search-input" aria-autocomplete="list">
+                                                </div>
+                                            </div>
+                                            <button class="btn" id="drug-search-button" aria-controls="alt-search" aria-expanded="false">
+                                                <span class="btn btn--primary" data-button-icon="search">
+                                                    Search
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <div id="alt-search" class="margin-large" style="display: none;" tabindex="-1">
+                                            <div class="row">
+                                                <div class="col-sm-10 col-md-offset-2 align-left">
+                                                    <fieldset id="alt-search-radios">
+                                                        <legend class="margin-small">Select Matching Drug *</legend>
+                                                        <div id="lipitor-radios" class="hidden">
+                                                            <a href="#" role="button" onkeypress="btnSpacePress(this, event)" onclick="btnClick(this, event)">Lipitor</a>
+                                                            <a href="#" role="button" onkeypress="btnSpacePress(this, event)" onclick="btnClick(this, event)">Liphetamine and Dextroamphetamine</a>
+                                                        </div>
+                                                        <div id="drug-radios" class="hidden">
+                                                            <a href="#" role="button" onkeypress="btnSpacePress(this, event)" onclick="btnClick(this, event)">Drug A</a>
+                                                            <a href="#" role="button" onkeypress="btnSpacePress(this, event)" onclick="btnClick(this, event)">Drug B</a>
+                                                            <a href="#" role="button" onkeypress="btnSpacePress(this, event)" onclick="btnClick(this, event)">Drug C</a>
+                                                            <a href="#" role="button" onkeypress="btnSpacePress(this, event)" onclick="btnClick(this, event)">Drug D</a>
+                                                            <a href="#" role="button" onkeypress="btnSpacePress(this, event)" onclick="btnClick(this, event)">Drug E</a>
+                                                            <a href="#" role="button" onkeypress="btnSpacePress(this, event)" onclick="btnClick(this, event)">Drug F</a>
+                                                            <a href="#" role="button" onkeypress="btnSpacePress(this, event)" onclick="btnClick(this, event)">Drug G</a>
+                                                            <a href="#" role="button" onkeypress="btnSpacePress(this, event)" onclick="btnClick(this, event)">Drug H</a>
+                                                            <a href="#" role="button" onkeypress="btnSpacePress(this, event)" onclick="btnClick(this, event)">Drug I</a>
+                                                        </div>
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="display-block align-center">
+                                            <a href="#" data-dismiss="modal" aria-label="Close">Cancel</a>
+                                        </div>
+                                        <div class="form-error-block align-center"></div>
+                                    </form>
+                                </div>
+                            </section>
+                            <section class="add-drug-slide" aria-hidden="true" tabindex="-1">
+                                <header class="add-drug-slide-header">
+                                    <h2 class="subtitle margin-none">Add Drug Details</h2>
+                                </header>
+                                <div class="add-drug-slide-body">
+                                    <h3 class="h4 margin-none drug-name">Nexium</h3>
+                                    * required fields
+                                    <hr>
+                                    <form id="add-drug-details">
+                                        <div class="table-body responsive">
+                                            <div class="table-body-row field--row-small">
+                                                <div class="table-body-cell">
+                                                    <span class="bold">Dosage *</span>
+                                                </div>
+                                                <div class="table-body-cell">
+                                                    <fieldset id="dosage-radios">
+                                                        <legend class="sr-only">Dosage *</legend>
+                                                        <div class="radio-block">
+                                                            <input type="radio" id="radio-1" name="dosage" value="20" checked="checked">
+                                                            <label for="radio-1">20MG</label>
+                                                        </div>
+                                                        <div class="radio-block">
+                                                            <input type="radio" id="radio-2" name="dosage" value="40">
+                                                            <label for="radio-2">40MG</label>
+                                                        </div>
+                                                        <div class="radio-block">
+                                                            <input type="radio" id="radio-3" name="dosage" value="80">
+                                                            <label for="radio-3">80MG</label>
+                                                        </div>
+                                                        <div class="radio-block">
+                                                            <input type="radio" id="radio-4" name="dosage" value="120">
+                                                            <label for="radio-4">120MG</label>
+                                                        </div>
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+                                            <div class="table-body-row field--row-small">
+                                                <div class="table-body-cell">
+                                                    <span class="bold">Package *</span>
+                                                </div>
+                                                <div class="table-body-cell">
+                                                    <fieldset id="dosage-package">
+                                                        <legend class="sr-only">Package *</legend>
+                                                        <div class="radio-block">
+                                                            <input type="radio" id="package" name="package" value="20" checked="checked">
+                                                            <label for="package">Pen of 2 (sold in a package
+                                                                of 1)</label>
+                                                        </div>
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+                                            <div class="table-body-row field--row-small">
+                                                <div class="table-body-cell">
+                                                    <label for="quantity">Select Your Quantity *</label>
+                                                </div>
+                                                <div class="table-body-cell">
+                                                    <div class="field-input--radio">
+                                                        <input type="number" name="quantity" id="quantity" placeholder="Quantity" class="input-small"
+                                                            value="30" min="1">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="table-body-row field--row-small">
+                                                <div class="table-body-cell">
+                                                    <label for="frequency">Select Your Frequency *</label>
+                                                </div>
+                                                <div class="table-body-cell">
+                                                    <div class="select--regular margin-large">
+                                                        <select name="frequency" id="frequency">
+                                                            <option value="1">Every 1 Month</option>
+                                                            <option value="3">Every 3 Months</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="btn-group--center margin-small">
+                                            <a href="#" class="btn btn--secondary drug-back">Back</a>
+                                            <button id="drug-dosage-button" class="btn">
+                                                <span class="btn btn--primary">Continue</span>
+                                            </button>
+                                        </div>
+                                        <a href="#" class="display-block align-center" data-dismiss="modal">Cancel</a>
+                                    </form>
+                                </div>
+                            </section>
+                            <section class="add-drug-slide" aria-hidden="true" tabindex="-1">
+                                <header class="add-drug-slide-header">
+                                    <h2 class="subtitle margin-none">Savings Opportunity</h2>
+                                </header>
+                                <section class="add-drug-slide-body">
+                                    <h3 class="h4 margin-none drug-name">Nexium 40mg Daily</h3>
+                                    <hr>
+                                    <div class="message-block success full-width">
+                                        <div class="message-block-body display-flex v-center">
+                                            <div>
+                                                <img src="/images/icon-svgs/money.svg" alt="Money" class="img-small" style="padding-right: 5px;"
+                                                />
+                                            </div>
+                                            <div>
+                                                Save money by
+                                                <span class="bold color-green-dark">switching to a generic drug</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="margin-large">
+                                        You may be able to save money by switching to a generic drug. The following generic
+                                        drug is available for the drug you entered:
+                                    </p>
+                                    <h3 class="h4 margin-small drug-name-generic">Acme Nonexium 40mg Daily</h3>
+                                    <form>
+                                        <fieldset class="margin-large" id="generic-check">
+                                            <legend class="sr-only">Choose option</legend>
+                                            <div class="display-block margin-extra-small">
+                                                <div class="radio-block">
+                                                    <input type="radio" id="generic-1" name="generic-radio" value="generic">
+                                                    <label for="generic-1">Switch to Generic</label>
+                                                </div>
+                                            </div>
+                                            <div class="display-block">
+                                                <div class="radio-block display-block">
+                                                    <input type="radio" id="generic-2" name="generic-radio" value="original" checked="checked">
+                                                    <label for="generic-2">Keep Brand Name Drug</label>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                        <div class="btn-group--center margin-small">
+                                            <a href="#" class="btn btn--secondary drug-back">Back</a>
+                                            <button class="btn" id="save-drug-button">
+                                                <span class="btn btn--primary">Save Drug</span>
+                                            </button>
+                                        </div>
+                                        <a href="#" class="display-block align-center" data-dismiss="modal">Cancel</a>
+                                    </form>
+                                </section>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="genericModal" tabindex="-1" role="dialog" aria-labelledby="genericModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a class="link link--icon-right link--icon-circled align-right" data-icon="&#xE5CD;"
+                        data-dismiss="modal" aria-label="Close">Cancel</a>
+                    <h2 class="modal-title sr-only" id="genericModalLabel">Switch To Generic</h2>
+                </div>
+                <div class="modal-body full-padding">
+                    <h2 class="subtitle margin-none">Savings Opportunity</h2>
+                    <h3 class="h4 margin-none drug-name">Nexium 40mg Daily</h3>
+                    <hr>
+                    <div class="message-block success full-width">
+                        <div class="message-block-body display-flex v-center">
+                            <div>
+                                <img src="/images/icon-svgs/money.svg" alt="Money" class="img-small" style="padding-right: 5px;"
+                                />
+                            </div>
+                            <div>
+                                Save money by
+                                <span class="bold color-green-dark">switching to a generic drug</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="margin-large">
+                        You may be able to save money by switching to a generic drug. The following generic
+                        drug is available for the drug you entered:
+                    </p>
+                    <h3 class="h4 margin-large generic-name">Acme Nonexium 40mg Daily</h3>
+                    <a href="#" data-dismiss="modal" class="btn btn--center btn--primary margin-small">Switch to Generic</a>
+                    <a href="#" data-dismiss="modal" class="display-block align-center">Cancel</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbmYpZ-If4XUPHONtC87GHZOjXuvzj1sk"></script>
+<script src="/scripts/vendor/maplabel.js"></script>
+
+
+      <!-- Tooltips -->
+      <div class="tooltip-templates">
+          <div id="tooltip-large">
+              <p class="bold margin-extra-small">Lorem Ipsum</p>
+              <span class="text-small">
+                  Id elit reprehenderit fugiat Lorem in magna aliqua sunt ut est id ullamco dolor ut ad.
+              </span>
+          </div>
+          <div id="tooltip-small">
+              <span class="text-small">
+                  Aute enim nisi consectetur excepteur esse cupidatat Lorem excepteur laborum sunt occaecat nulla culpa magna cillum.
+              </span>
+          </div>
+          <div id="tooltip-costs">
+            <span class="text-small">
+                This is the amount you pay as your share of your prescription drug costs,
+                such as deductibles (if applicable), co-pays/co-insurance and the amounts
+                you pay in the coverage gap.
+            </span>
+          </div>
+      </div>
+
+    </main>
+
+    <!-- Start: Footer -->
+  </div>
+
+    <!-- Start: Footer scripts -->
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    
+    <!-- Vendor scripts -->
+    <script src="/scripts/vendor/jquery-3.1.1.min.js"></script>
+    <script src="/scripts/vendor/lockrroom.js"></script>
+    <script src="/scripts/vendor/select2.min.js"></script>
+    <script src="/scripts/vendor/select2-tab-fix.js"></script>
+    <script src="/scripts/vendor/rivets.bundled.min.js"></script>
+    <script src="/scripts/vendor/rivets.js"></script>
+    <script src="/scripts/vendor/jquery.matchHeight.js"></script>
+    <script src="/scripts/vendor/slick.min.js"></script>
+    <script src="/scripts/vendor/TweenLite.min.js"></script>
+    <script src="/scripts/vendor/plugins/CSSPlugin.min.js"></script>
+    <script src="/scripts/vendor/jquery.autocomplete.min.js"></script>
+    <script src="/scripts/vendor/bootstrap.min.js"></script>
+    
+    <script src="/scripts/vendor/jquery.validate.min.js"></script>
+    <script src="/scripts/vendor/tooltipster.bundle.min.js"></script>
+    <script src="/scripts/vendor/awesomplete.js"></script>
+    
+    
+    
+    
+    <script src="/scripts/main.js"></script>
+    <script src="/scripts/navigation.js"></script>
+    
+    
+      <script src="/scripts/pages/drug-cost-estimator/dce-drugs-update.js"></script>
+      <script src="/scripts/pages/drug-cost-estimator/dce-pharmacy-update.js"></script>
+      <script src="/scripts/pages/drug-cost-estimator/jquery.tooltip.js"></script>
+</body>
+</html>

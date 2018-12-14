@@ -1,0 +1,102 @@
+<section class="container--base">
+  <div class="container margin-large">
+    <div class="row section-header">
+      <div class="col-md-10 margin-none">
+        <div class="row">
+          <div class="col-xs-2 col-sm-2 col-md-1 col-lg-1 padding-none">
+            <img src="/images/icon-svgs/go-green.svg" alt="Plan Support" class="img-responsive go-green-img">
+          </div>
+          <div class="col-xs-10 col-sm-10 col-md-10 col-lg-11">
+            <h2 class="h3 medium margin-small">Go Green: Paperless Document Delivery</h2>
+            <p>Select the plan materials you want to sign up for paperless delivery per the terms and conditions below.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tabs-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          {{!-- Mobile --}}
+          {{#if combo}}
+            <div class="tabs-mobile margin-small">
+              <label for="tab-select">Select one of your plans to see corresponding details:</label>
+              <div class="select--regular select--medium margin-none">
+                <select name="tab-select" id="tab-select">
+                  <option value="tab-1">Prescription Drug Plan</option>
+                  <option value="tab-2">Medicare Supplement Plan</option>
+                </select>
+              </div>
+            </div>
+          {{/if}}
+          {{#if federal}}
+            <p class="plan-label text-uppercase bold margin-small">Prescription Drug Plan</p>
+          {{/if}}
+          {{#if ship}}
+            <p class="plan-label text-uppercase bold margin-small">Medicare Supplement Plan</p>
+          {{/if}}
+          {{!-- Tabs desktop --}}
+          <div class="tabs-desktop">
+            <!--<p class="bold margin-small">Select one of your plans to see corresponding details:</p>-->
+            <ul class="nav nav-tabs" role="tablist">
+              {{#if combo}}
+                <li role="presentation" class="active">
+                  <a href="#tab-1" aria-controls="tab-1" role="tab" data-toggle="tab">
+                    Prescription Drug Plan
+                  </a>
+                </li>
+                <li role="presentation">
+                  <a href="#tab-2" aria-controls="tab-2" role="tab" data-toggle="tab">
+                    Medicare Supplement Plan
+                  </a>
+                </li>
+              {{/if}}
+              {{#if federal}}
+                <li role="presentation" class="active">
+                  <a href="#tab-1" aria-controls="tab-1" role="tab" data-toggle="tab">
+                    Prescription Drug Plan
+                  </a>
+                </li>
+              {{/if}}
+              {{#if ship}}
+                <li role="presentation" class="active">
+                  <a href="#tab-1" aria-controls="tab-1" role="tab" data-toggle="tab">
+                    Medicare Supplement Plan
+                  </a>
+                </li>
+              {{/if}}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container--base gray">
+    <div class="container">
+      <div class="tab-content margin-large">
+        {{#if combo}}
+          <div role="tabpanel" aria-label="Federal Plans" class="tab-pane fade active in" id="tab-1">
+            <div class="row">
+              <div class="col-md-12">{{> gg-card federal="true"}}</div>
+            </div>
+          </div>
+          <div role="tabpanel" aria-label="SHIP Plans" class="tab-pane fade" id="tab-2">
+            <div class="row">
+              <div class="col-md-12">{{> gg-card ship="true" combo="true" uniqueId="true" }}</div>
+            </div>
+          </div>
+        {{/if}}
+      </div>
+      {{#unless federal}}
+        <div class="row">
+          <div class="col-md-8">
+            <p class="margin-none">Note: it may take up to two mail cycles for your updated delivery preferences to take effect.  Your mailing cycle-the length of time between documents-varies by document.  When the paper mailings stop, you will receive an email notification alerting you that a new document has been posted to your online account.</p>
+          </div>
+        </div>
+      {{/unless}}
+    </div>
+  </div>
+
+
+</section>

@@ -1,0 +1,72 @@
+<!-- Start: block header component -->
+<div class="block">
+  <header class="block-header {{header-color}}">
+    {{title}}
+  </header>
+  <section class="block-body">
+    {{!-- Each: content --}}
+    <div {{#if block-border}}class="margin-small"{{/if}}>  
+      {{#each content}}
+        {{!-- If: has body --}}
+        {{#if body}}
+          {{{body}}}
+        {{/if}}
+      {{/each}}
+    </div>
+    {{!-- If: border block --}}
+    {{#if block-border}}
+      <div class="block border-gray padding">
+        <header class="block-header">
+          <span class="bold">{{block-border.title}}</span>
+        </header>
+        <section class="block-body">
+          {{!-- If: col 1 --}}
+          {{#eq block-border.col-size "1"}}
+            Test
+          {{/eq}}
+          {{!-- If: col 2 --}}
+          {{#eq block-border.col-size "2"}}
+            <div class="row">
+              {{!-- Col 1 --}}
+              <div class="col-md-6">
+                <div class="table-body">
+                  {{#each block-border.col-1}}
+                    <div class="table-body-row">
+                      {{!-- If: has title --}}
+                      {{#if title}}
+                        <div class="table-body-cell">
+                          <span class="bold">{{title}}:</span>
+                        </div>
+                      {{/if}}
+                      <div class="table-body-cell">
+                        {{{content}}}
+                      </div>
+                    </div>
+                  {{/each}}
+                </div>
+              </div>
+              {{!-- Col 2 --}}
+              <div class="col-md-6">
+                <div class="table-body">
+                  {{#each block-border.col-2}}
+                    <div class="table-body-row">
+                      {{!-- If: has title --}}
+                      {{#if title}}
+                        <div class="table-body-cell">
+                          <span class="bold">{{title}}:</span>
+                        </div>
+                      {{/if}}
+                      <div class="table-body-cell">
+                        {{{content}}}
+                      </div>
+                    </div>
+                  {{/each}}
+                </div>
+              </div>
+            </div>
+          {{/eq}}
+        </section>
+      </div>
+    {{/if}}
+  </section>
+</div>

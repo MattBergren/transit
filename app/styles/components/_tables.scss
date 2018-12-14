@@ -1,0 +1,329 @@
+$nav-dot-size: 1rem;
+
+.mobile-table-wrapper {
+  @media screen and (min-width: $breakpoint-md) {
+    display: none;
+    visibility: hidden;
+  }
+}
+.desktop-table-wrapper {
+  display: none;
+  visibility: hidden;
+
+  @media screen and (min-width: $breakpoint-md) {
+    display: block;
+    visibility: visible;
+  }
+}
+
+table.mobile-table {
+  table-layout: fixed;
+  background-color: $color-white;
+}
+
+table {
+  width: 100%;
+
+  &.table-white {
+    background-color: $color-white;
+  }
+
+  td,
+  th {
+    padding: $spacing-small;
+    border: 1px solid $color-gray-medium;
+    word-break: break-word;
+    max-width: 230px;
+  }
+  th {
+    text-align: center;
+  }
+  .table-subheader {
+    td {
+      width: 125px;
+      font-size: 14px;
+    }
+  }
+  // Row header styling
+  tr:not(:first-child) {
+    th {
+      @media screen and (min-width: $breakpoint-md) {
+        white-space: nowrap;
+      }
+    }
+  }
+
+  &.table-responsive {
+    td, th {
+      border-color: $color-gray-accent;
+      word-break: normal;
+    }
+
+    tr:first-child {
+      background-color: $color-white;
+    }
+
+    tr:not(:first-child) {
+      td {
+        border-top: none;
+        border-bottom: none;
+
+        .table-responsive__value {
+          font-weight: bold;
+          @media screen and (min-width: $breakpoint-md) {
+            font-weight: normal;
+          }
+        }
+
+        .table-responsive__key {
+          @media screen and (min-width: $breakpoint-md) {
+            display: none;
+          }
+        }
+      }
+
+      &:nth-child(2n+1) {
+        background-color: $color-gray-light;
+      }
+
+      &:nth-child(2n) {
+        background-color: $color-white;
+      }
+
+      &:last-child {
+        td {
+          border-bottom: 1px solid $color-gray-accent;
+        }
+      }
+    }
+
+    .mobile-table-header {
+        display: none;
+    }
+
+    @media screen and (max-width: 991px) {
+      background-color: transparent;
+      border: 1px solid $color-gray-accent;
+      border-collapse: collapse;
+
+      tr {
+        // Hide header
+        &:first-child {
+          display: none;
+          visibility: hidden;
+        }
+
+        // Stack rows
+        &:not(:first-child) {
+          td:not(.print-only) {
+            align-items: flex-end;
+            background-color: $color-white;
+            border: 0;
+            display: flex;
+            justify-content: space-between;
+            max-width: none;
+            padding-bottom: 0;
+            padding-top: 10px;
+            width: 100%;
+
+            // Table dots
+            .table-dots {
+              border-bottom: 1px dotted $color-gray-base;
+              flex-grow: 1;
+              margin: 0 5px 5px;
+            }
+
+            .mobile-table-header {
+                display: block;
+                flex: 0 1 auto;
+                font-weight: bold;
+            }
+
+            span:first-of-type {
+              max-width: 40%;
+            }
+
+            span:last-of-type {
+              max-width: 40%;
+              text-align: right;
+            }
+
+            // First and last spacing
+            &:first-child {
+              padding-top: 20px;
+            }
+
+            &:last-child {
+              padding-bottom: 20px;
+            }
+          }
+
+          // Background colors
+          &:nth-child(2n+1) {
+            td {
+              background-color: $color-gray-light;
+            }
+          }
+
+          // Remove bottom border
+          &:last-child {
+            td {
+              border-bottom: none;
+            }
+          }
+        }
+      }
+    }
+
+    &.no-header {
+      width: 100%;
+
+      tr {
+        // Hide header
+        &:first-of-type {
+          display: none;
+        }
+
+        &:not(:first-child) {
+          td {
+            display: table-cell;
+            width: auto;
+
+            @media (max-width: 767px) {
+              display: block;
+            }
+
+            img {
+              height: 1.4rem;
+              vertical-align: bottom;
+            }
+
+            &:first-of-type {
+              border-right: 0;
+            }
+
+            &:last-of-type {
+              border-left: 0;
+              max-width: none;
+
+              @media (max-width: 767px) {
+                border-left: 0;
+
+                div {
+                  &:nth-of-type(2) {
+                    padding-top: 10px;
+                  }
+                }
+              }
+
+              div {
+                display: block;
+
+                @media (min-width: $breakpoint-sm) {
+                  display: inline-block;
+
+                  &:not(:first-of-type) {
+                    margin-left: $spacing-large;
+
+                    a + a {
+                      border-left: 1px solid $color-gray-medium;
+                      padding-left: $spacing-small;
+                      margin-left: $spacing-small;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      @media (min-width: $breakpoint-md) {
+
+        tr {
+          // Add border
+          &:nth-child(2) {
+            border-top: 1px solid $color-gray-accent;
+          }
+
+          &:not(:first-child) {
+            td {
+              display: table-cell;
+
+              &:last-of-type {
+                max-width: none;
+
+                div {
+                  display: inline-block;
+
+                  &:not(:first-of-type) {
+                    margin-left: $spacing-large * 2;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.table-slick-slide {
+  margin: 0 10px;
+}
+
+// Slick navigation
+.table-nav-block {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  .prev-arrow, .next-arrow {
+    color: $color-digital-blue;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .nav-dots {
+    ul.slick-dots {
+      position: inherit;
+      top: auto;
+      bottom: auto;
+      left: auto;
+      right: auto;
+
+      li {
+        width: $nav-dot-size;
+        height: $nav-dot-size;
+
+        button {
+          width: $nav-dot-size;
+          height: $nav-dot-size;
+
+          &:before {
+            font-size: $nav-dot-size;
+            width: $nav-dot-size;
+            height: $nav-dot-size;
+            opacity: 1;
+            color: $color-gray-medium;
+          }
+        }
+
+        &.slick-active {
+          button:before {
+            color: $color-gray-dark;
+          }
+        }
+      }
+    }
+  }
+}
+
+.table-footnote {
+	padding: 5px 10px 0;
+
+	span {
+		font-size: .875rem;
+	}
+}

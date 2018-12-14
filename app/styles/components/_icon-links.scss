@@ -1,0 +1,108 @@
+.link {
+  color: $color-digital-blue;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 800;
+  line-height: 1.5rem;
+  margin: 9px 0;
+  position: relative;
+  text-transform: uppercase;
+  user-select: none;
+
+  &[type='button'] {
+    -webkit-appearance: none;
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-btn-primary-hover;
+    text-decoration: none;
+  }
+
+  &--icon-left,
+  &--icon-right {
+    display: inline-block;
+
+    &:before {
+      content: attr(data-icon);
+      display: block;
+      font-family: 'Material Icons';
+      font-size: 1em;
+      font-weight: 500;
+      position: absolute;
+      top: 0;
+    }
+  }
+
+  &--icon-left {
+    padding-left: 24px;
+
+    &.link--icon-circled {
+      padding-left: 28px;
+    }
+
+    &:before {
+      left: 0;
+    }
+  }
+
+  &--icon-right {
+    padding-right: 24px;
+
+    &.link--icon-circled {
+      padding-right: 28px;
+    }
+
+    &:before {
+      right: 0;
+    }
+  }
+
+  &--icon-circled {
+    &:before {
+      align-items: center;
+      border-radius: 50%;
+      border: solid 1px $color-digital-blue;
+      display: flex;
+      font-size: 16px;
+      height: 24px;
+      justify-content: center;
+      padding: 3px;
+      text-align: center;
+      width: 24px;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      &:before {
+        background-color: $color-gray-light;
+      }
+    }
+
+    &:active {
+      &:before {
+        background-color: $color-digital-blue;
+        color: $color-white;
+      }
+    }
+  }
+}
+
+.list-group {
+  .list-group-item {
+    img.icon {
+      height: 1.4rem;
+      margin: 0;
+      position: relative;
+      top: -1px;
+    }
+  }
+}
+
+a {
+  img[alt='PDF'] {
+    height: 1.2rem;
+    width: auto;
+  }
+}

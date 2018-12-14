@@ -1,0 +1,19 @@
+.payments {
+<<<<<<< Updated upstream
+  .payment-confirm-table {
+    .table-body-cell {
+      padding: 5px 0;
+      color: $color-digital-gray;
+=======
+  form {
+    @media (max-width: $breakpoint-xs) {
+      .table-body {
+        width: 100%;
+      }
+      input[type='text'] {
+        width: 100%;
+      }
+>>>>>>> Stashed changes
+    }
+  }
+}

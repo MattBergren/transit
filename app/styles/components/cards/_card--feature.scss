@@ -1,0 +1,11 @@
+&.feature {
+  border: 5px solid $color-gray-light;
+
+  &.blue {
+    border-color: $color-blue-light;
+  }
+
+  &.dark-gray {
+    border-color: $color-gray-medium;
+  }
+}

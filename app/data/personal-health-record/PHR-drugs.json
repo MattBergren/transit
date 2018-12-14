@@ -1,0 +1,26 @@
+{
+	"phr-drugs": {
+		"drugs": [
+			{
+				"name": "Albuterol 20mg 1",
+				"provider": "Jonathan Doe 1",
+				"date-prescribed": "12/15/2014"
+			},
+			{
+				"name": "Albuterol 20mg 2",
+				"provider": "Jonathan Doe 2",
+				"date-prescribed": "12/15/2014"
+			},
+			{
+				"name": "Albuterol 20mg 3",
+				"provider": "Jonathan Doe 3",
+				"date-prescribed": "12/15/2014"
+			},
+			{
+				"name": "Albuterol 20mg 4",
+				"provider": "Jonathan Doe 4",
+				"date-prescribed": "12/15/2014"
+			}
+		]
+	}
+}

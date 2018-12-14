@@ -1,0 +1,99 @@
+.uib-datepicker-popup {
+  width: 300px;
+  height: auto;
+  list-style: none;
+  margin: 0;
+  padding: 5px;
+  background-color: $color-white;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  border: solid 1px #DFDFDF;
+  border-left: none;
+  border-right: none;
+  font-size: 0.875em;
+  position: absolute;
+  top: 105%;
+  left: 50px;
+  z-index: 9999;
+
+  li:last-child {
+    margin: 0;
+  }
+
+  .uib-left, .uib-right, .uib-title {
+    border: none;
+    background-color: transparent;
+    font-size: 1.2em;
+    font-weight: 500;
+  }
+
+  .uib-day {
+    padding: 0;
+
+    &:hover {
+      .btn-day {
+        border-color: $color-digital-blue;
+        color: $color-digital-blue;
+
+        span.text-muted {
+          color: $color-digital-blue;
+        }
+      }
+    }
+
+    .btn-day {
+      border: 1px solid transparent;
+      background-color: transparent;
+      font-weight: 500;
+      width: 100%;
+      padding: 4px 2px;
+
+      span.text-muted {
+        color: $color-gray-accent;
+      }
+
+      &.active {
+        background-color: $color-digital-blue;
+        color: $color-white;
+      }
+    }
+  }
+
+  table {
+    td, th {
+      padding: 0;
+      border: none;
+    }
+
+    th {
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    thead {
+      tr:nth-child(2) {
+        background-color: $color-blue-medium;
+
+        small {
+          display: block;
+          padding: 5px 0;
+        }
+      }
+    }
+  }
+
+  .uib-datepicker-current, .uib-clear {
+    .btn {
+      min-height: 0;
+      font-size: 0.875em;
+      padding: 5px 10px;
+    }
+  }
+
+  .uib-close {
+    border: none;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: $color-digital-blue;
+  }
+}

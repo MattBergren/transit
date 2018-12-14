@@ -1,0 +1,96 @@
+// .home {
+//   ul {
+//     list-style: circle;
+//
+//     & > ul {
+//         padding-left: 2rem;
+//     }
+//
+//     li {
+//       padding-left: $spacing-large;
+//       list-style-position: inside;
+//       margin-bottom: $spacing-small;
+//
+//       &.title {
+//         list-style: none;
+//         border-bottom: 2px solid $color-gray-medium;
+//         padding-bottom: 10px;
+//         padding-left: 0;
+//         margin-bottom: $spacing-large;
+//       }
+//       &.subtitle {
+//           color: $color-gray-dark;
+//       }
+//     }
+//   }
+// }
+
+.template-list {
+    ul {
+        margin-left: 0;
+        padding-left: 0;
+        & > ul {
+            padding-left: 1.75rem;
+        }
+        & > ul > ul {
+            padding-left: 1rem;
+        }
+        li {
+            margin-bottom: 5px;
+            list-style-type: none;
+            & > li {
+                padding-left: 1rem;
+            }
+            a {
+                text-transform: capitalize;
+                font-weight: normal;
+            }
+        }
+    }
+    &__link-list {
+        padding-left: 0;
+        margin-bottom: 1rem;
+        i {
+            transform: translateX(-10px);
+            color: $color-gray-accent;
+        }
+
+        .dev-flag {
+            border: 1px solid $color-gray-accent;
+            border-radius: 3px;
+            padding: 2px 5px;
+            margin-left: 20px;
+            opacity: 0.4;
+            &--wip {
+                border-color: orange;
+                color: orange;
+            }
+            &--qa {
+                border-color: purple;
+                color: purple;
+            }
+            &--done {
+                border-color: green;
+                color: green;
+            }
+        }
+    }
+    &__section-title {
+        font-weight: bold;
+        color: $color-gray-dark;
+        margin-top: 2rem;
+        padding: 10px;
+        background-color: $color-gray-light;
+        font-size: 1.75rem;
+        font-weight: bold;
+    }
+    &__page-title {
+        text-transform: uppercase;
+        padding: 5px 0;
+        font-weight: bold;
+    }
+}
+
+#feature-list.devflags-hidden .dev-flag {
+    display: none;
+}

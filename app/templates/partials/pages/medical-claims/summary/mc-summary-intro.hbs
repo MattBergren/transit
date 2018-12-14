@@ -1,0 +1,111 @@
+<section class="container--base">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="h2 margin-large">
+          {{#eq type 'ship'}}Supplemental Insurance Plan Claims{{/eq}}
+          {{#eq type 'mapd'}}Plan Name Lorem Ipsum{{/eq}}
+        </h2>
+        {{#eq type 'ship'}}
+          <p class="margin-small">
+            Review your claim history results below. To perform a custom search,
+            select a date range and/or a provider name from the list below.
+            You may search your claim history for up to six years. Note that your
+            plan may not include coverage for all claim types. This is a summary
+            of your claim activity. It does not replace your
+            <a href="#" class="lowercase">Explanation of Benefits (EOB)</a>.
+          </p>
+          <p>
+            The claim history below includes items submitted under the following plans:
+          </p>
+          <ul class="margin-large" style="margin-left: 15px;">
+            <li class="bold">&lt;SHIP plan name&gt;</li>
+            <li class="bold">&lt;SHIP plan name&gt;</li>
+          </ul>
+        {{/eq}}
+        {{!-- Form start --}}
+        <div class="margin-large">
+          <fieldset>
+            <legend class="sr-only">Claim Search</legend>
+            <div class="table-body responsive my-documents-table wide">
+              <div class="table-body-row">
+                <div class="table-body-cell">
+                    <label class="bold" for="date-range{{#if combo}}2{{/if}}">View Claims From:</label>
+                </div>
+                <div class="table-body-cell">
+                  <div class="select--regular">
+                    <select name="date-range" id="date-range{{#if combo}}2{{/if}}" class="date-range">
+                        <option value="30 days">Last 30 Days</option>
+                        <option value="90 days" selected="selected">Last 90 Days</option>
+                        <option value="6 months">Last 6 Months</option>
+                        <option value="12 months">Last 12 Months</option>
+                        <option value="24 months">Last 24 Months</option>
+                        <option value="custom-search">Custom Search</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="table-body-cell"></div>
+              </div>
+              <div class="table-body-row custom-search-fields hidden">
+                <div class="table-body-cell"></div>
+                <div class="table-body-cell">
+                  <div class="custom-search-input">
+                      <label for="custom-from{{#if combo}}2{{/if}}">From</label>
+                      <input type="date" id="custom-from{{#if combo}}2{{/if}}">
+                  </div>
+                  <div class="custom-search-input">
+                      <label for="custom-to{{#if combo}}2{{/if}}">to</label>
+                      <input type="date" id="custom-to{{#if combo}}2{{/if}}">
+                  </div>
+                </div>
+                <div class="table-body-cell">
+                  <button class="btn custom-search-btn"><span class="btn btn--primary">Search</span></button>
+                </div>
+              </div>
+              <div class="table-body-row">
+                <div class="table-body-cell">
+                  {{#eq type 'mapd'}}
+                    <label class="bold" for="claim-type">Claim Type:</label>
+                  {{/eq}}
+                  {{#eq type 'ship'}}
+                    <label class="bold" for="provider-type">From Provider:</label>
+                  {{/eq}}
+                </div>
+                <div class="table-body-cell">
+                  {{#eq variation 'pdp'}}
+                    Prescription Drug
+                  {{/eq}}
+                  {{#eq variation 'ma'}}
+                    Medical
+                  {{/eq}}
+                  <div class="select--regular {{#eq variation 'pdp'}}display-none{{/eq}}{{#eq variation 'ma'}}display-none{{/eq}}">
+                    {{#eq type 'mapd'}}
+                      <select name="claim-type" id="claim-type">
+                          <option value="medical">Medical</option>
+                          <option value="prescription-drug">Prescription Drug</option>
+                      </select>
+                    {{/eq}}
+                    {{#eq type 'ship'}}
+                      <select name="provider-type" id="provider-type">
+                          <option value="all providers">All Providers</option>
+                          <option value="Provider 1">Provider Name 1</option>
+                          <option value="Provider 2">Provider Name 2</option>
+                          <option value="Provider 3">Provider Name 3</option>
+                          <option value="Provider 4">Provider Name 4</option>
+                      </select>
+                    {{/eq}}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <p class="margin-none">
+          Review your claims search results below. Or you may enter new dates to
+          search again. Only claims submitted in the past 24 months of your
+          current plan will be displayed.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

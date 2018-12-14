@@ -1,0 +1,50 @@
+<section class="container--base">
+  <div class="container">
+    {{!-- Start: section header --}}
+    <div class="row">
+      <div class="col-md-8">
+        <h2 class="h3 medium margin-small">Plan Benefits Documents</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo
+          elementum libero, quis ultricies odio luctus sit amet. Duis ut facilisis purus.
+          Phasellus cursus elit et viverra sodales.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8">
+        {{!-- Select --}}
+        <div class="margin-small">
+          <label for="lang-select-{{#if id}}{{id}}{{else}}2{{/if}}" class="sr-only">lang-select-{{#if id}}{{id}}{{else}}2{{/if}}</label>
+          <span class="bold">View </span>
+          <div class="select--inline select-no-underlin">
+            <select id="lang-select-{{#if id}}{{id}}{{else}}2{{/if}}" class="lang-select">
+              <option>ENGLISH</option>
+              <option>SPANISH</option>
+              <option>CHINESE</option>
+            </select>
+          </div>
+          <span class="bold"> documents</span>
+        </div>
+        {{!-- List group --}}
+        <ul class="document-list-new margin-none">
+          <li>
+            <a href="#"><img src="/images/icon-svgs/PDF_outlined.svg" alt="PDF">Document_Name_v1.pdf <span class="doc-specs">(PDF, size)</span></a>
+          </li>
+          <li>
+            <a href="#"><img src="/images/icon-svgs/PDF_outlined.svg" alt="PDF">Document_Name_v1.pdf <span class="doc-specs">(PDF, size)</span></a>
+          </li>
+          <li>
+            <a href="#"><img src="/images/icon-svgs/PDF_outlined.svg" alt="PDF">Document_Name_v1.pdf <span class="doc-specs">(PDF, size)</span></a>
+          </li>
+          <li>
+            <a href="#"><img src="/images/icon-svgs/PDF_outlined.svg" alt="PDF">Document_Name_v1.pdf <span class="doc-specs">(PDF, size)</span></a>
+          </li>
+          <li>
+            <a href="#"><img src="/images/icon-svgs/PDF_outlined.svg" alt="PDF">Document_Name_v1.pdf <span class="doc-specs">(PDF, size)</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

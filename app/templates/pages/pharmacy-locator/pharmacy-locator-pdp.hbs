@@ -1,0 +1,20 @@
+---
+title: Pharmacy Locator
+layout: default
+hasFooter: true
+hasHeader: true
+langSelect: true
+hasScript:
+  - pharmacy-locator
+hasHelp: PDP
+---
+<div class="pharmacy-locator">
+  {{> PL-search-parameters PL.PDP }}
+  {{> PL-search-filters PL.PDP }}
+  {{> PL-search-results type="PDP" }}
+  {{> PL-more-info }}
+  {{> PL-modals }}
+</div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbmYpZ-If4XUPHONtC87GHZOjXuvzj1sk"></script>
+<script src="/scripts/vendor/maplabel.js"></script>

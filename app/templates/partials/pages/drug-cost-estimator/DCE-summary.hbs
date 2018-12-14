@@ -1,0 +1,74 @@
+<section class="container--base">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 margin-none">
+                <h2 class="h3 medium margin-small">Summary</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 match-height">
+                <div role="tablist">
+                    <a href="#drugs-tab" aria-controls="drugs-tab" role="tab" data-toggle="tab" class="text-medium">
+                        Drugs
+                    </a>
+                </div>
+                <div class="drug-container">
+                    <p rv-if="data.DCE.savedDrugs.noDrugs" class="color-gray">
+                        Enter your drugs to see your total drug costs
+                    </p>
+                    <p rv-each-drug="data.DCE.savedDrugs.drugs" rv-show="%drug% | isLessThan 3">
+                        { drug.title }
+                    </p>
+                    <span class="msg-more-drugs"></span>
+                </div>
+            </div>
+            <div class="col-sm-4 border-left-sm match-height">
+                <div role="tablist">
+                    <a href="#pharmacy-tab" aria-controls="pharmacy-tab" role="tab" data-toggle="tab"
+                        class="text-medium">
+                        Pharmacy
+                    </a>
+                </div>
+                <div class="pharmacy-container">
+                    <p rv-unless="data.DCE.savedPharmacy.name" class="color-gray">
+                        Select a pharmacy to see your drug costs
+                    </p>
+                    <p class="text-medium semi-bold margin-none">
+                        { data.DCE.savedPharmacy.name }
+                    </p>
+                    <p class="color-gray">
+                        { data.DCE.savedPharmacy.address1 }
+                        <br rv-if="data.DCE.savedPharmacy.address2"> { data.DCE.savedPharmacy.address2 }
+                        <br rv-if="data.DCE.savedPharmacy.phone"> { data.DCE.savedPharmacy.phone }
+                    </p>
+                    <p class="margin-none" rv-if="data.DCE.savedPharmacy.type">
+                        Pharmacy Type: { data.DCE.savedPharmacy.type }
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-4 border-left-sm match-height">
+                <div role="tablist">
+                    <a href="#costs-tab" aria-controls="costs-tab" role="tab" data-toggle="tab" class="text-medium">Costs</a>
+                </div>
+                <p class="h4 margin-extra-small">$
+                    <span class="total-cost">---.--</span>
+                </p>
+                <p class="margin-small" data-tooltip="costs">
+                    Total Estimated Annual Drug Costs
+                </p>
+
+                <div class="message-block success margin-none" rv-if="data.DCE.savingsAvail">
+                    <div class="message-block-body display-flex v-center">
+                        <div>
+                            <img src="/images/icon-svgs/money.svg" alt="Money" class="img-small" />
+                        </div>
+                        <div>
+                            <span class="bold color-green-dark">$100.00</span>
+                            total available savings
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

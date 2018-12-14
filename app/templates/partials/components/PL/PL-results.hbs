@@ -1,0 +1,89 @@
+<ul class="pharmacy-list">
+  <li class="clearfix" rv-if="data.PL.hasResults">
+    <div class="pull-left" style="margin-right: 15px;">
+      <img src="/images/icon-svgs/mapmarker-pin-blue.svg" alt="Standard Network" class="img-extra-small" />
+      <span class="text-small">Standard Network Pharmacy</span>
+    </div>
+    <div class="pull-left">
+      <img src="/images/icon-svgs/mapmarker-pin-green.svg" alt="Preferred Network" class="img-extra-small" />
+      <span class="text-small">{{this.pharmacy-type}}</span>
+    </div>
+    <div class="pull-right">
+      <a href="#">View Results as PDF</a>
+    </div>
+  </li>
+  {{!-- If no results --}}
+  <li rv-unless="data.PL.hasResults">
+    <span class="color-red bold">
+      {{> important }}
+      There were no results found for the requested search. Broadening your search
+      criteria may help you get a different result.
+    </span>
+  </li>
+  {{!-- Results --}}
+  <li rv-each-pharmacy="data.PL.resultList">
+    <div class="row">
+      <div class="col-sm-6 col-md-4">
+        <div class="display-flex">
+          <div class="map-pin">
+            <img src="/images/icon-svgs/mapmarker-pin-blue.svg" alt="Map Marker Standard" class="img-small" rv-if="pharmacy.type | isEqualTo 'standard'" />
+            <img src="/images/icon-svgs/mapmarker-pin-green.svg" alt="Map Marker Saver" class="img-small" rv-if="pharmacy.type | isEqualTo 'saver'" />
+            <div class="map-pin-number">
+              {{!-- { %pharmacy% } --}}
+              <span rv-text="%pharmacy% | plusOne"></span>
+            </div>
+          </div>
+          <div class="pharmacy-info">
+            <span class="bold text-medium display-block color-blue-base pharmacy-name" rv-if="pharmacy.type | isEqualTo 'standard'">
+              { pharmacy.name } &nbsp;
+            </span>
+            <span class="bold text-medium display-block color-green-dark pharmacy-name" rv-if="pharmacy.type | isEqualTo 'saver'">
+              { pharmacy.name } &nbsp;
+            </span>
+            <p class="bold text-medium margin-none">
+              { pharmacy.distance } mi
+            </p>
+            <p class="margin-none color-gray">
+              { pharmacy.address1 }
+            </p>
+            <p class="margin-none color-gray">
+              { pharmacy.address2 }
+            </p>
+            <p class="margin-none color-gray">
+              { pharmacy.phone }
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <p rv-each-filter="pharmacy.filters">
+          <img src="/images/icon-svgs/check.svg" class="img-extra-small" style="margin-right: 5px;" alt="check mark">
+          { filter }
+        </p>
+      </div>
+      <div class="col-sm-12 col-md-4">
+        <div class="pharmacy-list-links">
+          <div>
+            <a href="#">Show on Map</a>
+            <a href="#">Get Directions</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+  {{!-- Pagination --}}
+  <li>
+    <p class="margin-auto margin-small">
+      For pharmacies with Indian/Tribal/Urban, Home Infusion, or Long-term
+      care services only, please contact UnitedHealthcare for more information.
+    </p>
+    <nav aria-label="Page navigation" class="margin-small">
+      <ul class="uhc-pagination">
+        <li>Page 1 of 5</li>
+        <li class="disabled"><a href="#"><span class="material-icons">keyboard_arrow_left</span></a></li>
+        <li><a href="#"><span class="material-icons">keyboard_arrow_right</span></a></li>
+      </ul>
+    </nav>
+    <p class="italic margin-auto" style="margin-bottom: 0;" data-tooltip="small">Dont see the pharmacy you're looking for? Try modifying your search</p>
+  </li>
+</ul>

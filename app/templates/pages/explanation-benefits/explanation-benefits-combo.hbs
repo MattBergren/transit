@@ -1,0 +1,27 @@
+---
+title: Explanation of Benefits (EOB)
+layout: default
+hasFooter: true
+hasHeader: true
+hasScript:
+  - explanation-benefits
+hasTabs:
+  - Prescription Drug Plan
+  - State Health Insurance Plan
+---
+<div class="explanation-benefits">
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane fade in active" id="tab-1" aria-label="PDP">
+      {{> eob-search combo="1"}}
+      {{> eob-results pdp="true" combo="1" }}
+      {{> form-disclaimer }}
+      {{> need-help help-type="PDP" }}
+    </div>
+    <div role="tabpanel" class="tab-pane fade" id="tab-2" aria-label="SHIP">
+      {{> eob-search ship="true" combo="2"}}
+      {{> eob-results ship="true" combo="2" }}
+      {{> form-disclaimer }}
+      {{> need-help help-type="SHIP" }}
+    </div>
+  </div>
+</div>

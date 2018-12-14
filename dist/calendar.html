@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Turn off telephone number detection. -->
+    <meta name="format-detection" content="telephone=no">
+    <title>Datepicker</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <!-- Place favicon.ico in the root directory -->
+
+
+    <link rel="stylesheet" href="/styles/vendor/slick-theme.css">
+    <link rel="stylesheet" href="/styles/vendor/slick.css">
+    <link rel="stylesheet" href="/styles/vendor/tooltipster-new.css">
+    <link rel="stylesheet" href="/styles/vendor/bootstrap.css">
+    <link rel="stylesheet" href="/styles/vendor/awesomplete.css">
+
+    <link rel="stylesheet" href="/styles/mir-main.css">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/cc-enhancement.css">
+
+    <link rel="stylesheet" href="/styles/print.css">
+
+
+    <link rel="stylesheet" href="/styles/vendor/common.css">
+
+    <script src="/scripts/vendor/modernizr.js"></script>
+
+</head>
+<body>
+  <div class="uhc-body-wrapper">
+    <div class="uhc-body-light-box"></div>
+    <div class="rivets-loading" rv-show="data.loading" style="position: fixed; top:0; left:0; right:0; bottom:0; background-color: white; z-index:9999;"></div>
+    <!-- Start: Navigation -->
+    <nav class="uhcg-nav">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="uhcg-nav-header">
+          <div class="header-wrapper">
+            <div class="logo-container">
+              <img src="/images/logos/uhc-logo.svg" alt="Main Logo" class="img-responsive">
+              <div class="logo-divider"></div>
+              <img src="/images/logos/mirum-logo.png" alt="Partner Logo" class="img-responsive">
+            </div>
+            <div class="icon-container">
+              <a href="#" class="menu-icon" aria-label="Menu">
+                <div class="menu-line-wrapper">
+                  <div class="menu-line"></div>
+                  <div class="menu-line"></div>
+                  <div class="menu-line"></div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <ul class="uhc-nav">
+            <li class="uhc-nav-item--secondary">
+              <a href="#" class="uhc-nav-item-link">
+                <img src="/images/icon-svgs/nav-phone.svg" alt="Phone">
+                Contact Us
+              </a>
+            </li>
+            <li class="uhc-nav-item--secondary">
+              <a href="#" class="uhc-nav-item-link">
+                <span class="count-circle">2</span>
+                <img src="/images/icon-svgs/nav-mail.svg" alt="Message">
+                Messages
+              </a>
+            </li>
+            <li class="uhc-nav-item--secondary">
+              <a href="#" class="uhc-nav-item-link">
+                <img src="/images/icon-svgs/nav-doc.svg" alt="Documents">
+                My Documents
+              </a>
+            </li>
+            <li class="uhc-nav-item--secondary has-sub-nav">
+              <a href="#" class="uhc-nav-item-link" id="nav-profile">
+                <img src="/images/icon-svgs/nav-user.svg" alt="User">
+                Profile
+              </a>
+              <ul class="sub-nav">
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Update Profile</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Go Green Preferences</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Change Password</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Sign Out</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="nav-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="uhc-nav">
+            <li class="uhc-nav-item"><a href="#" class="uhc-nav-item-link">Home</a></li>
+            <li class="uhc-nav-item has-sub-nav">
+              <a href="#" class="uhc-nav-item-link">Care & Costs</a>
+              <ul class="sub-nav">
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Provider Search</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Pharmacy Locator</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Drug Look Up</a></li>
+              </ul>
+            </li>
+            <li class="uhc-nav-item has-sub-nav">
+              <a href="#" class="uhc-nav-item-link">Benefits</a>
+              <ul class="sub-nav">
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Benefits Summary</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Forms & Resources</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Order Materials</a></li>
+              </ul>
+            </li>
+            <li class="uhc-nav-item has-sub-nav">
+              <a href="#" class="uhc-nav-item-link">Claims</a>
+              <ul class="sub-nav">
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Claims Search</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">EOB Search</a></li>
+              </ul>
+            </li>
+            <li class="uhc-nav-item"><a href="#" class="uhc-nav-item-link">Premium Payments</a></li>
+            <li class="uhc-nav-item"><a href="#" class="uhc-nav-item-link">Health & Wellness</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+    
+
+    <!-- Start: Page header -->
+
+    <main>
+
+
+      <div class="container--base">
+	<ul role="presentation" class="uib-datepicker-popup margin-auto">
+		<li>
+			<div class="uib-datepicker" role="application">
+				<div>
+					<div class="uib-daypicker">
+						<table role="grid" aria-labelledby="datepicker-12888-8041-title" aria-activedescendant="datepicker-12888-8041-2">
+							<thead>
+								<tr>
+									<th><button type="button" class="uib-left" tabindex="-1">&lt;<span class="sr-only">previous</span></button></th>
+									<th colspan="6"><button id="datepicker-12888-8041-title" role="heading" aria-live="assertive" aria-atomic="true" type="button" class="uib-title" tabindex="-1"><strong>March 2017</strong></button></th>
+									<th><button type="button" class="uib-right" tabindex="-1">&gt;<span class="sr-only">next</span></button></th>
+								</tr>
+								<tr>
+
+									<th class="text-center"></th>
+
+
+									<th class="text-center"><small aria-label="Monday">Mo</small></th>
+
+									<th class="text-center"><small aria-label="Tuesday">Tu</small></th>
+
+									<th class="text-center"><small aria-label="Wednesday">We</small></th>
+
+									<th class="text-center"><small aria-label="Thursday">Th</small></th>
+
+									<th class="text-center"><small aria-label="Friday">Fr</small></th>
+
+									<th class="text-center"><small aria-label="Saturday">Sa</small></th>
+
+									<th class="text-center"><small aria-label="Sunday">Su</small></th>
+
+								</tr>
+							</thead>
+							<tbody>
+
+								<tr class="uib-weeks" role="row">
+
+									<td class="text-center h6"><em>9</em></td>
+
+
+									<td class="uib-day text-center" role="gridcell" id="datepicker-12888-8041-0">
+										<button type="button" class="btn-day" tabindex="-1"><span class="text-muted">27</span></button>
+									</td>
+
+									<td class="uib-day text-center" role="gridcell" id="datepicker-12888-8041-1">
+										<button type="button" class="btn-day" tabindex="-1"><span class="text-muted">28</span></button>
+									</td>
+
+									<td class="uib-day text-center" role="gridcell" id="datepicker-12888-8041-2">
+										<button type="button" class="btn-day active" tabindex="-1"><span>1</span></button>
+									</td>
+
+									<td class="uib-day text-center" role="gridcell" id="datepicker-12888-8041-3">
+										<button type="button" class="btn-day" tabindex="-1"><span>2</span></button>
+									</td>
+
+									<td class="uib-day text-center" role="gridcell" id="datepicker-12888-8041-4">
+										<button type="button" class="btn-day" tabindex="-1"><span class="text-info">3</span></button>
+									</td>
+
+									<td class="uib-day text-center" role="gridcell" id="datepicker-12888-8041-5">
+										<button type="button" class="btn-day" tabindex="-1"><span>4</span></button>
+									</td>
+
+									<td class="uib-day text-center" role="gridcell" id="datepicker-12888-8041-6">
+										<button type="button" class="btn-day" tabindex="-1"><span>5</span></button>
+									</td>
+
+								</tr>
+
+								<tr class="uib-weeks" role="row">
+
+									<td class="text-center h6"><em>10</em></td>
+
+
+									<td class="uib-day text-center" role="gridcell" id="datepicker-12888-8041-7">
+										<button type="button" class="btn-day" tabindex="-1"><span>6</span></button>
+									</td>
+
+									<td class="uib-day text-center" role="gridcell" id="datepicker-12888-8041-8">
+										<button type="button" class="btn-day" tabindex="-1"><span>7</span></button>
+									</td>
+
+									<td class="uib-day text-center" role="gridcell" id="datepicker-12888-8041-9">
+										<button type="button" class="btn-day" tabindex="-1"><span>8</span></button>
+									</td>
+
+									<td class="uib-day text-center" role="gridcell" id="datepicker-12888-8041-10">
+										<button type="button" class="btn-day" tabindex="-1"><span>9</span></button>
+									</td>
+
+									<td class="uib-day text-center" role="gridcell" id="datepicker-12888-8041-11">
+										<button type="button" class="btn-day" tabindex="-1"><span>10</span></button>
+									</td>
+
+									<td class="uib-day text-center" role="gridcell" id="datepicker-12888-8041-12">
+										<button type="button" class="btn-day" tabindex="-1"><span>11</span></button>
+									</td>
+
+									<td class="uib-day text-center" role="gridcell" id="datepicker-12888-8041-13">
+										<button type="button" class="btn-day" tabindex="-1"><span>12</span></button>
+									</td>
+
+								</tr>
+
+								<tr class="uib-weeks" role="row">
+
+									<td class="text-center h6"><em>11</em></td>
+
+
+									<td class="uib-day text-center" role="gridcell" id="datepicker-12888-8041-14">
+										<button type="button" class="btn-day" tabindex="-1"><span>13</span></button>
+									</td>
+
+									<td class="uib-day text-center" role="gridcell" id="datepicker-12888-8041-15">
+										<button type="button" class="btn-day" tabindex="-1"><span>14</span></button>
+									</td>
+
+									<td class="uib-day text-center" role="gridcell" id="datepicker-12888-8041-16">
+										<button type="button" class="btn-day" tabindex="-1"><span>15</span></button>
+									</td>
+
+									<td class="uib-day text-center" role="gridcell" id="datepicker-12888-8041-17">
+										<button type="button" class="btn-day" tabindex="-1"><span>16</span></button>
+									</td>
+
+									<td class="uib-day text-center" role="gridcell" id="datepicker-12888-8041-18">
+										<button type="button" class="btn-day" tabindex="-1"><span>17</span></button>
+									</td>
+
+									<td class="uib-day text-center" role="gridcell" id="datepicker-12888-8041-19">
+										<button type="button" class="btn-day" tabindex="-1"><span>18</span></button>
+									</td>
+
+									<td class="uib-day text-center" role="gridcell" id="datepicker-12888-8041-20">
+										<button type="button" class="btn-day" tabindex="-1"><span>19</span></button>
+									</td>
+
+								</tr>
+
+								<tr class="uib-weeks" role="row">
+
+									<td class="text-center h6"><em>12</em></td>
+
+
+									<td class="uib-day text-center" role="gridcell" id="datepicker-12888-8041-21">
+										<button type="button" class="btn-day" tabindex="-1"><span>20</span></button>
+									</td>
+
+									<td class="uib-day text-center" role="gridcell" id="datepicker-12888-8041-22">
+										<button type="button" class="btn-day" tabindex="-1"><span>21</span></button>
+									</td>
+
+									<td class="uib-day text-center" role="gridcell" id="datepicker-12888-8041-23">
+										<button type="button" class="btn-day" tabindex="-1"><span>22</span></button>
+									</td>
+
+									<td class="uib-day text-center" role="gridcell" id="datepicker-12888-8041-24">
+										<button type="button" class="btn-day" tabindex="-1"><span>23</span></button>
+									</td>
+
+									<td class="uib-day text-center" role="gridcell" id="datepicker-12888-8041-25">
+										<button type="button" class="btn-day" tabindex="-1"><span>24</span></button>
+									</td>
+
+									<td class="uib-day text-center" role="gridcell" id="datepicker-12888-8041-26">
+										<button type="button" class="btn-day" tabindex="-1"><span>25</span></button>
+									</td>
+
+									<td class="uib-day text-center" role="gridcell" id="datepicker-12888-8041-27">
+										<button type="button" class="btn-day" tabindex="-1"><span>26</span></button>
+									</td>
+
+								</tr>
+
+								<tr class="uib-weeks" role="row">
+
+									<td class="text-center h6"><em>13</em></td>
+
+
+									<td class="uib-day text-center" role="gridcell" id="datepicker-12888-8041-28">
+										<button type="button" class="btn-day" tabindex="-1"><span>27</span></button>
+									</td>
+
+									<td class="uib-day text-center" role="gridcell" id="datepicker-12888-8041-29">
+										<button type="button" class="btn-day" tabindex="-1"><span>28</span></button>
+									</td>
+
+									<td class="uib-day text-center" role="gridcell" id="datepicker-12888-8041-30">
+										<button type="button" class="btn-day" tabindex="-1"><span>29</span></button>
+									</td>
+
+									<td class="uib-day text-center" role="gridcell" id="datepicker-12888-8041-31">
+										<button type="button" class="btn-day" tabindex="-1"><span>30</span></button>
+									</td>
+
+									<td class="uib-day text-center" role="gridcell" id="datepicker-12888-8041-32">
+										<button type="button" class="btn-day" tabindex="-1"><span>31</span></button>
+									</td>
+
+									<td class="uib-day text-center" role="gridcell" id="datepicker-12888-8041-33">
+										<button type="button" class="btn-day" tabindex="-1"><span class="text-muted">1</span></button>
+									</td>
+
+									<td class="uib-day text-center" role="gridcell" id="datepicker-12888-8041-34">
+										<button type="button" class="btn-day" tabindex="-1"><span class="text-muted">2</span></button>
+									</td>
+
+								</tr>
+
+								<tr class="uib-weeks" role="row">
+
+									<td class="text-center h6"><em>14</em></td>
+
+
+									<td class="uib-day text-center" role="gridcell" id="datepicker-12888-8041-35">
+										<button type="button" class="btn-day" tabindex="-1"><span class="text-muted">3</span></button>
+									</td>
+
+									<td class="uib-day text-center" role="gridcell" id="datepicker-12888-8041-36">
+										<button type="button" class="btn-day" tabindex="-1"><span class="text-muted">4</span></button>
+									</td>
+
+									<td class="uib-day text-center" role="gridcell" id="datepicker-12888-8041-37">
+										<button type="button" class="btn-day" tabindex="-1"><span class="text-muted">5</span></button>
+									</td>
+
+									<td class="uib-day text-center" role="gridcell" id="datepicker-12888-8041-38">
+										<button type="button" class="btn-day" tabindex="-1"><span class="text-muted">6</span></button>
+									</td>
+
+									<td class="uib-day text-center" role="gridcell" id="datepicker-12888-8041-39">
+										<button type="button" class="btn-day" tabindex="-1"><span class="text-muted">7</span></button>
+									</td>
+
+									<td class="uib-day text-center" role="gridcell" id="datepicker-12888-8041-40">
+										<button type="button" class="btn-day" tabindex="-1"><span class="text-muted">8</span></button>
+									</td>
+
+									<td class="uib-day text-center" role="gridcell" id="datepicker-12888-8041-41">
+										<button type="button" class="btn-day" tabindex="-1"><span class="text-muted">9</span></button>
+									</td>
+
+								</tr>
+
+							</tbody>
+						</table>
+					</div>
+
+
+
+				</div>
+			</div>
+		</li>
+
+		<li class="uib-button-bar clearfix">
+			<span class="btn-group pull-left">
+		    <button type="button" class="btn uib-datepicker-current"><span class="btn btn--primary">Today</span></button>
+		    <button type="button" class="btn uib-clear"><span class="btn btn--secondary">Clear</span></button>
+	   	</span>
+			<button type="button" class="pull-right uib-close">Close</button>
+		</li>
+
+	</ul>
+</div>
+
+
+      <!-- Tooltips -->
+      <div class="tooltip-templates">
+          <div id="tooltip-large">
+              <p class="bold margin-extra-small">Lorem Ipsum</p>
+              <span class="text-small">
+                  Id elit reprehenderit fugiat Lorem in magna aliqua sunt ut est id ullamco dolor ut ad.
+              </span>
+          </div>
+          <div id="tooltip-small">
+              <span class="text-small">
+                  Aute enim nisi consectetur excepteur esse cupidatat Lorem excepteur laborum sunt occaecat nulla culpa magna cillum.
+              </span>
+          </div>
+          <div id="tooltip-costs">
+            <span class="text-small">
+                This is the amount you pay as your share of your prescription drug costs,
+                such as deductibles (if applicable), co-pays/co-insurance and the amounts
+                you pay in the coverage gap.
+            </span>
+          </div>
+      </div>
+
+    </main>
+
+    <!-- Start: Footer -->
+  </div>
+
+    <!-- Start: Footer scripts -->
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    
+    <!-- Vendor scripts -->
+    <script src="/scripts/vendor/jquery-3.1.1.min.js"></script>
+    <script src="/scripts/vendor/lockrroom.js"></script>
+    <script src="/scripts/vendor/select2.min.js"></script>
+    <script src="/scripts/vendor/select2-tab-fix.js"></script>
+    <script src="/scripts/vendor/rivets.bundled.min.js"></script>
+    <script src="/scripts/vendor/rivets.js"></script>
+    <script src="/scripts/vendor/jquery.matchHeight.js"></script>
+    <script src="/scripts/vendor/slick.min.js"></script>
+    <script src="/scripts/vendor/TweenLite.min.js"></script>
+    <script src="/scripts/vendor/plugins/CSSPlugin.min.js"></script>
+    <script src="/scripts/vendor/jquery.autocomplete.min.js"></script>
+    <script src="/scripts/vendor/bootstrap.min.js"></script>
+    
+    <script src="/scripts/vendor/jquery.validate.min.js"></script>
+    <script src="/scripts/vendor/tooltipster.bundle.min.js"></script>
+    <script src="/scripts/vendor/awesomplete.js"></script>
+    
+    
+    
+    
+    <script src="/scripts/main.js"></script>
+    <script src="/scripts/navigation.js"></script>
+    
+    
+</body>
+</html>

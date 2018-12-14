@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Turn off telephone number detection. -->
+    <meta name="format-detection" content="telephone=no">
+    <title>checking form</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <!-- Place favicon.ico in the root directory -->
+
+
+    <link rel="stylesheet" href="/styles/vendor/slick-theme.css">
+    <link rel="stylesheet" href="/styles/vendor/slick.css">
+    <link rel="stylesheet" href="/styles/vendor/tooltipster-new.css">
+    <link rel="stylesheet" href="/styles/vendor/bootstrap.css">
+    <link rel="stylesheet" href="/styles/vendor/awesomplete.css">
+
+    <link rel="stylesheet" href="/styles/mir-main.css">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/cc-enhancement.css">
+
+    <link rel="stylesheet" href="/styles/print.css">
+
+
+    <link rel="stylesheet" href="/styles/vendor/common.css">
+
+    <script src="/scripts/vendor/modernizr.js"></script>
+
+</head>
+<body>
+  <div class="uhc-body-wrapper">
+    <div class="uhc-body-light-box"></div>
+    <div class="rivets-loading" rv-show="data.loading" style="position: fixed; top:0; left:0; right:0; bottom:0; background-color: white; z-index:9999;"></div>
+    <!-- Start: Navigation -->
+    
+    
+
+    <!-- Start: Page header -->
+
+    <main>
+
+
+      <div id="cc-enhancement">
+    
+    <header class="intro">
+        <div class="container">
+            <a href="" class="intro__back-btn lowercase"><span class="material-icons md-36">arrow_left</span>Back to payment options</a>
+            <h1 class="intro__header">Update Payment Method
+                <small>&nbsp;for Medicare Prescription Drug Plan</small>
+            </h1>
+            <p class="intro__body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim cupiditate quasi, eos, corrupti odio consequatur consectetur velit maiores eveniet obcaecati nihil nam esse dicta harum eius doloremque sapiente beatae quia.</p>
+        </div>
+    </header>    <section class="checking-form">
+        <div class="container">
+            <h3 class="checking-form__header">Checking Account Information</h3>
+            <p class="checking-form__info"><em>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto ab rerum sed numquam.</em></p>
+            <div class="row">
+                <div class="col-sm-6 col-sm-push-5">
+                    <div class="checking-form__helper">
+                        <p id="checkingFormInfo">You can find the bank 9-digit routing number and your account number at the bottom of your check.</p>
+                    </div>
+                    <img class="checking-form__image"src="/images/partials/check.svg" alt="">
+                </div>
+                <div class="col-sm-5 col-sm-pull-6">
+                    <form class="checking-form__form js-checking-form__form" action="">
+                        <div class="form-group">
+                            <label for="routing-number" aria-describedby="checkingFormInfo">Routing Number</label>
+                            <input type="text" class="form-control" id="routing-number" aria-required="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm-routing-number">Confirm Routing Number</label>
+                            <input type="text" class="form-control" id="confirm-routing-number" aria-required="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="account-number" aria-describedby="checkingFormInfo">Account Number</label>
+                            <input type="text" class="form-control" id="account-number" aria-required="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm-account-number">Confirm Account Number</label>
+                            <input type="text" class="form-control" id="confirm-account-number" aria-required="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="first-name">Bank Holder First Name</label>
+                            <input type="text" class="form-control" id="first-name" aria-required="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="middle-name">Bank Holder Middle Name (optional)</label>
+                            <input type="text" class="form-control" id="middle-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="last-name">Bank Holder Last Name</label>
+                            <input type="text" class="form-control" id="last-name" aria-required="true">
+                        </div>
+                        <p class="checking-form__preview-msg">By clicking "Authorize" you <a href="#" data-toggle="modal" data-target="#authModal"  class="lowercase">allow UHC to withdraw monthly payments on your behalf</a></p>
+                        <div class="checking-form__actions">
+                            <button type="submit" class="btn btn--primary checking-form__btn">Authorize</button>
+                            <a class="checking-form__link" data-toggle="modal" data-target="#cancelModal" href="#">Cancel</a>
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+            
+        </div>
+    </section>    <!-- Start: Cancel modal -->
+    <div id="cancelModal" tabindex="-1" role="alertdialog" aria-labelledby="cancelHeader" class="modal fade">
+        <div role="document" class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a class="link link--icon-right link--icon-circled align-right" data-icon="&#xE5CD;" data-dismiss="modal" aria-label="Close">Close</a>
+                    <div class="modal-title">
+                        <h1 id="cancelHeader" class="h3 margin-none">Cancel One-Time Payment?</h1>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="btn-group--full-width">
+                      <a href="#" class="btn btn--primary">
+                          Cancel Payment
+                      </a>
+                      <a href="#" data-dismiss="modal" class="btn btn--secondary">
+                          Stay On Page
+                      </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    <!-- Start: Authorization modal -->
+    <div id="authModal" tabindex="-1" role="alertdialog" aria-labelledby="authHeader" class="modal fade">
+        <div role="document" class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a class="link link--icon-right link--icon-circled align-right" data-icon="&#xE5CD;" data-dismiss="modal" aria-label="Close">Close</a>
+                    <div class="modal-title">
+                        <h1 id="authHeader" class="h3 margin-none">Authorizing UHC to withdraw monthly payments</h1>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <p class="p--full">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad harum provident, sunt quos nisi modi quaerat quia! Consequuntur impedit maxime esse voluptas quidem veniam illo eligendi placeat aut, non temporibus.</p>
+                    <p class="p--full">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad harum provident, sunt quos nisi modi quaerat quia! Consequuntur impedit maxime esse voluptas quidem veniam illo eligendi placeat aut, non temporibus.</p>
+                    <p class="p--full">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad harum provident, sunt quos nisi modi quaerat quia! Consequuntur impedit maxime esse voluptas quidem veniam illo eligendi placeat aut, non temporibus.</p>
+                    <p class="p--full">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad harum provident, sunt quos nisi modi quaerat quia! Consequuntur impedit maxime esse voluptas quidem veniam illo eligendi placeat aut, non temporibus.</p>
+                </div>
+                <div class="modal-footer">
+                    <div class="btn-group--full-width">
+                      <a href="#" data-dismiss="modal" class="btn btn--primary">
+                          Close
+                      </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    <!-- Start: Abandon modal -->
+    <div id="abandonModal" tabindex="-1" role="alertdialog" aria-labelledby="abandonHeader" class="modal fade">
+        <div role="document" class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a class="link link--icon-right link--icon-circled align-right" data-icon="&#xE5CD;" data-dismiss="modal" aria-label="Close">Close</a>
+                    <div class="modal-title">
+                        <h1 id="abandonHeader" class="h3 margin-none">Leave this page?</h1>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <p class="p--full">Any changes you made will not be saved</p>
+                </div>
+                <div class="modal-footer">
+                    <div class="btn-group--full-width">
+                      <a href="#" class="btn btn--primary">
+                          Leave this page
+                      </a>
+                      <a href="#" data-dismiss="modal" class="btn btn--secondary">
+                          Stay On Page
+                      </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div></div>
+
+
+      <!-- Tooltips -->
+      <div class="tooltip-templates">
+          <div id="tooltip-large">
+              <p class="bold margin-extra-small">Lorem Ipsum</p>
+              <span class="text-small">
+                  Id elit reprehenderit fugiat Lorem in magna aliqua sunt ut est id ullamco dolor ut ad.
+              </span>
+          </div>
+          <div id="tooltip-small">
+              <span class="text-small">
+                  Aute enim nisi consectetur excepteur esse cupidatat Lorem excepteur laborum sunt occaecat nulla culpa magna cillum.
+              </span>
+          </div>
+          <div id="tooltip-costs">
+            <span class="text-small">
+                This is the amount you pay as your share of your prescription drug costs,
+                such as deductibles (if applicable), co-pays/co-insurance and the amounts
+                you pay in the coverage gap.
+            </span>
+          </div>
+      </div>
+
+    </main>
+
+    <!-- Start: Footer -->
+  </div>
+
+    <!-- Start: Footer scripts -->
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    
+    <!-- Vendor scripts -->
+    <script src="/scripts/vendor/jquery-3.1.1.min.js"></script>
+    <script src="/scripts/vendor/lockrroom.js"></script>
+    <script src="/scripts/vendor/select2.min.js"></script>
+    <script src="/scripts/vendor/select2-tab-fix.js"></script>
+    <script src="/scripts/vendor/rivets.bundled.min.js"></script>
+    <script src="/scripts/vendor/rivets.js"></script>
+    <script src="/scripts/vendor/jquery.matchHeight.js"></script>
+    <script src="/scripts/vendor/slick.min.js"></script>
+    <script src="/scripts/vendor/TweenLite.min.js"></script>
+    <script src="/scripts/vendor/plugins/CSSPlugin.min.js"></script>
+    <script src="/scripts/vendor/jquery.autocomplete.min.js"></script>
+    <script src="/scripts/vendor/bootstrap.min.js"></script>
+    
+    <script src="/scripts/vendor/jquery.validate.min.js"></script>
+    <script src="/scripts/vendor/tooltipster.bundle.min.js"></script>
+    <script src="/scripts/vendor/awesomplete.js"></script>
+    
+    
+    
+    
+    <script src="/scripts/main.js"></script>
+    <script src="/scripts/navigation.js"></script>
+    
+    
+      <script src="/scripts/pages/cc-enhancement-app.js"></script>
+</body>
+</html>

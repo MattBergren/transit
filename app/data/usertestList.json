@@ -1,0 +1,93 @@
+{
+    "sections": [
+        {
+            "title": "My Benefits & Coverage",
+            "pages": [
+                {
+                    "title": "Benefits Summary",
+                    "links": [
+                        {
+                            "title": "Individual MA",
+                            "path": "/usertests/benefits/benefits-coverage-ma.html"
+                        },
+                        {
+                            "title": "Combo plan",
+                            "path": "/usertests/benefits/benefits-coverage-combo.html"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+          "title": "Drug Cost Estimator",
+          "pages": [
+              {
+                  "links": [
+                      {
+                          "title": "Default",
+                          "path": "/usertests/drug-cost-estimator/drug-cost-estimator-test.html"
+                      }
+                  ]
+              }
+          ]
+        },
+        {
+            "title": "Federal Payments",
+            "pages": [
+                {
+                    "title": "Payments Overview",
+                    "links": [
+                        {
+                            "title": "Monthly Billing",
+                            "path": "/usertests/payments/federal/overview/monthly.html"
+                        }
+                    ]
+                },
+                {
+                    "title": "Automatic Pay Flow",
+                    "links": [
+                        {
+                            "title": "Setup Automatic Pay",
+                            "path": "/usertests/payments/federal/automatic/form.html"
+                        },
+                        {
+                            "title": "Review Automatic Pay",
+                            "path": "/usertests/payments/federal/automatic/review.html"
+                        },
+                        {
+                            "title": "Automatic Pay Submitted",
+                            "path": "/usertests/payments/federal/automatic/submitted.html"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "SHIP Payments",
+            "pages": [
+                {
+                    "title": "Payments Overview",
+                    "links": [
+                        {
+                            "title": "Monthly Billing",
+                            "path": "/usertests/payments/ship/overview/monthly.html"
+                        },
+                        {
+                            "title": "Existing Recurring Pay",
+                            "path": "/usertests/payments/ship/overview/recurring.html"
+                        }
+                    ]
+                },
+                {
+                    "title": "Recurring Pay Flow",
+                    "links": [
+                        {
+                            "title": "Setup Recurring Pay",
+                            "path": "/usertests/payments/ship/recurring/form.html"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

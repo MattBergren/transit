@@ -1,0 +1,34 @@
+.value-added-services {
+  .video-tout {
+    p,
+    .video-caption {
+      font-size: 14px;
+      font-style: italic;
+      line-height: 18px;
+    }
+    .video-thumbnail {
+      width: 100%;
+      position: relative;
+      margin-bottom: 10px;
+
+      &:after {
+        display: none;
+        position: absolute;
+        content: " ";
+        z-index: 2;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        background: $color-digital-blue;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      img {
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+}

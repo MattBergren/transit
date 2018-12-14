@@ -1,0 +1,72 @@
+<section class="container--base gray">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 margin-small">
+        {{!-- Start: section header --}}
+        <h2 class="h3 medium margin-small">Drug Copays & Discounts</h2>
+        <p class="margin-none">
+          Co-pays and co-insurance, or the amount you pay for your drugs, are
+          determined by drug tier, your current stage of coverage, and the pharmacy you use....
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 margin-small">
+        {{!-- Start: drug costs --}}
+        <h3 class="h4 color-blue medium margin-small">Drug Costs</h3>
+        {{!-- Form select --}}
+
+          <label for="drug-costs">Set a pharmacy to view drug costs below:</label>
+          <div class="select--regular">
+            <select id="drug-costs">
+              <option value="">Preferred Retail Pharmacy</option>
+              <option value="">Standard Retail Pharmacy</option>
+              <option value="">Preferred Mail Service Pharmacy</option>
+            </select>
+          </div>
+        
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8">
+        <p class="margin-none">
+          <span class="bold">Preferred Retail Pharmacies</span>
+          are generally the lowest cost lorem ipsum dolor sit amet, consectetur
+          adipiscing elit. Mauris commodo elementum libero, quis ultricies odio luctus
+        </p>
+      </div>
+    </div>
+    {{!-- Start: tables --}}
+    <div class="row">
+      <div class="col-md-12">
+        {{> table-pdp}}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8">
+        {{!-- Start: drug coverage --}}
+        <h3 class="h4 color-blue medium margin-small">Drug Coverage</h3>
+        <span>
+          Covered drugs in your plan include most generic and commonly used brand
+          name drugs covered by Medicare Part D. You pay no more than 58% of the
+          total cost for generic drugs or 45% of the total cost for brand name drugs,
+          for any drug tier during the coverage gap.
+        </span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3 match-height">
+        <p class="margin-small">
+          Search drugs by name to find tier listings and drug costs with your plan
+        </p>
+        <a href="#" class="btn btn--primary">Look up Drugs</a>
+      </div>
+      <div class="col-md-3 border-left match-height">
+        <p class="margin-small">
+          Excepteur esse labore dolor id officia anim tempor occaecat elit cupidatat amet.
+        </p>
+        <a href="#" class="btn btn--secondary">Locate a Pharmacy</a>
+      </div>
+    </div>
+  </div>
+</section>

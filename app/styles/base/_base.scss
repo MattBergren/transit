@@ -1,0 +1,101 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+    box-sizing: border-box;
+}
+
+html, body {
+  background: #FFF;
+  color: #2D2D39;
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+hr {
+  border-top-color: #E0E0E0;
+  margin-bottom: 30px;
+  margin-top: 20px;
+
+  &.hr-margin-small {
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+}
+
+ul {
+  margin: 0;
+  padding-left: 1rem;
+
+  li {
+    margin-bottom: 5px;
+  }
+
+  &.style-none {
+    list-style: none;
+    padding: 0;
+  }
+
+  &.indented {
+    margin-left: $spacing-large;
+  }
+
+  &.numbered-list {
+    list-style: decimal;
+  }
+}
+
+a {
+  img {
+    display: inline-block;
+    height: 1rem;
+    margin-right: 5px;
+
+    &.external-link {
+      height: 1.2rem;
+      margin-right: 0;
+    }
+  }
+
+  svg {
+    vertical-align: middle;
+  }
+
+  &:hover {
+    svg {
+      path {
+        fill: #115fa0;
+      }
+    }
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  &.subtitle {
+    font-size: 1em;
+  }
+}
+
+iframe {
+  background-color: transparent;
+  height: 100%;
+  position: relative;
+  width: 100%;
+}

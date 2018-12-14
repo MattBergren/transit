@@ -1,0 +1,50 @@
+---
+title: Payments
+layout: default
+hasFooter: true
+hasHeader: true
+hasScript:
+  - payments
+  - form-validation
+---
+<div class="payments">
+    <section class="container--base">
+        <div class="container">
+          <form class="margin-large" id="auto-payments" action="/payments/federal/automatic/review-eft.html">
+            <div class="row">
+                <div class="col-md-12">
+                    {{!-- Intro header --}}
+                    <h2 class="h3 medium margin-small">Recurring Payments</h2>
+                    <p class="margin-small">
+                        It’s easy to pay your premium. Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit. Nunc dapibus, sem a consequat varius, metus dolor convallis
+                        justo, sit amet interdum justo orci at sapien.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    {{!-- Amount to be paid --}}
+                    <h3 class="h4 color-blue medium margin-small">Amount to be paid</h3>
+                    The current premium amount due each month
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    {{> payments-fed-form
+                        cancelUrl="/payments/ship/overview/monthly.html"
+                        continueUrl="/payments/federal/automatic/review.html"
+                    }}
+
+                    {{> payments-bank-account-form
+                        cancelUrl="/payments/ship/overview/monthly.html"
+                        continueUrl="/payments/federal/automatic/review-eft.html"
+                    }}
+
+                </div>
+            </div>
+          </form>
+        </div>
+    </section>
+</div>

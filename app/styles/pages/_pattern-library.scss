@@ -1,0 +1,379 @@
+.pattern-library {
+
+  .navbar {
+    &.affix {
+      top: 40px;
+
+      @media (max-width: $breakpoint-sm - 1px) {
+        top: 0;
+        right: 0;
+      }
+    }
+
+    .navbar-header {
+      background-color: transparent;
+      padding: 10px 0;
+
+      .navbar-toggle {
+        background-color: $color-digital-blue;
+        border: none;
+        height: 45px;
+        width: 45px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+
+        .icon-bar {
+          background-color: $color-white;
+          transition: all $transition-speed $easeOut;
+
+          &:nth-of-type(3) {
+            transition-duration: $transition-speed-fast;
+          }
+        }
+
+        &[aria-expanded='true'] {
+          background-color: $color-btn-primary-hover;
+
+          .icon-bar {
+            &:nth-of-type(2) {
+              transform: translateY(6px) rotate(45deg);
+            }
+            &:nth-of-type(3) {
+              opacity: 0;
+            }
+            &:nth-of-type(4) {
+              transform: translateY(-6px) rotate(-45deg);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .container-library {
+    display: flex;
+    align-items: flex-start;
+
+    .nav-wrapper {
+      flex-basis: 20%;
+      padding-top: 40px;
+    }
+
+    nav {
+      background-color: transparent;
+      border: none;
+      z-index: 9999;
+
+      .container-fluid, .navbar-collapse {
+        padding: 0;
+      }
+
+      .nav.navbar-nav {
+        float: none;
+
+        & > li {
+          float: none;
+          display: block;
+
+          a {
+            color: $color-digital-blue;
+            white-space: nowrap;
+
+            &:hover {
+              color: $color-btn-primary-hover;
+              text-decoration: underline;
+            }
+          }
+
+          &.active a {
+            background-color: $color-btn-primary-hover;
+            border-radius: 4px;
+            color: $color-white;
+
+            &:hover {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+
+    .container-body {
+      flex-grow: 1;
+      margin-left: $spacing-large;
+      max-width: 100%;
+
+      &-section {
+        padding-left: $spacing-large;
+        padding-bottom: 40px;
+        padding-top: 40px;
+
+        &:not(:last-child) {
+          border-bottom: 1px dashed $color-gray-accent;
+        }
+      }
+    }
+
+    @media (max-width: $breakpoint-sm - 1px) {
+      flex-direction: column;
+
+      .nav-wrapper {
+        flex-basis: auto;
+        width: 100%;
+        padding: 0;
+
+        .navbar {
+          margin: 0;
+
+          .navbar-toggle {
+            display: flex;
+          }
+
+          .navbar-nav {
+            width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-left: 0;
+            margin-right: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+
+            & > li {
+              width: 100%;
+              background-color: $color-white;
+              box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+              margin-bottom: 8px;
+              transition: all $transition-speed $easeOut;
+
+              a {
+                border-radius: 0 !important;
+              }
+            }
+          }
+
+          &.affix {
+            width: 100%;
+            padding-right: 15px;
+
+            .navbar-nav > li {
+              width: 60%;
+              max-width: 100%;
+            }
+          }
+        }
+
+        .navbar-collapse {
+          border-top: none;
+        }
+      }
+
+      .container-body {
+        margin: 0;
+
+        &-section {
+          padding-left: 0;
+
+          &:first-of-type {
+            padding-top: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .heading-level {
+    margin-bottom: $spacing-small;
+
+    &-label {
+      display: flex;
+
+      p {
+        margin: 0;
+
+        &:last-child {
+          border-left: 1px solid $color-gray-medium;
+          padding-left: 10px;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+  .color-container {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+
+    &-item {
+      padding: 0 $spacing-small;
+      margin-bottom: $spacing-small;
+
+      .color-sample {
+        height: 80px;
+        width: 120px;
+        border-radius: 4px;
+        margin: 0 auto $spacing-small;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+      }
+
+      .color-label {
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+
+  // Table styles
+  .table-2 {
+    .table-responsive {
+      @media screen and (max-width: 991px) {
+        tr:not(:first-child) {
+          td {
+            flex-direction: column;
+            align-items: baseline;
+
+            span {
+              &:first-of-type {
+                max-width: none;
+              }
+
+              &:last-of-type {
+                text-align: left;
+                max-width: none;
+              }
+            }
+
+            .table-dots {
+              display: none;
+            }
+          }
+        }
+
+        &.table-prescription {
+          tr:not(:first-child) {
+            td {
+              // Row: Filled
+              &:first-child {
+                flex-direction: row;
+                justify-content: flex-start;
+
+                span {
+                  &:first-of-type {
+                    display: none;
+                  }
+
+                  &:last-of-type {
+                    &:before {
+                      content: 'Filled ';
+                    }
+                  }
+                }
+              }
+
+              // Row: Medication
+              &:nth-child(2) {
+                span {
+                  &:first-of-type {
+                    display: none;
+                  }
+
+                  &:last-of-type {
+                    font-size: 1.188rem;
+                    font-weight: 300;
+                  }
+                }
+              }
+
+              // Row: Rx Number
+              &:nth-child(3) {
+                padding-top: 0;
+
+                span {
+                  &:first-child {
+                    display: none;
+                  }
+
+                  &:last-of-type {
+                    font-style: italic;
+
+                    &:before {
+                      content: 'Rx #'
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        // Row: More info
+        &.more-info {
+          tr:not(:first-child) {
+            td {
+              &:last-of-type {
+                align-items: center;
+
+                span {
+                  &:first-of-type {
+                    display: none;
+                  }
+                }
+              }
+
+              // Row: Date
+              &:nth-child(1) {
+                span {
+                  &:first-of-type {
+                    display: none;
+                  }
+
+                  &:last-of-type {
+                    font-weight: normal;
+                  }
+                }
+              }
+
+              // Row: Provider name
+              &:nth-child(2) {
+                span {
+                  &:first-of-type {
+                    display: none;
+                  }
+
+                  &:last-of-type {
+                    font-size: 1.188rem;
+                    font-weight: 300;
+                  }
+                }
+              }
+
+              // Row: Claim type
+              &:nth-child(3) {
+                padding-top: 0;
+
+                span:first-child {
+                  display: none;
+                }
+                span:last-of-type {
+                  font-style: italic;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// For scrollspy
+body {
+  position: relative;
+}

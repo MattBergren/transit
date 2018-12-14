@@ -1,0 +1,123 @@
+.card {
+  padding: $spacing-inner;
+  background-color: $color-white;
+  transition: min-height $transition-speed;
+
+  &.border-gray {
+    border: 1px solid $color-gray-medium;
+  }
+
+  &.bg-gray {
+    background-color: $color-gray-light;
+  }
+
+  .card-header {
+    margin-bottom: $spacing-large;
+
+    &.display-flex {
+      & > div:first-child {
+        flex-shrink: 0;
+      }
+    }
+  }
+
+  .card-body {
+
+    .image-center {
+      width: 100%;
+      text-align: center;
+
+      img {
+        height: 5rem;
+      }
+    }
+
+    ul.links {
+      display: block;
+      padding: 0;
+      margin: 0;
+      text-align: left;
+
+      li {
+        display: inline-block;
+        padding: 0 $spacing-small;
+
+        a {
+          font-weight: 600;
+          display: block;
+
+          span.material-icons {
+            font-weight: 600;
+            vertical-align: middle;
+            transition: transform $transition-speed;
+          }
+
+          &[aria-expanded='true'] {
+            span.material-icons {
+              transform: rotate(-180deg);
+            }
+          }
+        }
+
+        &:first-child {
+          padding-left: 0;
+        }
+
+        &:not(:first-child) {
+          border-left: 1px solid $color-gray-medium;
+        }
+      }
+    }
+
+    button.btn {
+      span.material-icons {
+        margin-right: 5px;
+      }
+
+      &.full-width {
+        width: 100%;
+      }
+    }
+
+    .collapse-inner {
+      margin-bottom: $spacing-small;
+
+      ul {
+        margin: 0;
+        padding: 0 0 0 $spacing-small;
+
+        li {
+          margin-bottom: 5px;
+
+          img {
+            height: $spacing-small;
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  &.button-bottom {
+    display: flex;
+    flex-direction: column;
+
+    .card-body {
+      flex-grow: 1;
+    }
+
+    .btn {
+      width: 100%;
+    }
+  }
+
+  // Import card variation styles
+  @import
+      'cards/card--add',
+      'cards/card--feature',
+      'cards/card--rider',
+      'cards/card--large',
+      'cards/card--promo';
+}
+
+@import 'cards/card--claim';

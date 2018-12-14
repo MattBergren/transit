@@ -1,0 +1,705 @@
+{
+    "sections": [
+				{
+					"title": "Personal Health Record",
+					"pages": [
+						{
+							"links": [
+								{
+									"title": "Personal Health Record",
+									"path": "/personal-health-record/personal-health-record-stacked.html"
+								},
+								{
+									"title": "Personal Health Record - No Prescriptions",
+									"path": "/personal-health-record/personal-health-record-zero-rx.html"
+								}
+							]
+						}
+					]
+				},
+        {
+            "title": "My Benefits & Coverage",
+            "pages": [
+                {
+                    "title": "Benefits Summary",
+                    "links": [
+                        {
+                            "title": "Individual MA -- with Medical Tiers, HMO",
+                            "path": "/benefits-coverage/benefits-coverage-ma.html"
+                        },
+                        {
+                            "title": "Group MA -- with tiers, PPO",
+                            "path": "/benefits-coverage/benefits-coverage-ma-group.html"
+                        },
+                        {
+                            "title": "Group MAPD -- LIS, no medical tier",
+                            "path": "/benefits-coverage/benefits-coverage-mapd.html"
+                        },
+                        {
+                            "title": "Individual PDP -- non-LIS, with drug tiers",
+                            "path": "/benefits-coverage/benefits-coverage-pdp.html"
+                        },
+                        {
+                            "title": "Individual PDP -- non-LIS, with drug tiers - Texas Version",
+                            "path": "/benefits-coverage/benefits-coverage-pdp-texas.html"
+                        },
+                        {
+                            "title": "SHIP",
+                            "path": "/benefits-coverage/benefits-coverage-ship.html"
+                        },
+                        {
+                            "title": "Combo plans: Individual PDP plus SHIP",
+                            "path": "/benefits-coverage/benefits-coverage-combo.html"
+                        },
+                        {
+                            "title": "Group SSUP",
+                            "path": "/benefits-coverage/benefits-coverage-ssup-group.html"
+                        }
+                    ]
+                },
+                {
+                    "title": "Value Added Services",
+                    "links": [
+                        {
+                            "title": "Default",
+                            "path": "/benefits-coverage/value-added-services-ma.html"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Drug Cost Estimator",
+            "pages": [
+                {
+                    "title": "Estimator",
+                    "links": [
+                        {
+                            "title": "New User",
+                            "path": "/drug-cost-estimator-update.html"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Federal Payments",
+            "pages": [
+                {
+                    "title": "Payments Overview",
+                    "links": [
+                        {
+                            "title": "New Member",
+                            "path": "/payments/federal/overview/new-member.html"
+                        },
+                        {
+                          "title": "Existing Member",
+                          "path": "/payments/federal/overview/existing-member.html"
+                        },
+                        {
+                          "title": "Advance Pay Member",
+                          "path": "/payments/federal/overview/advance-pay-member.html"
+                        },
+                        {
+                          "title": "Full Paid Member",
+                          "path": "/payments/federal/overview/full-paid-member.html"
+                        }
+                    ]
+                },
+                {
+                    "title": "Recurring Pay Flow",
+                    "links": [
+                        {
+                          "title": "Setup",
+                          "path": "/payments/federal/automatic/setup.html"
+                        },
+                        {
+                          "title": "Checking Form",
+                          "path": "/payments/federal/automatic/checking-form.html"
+                        },
+                        {
+                          "title": "Review",
+                          "path": "/payments/federal/automatic/review.html"
+                        },
+                        {
+                          "title": "Confirm",
+                          "path": "/payments/federal/automatic/confirm.html"
+                        }
+                    ]
+                },
+                {
+                  "title": "One Time Pay Flow",
+                  "links": [
+                      {
+                        "title": "One Time",
+                        "path": "/payments/federal/onetimepay/one-time.html"
+                      },
+                      {
+                        "title": "Checking Form",
+                        "path": "/payments/federal/onetimepay/checking-form.html"
+                      },
+                      {
+                        "title": "Review",
+                        "path": "/payments/federal/onetimepay/review.html"
+                      },
+                      {
+                        "title": "Confirm",
+                        "path": "/payments/federal/onetimepay/confirm.html"
+                      }
+                  ]
+              },
+                {
+                    "title": "Update Method Flow",
+                    "links": [
+                        {
+                          "title": "Update",
+                          "path": "/payments/federal/update/update.html"
+                        },
+                        {
+                          "title": "Checking Form",
+                          "path": "/payments/federal/update/checking-form.html"
+                        },
+                        {
+                          "title": "Review",
+                          "path": "/payments/federal/update/review.html"
+                        },
+                        {
+                          "title": "Confirm",
+                          "path": "/payments/federal/update/confirm.html"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "SHIP Payments",
+            "pages": [
+                {
+                    "title": "Payments Overview",
+                    "links": [
+                        {
+                            "title": "Monthly Billing",
+                            "path": "/payments/ship/overview/monthly.html"
+                        },
+                        {
+                            "title": "Existing Recurring Pay",
+                            "path": "/payments/ship/overview/recurring.html"
+                        }
+                    ]
+                },
+                {
+                    "title": "Recurring Pay Flow",
+                    "links": [
+                        {
+                            "title": "Setup Recurring Pay",
+                            "path": "/payments/ship/recurring/form.html"
+                        }
+                    ]
+                },
+                {
+                    "title": "Onetime Pay Flow",
+                    "links": [
+                        {
+                            "title": "Setup Onetime Pay",
+                            "path": "/payments/ship/onetimepay/form.html"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+          "title": "Forms and Resources",
+          "pages": [
+            {
+              "links": [
+                {
+                  "title": "MA Individual",
+                  "path":  "/resources/forms-and-resources-ma.html"
+                },
+                {
+                    "title": "Individual MAPD",
+                    "path": "/resources/forms-and-resources-mapd.html"
+                },
+                {
+                    "title": "Individual MAPD - Jan-Sept",
+                    "path": "/resources/forms-and-resources-mapd-jan-sept.html"
+                },
+                {
+                    "title": "Group MAPD",
+                    "path": "/resources/forms-and-resources-mapd-group.html"
+                },
+                {
+                    "title": "Group PDP",
+                    "path": "/resources/forms-and-resources-pdp-group.html"
+                },
+                {
+                    "title": "SHIP",
+                    "path": "/resources/forms-and-resources-ship.html"
+                },
+                {
+                    "title": "Combo",
+                    "path": "/resources/forms-and-resources-combo.html"
+                },
+                {
+                    "title": "Group SSUP",
+                    "path": "/resources/forms-and-resources-ssup-group.html"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Pharmacy Locator",
+          "pages": [
+            {
+              "links": [
+                {
+                  "title": "MAPD",
+                  "path": "/pharmacy-locator/pharmacy-locator-mapd.html"
+                },
+                {
+                  "title": "PDP",
+                  "path": "/pharmacy-locator/pharmacy-locator-pdp.html"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "My Claims",
+          "pages": [
+            {
+              "title": "Federal Claims",
+              "links": [
+                {
+                  "title": "MAPD - NICE",
+                  "path": "/medical-claims/claims/mapd-nice.html"
+                },
+                {
+                  "title": "MAPD - NICE Detail",
+                  "path": "/medical-claims/details/mapd-nice.html"
+                },
+                {
+                  "title": "MAPD - COSMOS",
+                  "path": "/medical-claims/claims/mapd.html"
+                },
+                {
+                  "title": "MAPD - COSMOS Detail",
+                  "path": "/medical-claims/details/index.html"
+                },
+                {
+                  "title": "MA",
+                  "path": "/medical-claims/claims/ma.html"
+                },
+                {
+                  "title": "PDP",
+                  "path": "/medical-claims/claims/pdp.html"
+                }
+              ]
+            },
+            {
+              "title": "SHIP Claims",
+              "links": [
+                {
+                  "title": "SHIP Summary",
+                  "path": "/medical-claims/claims/ship.html"
+                },
+                {
+                  "title": "Part B Services",
+                  "path": "/medical-claims/details/ship-partb.html"
+                },
+                {
+                  "title": "Indemnity/Prescription Drugs",
+                  "path": "/medical-claims/details/ship-indemnity-rx.html"
+                },
+                {
+                  "title": "Med Supp/Indemnity - Medical Services",
+                  "path": "/medical-claims/details/ship-indemnity-medserve.html"
+                },
+                {
+                  "title": "Indemnity/Hospital/SNF",
+                  "path": "/medical-claims/details/ship-indemnity-snf.html"
+                },
+                {
+                  "title": "Med Supp/Hospital/SNF",
+                  "path": "/medical-claims/details/ship-snf.html"
+                },
+                {
+                  "title": "Indemnity/Other",
+                  "path": "/medical-claims/details/ship-indemnity-other.html"
+                }
+              ]
+            },
+            {
+              "title": "Combo",
+              "links": [
+                {
+                  "title": "PDP & SHIP",
+                  "path": "/medical-claims/claims/combo.html"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Order Plan Materials",
+          "pages": [
+            {
+              "title": "Federal",
+              "links": [
+                {
+                  "title": "Order Page",
+                  "path": "/order-materials/order-materials-federal.html"
+                },
+                {
+                  "title": "Confirmation Page",
+                  "path": "/order-materials/order-materials-federal-submitted.html"
+                }
+              ]
+            },
+            {
+              "title": "SHIP",
+              "links": [
+                {
+                  "title": "Order Page",
+                  "path": "/order-materials/order-materials-ship.html"
+                },
+                {
+                  "title": "Confirmation Page",
+                  "path": "/order-materials/order-materials-ship-submitted.html"
+                }
+              ]
+            },
+            {
+              "title": "Combo",
+              "links": [
+                {
+                  "title": "Order Page",
+                  "path": "/order-materials/order-materials-combo.html"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Content Only",
+          "pages": [
+            {
+              "links": [
+                {
+                  "title": "No Accordion",
+                  "path": "/content-only/content-only.html"
+                },
+                {
+                  "title": "With Accordion",
+                  "path": "/content-only/content-only-accordion.html"
+                },
+                {
+                  "title": "Privacy Policy",
+                  "path": "/content-only/content-only-privacy.html"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Contact Us",
+          "pages": [
+            {
+              "links": [
+                {
+                  "title": "MA/MAPD",
+                  "path": "/contact/contact-us-ma.html"
+                },
+                {
+                  "title": "MA/MAPD - Opt In",
+                  "path": "/contact/contact-us-ma-opt-in.html"
+                },
+                {
+                  "title": "PDP",
+                  "path": "/contact/contact-us-pdp.html"
+                },
+                {
+                  "title": "Group",
+                  "path": "/contact/contact-us-group.html"
+                },
+                {
+                  "title": "SHIP",
+                  "path": "/contact/contact-us-ship.html"
+                },
+                {
+                  "title": "Combo (MA & SHIP)",
+                  "path": "/contact/contact-us-combo.html"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Explanation of Benefits",
+          "pages": [
+            {
+              "links": [
+                {
+                  "title": "MA",
+                  "path": "/explanation-benefits/explanation-benefits-ma.html"
+                },
+                {
+                  "title": "MAPD",
+                  "path": "/explanation-benefits/explanation-benefits-mapd.html"
+                },
+                {
+                  "title": "PDP",
+                  "path": "/explanation-benefits/explanation-benefits-pdp.html"
+                },
+                {
+                  "title": "SHIP",
+                  "path": "/explanation-benefits/explanation-benefits-ship.html"
+                },
+                {
+                  "title": "Combo (PDP & SHIP)",
+                  "path": "/explanation-benefits/explanation-benefits-combo.html"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Dashboard",
+          "pages": [
+            {
+              "links": [
+                {
+                  "title": "MA - Group Member (without premium)",
+                  "path": "/dashboard/dashboard-ma.html"
+                },
+                {
+                  "title": "MAPD only - UHC",
+                  "path": "/dashboard/dashboard-mapd.html"
+                },
+                {
+                  "title": "PDP only - AARP",
+                  "path": "/dashboard/dashboard-pdp.html"
+                },
+                {
+                  "title": "Combo - PDP & SHIP (Med Supp)",
+                  "path": "/dashboard/dashboard-pdp-ship.html"
+                }
+              ]
+            }
+          ]
+      },
+      {
+        "title": "Registration",
+        "pages": [
+          {
+            "title": "Personal Information, no errors",
+            "links": [
+              {
+                "title": "Personal Information",
+                "path": "/register/step-1/register-step1.html"
+              },
+              {
+                "title": "Personal Information (additional variation)",
+                "path": "/register/step-1/register-step1-additional.html"
+              },
+              {
+                "title": "Plan Information",
+                "path": "/register/register-step2.html"
+              },
+              {
+                "title": "Plan Information (Multiple Plan Variation)",
+                "path": "/register/register-step2-additional.html"
+              },
+              {
+                "title": "Create Account",
+                "path": "/register/register-step3.html"
+              },
+              {
+                "title": "Confirmation",
+                "path": "/register/register-confirmation.html"
+              }
+            ]
+          },
+          {
+            "title": "Errors",
+            "links": [
+              {
+                "title": "Existing Member",
+                "path": "/register/step-1/existing-member.html"
+              },
+              {
+                "title": "Future Effective Plan",
+                "path": "/register/step-1/future-plan.html"
+              },
+              {
+                "title": "Inactive/Terminated Plan",
+                "path": "/register/step-1/inactive-plan.html"
+              },
+              {
+                "title": "Member Information not Found",
+                "path": "/register/step-1/member-not-found.html"
+              }
+            ]
+          },
+          {
+            "title": "Go Green Splash Pages",
+            "links": [
+              {
+                "title": "SHIP",
+                "path": "/register/go-green-ship.html"
+              },
+              {
+                "title": "Federal",
+                "path": "/register/go-green-federal.html"
+              },
+              {
+                "title": "Combo",
+                "path": "/register/go-green-combo.html"
+              },
+              {
+                "title": "Combo (Opted In)",
+                "path": "/register/go-green-combo-optin.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Sign In",
+        "pages": [
+          {
+            "title": "Sign In",
+            "links": [
+              {
+                "title": "Sign In",
+                "path": "/sign-in/sign-in.html"
+              }
+            ]
+          },
+          {
+            "title": "Sign In Errors",
+            "links": [
+              {
+                "title": "Multiple Emails",
+                "path": "/sign-in/sign-in-multiple.html"
+              },
+              {
+                "title": "Undeliverable Email",
+                "path": "/sign-in/sign-in-undeliverable.html"
+              },
+              {
+                "title": "No Email",
+                "path": "/sign-in/sign-in-none.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Username and Password Assistance",
+        "pages": [
+          {
+            "title": "Recovery Request",
+            "links": [
+              {
+                "title": "Type Selection",
+                "path": "/sign-in/assistance/sign-in-assistance.html"
+              },
+              {
+                "title": "Additional Information",
+                "path": "/sign-in/assistance/sign-in-assistance-additional.html"
+              },
+              {
+                "title": "Confirmation",
+                "path": "/sign-in/assistance/sign-in-assistance-confirm.html"
+              }
+            ]
+          },
+          {
+            "title": "Recovery Response",
+            "links": [
+              {
+                "title": "Username",
+                "path": "/sign-in/assistance/sign-in-assistance-username.html"
+              },
+              {
+                "title": "Change Password",
+                "path": "/sign-in/assistance/sign-in-new-password.html"
+              },
+              {
+                "title": "Username and Change Password",
+                "path": "/sign-in/assistance/sign-in-new-password-variation.html"
+              },
+              {
+                "title": "Password Change Confirmation",
+                "path": "/sign-in/assistance/sign-in-new-password-confirmation.html"
+              },
+              {
+                "title": "Expired Link",
+                "path": "/sign-in/assistance/sign-in-assistance-expired.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "My Profile & Preferences",
+        "pages": [
+          {
+            "links": [
+              {
+                "title": "Federal (PDP)",
+                "path": "/profile/profile-federal.html"
+              },
+              {
+                "title": "Federal (PDP) - Go Green Opt-In",
+                "path": "/profile/profile-federal-green.html"
+              },
+              {
+                "title": "SHIP",
+                "path": "/profile/profile-ship.html"
+              },
+              {
+                "title": "SHIP - Go Green Opt-In",
+                "path": "/profile/profile-ship-green.html"
+              },
+              {
+                "title": "Combo (PDP & SHIP)",
+                "path": "/profile/profile-combo.html"
+              },
+              {
+                "title": "Combo (PDP & SHIP) - Go Green Opt-In",
+                "path": "/profile/profile-combo-green.html"
+              },
+              {
+                "title": "Link Another Plan",
+                "path": "/profile/profile-link-plan.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Go Green",
+        "pages": [
+            {
+                "links": [
+                    {
+                      "title": "Federal",
+                      "path": "/go-green/go-green-federal.html"
+                    },
+                    {
+                      "title": "SHIP",
+                      "path": "/go-green/go-green-ship.html"
+                    },
+                    {
+                      "title": "Combo",
+                      "path": "/go-green/go-green-combo.html"
+                    }
+                ]
+            }
+        ]
+      }
+    ]
+}

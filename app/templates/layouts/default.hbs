@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Turn off telephone number detection. -->
+    <meta name="format-detection" content="telephone=no">
+    <title>{{title}}</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <!-- Place favicon.ico in the root directory -->
+
+    {{!-- <!-- build:css /styles/vendor.css -->
+    <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick-theme.css">
+    <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" href="/bower_components/tooltipster/css/tooltipster.css">
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild --> --}}
+
+    <link rel="stylesheet" href="/styles/vendor/slick-theme.css">
+    <link rel="stylesheet" href="/styles/vendor/slick.css">
+    <link rel="stylesheet" href="/styles/vendor/tooltipster-new.css">
+    <link rel="stylesheet" href="/styles/vendor/bootstrap.css">
+    <link rel="stylesheet" href="/styles/vendor/awesomplete.css">
+
+    {{!-- <!-- build:css /styles/main.css -->
+    <link rel="stylesheet" href="/styles/main.css?v={{moment cachebust "YYYYHHmmssZZ"}}">
+    <!-- endbuild --> --}}
+    <link rel="stylesheet" href="/styles/mir-main.css">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/cc-enhancement.css">
+
+    <link rel="stylesheet" href="/styles/print.css">
+
+    {{!-- <!-- build:js /scripts/vendor/modernizr.js -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild --> --}}
+
+    <link rel="stylesheet" href="/styles/vendor/common.css">
+
+    <script src="/scripts/vendor/modernizr.js"></script>
+
+</head>
+<body{{#if grayBg}} style="background-color: #F5F5F5;"{{/if}}>
+  <div class="uhc-body-wrapper">
+    <div class="uhc-body-light-box"></div>
+    <div class="rivets-loading" rv-show="data.loading" style="position: fixed; top:0; left:0; right:0; bottom:0; background-color: white; z-index:9999;"></div>
+    <!-- Start: Navigation -->
+    {{#neither altNav iframe}}{{> nav nav}}{{/neither}}
+    {{#if altNav}}{{> nav nav altNav="true"}}{{/if}}
+
+    <!-- Start: Page header -->
+    {{#if hasHeader}}
+    {{> page-header}}
+    {{/if}}
+
+    <main>
+      {{!-- Nav tabs --}}
+      {{#if hasTabs }}
+        <div class="tabs-header">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                {{!-- Mobile --}}
+                <div class="tabs-mobile">
+
+                    <label for="tab-select">Select one of your plans to see corresponding details:</label>
+                    <div class="select--regular select--medium margin-none">
+                      <select name="tab-select" id="tab-select">
+                        {{#each hasTabs}}
+                        <option value="tab-{{add @index 1}}">{{this}}</option>
+                        {{/each}}
+                      </select>
+                    </div>
+
+                </div>
+                {{!-- Tabs desktop --}}
+                <div class="tabs-desktop">
+                  <p class="bold margin-small">Select one of your plans to see corresponding details:</p>
+                  <ul class="nav nav-tabs" role="tablist">
+                    {{#each hasTabs}}
+                      <li role="presentation" {{#eq @index 0}}class="active"{{/eq}}>
+                        <a href="#tab-{{add @index 1}}" aria-controls="tab-{{add @index 1}}" role="tab" data-toggle="tab">
+                          {{this}}
+                        </a>
+                      </li>
+                    {{/each}}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      {{/if}}
+
+			{{#if isPHR}}
+				{{!-- <div class="container print-container">
+					<div class="row">
+						<div class="col-sm-10 margin-extra-small">
+							<p class="margin-top-extra-small">Records are pulled from your claims. Keep up-to-date by entering records below. Print a copy to bring to your doctor’s
+								appointment.</p>
+						</div>
+						<div class="col-sm-2 align-right">
+							<button class="btn btn--right phr-print-button">
+								<span class="btn btn--primary">Print</span>
+							</button>
+						</div>
+					</div>
+				</div> --}}
+			{{/if}}
+
+			{{#if hasPHRTabs }}
+        <div class="tabs-header">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="tabs-mobile">
+										<div class="row">
+											<div class="container margin-medium">
+												<div class="row">
+													<div class="col-sm-8 col-md-6">
+														<p>Find health records of your medications and providers that are pulled from your
+															<a href="#" class="lowercase">claims</a>. You can keep this list up-to-date by entering your own records below.</p>
+													</div>
+												</div>
+											</div>
+                       {{> PHR-print-email-card }}
+										</div>
+                    <label for="tab-select">Select to view Medications or Providers</label>
+                    <div class="select--regular select--medium margin-none">
+                      <select name="tab-select" id="tab-select">
+                        {{#each hasPHRTabs}}
+                        <option value="tab-{{add @index 1}}">{{this}}</option>
+                        {{/each}}
+                      </select>
+                    </div>
+                </div>
+                <div class="tabs-desktop">
+									<div class="row">
+										<div class="container margin-medium">
+											<div class="row">
+												<div class="col-sm-8 col-md-6">
+													<p>Find health records of your medications and providers that are pulled from your
+														<a href="#" class="lowercase">claims</a>. You can keep this list up-to-date by entering your own records below.</p>
+												</div>
+											</div>
+										</div>
+                     {{> PHR-print-email-card }}
+									</div>
+                  <p class="bold margin-small">Select to view Medications or Providers</p>
+                  <ul class="nav nav-tabs" role="tablist">
+                    {{#each hasPHRTabs}}
+                      <li role="presentation" {{#eq @index 0}}class="active"{{/eq}}>
+                        <a href="#tab-{{add @index 1}}" aria-controls="tab-{{add @index 1}}" role="tab" data-toggle="tab">
+                          {{this}}
+                        </a>
+                      </li>
+                    {{/each}}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      {{/if}}
+      {% body %}
+
+      <!-- Tooltips -->
+      <div class="tooltip-templates">
+          <div id="tooltip-large">
+              <p class="bold margin-extra-small">Lorem Ipsum</p>
+              <span class="text-small">
+                  Id elit reprehenderit fugiat Lorem in magna aliqua sunt ut est id ullamco dolor ut ad.
+              </span>
+          </div>
+          <div id="tooltip-small">
+              <span class="text-small">
+                  Aute enim nisi consectetur excepteur esse cupidatat Lorem excepteur laborum sunt occaecat nulla culpa magna cillum.
+              </span>
+          </div>
+          <div id="tooltip-costs">
+            <span class="text-small">
+                This is the amount you pay as your share of your prescription drug costs,
+                such as deductibles (if applicable), co-pays/co-insurance and the amounts
+                you pay in the coverage gap.
+            </span>
+          </div>
+          {{#if AARPtooltip}}
+            <div id="tooltip-aarp-card">
+              <p class="bold">Where to find your membership number:</p>
+              <img src="/images/partials/aarp-card.png" alt="AARP Card" class="img-responsive">
+            </div>
+          {{/if}}
+          {{#if registerTooltips}}
+            <div id="tooltip-username"></div>
+            <div id="tooltip-password"></div>
+          {{/if}}
+      </div>
+
+      {{#if hasHelp}}
+        {{#eq hasHelp 'SHIP'}}
+          {{> need-help help-type='SHIP' }}
+          {{else eq hasHelp 'PDP'}}
+            {{> need-help help-type='PDP' }}
+          {{else}}
+            {{> need-help }}
+        {{/eq}}
+      {{/if}}
+    </main>
+
+    <!-- Start: Footer -->
+    {{#if hasFooter}}
+    {{> footer}}
+    {{/if}}
+    {{#if hasUnauthFooter }}
+      {{> unauth-footer }}
+    {{/if}}
+  </div>
+
+    <!-- Start: Footer scripts -->
+    {{> footer-scripts}}
+</body>
+</html>

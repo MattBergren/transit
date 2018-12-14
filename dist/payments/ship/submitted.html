@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Turn off telephone number detection. -->
+    <meta name="format-detection" content="telephone=no">
+    <title>Payments</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <!-- Place favicon.ico in the root directory -->
+
+
+    <link rel="stylesheet" href="/styles/vendor/slick-theme.css">
+    <link rel="stylesheet" href="/styles/vendor/slick.css">
+    <link rel="stylesheet" href="/styles/vendor/tooltipster-new.css">
+    <link rel="stylesheet" href="/styles/vendor/bootstrap.css">
+    <link rel="stylesheet" href="/styles/vendor/awesomplete.css">
+
+    <link rel="stylesheet" href="/styles/mir-main.css">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/cc-enhancement.css">
+
+    <link rel="stylesheet" href="/styles/print.css">
+
+
+    <link rel="stylesheet" href="/styles/vendor/common.css">
+
+    <script src="/scripts/vendor/modernizr.js"></script>
+
+</head>
+<body>
+  <div class="uhc-body-wrapper">
+    <div class="uhc-body-light-box"></div>
+    <div class="rivets-loading" rv-show="data.loading" style="position: fixed; top:0; left:0; right:0; bottom:0; background-color: white; z-index:9999;"></div>
+    <!-- Start: Navigation -->
+    <nav class="uhcg-nav">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="uhcg-nav-header">
+          <div class="header-wrapper">
+            <div class="logo-container">
+              <img src="/images/logos/uhc-logo.svg" alt="Main Logo" class="img-responsive">
+              <div class="logo-divider"></div>
+              <img src="/images/logos/mirum-logo.png" alt="Partner Logo" class="img-responsive">
+            </div>
+            <div class="icon-container">
+              <a href="#" class="menu-icon" aria-label="Menu">
+                <div class="menu-line-wrapper">
+                  <div class="menu-line"></div>
+                  <div class="menu-line"></div>
+                  <div class="menu-line"></div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <ul class="uhc-nav">
+            <li class="uhc-nav-item--secondary">
+              <a href="#" class="uhc-nav-item-link">
+                <img src="/images/icon-svgs/nav-phone.svg" alt="Phone">
+                Contact Us
+              </a>
+            </li>
+            <li class="uhc-nav-item--secondary">
+              <a href="#" class="uhc-nav-item-link">
+                <span class="count-circle">2</span>
+                <img src="/images/icon-svgs/nav-mail.svg" alt="Message">
+                Messages
+              </a>
+            </li>
+            <li class="uhc-nav-item--secondary">
+              <a href="#" class="uhc-nav-item-link">
+                <img src="/images/icon-svgs/nav-doc.svg" alt="Documents">
+                My Documents
+              </a>
+            </li>
+            <li class="uhc-nav-item--secondary has-sub-nav">
+              <a href="#" class="uhc-nav-item-link" id="nav-profile">
+                <img src="/images/icon-svgs/nav-user.svg" alt="User">
+                Profile
+              </a>
+              <ul class="sub-nav">
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Update Profile</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Go Green Preferences</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Change Password</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Sign Out</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="nav-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="uhc-nav">
+            <li class="uhc-nav-item"><a href="#" class="uhc-nav-item-link">Home</a></li>
+            <li class="uhc-nav-item has-sub-nav">
+              <a href="#" class="uhc-nav-item-link">Care & Costs</a>
+              <ul class="sub-nav">
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Provider Search</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Pharmacy Locator</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Drug Look Up</a></li>
+              </ul>
+            </li>
+            <li class="uhc-nav-item has-sub-nav">
+              <a href="#" class="uhc-nav-item-link">Benefits</a>
+              <ul class="sub-nav">
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Benefits Summary</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Forms & Resources</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Order Materials</a></li>
+              </ul>
+            </li>
+            <li class="uhc-nav-item has-sub-nav">
+              <a href="#" class="uhc-nav-item-link">Claims</a>
+              <ul class="sub-nav">
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">Claims Search</a></li>
+                <li class="sub-nav-item"><a href="#" class="sub-nav-item-link">EOB Search</a></li>
+              </ul>
+            </li>
+            <li class="uhc-nav-item"><a href="#" class="uhc-nav-item-link">Premium Payments</a></li>
+            <li class="uhc-nav-item"><a href="#" class="uhc-nav-item-link">Health & Wellness</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+    
+
+    <!-- Start: Page header -->
+    <header class="benefits-coverage page-header-wrapper" role="banner" aria-label="header">
+      <div class="page-header">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="display-flex v-center">
+                <div class="page-header--left">
+                  <h1 class="h4 margin-none">
+                    Payments
+                  </h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+
+
+      <div class="payments">
+    <div class="container--base">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <h1 class="h2 margin-large">
+                        Recurring Payment Submitted
+                    </h1>
+                    <div class="message-block--full-width success margin-small">
+                      <div class="message-block-header">
+                        <span>Your Payment is Being Processed</span>
+                      </div>
+                      <div class="message-block-body">
+                        <p>Thank you for your payment. Your payment is being processed. It typically takes 1 – 3 business days for your payment to be processed and applied to your account. Please print this page for your records.</p>
+                      </div>
+                    </div>
+                    <div class="table-body payment-confirm-table">
+                        <div class="table-body-row">
+                            <div class="table-body-cell">
+                                Payment Type
+                            </div>
+                            <div class="table-body-cell">
+                                <span class="bold">EFT-Checking (Recurring)</span>
+                            </div>
+                        </div>
+                        <div class="table-body-row">
+                            <div class="table-body-cell">
+                                Payment Date
+                            </div>
+                            <div class="table-body-cell">
+                                <span class="bold">12/31/2016 12:00:00</span>
+                            </div>
+                        </div>
+                        <div class="table-body-row">
+                            <div class="table-body-cell">
+                                Payment Amount
+                            </div>
+                            <div class="table-body-cell">
+                                <span class="bold">The current monthly premium due each month.</span>
+                            </div>
+                        </div>
+                        <div class="table-body-row">
+                            <div class="table-body-cell">
+                                Routing Number
+                            </div>
+                            <div class="table-body-cell">
+                                <span class="bold">123456789</span>
+                            </div>
+                        </div>
+                        <div class="table-body-row">
+                            <div class="table-body-cell">
+                                Account Number
+                            </div>
+                            <div class="table-body-cell">
+                                <span class="bold">123456789</span>
+                            </div>
+                        </div>
+                        <div class="table-body-row">
+                            <div class="table-body-cell">
+                                Account Holder Name
+                            </div>
+                            <div class="table-body-cell">
+                                <span class="bold">John Adam Smith</span>
+                            </div>
+                        </div>
+                        <div class="table-body-row">
+                            <div class="table-body-cell">
+                                Member ID
+                            </div>
+                            <div class="table-body-cell">
+                                <span class="bold">123456789</span>
+                            </div>
+                        </div>
+                        <div class="table-body-row">
+                            <div class="table-body-cell">
+                                Member Name
+                            </div>
+                            <div class="table-body-cell">
+                                <span class="bold">John Smith</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container--base">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="bold">I have read and agreed to the following:</p>
+                    <p class="text-small">Signature: John Adam Smith</p>
+                    <p class="text-small">I authorize UnitedHealthCare Insurance Company (UnitedHealthCare Insurance Company of New York for New York residents), or its affiliates, to initiate monthly withdrawals in the amount of my current monthly premium, from the account named on this form and authorize the named banking facility (BANK) to charge such withdrawals to my account. My bank may pay UnitedHealthcare Insurance Company the new charges from my bank account which may include up to $200.00 of current retroactive charges plus monthly premium amount. This authority remains in effect until UnitedHealthCare Insurance Company (UnitedHealthCare Insurance Company of New York for New York residents) or one of its affiliates and the named banking facility receives notification from me of its termination in such time and manner as to give UnitedHealthCare Insurance Company and the banking facility a reasonable opportunity to act on it. I have the right to stop payment of a withdrawal by notification to the named banking facility in such time as to give the banking facility a reasonable opportunity to act upon it, with the understanding that such action may put my plan account past due. To set up automatic monthly payments online using electronic funds transfer (EFT), you must provide your electronic signature. Your electronic signature is binding, just as if you had signed a paper form. Your consent to use your electronic signature applies only to this EFT form. By selecting the “authorize monthly payments” button, you understand the above and agree to submit your form electronically.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container--base">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <button class="btn btn--secondary">Back to payment history</button>
+                    <button class="btn btn--primary">View as PDF</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="divider"></div>
+</div>
+
+
+      <!-- Tooltips -->
+      <div class="tooltip-templates">
+          <div id="tooltip-large">
+              <p class="bold margin-extra-small">Lorem Ipsum</p>
+              <span class="text-small">
+                  Id elit reprehenderit fugiat Lorem in magna aliqua sunt ut est id ullamco dolor ut ad.
+              </span>
+          </div>
+          <div id="tooltip-small">
+              <span class="text-small">
+                  Aute enim nisi consectetur excepteur esse cupidatat Lorem excepteur laborum sunt occaecat nulla culpa magna cillum.
+              </span>
+          </div>
+          <div id="tooltip-costs">
+            <span class="text-small">
+                This is the amount you pay as your share of your prescription drug costs,
+                such as deductibles (if applicable), co-pays/co-insurance and the amounts
+                you pay in the coverage gap.
+            </span>
+          </div>
+      </div>
+
+          <section class="container--base contact-us">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <h2 class="h3 medium margin-small">Need help?</h2>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="display-flex v-center margin-small">
+                    <img src="/images/icon-svgs/computer.svg" alt="Tech Support" class="img-small">
+                    <div class="padding-left-small">
+                      <h3 class="h4 margin-none">Technical Support</h3>
+                    </div>
+                  </div>
+                  <a href="tel:1-800-555-5555" class="display-inline-block margin-extra-small text-large">1-800-XXX-XXXX</a>
+                  <p>
+                    TTY users, call <a href="tel:711">711</a>
+                  </p>
+                  <p>
+                    8 am-8 pm local time, 7 days a week
+                  </p>
+                </div>
+                  <div class="col-md-4 border-left">
+                    <div class="display-flex v-center margin-small">
+                      <img src="/images/icon-svgs/question.svg" alt="General Questions" class="img-small">
+                      <div class="padding-left-small">
+                        <h3 class="h4 margin-none">General Questions</h3>
+                      </div>
+                    </div>
+                    <a href="tel:1-800-555-5555" class="display-inline-block margin-extra-small text-large">1-800-XXX-XXXX</a>
+                    <p>
+                      TTY users, call <a href="tel:711">711</a>
+                    </p>
+                    <p>
+                      8 am-8 pm local time, 7 days a week
+                    </p>
+                  </div>
+                <div class="col-md-4 border-left">
+                  <div class="display-flex v-center margin-small">
+                    <img src="/images/icon-svgs/claim.svg" alt="claim Support" class="img-small">
+                    <div class="padding-left-small">
+                      <h3 class="h4 margin-none">Claims Support</h3>
+                    </div>
+                  </div>
+                  <a href="tel:1-800-555-5555" class="display-inline-block margin-extra-small text-large">1-800-XXX-XXXX</a>
+                  <p>
+                    TTY users, call <a href="tel:711">711</a>
+                  </p>
+                  <p>
+                    8 am-8 pm local time, 7 days a week
+                  </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <p class="margin-none">
+                    See more ways to <a href="/contact/contact-us-ship.html" class="lowercase">contact us</a>.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+    </main>
+
+    <!-- Start: Footer -->
+    <footer class="nav-footer" role="contentinfo" aria-label="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h1 class="h6 medium">Member Support</h1>
+            <ul class="nav-footer--list">
+              <li>Customer Service 1-800-555-5555</li>
+              <li><a href="#">All Contact Info</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h1 class="h6 medium">Quick Links</h1>
+            <ul class="nav-footer--list">
+              <li><a href="#">Find A Provider</a></li>
+              <li><a href="#">Send Feedback</a></li>
+              <li><a href="#">Report Incorrect Info</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h1 class="h6 medium">Ask A Nurse</h1>
+            <ul class="nav-footer--list">
+              <li>Registered nurses available 24/7</li>
+              <li>1-888-842-4224</li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12"><span style="font-size: .875rem;">UHC &copy; 2016 | All Rights Reserved</span></div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+    <!-- Start: Footer scripts -->
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    
+    <!-- Vendor scripts -->
+    <script src="/scripts/vendor/jquery-3.1.1.min.js"></script>
+    <script src="/scripts/vendor/lockrroom.js"></script>
+    <script src="/scripts/vendor/select2.min.js"></script>
+    <script src="/scripts/vendor/select2-tab-fix.js"></script>
+    <script src="/scripts/vendor/rivets.bundled.min.js"></script>
+    <script src="/scripts/vendor/rivets.js"></script>
+    <script src="/scripts/vendor/jquery.matchHeight.js"></script>
+    <script src="/scripts/vendor/slick.min.js"></script>
+    <script src="/scripts/vendor/TweenLite.min.js"></script>
+    <script src="/scripts/vendor/plugins/CSSPlugin.min.js"></script>
+    <script src="/scripts/vendor/jquery.autocomplete.min.js"></script>
+    <script src="/scripts/vendor/bootstrap.min.js"></script>
+    
+    <script src="/scripts/vendor/jquery.validate.min.js"></script>
+    <script src="/scripts/vendor/tooltipster.bundle.min.js"></script>
+    <script src="/scripts/vendor/awesomplete.js"></script>
+    
+    
+    
+    
+    <script src="/scripts/main.js"></script>
+    <script src="/scripts/navigation.js"></script>
+    
+    
+      <script src="/scripts/pages/table.js"></script>
+</body>
+</html>

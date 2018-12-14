@@ -1,0 +1,12 @@
+{
+  "cards": {
+    "intro": {
+      "card-col": "col-md-6",
+      "type": "feature",
+      "title-size": "small",
+      "title": "Template Development",
+      "col-size": "1",
+      "body": "The current templates being developed are listed below. All templates are Works in Progress (WIP) and are subject to change."
+    }
+  }
+}

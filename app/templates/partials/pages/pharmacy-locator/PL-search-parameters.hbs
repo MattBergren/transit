@@ -1,0 +1,71 @@
+<div class="container--base">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <p class="margin-none">Use the online directory to locate a pharmacy and map its location</p>
+      </div>
+    </div>
+    {{!-- Zip/Distance search --}}
+    <div class="row">
+      <div class="col-md-12">
+        <div class="display-inline-block margin-small h4">
+          Find a pharmacy within
+          <label for="distance" class="sr-only">Distance</label>
+          <div class="select--inline">
+            <select id="distance">
+              <option value="1">1 mile</option>
+              <option value="2">2 miles</option>
+              <option value="5">5 miles</option>
+              <option value="10">10 miles</option>
+              <option value="15" selected="selected">15 miles</option>
+              <option value="25">25 miles</option>
+            </select>
+          </div>
+          of
+        </div>
+        <div id="zipcode-wrapper">
+          <label for="zipcode" class="sr-only">Zipcode</label>
+          <input type="text" id="zipcode" placeholder="Search by ZIP Code" value="90210" class="input-small">
+          <button class="btn" id="zipcode-button"><span class="btn btn--primary" data-button-icon="search">Search</span></button>
+        </div>
+      </div>
+    </div>
+    {{!-- Plan search --}}
+    <div class="row">
+      <div class="col-md-12">
+          <div class="table-body responsive">
+            {{!-- Plan year select --}}
+            <div class="table-body-row">
+              <div class="table-body-cell">
+                <label for="plan-year">Plan year:</label>
+              </div>
+              <div class="table-body-cell">
+                <div class="select--regular margin-large">
+                  <select name="plan-year" id="plan-year">
+                    <option value="2016">2016</option>
+                    <option value="2017">2017</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            {{!-- Plan select --}}
+            <div class="table-body-row">
+              <div class="table-body-cell">
+                <label for="plan-type">Plan type:</label>
+              </div>
+              <div class="table-body-cell">
+                <div class="select--regular margin-extra-small">
+                  <select name="plan-type" id="plan-type">
+                    {{#each this.plan-types}}
+                      <option value="{{this.value}}">{{this.name}}</option>
+                    {{/each}}
+                  </select>
+                </div>
+                <span class="italic">All Medicare prescription drug plans available in your area are displayed</span>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

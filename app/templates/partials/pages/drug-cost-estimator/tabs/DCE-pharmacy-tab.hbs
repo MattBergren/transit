@@ -1,0 +1,359 @@
+{{!-- Start: Zip code search --}}
+<form class="margin-small" id="pharmacy-form">
+    <div class="do-not-use">
+        DEV NOTE: ONLY USE STEP 3 TAB CONTENT & LAYOUT.
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            {{!-- Distance search --}}
+            <div class="display-inline-flex v-center flex-wrap">
+                <div class="h4 margin-none">
+                    Find a pharmacy withins
+                    <label for="distance" class="sr-only">Distance</label>
+                    <div class="select--inline">
+                        <select id="distance">
+                            <option value="15">15 miles</option>
+                            <option value="25">25 miles</option>
+                            <option value="50">55 miles</option>
+                        </select>
+                    </div>
+                    of
+                </div>
+                <div id="zipcode-wrapper">
+                    <label for="zipcode" class="sr-only">Zipcode</label>
+                    <input type="text" id="zipcode" placeholder="Search by ZIP Code" value="90210" class="input-small">
+                    <button class="btn margin-none" id="zipcode-button" style="min-width: auto; max-height: 42px;">
+                        <span class="btn btn--primary" data-button-icon="search">Search</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 match-height-inner">
+            {{!-- Pharmacy type --}}
+            <fieldset class="margin-none" id="pharmacy-type">
+                <legend class="text-medium margin-small" style="font-weight: normal;">Pharmacy Type</legend>
+                <div class="radio-block" data-tooltip="small" data-tooltip-side="right">
+                    <input type="radio" name="pharmacy-type" value="standard" id="standard">
+                    <label for="standard" class="color-black display-inline">Standard Network</label>
+                </div>
+                <div class="radio-block" data-tooltip="small" data-tooltip-side="right">
+                    <input type="radio" name="pharmacy-type" value="saver" id="saver" checked="checked">
+                    <label for="saver" class="color-black display-inline">Pharmacy Saver</label>
+                </div>
+                <div class="radio-block" data-tooltip="small" data-tooltip-side="right">
+                    <input type="radio" name="pharmacy-type" value="mail-service" id="mail-service">
+                    <label for="mail-service" class="color-black display-inline">Preferred Mail Service</label>
+                </div>
+                <div class="radio-block" data-tooltip="small" data-tooltip-side="right">
+                    <input type="radio" name="pharmacy-type" value="retail" id="retail">
+                    <label for="retail" class="color-black display-inline">Preferred Retail</label>
+                </div>
+            </fieldset>
+        </div>
+        <div class="col-md-9 border-left match-height-inner">
+            <div class="pharmacy-listing display-flex v-center" style="height: 100%;">
+                {{!-- Mail service card --}}
+                <div class="mail-service-block">
+                    <div class="card promo blue">
+                        <div class="card-body display-flex v-center">
+                            <div>
+                                <img src="/images/icon-svgs/mail.svg" alt="Pharmacy" class="img-medium" />
+                            </div>
+                            <div>
+                                <span class="color-blue-dark bold">Preferred Mail Service:</span>
+                                Save up to $XX.XX by using the Mail Service Pharmacy.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{!-- Pharmacy saver card --}}
+                <div class="pharmacy-saver-block">
+                    <div class="card promo blue">
+                        <div class="card-body display-flex v-center">
+                            <div>
+                                <img src="/images/icon-svgs/pharmacy.svg" alt="Pharmacy" class="img-medium" />
+                            </div>
+                            <div>
+                                <span class="color-blue-dark bold">Pharmacy Saver:</span>
+                                Spend as little as $1.50 on your prescription drug copays using Pharmacy Saver Pharmacies.
+                                See how many of your drugs are elegible for Pharmacy
+                                Saver below.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{!-- Retail Pharmacy card --}}
+                <div class="pharmacy-retail-block">
+                    <div class="card promo blue">
+                        <div class="card-body display-flex v-center">
+                            <div>
+                                <img src="/images/icon-svgs/pharmacy.svg" alt="Pharmacy" class="img-medium" />
+                            </div>
+                            <div>
+                                <span class="color-blue-dark bold">Preferred Retail Pharmacy:</span>
+                                Save up to $XX.XX by using a Preferred Retail Pharmacy
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+{{!-- Error message --}}
+<div class="pharmacy-error" style="display: none;">
+    <p class="color-red">
+        There were no results found for the requested search. Broadening your search criteria
+        (for example, changing the pharmacy type, search radius and/or your ZIP code)
+        may help you get a different result.
+    </p>
+</div>
+
+{{!-- Map toggle --}}
+<ul class="map-toggle">
+    <li>
+        <a href="#collapseMap" role="button" data-toggle="collapse" aria-expanded="true"
+            aria-controls="collapseMap" class="toggle-show">
+            Map
+            <span class="material-icons">keyboard_arrow_down</span>
+        </a>
+    </li>
+</ul>
+{{!-- Map --}}
+<div class="collapse-wrapper">
+    <div class="collapse in" id="collapseMap">
+        <div class="map-wrapper">
+            <div id="map"></div>
+        </div>
+    </div>
+</div>
+
+{{!-- Selected pharmacy --}}
+<div class="selected-pharmacy pharmacy-container">
+    <ul class="pharmacy-list" rv-unless="data.DCE.savedPharmacy.name | isEqualTo 'Preferred Mail Service'">
+        <li class="selected">
+            <div class="row">
+                <div class="col-xs-8 col-sm-10 margin-none">
+                    <div class="row">
+                        <div class="col-sm-4 margin-mobile-small">
+                            <div class="display-flex margin-small">
+                                <div class="map-pin">
+                                    <img src="/images/icon-svgs/mapmarker-pin-star.svg" alt="Map Pin" class="img-small"
+                                    />
+                                </div>
+                                <div>
+                                    <span class="bold text-medium display-block color-orange-dark pharmacy-name">
+                                        { data.DCE.savedPharmacy.name }
+                                    </span>
+                                    <p class="color-gray">{ data.DCE.savedPharmacy.address1 }</p>
+                                    <a href="#" class="show-on-map">Show on Map</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 margin-mobile-small">
+                            <div class="display-inline-flex">
+                                <div class="hidden-pin">
+                                    <img src="/images/icon-svgs/mapmarker-pin-blue.svg" alt="Map Pin" class="img-small"
+                                    />
+                                </div>
+                                <div>
+                                    <span class="bold">{ data.DCE.savedPharmacy.distance } mi.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 margin-mobile-small pharmacy-cost">
+                            <div class="display-inline-flex" rv-if="data.DCE.savedPharmacy.cost">
+                                <div class="hidden-pin">
+                                    <img src="/images/icon-svgs/mapmarker-pin-blue.svg" alt="Map Pin" class="img-small"
+                                    />
+                                </div>
+                                <div>
+                                    <span class="bold display-block text-medium">${ data.DCE.savedPharmacy.cost }</span>
+                                    <span class="color-gray">
+                                        total annual drug cost
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 margin-mobile-small">
+                            <div class="display-inline-flex" rv-if="data.DCE.savedPharmacy.savings">
+                                <div class="hidden-pin">
+                                    <img src="/images/icon-svgs/mapmarker-pin-blue.svg" alt="Map Pin" class="img-small"
+                                    />
+                                </div>
+                                <div>
+                                    <span class="bold display-block color-green-dark">Save ${ data.DCE.savedPharmacy.savings } anually</span>
+                                    <span class="color-gray">
+                                        (
+                                        <span class="bold">2 of 4 drugs</span> have Pharmacy Saver™
+                                        pricing)
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-4 col-sm-2">
+                    <span class="color-orange-dark bold select-pharmacy display-block align-center">SELECTED</span>
+                </div>
+            </div>
+        </li>
+    </ul>
+    {{!-- If mail service --}}
+    <ul class="pharmacy-list" rv-if="data.DCE.savedPharmacy.name | isEqualTo 'Preferred Mail Service'">
+        <li class="selected">
+            <div class="row">
+                <div class="col-xs-8 col-sm-10">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="display-flex">
+                                <div>
+                                    <img src="/images/icon-svgs/mapmarker-pin-star.svg" alt="Map Pin" class="img-medium"
+                                    />
+                                </div>
+                                <div>
+                                    <p class="bold text-medium color-blue-base margin-none" id="selected-name">{ data.DCE.savedPharmacy.name }</p>
+                                    <p class="color-gray">
+                                        { data.DCE.savedPharmacy.address1 }
+                                        <br rv-if="data.DCE.savedPharmacy.address2"> { data.DCE.savedPharmacy.address2 }
+                                        <br
+                                            rv-if="data.DCE.savedPharmacy.phone">
+                                            { data.DCE.savedPharmacy.phone }
+                                    </p>
+                                    <div>
+                                        <p class="semi-bold">
+                                            Take advantage of a $0 co-pay for Tier 1 and Tier 2 medications and make the most
+                                            of your pharmacy benefits. Begin using
+                                            home delivery with OptumRx today.
+                                        </p>
+                                        <p>
+                                            You could pay less for the same medication when you use home delivery through OptumRx,
+                                            your plan's preferred mail service pharmacy.
+                                        </p>
+                                        <p class="margin-large">
+                                            Completed orders for a new prescription should arrive within ten business days, completed
+                                            refill orders should arrive in about
+                                            seven business days. No charge for standard
+                                            delivery to U.S. addresses, including
+                                            U.S. territories. Pharmacists are available
+                                            by phone to answer your questions any
+                                            day, anytime.
+                                        </p>
+                                        <a href="#collapseHomeDel" role="button" data-toggle="collapse" aria-expanded="false"
+                                            aria-controls="collapseHomeDel" class="margin-extra-small display-inline-block">
+                                            Learn more about starting home delivery
+                                            <span class="material-icons">keyboard_arrow_down</span>
+                                        </a>
+                                        <div class="collapse-wrapper">
+                                            <div class="collapse" id="collapseHomeDel">
+                                                <p>
+                                                    OptumRx makes it easy to move to move to home delivery. Get started with only a few
+                                                    quick steps. We can even contact
+                                                    your doctor to move your prescription.
+                                                    Begin using home delivery today.
+                                                </p>
+                                                <p class="semi-bold margin-extra-small">Go online.</p>
+                                                <p>
+                                                    Set up your account at optumrx.com and select which medication you would like to
+                                                    enroll in home delivery.
+                                                </p>
+                                                <p class="semi-bold margin-extra-small">
+                                                    By phone.
+                                                </p>
+                                                <p>
+                                                    Call OptumRx at 1-888-217-0152 (TTY 711), any day, anytime. OptumRx can get you set
+                                                    up with home delivery right over
+                                                    the phone.
+                                                </p>
+                                                <p class="semi-bold margin-extra-small">
+                                                    By mail.
+                                                </p>
+                                                <p class="margin-none">
+                                                    Complete an order form and mail it with your written prescription(s) to OptumRx.
+                                                    Prescription order form (PDF)
+                                                    (749.8 KB)
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <span class="text-medium color-green-dark bold">Save $100 annually</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-2 col-sm-2 align-right">
+                    <span class="color-orange-dark bold select-pharmacy display-block align-center">SELECTED</span>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <hr> {{!-- Buttons --}}
+    <div class="row">
+        <div class="col-md-12 align-center" role="tablist">
+            <a href="#drugs-tab" aria-controls="drugs-tab" role="tab" data-toggle="tab" class="btn btn--secondary drug-tab-show">
+                Previous: Add Your Drugs
+            </a>
+            <a href="#costs-tab" aria-controls="costs-tab" role="tab" data-toggle="tab" class="btn btn--primary costs-tab-show">
+                Next: View costs
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="h4 margin-small">Other Nearby Pharmacies</h3>
+        </div>
+    </div>
+</div>
+
+{{!-- Pharmacy results --}}
+<div id="pharmacy-results">
+    <div class="pharmacy-standard-block">
+        {{> DCE-map-results type="pharmacyStandard"}}
+    </div>
+    <div class="pharmacy-saver-block">
+        {{> DCE-map-results type="pharmacySaver"}}
+    </div>
+    <div class="mail-service-block">
+        {{!-- Mail service section --}}
+        <ul class="pharmacy-list" rv-unless="data.DCE.savedPharmacy.name | isEqualTo 'Preferred Mail Service'">
+            <li>
+                <div class="row">
+                    <div class="col-xs-8 col-sm-10">
+                        <div class="row">
+                            <div class="col-md-9">
+                                <span class="color-blue-dark bold text-medium display-block">
+                                    Preferred Mail Service
+                                </span>
+                                <p class="color-gray">
+                                    Delivered to your home
+                                </p>
+                            </div>
+                            <div class="col-md-3">
+                                <span class="bold text-medium color-green-dark">Save $100 annually</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-4 col-sm-2">
+                        <a href="#" id="mail-service-select" class="btn btn--secondary">Select</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul class="pharmacy-list" rv-if="data.DCE.savedPharmacy.name | isEqualTo 'Preferred Mail Service'">
+            <li>
+                <div class="row">
+                    <div class="col-md-12">
+                        No results for your search. Lorem ipsum
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+{{> DCE-pharmacy-info }}

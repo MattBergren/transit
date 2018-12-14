@@ -1,0 +1,179 @@
+<section class="container--base gray">
+  <div class="container">
+    <div class="claim-results">
+      {{#eq type 'mapd'}}
+          {{#eq variation 'nice'}}
+            {{> mc-table-medical-nice }}
+            {{> mc-table-prescription }}
+          {{/eq}}
+          {{#eq variation 'pdp'}}
+            {{> mc-table-prescription display="true" }}
+          {{/eq}}
+          {{#eq variation 'ma'}}
+            {{> mc-table-medical-nice }}
+          {{/eq}}
+          {{#eq variation 'cosmos'}}
+            {{> mc-table-medical }}
+            {{> mc-table-prescription }}
+          {{/eq}}
+      {{/eq}}
+      {{#eq type 'ship'}}
+        {{> mc-table-claims }}
+      {{/eq}}
+      <div class="row">
+        <div class="col-md-12">
+          <p class="margin-small margin-auto align-center">
+            20 items found.  Displaying 1 to 10
+          </p>
+          <ul class="uhc-pagination margin-large">
+            <li>Page 1 of 2</li>
+            <li class="disabled" aria-disabled="true">
+              <a href="#"><span class="material-icons">keyboard_arrow_left</span></a>
+            </li>
+            <li>
+              <a href="#"><span class="material-icons">keyboard_arrow_right</span></a>
+            </li>
+          </ul>
+          {{#eq type 'mapd'}}
+            <p class="margin-small margin-auto align-center">
+              Not the claims you were expecting? Select a different date range,
+              claim type or plan above to search again.
+            </p>
+          {{/eq}}
+        </div>
+      </div>
+    </div>
+    <div class="claim-no-results display-none">
+      <h2 class="h4 margin-large">
+        You have <span class="bold">0 medical claims</span> from the
+        <span class="bold">Last 30 days</span>
+      </h2>
+      <p class="color-red bold">{{> important }} There were no results found for the requested search. Changing your search criteria may help you get a different result.</p>
+    </div>
+  </div>
+  <div class="loading-block"></div>
+</section>
+{{!-- Start: EOBs --}}
+{{#eq type 'mapd'}}
+<section class="container--base">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="h3 medium margin-small">Explanation of Benefits</h2>
+        <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </div>
+    <div class="row">
+      {{#eq variation 'pdp'}}
+        <div class="col-md-4">
+          <div class="block">
+            <div class="block-body">
+              <h2 class="h5 medium margin-small">Prescription Drug EOB</h2>
+              <a href="#" class="btn btn--secondary">Search Your History</a>
+            </div>
+          </div>
+        </div>
+      {{/eq}}
+      {{#eq variation 'nice'}}
+        <div class="col-md-4">
+          <div class="block">
+            <div class="block-body">
+              <h2 class="h5 medium margin-small">Prescription Drug EOB</h2>
+              <a href="#" class="btn btn--secondary">Search Your History</a>
+            </div>
+          </div>
+        </div>
+      {{/eq}}
+      {{#eq variation 'ma'}}
+        <div class="col-md-4">
+          <div class="block">
+            <div class="block-body">
+              <h2 class="h5 medium margin-small">Medical EOB</h2>
+              <a href="#" class="btn btn--secondary">Search Your History</a>
+            </div>
+          </div>
+        </div>
+      {{/eq}}
+      {{#eq variation 'cosmos'}}
+        <div class="col-md-4">
+          <div class="block">
+            <div class="block-body">
+              <h2 class="h5 medium margin-small">Medical EOB</h2>
+              <a href="#" class="btn btn--secondary">Search Your History</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 border-left">
+          <div class="block border-left">
+            <div class="block-body padding-left">
+              <h2 class="h5 medium margin-small">Prescription Drug EOB</h2>
+                <a href="#" class="btn btn--secondary">Search Your History</a>
+            </div>
+          </div>
+        </div>
+      {{/eq}}
+    </div>
+  </div>
+</section>
+{{/eq}}
+{{#eq type 'mapd'}}
+  <div class="blue-button-wrapper">
+    <div class="container">
+        {{!-- Blue button --}}
+        <div class="row">
+          <div class="col-md-12">
+            <div class="display-flex">
+              <div>
+                <a href="#" data-toggle="modal" data-target="#differentProviderClaims"><img src="/images/logos/blue-button.jpg" alt="Blue Button" class="img-large img-responsive"></a>
+              </div>
+              <div>
+                <h2 class="h4 margin-extra-small">Are you looking for claims from a different provider?</h2>
+                <p class="margin-extra-small">
+                  Blue Button℠ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+                <a href="#" data-toggle="modal" data-target="#differentProviderClaims">Download My Data℠</a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <!-- Start: Replace modal -->
+  <div id="differentProviderClaims" tabindex="-1" role="dialog" aria-labelledby="differentProviderClaims" class="modal fade">
+      <div role="document" class="modal-dialog modal-lg">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" data-dismiss="modal" aria-label="Close" class="close">
+                      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve" class="close-button">
+                          <path fill="#196ECF" d="M397.337,105.027 C399.791,105.269 401.829,106.368 403.63,107.996 C407.651,112.016 407.651,118.535
+                          403.63,122.555 L270.209,255.976 L403.63,389.397 C407.651,393.418 407.651,399.937 403.63,403.957 C399.61,407.978 393.091,407.978
+                          389.071,403.957 L256,270.886 L122.929,403.957 C118.909,407.978 112.39,407.978 108.37,403.957 C104.349,399.937 104.349,393.418
+                          108.37,389.397 L241.791,255.976 L108.37,122.555 C104.349,118.535 104.349,112.016 108.37,107.996 C110.171,106.368 112.209,105.269
+                          114.663,105.027 C118.196,105.027 120.259,105.501 122.929,107.996 L256,241.067 L389.071,107.996 C391.741,105.501 393.804,105.027
+                          397.337,105.027 z"></path>
+                      </svg>
+                  </button>
+                  <div class="modal-title">
+                      <h1 class="h3 margin-none">Leaving member.AARPMedicarePlans.com</h1>
+                  </div>
+              </div>
+              <div class="modal-body">
+                  <div class="container-fluid">
+                      <div class="row">
+                          <div class="col-md-8 col-md-offset-2">
+                              <p class="text-no-max">This link is being made available so that you will have an opportunity to obtain information from the third party on its website. This link is provided solely as a convenience and not as an endorsement of the content of the third party site or any products or services offered on that site. We are not responsible for the products or services offered or the content on any linked site or any link contained in a linked site. We do not make any representations regarding the quality of products or services offered, or the content or accuracy of the materials on such sites. </p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="modal-footer">
+                  <button id="replace-current-rider" class="btn">
+                      <span class="btn btn--primary">Proceed</span>
+                  </button>
+                  <a href="#" data-dismiss="modal">CANCEL</a>
+              </div>
+          </div>
+      </div>
+  </div>
+{{/eq}}

@@ -1,0 +1,61 @@
+{
+    "update": {
+        "controls": [
+            "Set Up New Checking Account",
+            "Set Up New Credit / Debit Card",
+            "Stop Automatic Recurring Payments"
+        ],
+        "buttons": [   
+            { 
+                "type": "button",
+                "class": "btn btn--primary payment-selection__btn",
+                "name": "next"
+            },
+            { 
+                "type": "a",
+                "class": "payment-selection__link",
+                "name": "Back to Overview",
+                "href": "href='#'"
+            }
+        ]
+    },
+    "setup": {
+        "controls": [
+            "Checking Account",
+            "Credit / Debit Card"
+        ],
+        "buttons": [   
+            { 
+                "type": "button",
+                "class": "btn btn--primary payment-selection__btn",
+                "name": "next"
+            },
+            { 
+                "type": "a",
+                "class": "payment-selection__link",
+                "name": "Back to Overview",
+                "href": "href='#'"
+            }
+        ]
+    },
+    "oneTime": {
+        "controls": [
+            "Checking Account",
+            "Credit / Debit Card"
+        ],
+        "buttons": [   
+            { 
+                "type": "button",
+                "class": "btn btn--primary payment-selection__btn",
+                "name": "next"
+            },
+            { 
+                "type": "a",
+                "class": "payment-selection__link",
+                "name": "Cancel",
+                "href": "href='#'"
+            }
+        ]
+    }
+    
+}

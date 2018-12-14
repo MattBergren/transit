@@ -1,0 +1,49 @@
+{
+  "providers": [
+    {
+      "name": "Smithsberg, Jonathen; MD",
+      "primary": true,
+      "specialty": "General",
+      "facility": "Western Health Center",
+      "city": "Eden Prairie",
+      "phone": "(123) 456-7890",
+      "date": "11/20/17"
+    },
+    {
+      "name": "Swain, Roselin; MD",
+      "primary": false,
+      "specialty": "General",
+      "facility": "Facility Name",
+      "city": "Eden Prairie",
+      "phone": "(123) 456-7890",
+      "date": "6/15/17"
+    },
+    {
+      "name": "Franklin, Timothy; MD",
+      "primary": false,
+      "specialty": "Allergist",
+      "facility": "Facility Name",
+      "city": "Bloomington",
+      "phone": "(123) 456-7890",
+      "date": "5/3/17"
+    },
+    {
+      "name": "Wali, Sanjay; MD",
+      "primary": false,
+      "specialty": "Cardiothoracic Surgeon",
+      "facility": "Facility Name",
+      "city": "Minneapolis",
+      "phone": "(123) 456-7890",
+      "date": "8/20/2015"
+    },
+    {
+      "name": "Ramirez, Steven; MD",
+      "primary": false,
+      "specialty": "General",
+      "facility": "Facility Name",
+      "city": "Bloomington",
+      "phone": "(123) 456-7890",
+      "date": "3/3/2014"
+    }
+  ]
+}

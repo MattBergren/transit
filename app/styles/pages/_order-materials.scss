@@ -1,0 +1,51 @@
+.order-materials {
+  .form-error {
+    display: none;
+    margin-bottom: 10px;
+  }
+
+  .radio-block {
+    label {
+      color: $color-black;
+      font-weight: normal;
+      text-transform: none;
+      margin-left: $spacing-small;
+      margin-bottom: $spacing-large;
+
+      &:before {
+        top: .2rem;
+        transform: translateY(0);
+      }
+    }
+  }
+
+  .hidden-select-block {
+    display: none;
+    margin-left: $spacing-small + 25px;
+    margin-bottom: $spacing-large;
+
+    label {
+      margin-left: 0;
+      display: inline-block;
+    }
+    .select--regular {
+      display: inline-block;
+      margin-left: $spacing-small;
+    }
+  }
+
+  fieldset {
+    legend {
+      font-size: 1.125em;
+      margin-bottom: $spacing-large;
+    }
+  }
+
+  .modal-body {
+    img {
+      max-width: 100%;
+      width: 450px;
+      box-shadow: 0px 12px 39px 0px rgba(0,0,0,0.3);
+    }
+  }
+}

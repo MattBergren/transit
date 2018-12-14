@@ -1,0 +1,267 @@
+.btn:not(button) {
+  align-items: center;
+  border-radius: 0;
+  display: flex;
+  font-size: 1rem;
+  font-weight: 500;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 400px;
+  min-height: 42px;
+  padding: 5px 20px;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: normal;
+  width: 100%;
+  zoom: 1;
+
+  // IE fix
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    padding-top: 7px;
+  }
+
+  & + .btn {
+    margin-top: $spacing-small;
+  }
+
+  &:focus,
+  &:focus:active {
+    // box-shadow: none;
+    // outline: none;
+    background-color: $color-btn-primary-hover;
+  }
+
+  @media (min-width: $breakpoint-sm) {
+    display: inline-flex;
+    margin: 0;
+    width: auto;
+
+    & + .btn {
+      margin-left: $spacing-small;
+      margin-top: 0;
+    }
+  }
+
+  .btn-icon {
+    height: 1em;
+    margin-right: 10px;
+    vertical-align: middle;
+    width: 1em;
+  }
+
+  &.btn {
+    &--primary {
+      background-color: $color-digital-blue;
+      color: $color-white;
+
+      &:hover,
+      &:focus {
+        background-color: $color-btn-primary-hover;
+      }
+
+      &:active {
+        background-color: $color-white;
+        border-color: $color-digital-blue;
+        color: $color-digital-blue;
+
+        .btn-icon {
+          path {
+            fill: $color-digital-blue;
+          }
+        }
+      }
+    }
+
+    &--secondary {
+      background-color: $color-white;
+      border-color: $color-digital-blue;
+      color: $color-digital-blue;
+
+      &:hover {
+        background-color: $color-btn-secondary-bg;
+      }
+
+      &:active {
+        background-color: $color-digital-blue;
+        color: $color-white;
+
+        .btn-icon {
+          path {
+            fill: $color-white;
+          }
+        }
+      }
+    }
+
+    &--medium-width {
+      min-width: 200px;
+    }
+
+    &--large-width {
+      max-width: 325px;
+      width: 100%;
+      @media (min-width: $breakpoint-sm) {
+        // max-width: 100%;
+        min-width: 325px;
+      }
+    }
+
+    &--full-width {
+      max-width: 100%;
+      width: 100%;
+    }
+	}
+}
+
+// Center button
+.btn--center:not(button) {
+  @media (min-width: $breakpoint-sm) {
+    display: flex;
+    margin: 0 auto;
+    width: auto;
+
+    & + .btn {
+      margin-left: 0;
+      margin-top: $spacing-small;
+    }
+  }
+}
+
+button.btn {
+  border-radius: 0;
+  border: none;
+  display: block;
+  margin: 0 auto;
+  max-width: 400px;
+  padding: 0;
+  width: 100%;
+
+  @media (min-width: $breakpoint-sm) {
+    margin: 0;
+    width: auto;
+  }
+
+  &:hover {
+    & > span {
+      @extend .btn--primary:hover;
+    }
+  }
+
+  &:active {
+    & > span {
+      @extend .btn--primary:active;
+    }
+  }
+
+  &:focus,
+  &:active {
+    // box-shadow: none;
+    // outline: none;
+    background-color: $color-btn-primary-hover;
+  }
+
+  & > span {
+    @extend .btn:not(button);
+    height: 100%;
+    width: 100%;
+  }
+
+  // Center button
+  &--center,
+  &--right {
+    @extend button.btn;
+
+    display: block;
+    margin: 0 auto;
+  }
+
+  &--right {
+    display: inline-block;
+  }
+}
+
+// Button group (side-by-side)
+.btn-group {
+  display: flex;
+  justify-content: flex-start;
+  max-width: 300px;
+
+  .btn {
+    & + .btn {
+      margin-top: 0;
+      order: -1;
+
+      @media (min-width: $breakpoint-sm) {
+        margin-left: $spacing-small;
+        order: inherit;
+      }
+    }
+  }
+
+  @media (max-width: $breakpoint-sm - 1px) {
+    flex-direction: column;
+    max-width: none;
+
+    .btn {
+      margin-left: auto !important;
+      margin-right: auto !important;
+
+      & + .btn {
+        margin-bottom: $spacing-small;
+      }
+    }
+  }
+
+  &--medium {
+    @extend .btn-group;
+
+    max-width: 500px;
+  }
+
+  &--full-width {
+    @extend .btn-group;
+
+    justify-content: space-around;
+    max-width: none;
+
+    .btn {
+      flex: 1 1 auto;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      .btn {
+        margin-bottom: $spacing-small;
+        margin-left: auto !important;
+        margin-right: auto !important;
+
+        & + .btn {
+          margin-bottom: 0;
+          order: inherit;
+        }
+      }
+    }
+  }
+
+  &--center {
+    @extend .btn-group;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    .btn {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &--change-order {
+    @extend .btn-group;
+
+    justify-content: flex-start;
+    max-width: none;
+
+    .btn {
+      flex: 0 1 auto;
+    }
+  }
+}

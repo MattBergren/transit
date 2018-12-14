@@ -1,0 +1,86 @@
+<div class="divider"></div>
+<div class="filter-wrapper">
+  <div class="filter-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-sm-12 margin-none">
+          <h2 class="h4 color-blue medium pharmacy-count">33 Pharmacies Found</h2>
+        </div>
+        <div class="col-xs-6 col-sm-12">
+          <a class="h5 filter-button bold color-blue-link margin-none" data-filter-open="false">Filter (<span id="filterNumber">1</span>) <span class="material-icons">keyboard_arrow_down</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{!-- Filter list --}}
+  <div class="filter-body-wrapper">
+    <div class="filter-body">
+      <div class="container">
+        <div class="row">
+          {{!-- Filters row 1 --}}
+          <div class="col-md-12">
+            <div class="pharmacyFilters">
+              <fieldset>
+                <legend class="sr-only">
+                  By Pharmacy Types
+                </legend>
+                <h3 class="h5 medium margin-small">By Pharmacy Types</h3>
+                <ul class="filter-list">
+                  <li>
+                    <input type="checkbox" class="custom-checkbox" id="pharmacy-standard" value="Standard Network Pharmacy">
+                    <label for="pharmacy-standard">Standard Network Pharmacy</label>
+                  </li>
+                  <li id="saver-checkbox" data-tooltip="small" data-tooltip-side="right" data-tooltip-label="Pharmacy saver tooltip">
+                    <input type="checkbox" class="custom-checkbox" id="pharmacy-saver" value="{{this.pharmacy-type}}">
+                    <label for="pharmacy-saver">{{this.pharmacy-type}}</label>
+                  </li>
+                  {{!-- <li id="retail-checkbox" style="display: none;">
+                    <input type="checkbox" class="custom-checkbox" id="pharmacy-retail" value="Preferred Retail Pharmacy">
+                    <label for="pharmacy-retail">Preferred Retail Pharmacy</label>
+                    {{> tooltip size="small" }}
+                  </li> --}}
+                </ul>
+              </fieldset>
+              <fieldset>
+                <legend class="sr-only">
+                  By Services
+                </legend>
+                <h3 class="h5 medium margin-small">By Services</h3>
+                <ul class="filter-list">
+                  <li data-tooltip="small" data-tooltip-side="right" data-tooltip-label="Standard network tooltip">
+                    <input type="checkbox" class="custom-checkbox" id="pharmacy-90" value="Standard Network (90-day)">
+                    <label for="pharmacy-90">Standard Network (90-day)</label>
+                  </li>
+                  <li data-tooltip="small" data-tooltip-side="right" data-tooltip-label="Open 24 hours tooltip">
+                    <input type="checkbox" class="custom-checkbox" id="24-hours" checked="checked" value="Open 24 Hours">
+                    <label for="24-hours">Open 24 Hours</label>
+                  </li>
+                  <li data-tooltip="small" data-tooltip-side="right" data-tooltip-label="Long term care tooltip">
+                    <input type="checkbox" class="custom-checkbox" id="long-term" value="Long-Term Care">
+                    <label for="long-term">Long-Term Care</label>
+                  </li>
+                  <li data-tooltip="small" data-tooltip-side="right" data-tooltip-label="Mail order tooltip">
+                    <input type="checkbox" class="custom-checkbox" id="mail-order" value="Mail Order Pharmacy">
+                    <label for="mail-order">Mail Order</label>
+                  </li>
+                  <li data-tooltip="small" data-tooltip-side="right" data-tooltip-label="Home infusion tooltip">
+                    <input type="checkbox" class="custom-checkbox" id="home-specialty" value="Home Infusion Speciality">
+                    <label for="home-specialty">Home Infusion and Specialty</label>
+                  </li>
+                  <li data-tooltip="small" data-tooltip-side="right" data-tooltip-label="E-prescribing tooltip">
+                    <input type="checkbox" class="custom-checkbox" id="E-Prescribing" value="E-Prescribing">
+                    <label for="E-Prescribing">E-Prescribing</label>
+                  </li>
+                  <li data-tooltip="small" data-tooltip-side="right" data-tooltip-label="Indian tribal tooltip">
+                    <input type="checkbox" class="custom-checkbox" id="indian-tribal" value="Indian / Tribal / Urban">
+                    <label for="indian-tribal">Indian / Tribal / Urban</label>
+                  </li>
+                </ul>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,118 @@
+---
+title: My Personal Health Record
+layout: default
+hasFooter: true
+hasHeader: true
+hasScript:
+  - table
+  - personal-health-record
+---
+<div class="personal-health-record">
+
+	<section class="container--base gray">
+		<div class="container margin-medium intro-text">
+			<div class="row">
+				<div class="col-sm-8 col-md-6">
+					<p>Find health records of your medications and providers that are pulled from your <a href="/medical-claims/claims/ma.html" class="lowercase">claims</a>. You can keep this list up-to-date by entering your own records below.</p>
+				</div>
+			</div>
+		</div>
+		{{> PHR-print-email-card }}
+    <div class="container user-info print-only">
+      <p><strong>Margret Smith</strong><br />
+      Gender: Female<br />
+      DOB: 10-15-48</p>
+      <p>Phone: 513-218-9955<br />
+      Email: margretsmith@yahoo.com</p>
+      <p>Policy #: 12349876</p>
+      <hr>
+    </div>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 margin-none">
+					<div class="phr-section-header display-flex v-center margin-large" id="Drugs">
+						<h2 class="h4 margin-none">You have <span class="bold"><span class="drug-total">0</span> Medications and Supplements</span></h2>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 display-flex h-space-between">
+					<a href="#" data-toggle="modal" data-target="#drugToolsModal" class="drug-tools-link display-inline-block" role="button">Drug Tools
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 560 4 16">
+              <path fill="#196ECF" d="M2 564c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+              />
+            </svg>
+					</a>
+					<a href="#" data-toggle="modal" data-target="#addDrugModal" class="add-link">+ Add new drug</a>
+          {{!-- <a href="#" class="add-row">+ Add row</a> --}}
+				</div>
+			</div>
+		</div>
+		<div class="container margin-top-small">
+      <!-- Desktop tables start -->
+      <div class="row">
+        <div class="col-md-12">
+          <div class="no-drugs-placeholder">
+            <h3>A list of your medications and supplements will appear here.</h3>
+          </div>
+          <div class="row" style="display: none;">
+            <div class="col-md-12 records-container">
+              <p>
+                Showing <span class="drug-showing-total">0</span> of <span class="drug-total">0</span> records.
+              </p>
+              <div>
+                <a class="show-records-btn show-drug-btn btn btn--primary" href="#">Show All</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+		</div>
+	</section>
+
+	<section class="container--base">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 margin-none">
+					<div class="phr-section-header display-flex v-center margin-large" id="Providers">
+						<h2 class="h4 margin-none">You have <span class="bold"><span class="provider-total">0</span> Health Care Providers</span></h2>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 display-flex h-bottom">
+					<a href="#" data-toggle="modal" data-target="#addProviderModal" class="add-link">+ Add new provider</a>
+				</div>
+			</div>
+		</div>
+		<div class="container margin-top-small">
+			<div class="row">
+				<div class="col-md-12">
+					{{> PHR-provider-table }}
+          <div class="row">
+            <div class="col-md-12 records-container">
+              <p>
+                 Showing <span class="provider-showing-total">0</span> of <span class="provider-total">0</span> records.
+              </p>
+              <div>
+                <a class="show-records-btn show-provider-btn btn btn--primary" href="#">Show All</a>
+              </div>
+            </div>
+          </div>
+				</div>
+			</div>
+		</div>
+	</section>
+  {{> PHR-tools-modal }}
+	{{> PHR-add-drug-modal }}
+  {{> PHR-view-drug-modal }}
+  {{> PHR-add-provider-modal }}
+	{{> PHR-view-provider-modal }}
+	{{> PHR-edit-provider-modal }}
+  {{> PHR-email-records-modal }}
+  {{> PHR-view-provider-carousel-modal }}
+</div>

@@ -1,0 +1,27 @@
+---
+title: Order Plan Materials
+layout: default
+hasFooter: true
+hasHeader: true
+hasScript:
+  - order-materials
+hasTabs:
+  - Prescription Drug Plan
+  - Supplemental Health Insurance Plan
+---
+<div class="order-materials">
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane fade in active" id="tab-1" aria-label="PDP">
+      {{> om-items }}
+      {{> om-form-card }}
+      {{> need-help }}
+    </div>
+    <div role="tabpanel" class="tab-pane fade" id="tab-2" aria-label="SHIP">
+      {{> om-items ship="true" }}
+      {{> om-form-card }}
+      {{> need-help help-type='SHIP' }}
+    </div>
+  </div>
+  {{> om-modal }}
+</div>

@@ -1,0 +1,73 @@
+<div class="table-body payment-confirm-table margin-large">
+
+    <div class="table-body-row">
+        <div class="table-body-cell">
+            Payment Type
+        </div>
+        <div class="table-body-cell">
+            <span class="bold">{{type}}</span>
+        </div>
+    </div>
+
+    <div class="table-body-row">
+        <div class="table-body-cell">
+            Payment Date
+        </div>
+        <div class="table-body-cell">
+            <span class="bold">12/31/2018 at 10:23am</span>
+        </div>
+    </div>
+
+    <div class="table-body-row">
+        <div class="table-body-cell">
+            Payment Amount
+        </div>
+        <div class="table-body-cell">
+            <span class="bold">
+            {{#if recurring}}
+                $57.00 deducted each month
+            {{else}}
+                $101.79
+            {{/if}}
+            </span>
+        </div>
+    </div>
+
+    {{#if eft}}
+        <div class="table-body-row">
+            <div class="table-body-cell">
+                Routing Number
+            </div>
+            <div class="table-body-cell">
+                <span class="bold">ending in .....2233</span>
+            </div>
+        </div>
+        <div class="table-body-row">
+            <div class="table-body-cell">
+                Account Number
+            </div>
+            <div class="table-body-cell">
+                <span class="bold">ending in .....0349</span>
+            </div>
+        </div>
+    {{else}}
+        <div class="table-body-row">
+            <div class="table-body-cell">
+                Credit Card Number
+            </div>
+            <div class="table-body-cell">
+                <span class="bold">**** **** **** 1234</span>
+            </div>
+        </div>
+
+    {{/if}}
+
+    <div class="table-body-row">
+        <div class="table-body-cell">
+            {{#if eft}}Account{{else}}Card{{/if}} Holder Name
+        </div>
+        <div class="table-body-cell">
+            <span class="bold">John Adam Smith</span>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+<section class="container--base">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9">
+        <h2 class="h3 margin-large">
+          Your order has been submitted
+        </h2>
+        <div class="message-block--full-width success margin-small">
+          <div class="message-block-header">
+            <span>The following documents have been ordered.</span>
+          </div>
+          <div class="message-block-body">
+            <ul class="margin-none">
+              <li>
+                <p class="margin-none">
+                  {{#if ship}}
+                    Medicare Hospital Directory
+
+                    {{else}}
+                      Member Materials (includes Getting Started Guide and Plan Details,
+                      plan benefits, information on how to find network pharmacies and
+                      providers, a partial drug list and Evidence of Coverage)
+                  {{/if}}
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <a href="/order-materials/order-materials-{{#if ship}}ship{{else}}federal{{/if}}.html"
+          class="link link--icon-left link--icon-circled" data-icon="&#xE314;">Order Additional Materials</a>
+      </div>
+    </div>
+  </div>
+</section>

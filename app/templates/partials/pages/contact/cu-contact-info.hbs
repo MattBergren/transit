@@ -1,0 +1,109 @@
+<div class="container--base">
+  <div class="container">
+    <div class="row">
+      {{!-- Start: Website Tech Support --}}
+      <div class="col-md-{{#if ship}}4{{else}}6{{/if}} match-height">
+        <div class="display-flex v-center margin-small">
+          <img src="/images/icon-svgs/computer.svg" alt="Website Tech Support" class="img-medium">
+          <div class="padding-left-small">
+            <h2 class="h3 margin-none">Website Technical Support</h2>
+          </div>
+        </div>
+        <p class="margin-small">
+          {{#if ship}}Customer Service representatives are available to assist you with password resets, technical issues and suggestions for improvement to the website.
+          {{else}}UnitedHealthcare® Customer Service representatives are available to assist you with password resets, technical issues and suggestions for improvement to the website.{{/if}}
+        </p>
+        <a href="tel:1-800-555-5555" class="display-inline-block margin-extra-small text-large">1-800-XXX-XXXX</a>
+        <p>
+          TTY users, call <a href="tel:711">711</a>
+        </p>
+        <p{{#unless ship}} class="margin-none"{{/unless}}>
+          8 am-8 pm local time, 7 days a week
+        </p>
+
+        {{#if ship}}<p class="margin-none"><span class="bold">Do you need help navigating the website?</span> Customer service has new screen sharing technology to better support you on the website.</p>{{/if}}
+      </div>
+      {{#if ship}}
+        {{!-- Start: General Questions --}}
+        <div class="col-md-4 match-height border-left border-right">
+          <div class="display-flex v-center margin-small">
+            <img src="/images/icon-svgs/question.svg" alt="General Questions" class="img-medium">
+            <div class="padding-left-small">
+              <h2 class="h3 margin-none">General Questions</h2>
+            </div>
+          </div>
+          <p class="margin-small">
+            {{#if ship}}Customer Service is ready to answer your questions and provide helpful information. If you need to mail us a form related to your plan, use the address below.
+            {{else}}Customer Service is ready to answer your questions and provide helpful information. Contact UnitedHealthcare by phone, online or by mail.{{/if}}
+          </p>
+          <a href="tel:1-800-555-5555" class="display-inline-block margin-extra-small text-large">1-800-XXX-XXXX</a>
+          <p>
+            TTY users, call <a href="tel:711">711</a>
+          </p>
+          <p class="margin-small">
+            8 am-8 pm local time, 7 days a week
+          </p>
+          <p class="margin-none bold">Mailing Address</p>
+          <p class="margin-none">UnitedHealthcare Customer Service</p>
+          <p class="margin-none">&lt;PO Box XXXXX&gt;</p>
+          <p class="margin-small">&lt;City, State, ZIP&gt;</p>
+          {{!-- Start: Spanish Collapse --}}
+          <div lang="es">
+            <a href="#collapseEspanol{{#if combo}}-{{combo}}{{/if}}" role="button" data-toggle="collapse"
+              aria-expanded="false" aria-controls="collapseEspanol{{#if combo}}-{{combo}}{{/if}}" class="display-inline-block collapse-expand">
+              INFORMACIÓN EN ESPAÑOL
+              <span class="material-icons">keyboard_arrow_down</span>
+            </a>
+            <div class="collapse-wrapper">
+              <div class="collapse" id="collapseEspanol{{#if combo}}-{{combo}}{{/if}}">
+                <p>Para información en español, por favor llame al departamento de atención al cliente de UnitedHealthcare, al número que aparece en la parte posterior de su tarjeta de membresía.</p>
+                <a href="#">VEA LOS BENEFICIOS Y RECURSOS EN ESPAÑOL</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      {{/if}}
+      {{!-- Start: Plan Support --}}
+      <div class="col-md-{{#if ship}}4{{else}}6 border-left{{/if}} match-height">
+        <div class="display-flex v-center margin-small">
+        <img src="/images/icon-svgs/{{#if ship}}claim{{else}}plan{{/if}}.svg" alt="Plan Support" class="img-medium">
+          <div class="padding-left-small">
+            <h2 class="h3 margin-none">{{#if ship}}Claims Questions{{else}}Plan Support{{/if}}</h2>
+          </div>
+        </div>
+        <p class="margin-small">
+          {{#if ship}}Customer Service is ready to answer your questions and provide helpful information.
+          {{else}}UnitedHealthcare® Customer Service is ready to answer your questions and provide helpful information. If you need to mail us a form related to your plan, use the address below.{{/if}}
+        </p>
+        <a href="tel:1-800-555-5555" class="display-inline-block margin-extra-small text-large">1-800-XXX-XXXX</a>
+        <p>
+          TTY users, call <a href="tel:711">711</a>
+        </p>
+        <p class="margin-small">
+          8 am-8 pm local time, 7 days a week
+        </p>
+        {{#if ship}}{{else}}
+          <p class="margin-none">UnitedHealthcare Customer Service</p>
+          <p class="margin-none">&lt;PO Box XXXXX&gt;</p>
+          <p class="margin-small">&lt;City, State, ZIP&gt;</p>
+        {{/if}}
+        {{!-- Start: Spanish Collapse --}}
+        {{#unless ship}}
+          <div lang="es">
+            <a href="#collapseEspanol{{#if combo}}-{{combo}}{{/if}}" role="button" data-toggle="collapse"
+              aria-expanded="false" aria-controls="collapseEspanol{{#if combo}}-{{combo}}{{/if}}" class="display-inline-block collapse-expand">
+              INFORMACIÓN EN ESPAÑOL
+              <span class="material-icons">keyboard_arrow_down</span>
+            </a>
+            <div class="collapse-wrapper">
+              <div class="collapse" id="collapseEspanol{{#if combo}}-{{combo}}{{/if}}">
+                <p>Para información en español, por favor llame al departamento de atención al cliente de UnitedHealthcare, al número que aparece en la parte posterior de su tarjeta de membresía.</p>
+                <a href="#">VEA LOS BENEFICIOS Y RECURSOS EN ESPAÑOL</a>
+              </div>
+            </div>
+          </div>
+        {{/unless}}
+      </div>
+    </div>
+  </div>
+</div>

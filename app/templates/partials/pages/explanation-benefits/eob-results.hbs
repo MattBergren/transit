@@ -1,0 +1,22 @@
+<div class="container--base gray">
+  <div class="container">
+    {{#if pdp}}
+      <div id="prescription-results{{#if combo}}-{{combo}}{{/if}}" class="search-container" aria-hidden="false">
+        {{> eob-prescription-results }}
+      </div>
+      {{else}}
+        <div id="medical-results{{#if combo}}-{{combo}}{{/if}}" class="search-container" aria-hidden="false">
+          {{> eob-medical-results }}
+        </div>
+    {{/if}}
+    {{#if mapd}}
+      <div id="prescription-results{{#if combo}}-{{combo}}{{/if}}" class="hidden search-container" aria-hidden="true">
+        {{> eob-prescription-results }}
+      </div>
+    {{/if}}
+    <div id="error-results{{#if combo}}-{{combo}}{{/if}}" class="hidden search-container" aria-hidden="true">
+      {{> eob-error-results }}
+    </div>
+  </div>
+  <div class="loading-block"></div>
+</div>

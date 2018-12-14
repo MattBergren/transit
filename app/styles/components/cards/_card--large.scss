@@ -1,0 +1,86 @@
+&.large-card {
+    border: 5px solid $color-gray-light;
+
+    &.blue {
+        border-color: $color-blue-light;
+    }
+}
+
+.card-body-main {
+    position: relative;
+
+    .row:only-of-type {
+        & > div:not(:only-of-type):not(:last-of-type) {
+            @media (max-width: $breakpoint-md) {
+                margin-bottom: 0px;
+            }
+        }
+    }
+
+    & > .row {
+        .col-md-8 {
+            @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
+                width: 47%;
+                float: left;
+            }
+        }
+    }
+
+    p {
+        @media (max-width: $breakpoint-xs) {
+            margin-bottom: 20px;
+        }
+    }
+
+    .img-wrapper {
+        margin-right: $spacing-large;
+        float: left;
+        width: 100%;
+
+        @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
+            width: auto;
+            margin: 0 10px 0px;
+        }
+
+        @media (max-width: $breakpoint-xs) {
+            width: 100%;
+            float: none;
+            margin-bottom: 20px;
+        }
+
+        .img {
+            background-color: $color-gray-light;
+            color: $color-gray-dark;
+            width: 100%;
+            height: auto;
+            font-size: 1.5rem;
+            display: inline-block;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .btn {
+        @media (max-width: $breakpoint-xs) {
+            width: 100%;
+        }
+    }
+
+}
+
+.card-body-collapse {
+    position: relative;
+    margin: 20px -20px -20px;
+    background: $color-gray-light;
+
+    & > .row {
+        padding: 20px;
+    }
+}

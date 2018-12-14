@@ -1,0 +1,67 @@
+<div class="container--base gray">
+  <div class="container">
+    {{!-- Claim 1 --}}
+    <div class="row">
+      <div class="col-md-12">
+        {{!-- Collapse --}}
+        <a href="#collapseInfo" role="button" data-toggle="collapse"
+          aria-expanded="false" aria-controls="collapseInfo" class="display-block collapse-expand">
+          Learn More About Your Cost Breakdown
+          <span class="material-icons">keyboard_arrow_down</span>
+        </a>
+        <div class="collapse-wrapper margin-small">
+          <div class="collapse" id="collapseInfo">
+            <p class="bold margin-none">Amount charged</p>
+            <p>
+              Qui aute quis laboris culpa velit dolore id cillum cupidatat
+              officia in ex velit ea sint exercitation. Proident non mollit
+              pariatur minim officia ad officia sit magna aute labore.
+            </p>
+            <p class="bold margin-none">Adjustments</p>
+            <p>
+              Qui aute quis laboris culpa velit dolore id cillum cupidatat
+              officia in ex velit ea sint exercitation. Proident non mollit
+              pariatur minim officia ad officia sit magna aute labore.
+            </p>
+            <p class="bold margin-none">Plan Paid</p>
+            <p>
+              Qui aute quis laboris culpa velit dolore id cillum cupidatat
+              officia in ex velit ea sint exercitation. Proident non mollit
+              pariatur minim officia ad officia sit magna aute labore.
+            </p>
+            <p class="bold margin-none">You Paid</p>
+            <p>
+              Qui aute quis laboris culpa velit dolore id cillum cupidatat
+              officia in ex velit ea sint exercitation. Proident non mollit
+              pariatur minim officia ad officia sit magna aute labore.
+            </p>
+          </div>
+        </div>
+        {{#if snf}}
+          {{> mc-claimcollection-ship-snf }}
+        {{else if medserve}}
+          {{> mc-claimcollection-ship-medserve }}
+        {{else if rx}}
+          {{> mc-claimcollection-ship-rx }}
+        {{else if other}}
+          {{> mc-claimcollection-ship-other }}
+        {{else}}
+          {{> mc-claimcollection-ship }}
+        {{/if}}
+      </div>
+    </div>
+    {{!-- Notes --}}
+    <div class="row">
+      <div class="col-md-12">
+        <p class="margin-small">
+        <span class="bold">Note:</span>
+        This is a summary of your claim activity. It does not replace your printed Explanation of Benefits (EOB).
+        </p>
+        <p class="margin-none">
+          <span class="bold">Comments about your claim:</span>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit...
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

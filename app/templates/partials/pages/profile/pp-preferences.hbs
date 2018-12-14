@@ -1,0 +1,44 @@
+<section class="container--base">
+  <div class="container margin-large">
+    <div class="row section-header">
+      <div class="col-md-10 margin-large">
+        <div class="row">
+          <div class="col-xs-2 col-sm-2 col-md-1 col-lg-1 padding-none">
+            <img src="/images/icon-svgs/go-green.svg" alt="Plan Support" class="img-responsive go-green-img">
+          </div>
+          <div class="col-xs-10 col-sm-10 col-md-9 col-lg-11">
+            <h2 class="h3 medium margin-small">Go Green: Paperless Document Delivery</h2>
+            <p>Select the plan materials you want to sign up for paperless delivery per the terms and conditions below.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" id="mail-preferences-selector">
+      {{#unless combo}}
+      <div class="col-md-8">
+        {{#if federal}}
+        <div class="iframe-placeholder">
+          <span class="fpo-text">Iframe FPO</span>
+        </div>
+        {{/if}}
+        {{#unless federal}} {{> gg-card no-padding="true" ship="true" uniqueID="true"}} {{/unless}}
+      </div>
+      {{/unless}}
+      {{#if combo}}
+      <div class="col-md-6">
+        <iframe src="/profile/iframe/fed-go-green.html" frameborder="0" width="100%" height="100%" scrolling="no" onload="resizeIframeHeight(this)"></iframe>
+      </div>
+      <div class="col-md-6 border-left">
+        {{> gg-card no-padding="true" ship="true"}}
+      </div>
+      {{/if}}
+    </div>
+    {{#or federal combo}}
+    <div class="row">
+      <div class="col-md-8">
+        <p>Note: It may take up to two mail cycles for your updated delivery preferences to take effect. Your mailing cycle-the length of time between documents-varies by document. When the paper mailings stop, you will receive an email notification alerting you that a new document has been posted to your online account.</p>
+      </div>
+    </div>
+    {{/or}}
+  </div>
+</section>

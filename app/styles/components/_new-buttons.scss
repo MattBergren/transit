@@ -1,0 +1,129 @@
+.btn {
+    display: flex;
+    zoom: 1;
+    line-height: normal;
+    white-space: normal;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 100%;
+    font-weight: 500;
+    padding: 10px;
+    color: rgba(0, 0, 0, 0.80);
+    border: none rgba(0, 0, 0, 0);
+    background-color: #E6E6E6;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 0px;
+    width: 100%;
+    max-width: 400px;
+    min-height: 42px;
+    margin: 0 auto;
+
+    &:not(:last-child) {
+        margin-bottom: $spacing-small;
+    }
+
+    @media screen and (min-width: $breakpoint-sm) {
+        display: inline-flex;
+        width: auto;
+        padding: 10px 30px;
+        margin: 0;
+
+        &:not(:last-child) {
+            margin-bottom: 0;
+        }
+
+        & + .btn {
+            margin-left: 20px;
+        }
+    }
+
+    &::-moz-focus-inner {
+        padding: 0;
+        border: 0;
+    }
+
+    &:focus {
+        outline: 0;
+    }
+
+
+    & > .material-icons {
+        font-weight: 600;
+        vertical-align: bottom;
+        margin-right: 5px;
+    }
+
+    &--active,
+    &:active {
+        border-color: #000\9;
+    }
+
+    &[disabled],
+    &--disabled,
+    &--disabled:hover,
+    &--disabled:focus,
+    &--disabled:active {
+        border: none;
+        background-image: none;
+        opacity: 0.40;
+        cursor: not-allowed;
+        box-shadow: none;
+    }
+
+    &--primary {
+        background-color: $color-digital-blue;
+        color: $color-white;
+        border: 1px solid $color-digital-blue;
+
+        &:hover,
+        &:focus {
+            background-color: $color-btn-primary-hover;
+            border-color: $color-btn-primary-hover;
+            color: $color-white;
+        }
+
+        &:active {
+            background-color: $color-white;
+            color: $color-digital-blue;
+        }
+    }
+
+    &--secondary {
+        background-color: $color-white;
+        color: $color-digital-blue;
+        border: 1px solid $color-digital-blue;
+
+        &:hover,
+        &:focus {
+            background-color: $color-btn-secondary-bg;
+            color: $color-digital-blue;
+        }
+
+        &:active {
+            background-color: $color-digital-blue;
+            color: $color-white;
+        }
+    }
+
+    &--tertiary {
+        background-color: $color-white;
+        color: $color-digital-gray-dark;
+        border: 1px solid $color-digital-gray-dark;
+
+        &:hover,
+        &:focus {
+            background-color: $color-btn-secondary-bg;
+            color: $color-digital-gray-dark;
+        }
+
+        &:active {
+            background-color: $color-digital-gray-dark;
+            color: $color-white;
+        }
+    }
+}

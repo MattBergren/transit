@@ -1,0 +1,46 @@
+<section class="container--base gray" style="padding-top: 0;">
+    <div class="arrow-tabs-wrapper margin-large">
+        <ul class="arrow-tabs" role="tablist">
+            <li class="arrow-tab-item active">
+                <a href="#drugs-tab" aria-controls="drugs-tab" role="tab" data-toggle="tab" id="drug-control">
+                    <p class="margin-none text-small bold color-gray text-no-max">Step 1:</p>
+                    <span>Drugs</span>
+                </a>
+            </li>
+            <li class="arrow-tab-item">
+                <a href="#pharmacy-tab" aria-controls="pharmacy-tab" role="tab" data-toggle="tab"
+                    id="pharmacy-control">
+                    <p class="margin-none text-small bold color-gray text-no-max">Step 2:</p>
+                    <span>Pharmacy</span>
+                </a>
+            </li>
+            <li class="arrow-tab-item">
+                <a href="#costs-tab" aria-controls="costs-tab" role="tab" data-toggle="tab" id="cost-control">
+                    <p class="margin-none text-small bold color-gray text-no-max">Step 3:</p>
+                    <span>See Your Estimated Cost</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    {{!-- Drug Tab --}}
+                    <div role="tabpanel" class="tab-pane fade in active" id="drugs-tab" aria-labelledby="drug-control">
+                        {{> DCE-drug-tab }}
+                    </div>
+                    {{!-- Pharmacy tab --}}
+                    <div role="tabpanel" class="tab-pane fade" id="pharmacy-tab" aria-labelledby="pharmacy-control">
+                        {{> DCE-pharmacy-tab }}
+                    </div>
+                    {{!-- Costs tab --}}
+                    <div role="tabpanel" class="tab-pane fade" id="costs-tab" aria-labelledby="cost-control">
+                        {{> DCE-costs-tab }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

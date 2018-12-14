@@ -1,0 +1,30 @@
+&.rider {
+  display: flex;
+  flex-direction: column;
+  word-break: break-word;
+
+  .card-header {
+    .pull-left {
+      max-width: 80%;
+      word-break: break-word;
+
+      p:first-of-type {
+        margin-bottom: 5px;
+      }
+    }
+    .pull-right {
+      max-width: 20%;
+      text-align: right;
+    }
+  }
+
+  .card-body {
+    flex-grow: 1;
+    position: relative;
+    padding-bottom: $spacing-small;
+  }
+
+  button > span {
+    width: 100%;
+  }
+}

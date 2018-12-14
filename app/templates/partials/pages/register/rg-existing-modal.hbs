@@ -1,0 +1,47 @@
+<!-- Start: Add plan modal -->
+<div id="existingPlanModal" tabindex="-1" role="dialog" aria-labelledby="existingPlanModalLabel" class="modal fade">
+	<div role="document" class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<a class="link link--icon-right link--icon-circled align-right" data-icon="&#xE5CD;" data-dismiss="modal" aria-label="Close">Cancel</a>
+				<div id="existingPlanModalLabel" class="modal-title">
+					<h1 class="h3 margin-none">Confirm Plan Details</h1>
+				</div>
+			</div>
+			<div class="modal-body">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-10 col-md-offset-1">
+							<div class="table-body wide margin-large">
+								<div class="table-body-row">
+									<div class="table-body-cell bold">Member ID</div>
+									<div class="table-body-cell">12345</div>
+								</div>
+								<div class="table-body-row">
+									<div class="table-body-cell bold">Plan Name(s)</div>
+									<div class="table-body-cell">&lt;SHIP Plan Name&gt;</div>
+								</div>
+								<div class="table-body-row">
+									<div class="table-body-cell bold">Name</div>
+									<div class="table-body-cell">John Smith</div>
+								</div>
+								<div class="table-body-row">
+									<div class="table-body-cell bold">Date of Birth</div>
+									<div class="table-body-cell">&lt;MM/DD/YYYY&gt;</div>
+								</div>
+							</div>
+							<p class="bold color-red margin-large"><img src="/images/icon-svgs/important.svg" alt="Important" class="img-text">The plan(s) are already associated with an existing online account: &lt;username&gt;. <a href="#">Sign In</a></p>
+							<p class="bold color-red"><img src="/images/icon-svgs/important.svg" alt="Important" class="img-text">Creating a new online account for the selected plans will delete your existing online account and any preferences saved with it.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" data-dismiss="modal" class="btn" id="add-plan-confirm-existing">
+          <span class="btn btn--primary">Continue</span>
+        </button>
+				<a href="#" data-dismiss="modal">Cancel</a>
+			</div>
+		</div>
+	</div>
+</div>

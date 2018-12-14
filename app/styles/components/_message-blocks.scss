@@ -1,0 +1,51 @@
+.message-block {
+    padding: 5px 10px;
+    margin-bottom: $spacing-small;
+    max-width: 400px;
+
+    &.full-width {
+      max-width: none;
+    }
+
+    &.error {
+        background-color: $color-red-light;
+        .message-block-header {
+            color: $color-red-dark;
+            font-weight: 500;
+
+            &:before {
+              content: '';
+              height: 1em;
+              width: 1em;
+              display: inline-block;
+              background: url('/images/icon-svgs/remove-circle.svg');
+              vertical-align: middle;
+              margin-right: 5px;
+            }
+        }
+    }
+    &.success {
+        background-color: $color-green-light;
+        .message-block-header {
+            color: $color-green-dark;
+            font-weight: 700;
+
+            &:before {
+                content: '';
+                height: 1em;
+                width: 1em;
+                display: inline-block;
+                background: url('/images/icon-svgs/check-circle.svg');
+                vertical-align: middle;
+                margin-right: 5px;
+            }
+        }
+    }
+
+    &--full-width {
+      @extend .message-block;
+
+      width: 100%;
+      max-width: none;
+    }
+}

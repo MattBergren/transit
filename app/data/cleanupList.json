@@ -1,0 +1,97 @@
+{
+	"sections": [{
+		"title": "My Benefits & Coverage",
+		"pages": [{
+				"title": "Benefits Summary",
+				"links": [{
+						"title": "Individual MA -- with Medical Tiers, HMO",
+						"path": "/benefits-coverage/cleanup/benefits-coverage-ma-variation.html"
+					},
+					{
+						"title": "Individual MA -- with Medical Tiers, HMO - Variation (add new rider)",
+						"path": "/benefits-coverage/benefits-coverage-ma-variation.html"
+					},
+					{
+						"title": "Group MA -- with tiers, PPO",
+						"path": "/benefits-coverage/cleanup/benefits-coverage-ma-group-variation.html"
+					},
+					{
+						"title": "Group MAPD -- LIS, no medical tier",
+						"path": "/benefits-coverage/cleanup/benefits-coverage-mapd-variation.html"
+					},
+					{
+						"title": "Individual PDP -- non-LIS, with drug tiers",
+						"path": "/benefits-coverage/cleanup/benefits-coverage-pdp-variation.html"
+					},
+					{
+						"title": "Combo plans: Individual PDP plus SHIP",
+						"path": "/benefits-coverage/cleanup/benefits-coverage-combo-variation.html"
+					},
+					{
+						"title": "Group SSUP",
+						"path": "/benefits-coverage/cleanup/benefits-coverage-ssup-group-variation.html"
+					}
+				]
+			}
+		]
+	}, {
+		"title": "Payments",
+		"pages": [{
+			"title": "Submit Pages",
+			"links": [{
+					"title": "Automatic Pay Submitted (EFT)",
+					"path": "/payments/cleanup/submitted-eft-auto-variation.html"
+				},
+				{
+					"title": "Onetime Pay Submitted (EFT)",
+					"path": "/payments/cleanup/submitted-eft-onetime-variation.html"
+				}
+			]
+		}, {
+			"title": "Overview",
+			"links": [{
+				"title": "Monthly Billing - Variation W/ Confirmation",
+				"path": "/payments/cleanup/monthly-variation.html"
+			}]
+		}]
+	}, {
+		"title": "Contact Us",
+		"pages": [{
+			"links": [{
+				"title": "MA/MAPD",
+				"path": "/contact/cleanup/contact-us-ma-variation.html"
+			}, {
+				"title": "PDP",
+				"path": "/contact/cleanup/contact-us-pdp-variation.html"
+			}, {
+				"title": "Group",
+				"path": "/contact/cleanup/contact-us-group-variation.html"
+			}, {
+				"title": "SHIP",
+				"path": "/contact/cleanup/contact-us-ship-variation.html"
+			}, {
+				"title": "Combo (MA & SHIP)",
+				"path": "/contact/cleanup/contact-us-combo-variation.html"
+			}]
+		}]
+	}, {
+		"title": "Forms and Resources",
+		"pages": [{
+			"links": [{
+				"title": "Individual MAPD",
+				"path": "/resources/cleanup/forms-and-resources-mapd-variation.html"
+			}]
+		}]
+	}, {
+		"title": "Order Plan Materials",
+		"pages": [{
+			"links": [{
+				"title": "Federal",
+				"path": "/order-materials/cleanup/order-materials-federal-submitted-variation.html"
+			}, {
+				"title": "SHIP",
+				"path": "/order-materials/cleanup/order-materials-ship-submitted-variation.html"
+			}]
+		}]
+	}]
+}

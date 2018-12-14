@@ -1,0 +1,41 @@
+.container--base {
+  margin: 40px 0 50px 0;
+  position: relative;
+
+  &.gray {
+    padding: 40px 0 50px 0;
+    margin: 0;
+    background-color: $color-gray-light;
+  }
+
+  &.yellow {
+    padding: 30px 0 30px 0;
+    margin: 0;
+    background-color: $color-yellow-light;
+  }
+
+  &.teal {
+    padding: 40px 0 50px 0;
+    margin: 0;
+    background-color: $color-teal-light;
+  }
+
+  &.no-margin-bottom {
+    margin-bottom: 0;
+  }
+
+  &.equal-margins-mobile {
+    @media (max-width: $breakpoint-sm - 1px) {
+      margin: 40px 0;
+    }
+  }
+
+  &.equal-margins {
+    margin: 40px 0;
+
+    &.gray {
+      margin: 0;
+      padding: 40px 0;
+    }
+  }
+}
